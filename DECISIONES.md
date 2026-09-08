@@ -35,9 +35,23 @@ categoría). Las tres copias del archivo congelado —`App\`, `Outputs\` y
 hash. La de `fuentes-oficiales/` es la autoridad: de ella salen el vector de
 pruebas y la comprobación de la tabla de migración de M5.
 
+**Hosting: GitHub Pages.** M4 publica `dist/pwa/` desde una rama `gh-pages` o
+desde `docs/` del repositorio, que a esa altura habrá que subir a GitHub. Da
+HTTPS, publica con un push y admite repositorio privado con página pública, así
+que el material del libro no queda expuesto en el código aunque la página sí sea
+accesible por enlace. Resuelve la tensión 2 (plano 8.2). Como el repositorio
+pasa a estar en GitHub aunque sea privado, en M4 hay que revisar el
+`.gitignore` con la decisión de uso personal ya tomada.
+
+**El curso está terminado o en pausa.** No hay unidad en curso que empuje el
+orden. Los módulos de contenido siguen el orden del plano, 1, 2, 3, 4, 5, 6, 7
+y 9, y `unidadActual` no tiene un valor por defecto obvio: lo fija Andrés en la
+pantalla de primer uso (Anexo B). En M2, con una sola unidad lista, el valor por
+defecto es 8 y la pregunta de primer uso muestra solo las unidades con
+`estado: "lista"`. Deja sin efecto, por ahora, la vía de utilidad temprana de
+8.6 que consistía en adelantar la unidad de la clase en curso.
+
 ## Abierto todavía
 
-**Hosting de la PWA (M4).** GitHub Pages, Netlify Drop o Cloudflare Pages. El
-artefacto `dist/pwa/` no tiene rutas absolutas ni supone dominio, así que la
-decisión no condiciona nada del código y se puede cambiar después sin costo.
-Se decide en M4.
+Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se
+resuelven ahí.
