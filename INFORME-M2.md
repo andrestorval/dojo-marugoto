@@ -103,8 +103,9 @@ pool trae todos los modos.
 | Primer uso con almacén vacío pregunta unidad y largo una sola vez | Sí. Tras contestar y recargar, arranca directo en el inicio |
 | Historial por unidad en el inicio | Barra "Unidad 8 · Contratiempos en el viaje · 30 de 668", con lo firme superpuesto |
 
-`node --test "pruebas/*.test.mjs"`: 58 pruebas, 57 en verde, 0 fallos, 1 marcada
-`todo` (la de M5). Las 25 nuevas están en `pruebas/programador.test.mjs`.
+`node --test "pruebas/*.test.mjs"`: 62 pruebas, 61 en verde, 0 fallos, 1 marcada
+`todo` (la de M5). Las 25 del programador están en `pruebas/programador.test.mjs`
+y las 4 de interfaz en `pruebas/interfaz.test.mjs`.
 
 Verificado además en el navegador, sobre la salida PWA servida en local: el
 primer uso, dos sesiones en días distintos simulando el paso del tiempo, el aviso
@@ -124,6 +125,32 @@ es invisible.
 
 **`ordenEntrada` no incluye los ítems de grupo del verbo** (`g:<kana>`) ni la
 dependencia que los precede, porque ese tipo de ítem nace en M3 (3.6).
+
+## El velo del diálogo, un fallo que venía desde M1
+
+Patricio abrió la salida y la app se veía atenuada y borrosa, ilegible. La causa
+es de CSS y de una línea: `.hide{display:none}` está declarada antes que
+`.dlg{…display:flex…}`, las dos con la misma especificidad, así que ganaba la
+última y el velo del diálogo —fondo translúcido y desenfoque— quedaba siempre
+encima de la app, aunque el elemento tuviera la clase `hide`. Se arregla con
+`.dlg.hide{display:none}`.
+
+El fallo nació en M1, con el componente de diálogo, y ninguna prueba lo vio
+porque todas miraban el DOM: `classList.contains('hide')` daba `true` y el
+diálogo estaba, en efecto, marcado como oculto. Lo que fallaba era el estilo, no
+el estado.
+
+Es también la explicación de algo que en el informe de M1 di por otra cosa. Dije
+que las capturas de pantalla "salían en negro por un problema del panel del
+navegador". No era el panel: era este velo tapando la página. La conclusión
+estaba equivocada y la corrijo aquí.
+
+`pruebas/interfaz.test.mjs` es la red para que no se repita: recorre el CSS y
+falla si alguna clase que el marcado combina con `hide` fija `display` después de
+`.hide` sin su pareja `.clase.hide`. Comprueba además que existan las cinco
+secciones de pantalla y que todos los ids que el motor busca estén en el
+marcado; esta última encontró de inmediato `#mc` y `#pool`, que se crean en
+tiempo de ejecución y están anotados como tales.
 
 ## Una trampa del entorno que conviene recordar
 

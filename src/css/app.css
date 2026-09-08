@@ -162,6 +162,11 @@ kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--l
 /* ---- dialogos propios (reemplazan alert y confirm) ---- */
 .dlg{position:fixed; inset:0; z-index:50; display:flex; align-items:center; justify-content:center;
   background:rgba(17,20,27,.55); padding:20px; backdrop-filter:blur(2px)}
+/* `.hide` se declara más arriba y tiene la misma especificidad que `.dlg`, así
+   que sin esta regla gana la última y el velo del diálogo queda siempre
+   encima de la app. Cualquier regla nueva que fije `display` sobre una clase
+   que también use `hide` necesita su pareja igual que esta. */
+.dlg.hide{display:none}
 .dlgcaja{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
   box-shadow:var(--shadow); padding:22px; width:100%; max-width:460px; max-height:86vh; overflow:auto}
 .dlgcaja h2.sec{margin-bottom:8px}
