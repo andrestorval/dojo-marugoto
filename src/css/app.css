@@ -172,3 +172,13 @@ kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--l
   border:2px solid var(--line-strong); border-radius:10px; padding:10px;
   background:var(--surface-2); color:var(--ink)}
 .dlgcaja textarea:focus{outline:none; border-color:var(--ai); background:var(--surface)}
+
+/* ---- barra de avance por unidad ---- */
+.ubar{margin-top:12px}
+.ubar-t{display:flex; justify-content:space-between; gap:10px; color:var(--muted);
+  font-size:.82rem; margin-bottom:5px; font-variant-numeric:tabular-nums}
+.ubar .rail{position:relative; margin-bottom:0}
+.ubar .rail i{background:var(--ai-lit)}
+.ubar .rail u{position:absolute; left:0; top:0; height:100%; display:block;
+  background:var(--ok); border-radius:99px}
+.piece[data-id]{cursor:pointer; font-family:var(--ui); font-size:.9rem}

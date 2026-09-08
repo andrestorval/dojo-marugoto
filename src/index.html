@@ -20,11 +20,63 @@
     <div class="temaLabel" id="temaLabel"></div>
   </header>
 
+  <!-- ══════════ PRIMER USO ══════════ -->
+  <section id="scPrimero" class="hide">
+    <div class="card">
+      <h2 class="sec">¿En qué unidad vas?</h2>
+      <p class="sub" style="margin-bottom:12px">Por ahí empiezan a entrar las cosas nuevas. Se cambia cuando quieras.</p>
+      <div class="chipsrow" id="p1Unidad"></div>
+    </div>
+    <div class="card">
+      <h2 class="sec">¿Cuánto quieres practicar por día?</h2>
+      <div class="chipsrow" id="p1Largo"></div>
+    </div>
+    <div class="card">
+      <button class="primary big" id="btnPrimero">Empezar a practicar</button>
+    </div>
+  </section>
+
   <!-- ══════════ INICIO ══════════ -->
-  <section id="scHome">
+  <section id="scHome" class="hide">
+    <div class="card">
+      <button class="primary big" id="btnStart">Practicar hoy</button>
+      <p class="sub" id="hoyLinea" style="text-align:center; margin-top:10px"></p>
+      <p class="sub hide" id="hoyAviso" style="margin-top:10px"></p>
+      <div class="acts" style="margin-top:14px">
+        <button class="ghost" id="btnMenu">Elegir qué practicar</button>
+      </div>
+    </div>
+
+    <div class="card" id="histCard">
+      <h2 class="sec">Lo que llevas</h2>
+      <div id="histBody"></div>
+      <div id="histUnidades"></div>
+      <div class="acts wrap" style="margin-top:14px">
+        <button class="ghost" id="btnExport">Exportar progreso</button>
+        <button class="ghost" id="btnImport">Importar de archivo</button>
+        <button class="ghost" id="btnPaste">Pegar progreso</button>
+        <button class="ghost hide" id="btnUndo">Deshacer la importación</button>
+        <button class="ghost" id="btnReset">Borrar mi progreso</button>
+      </div>
+      <input type="file" id="fileImport" accept=".json,application/json" class="hide">
+    </div>
+
+    <p class="foot" style="text-align:left">
+      Puedes escribir en kana o en rōmaji: <b>tobanai</b> y <b>とばない</b> valen lo mismo.
+      <kbd>Enter</kbd> comprueba y vuelve a avanzar.
+    </p>
+  </section>
+
+  <!-- ══════════ MENÚ ══════════ -->
+  <section id="scMenu" class="hide">
     <div class="card">
       <h2 class="sec">Qué quieres practicar</h2>
       <div class="opts" id="modeList"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sec">De qué unidades</h2>
+      <div class="chipsrow" id="unidadRow"></div>
     </div>
 
     <div class="grid2">
@@ -38,25 +90,22 @@
       </div>
     </div>
 
-    <div class="card">
-      <button class="primary big" id="btnStart">Empezar</button>
-      <p class="foot" style="margin-top:14px; text-align:left">
-        Puedes escribir en kana o en rōmaji: <b>tobanai</b> y <b>とばない</b> valen lo mismo.
-        <kbd>Enter</kbd> comprueba y vuelve a avanzar.
-      </p>
+    <div class="grid2">
+      <div class="card">
+        <h2 class="sec">Nuevos por sesión</h2>
+        <div class="chipsrow" id="nuevosRow"></div>
+      </div>
+      <div class="card">
+        <h2 class="sec">Unidad en curso</h2>
+        <div class="chipsrow" id="cursoRow"></div>
+      </div>
     </div>
 
-    <div class="card" id="histCard">
-      <h2 class="sec">Lo que llevas</h2>
-      <div id="histBody"></div>
-      <div class="acts wrap" style="margin-top:14px">
-        <button class="ghost" id="btnExport">Exportar progreso</button>
-        <button class="ghost" id="btnImport">Importar de archivo</button>
-        <button class="ghost" id="btnPaste">Pegar progreso</button>
-        <button class="ghost hide" id="btnUndo">Deshacer la importación</button>
-        <button class="ghost" id="btnReset">Borrar mi progreso</button>
+    <div class="card">
+      <button class="primary big" id="btnStartManual">Practicar con esta selección</button>
+      <div class="acts" style="margin-top:12px">
+        <button class="ghost" id="btnVolver">Volver al inicio</button>
       </div>
-      <input type="file" id="fileImport" accept=".json,application/json" class="hide">
     </div>
   </section>
 
@@ -84,8 +133,9 @@
       <h2 class="sec">Sesión terminada</h2>
       <div class="score" id="endScore"></div>
       <p class="sub" id="endLine"></p>
+      <p class="sub" id="endPend" style="margin-top:10px"></p>
       <div class="acts" style="margin-top:18px">
-        <button class="primary" id="btnAgain">Otra ronda</button>
+        <button class="primary hide" id="btnMas">Seguir 10 más</button>
         <button class="ghost" id="btnHome">Volver al inicio</button>
       </div>
     </div>

@@ -233,7 +233,7 @@ test('importar respalda antes y deshacer devuelve el estado anterior', () => {
 test('marcar escribe el registro completo de 2.1', () => {
   const { m } = cargar();
   m.iniciarProgreso();
-  m.marcar('c:のる:masu', true);
+  m.marcar('c:のる:masu', 'ok');
   const p = m.estado().prog['c:のる:masu'];
   assert.deepEqual(Object.keys(p).sort(), ['b', 'due', 'f', 'int', 'last', 'man', 'v']);
   assert.equal(p.b, 1);
@@ -241,7 +241,7 @@ test('marcar escribe el registro completo de 2.1', () => {
   assert.equal(p.due, m.HOY + m.ESCALERA[1]);
   assert.equal(p.last, m.HOY);
 
-  m.marcar('c:のる:masu', false);
+  m.marcar('c:のる:masu', 'mal');
   const q = m.estado().prog['c:のる:masu'];
   assert.equal(q.b, 0);
   assert.equal(q.f, 1);
@@ -251,8 +251,8 @@ test('marcar escribe el registro completo de 2.1', () => {
 test('los ids de ejercicio llevan unidad y clave estable', () => {
   const { m } = cargar();
   m.iniciarProgreso();
-  m.fijarSel({ modos: ['hueco', 'armar', 'frase'], clase: '0', largo: 0 });
-  m.construir();
+  m.fijarSel({ modos: ['hueco', 'armar', 'frase'], clase: '0', largo: 0, unidades: [] });
+  m.construir(true);
   const ids = m.cola().map((q) => q.id);
   assert.ok(ids.length > 0);
   for (const id of ids) {

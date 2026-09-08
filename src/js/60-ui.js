@@ -20,9 +20,44 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 
 /* ═══════════ render ═══════════ */
 function pintarInicio(){
-  $('#temaLabel').textContent = 'Tema ' + TEMA.n + ' · ' + TEMA.titulo;
-  $('#footTema').textContent = TEMA.n + ' ' + TEMA.titulo + ' — ' + TEMA.es;
+  const u = UNIDADES.find(x => x.n === unidadActual());
+  $('#temaLabel').textContent = u ? 'Unidad ' + u.n + ' · ' + u.titulo : '';
+  $('#footTema').textContent = u ? u.n + ' ' + u.titulo + ' — ' + u.es : '';
 
+  /* El subtítulo del botón explica sin texto qué va a pasar al tocarlo. */
+  const pan = panoramaHoy();
+  const b = $('#btnStart'), linea = $('#hoyLinea'), aviso = $('#hoyAviso');
+  b.disabled = false;
+  if(pan.vencidas === 0 && pan.nuevas === 0){
+    linea.textContent = pan.total ? 'Todo al día. Puedes adelantar trabajo.' : 'Todavía no hay contenido.';
+    b.textContent = pan.total ? 'Adelantar' : 'Practicar hoy';
+    b.disabled = !pan.total;
+  } else {
+    b.textContent = 'Practicar hoy';
+    linea.textContent = (pan.vencidas ? pan.vencidas + ' vencidas' : 'Nada vencido') +
+      ' · ' + pan.nuevas + ' nuevas';
+  }
+
+  /* Quien falla mucho vive semanas con el cupo de nuevos bloqueado, y sin esta
+     línea lo lee como que la app se quedó pegada (plano 2.4). */
+  aviso.classList.toggle('hide', !pan.bloquea);
+  if(pan.bloquea) aviso.textContent =
+    'Hoy no entran ítems nuevos: primero lo atrasado. Vuelven en cuanto bajes del tope de la sesión.';
+
+  pintarHistorial(); pintarAccionesProgreso();
+}
+
+/* ═══════════ menú "Elegir qué practicar" ═══════════ */
+
+function chips(cont, opciones, activo, alElegir){
+  $(cont).innerHTML = opciones.map(([v,t]) =>
+    `<button class="chipbtn ${activo(v)?'on':''}" data-v="${esc(String(v))}">${esc(t)}</button>`).join('');
+  $(cont).querySelectorAll('button').forEach(x => x.onclick = () => { alElegir(x.dataset.v); saveCfg(); });
+}
+
+const unidadesListas = () => UNIDADES.filter(u => u.estado === 'lista').map(u => u.n).sort((a,b) => a - b);
+
+function pintarMenu(){
   $('#modeList').innerHTML = MODOS.map(m => `
     <label class="opt ${sel.modos.includes(m.id)?'on':''}" data-m="${m.id}">
       <input type="checkbox" ${sel.modos.includes(m.id)?'checked':''}>
@@ -37,40 +72,110 @@ function pintarInicio(){
     };
   });
 
-  const clases = [['0','Las dos'],['1','Clase 1 · p96–100'],['2','Clase 2 · p101–105']];
-  $('#claseRow').innerHTML = clases.map(([v,t]) =>
-    `<button class="chipbtn ${sel.clase===v?'on':''}" data-c="${v}">${esc(t)}</button>`).join('');
-  $('#claseRow').querySelectorAll('button').forEach(b => b.onclick = () => {
-    sel.clase = b.dataset.c; saveCfg(); pintarInicio();
-  });
+  /* Selección múltiple: "todas" es vaciar la lista, no un valor más. */
+  const listas = unidadesListas();
+  chips('#unidadRow', [['0','Todas']].concat(listas.map(n => [String(n), 'Unidad ' + n])),
+    v => v === '0' ? !sel.unidades.length : sel.unidades.includes(+v),
+    v => {
+      if(v === '0') sel.unidades = [];
+      else {
+        const n = +v;
+        sel.unidades = sel.unidades.includes(n) ? sel.unidades.filter(x => x !== n) : sel.unidades.concat(n);
+      }
+      pintarMenu();
+    });
 
-  const largos = [[10,'10'],[15,'15'],[25,'25'],[40,'40'],[0,'Todas']];
-  $('#largoRow').innerHTML = largos.map(([v,t]) =>
-    `<button class="chipbtn ${sel.largo===v?'on':''}" data-l="${v}">${esc(t)}</button>`).join('');
-  $('#largoRow').querySelectorAll('button').forEach(b => b.onclick = () => {
-    sel.largo = +b.dataset.l; saveCfg(); pintarInicio();
-  });
+  chips('#claseRow', [['0','Las dos'],['1','Clase 1'],['2','Clase 2']],
+    v => sel.clase === v, v => { sel.clase = v; pintarMenu(); });
 
-  pintarHistorial(); pintarAccionesProgreso(); actualizarStart();
+  chips('#largoRow', [['10','10'],['15','15'],['20','20'],['25','25'],['40','40'],['0','Todas']],
+    v => sel.largo === +v, v => { sel.largo = +v; pintarMenu(); });
+
+  chips('#nuevosRow', [['0','0'],['3','3'],['6','6'],['10','10']],
+    v => sel.cupoNuevos === +v, v => { sel.cupoNuevos = +v; pintarMenu(); });
+
+  chips('#cursoRow', listas.map(n => [String(n), 'Unidad ' + n]),
+    v => unidadActual() === +v, v => { sel.unidadActual = +v; pintarMenu(); });
+
+  actualizarStart();
 }
-function actualizarStart(){ $('#btnStart').disabled = sel.modos.length === 0; }
+
+/* ═══════════ primer uso ═══════════ */
+
+/* Dos preguntas, una sola vez. Sin esto, el usuario que recibe la app por mano
+   no sabe en qué unidad está ni cuánto es un rato de práctica (Anexo B). */
+function pintarPrimerUso(){
+  const listas = unidadesListas();
+  if(!sel.unidadActual) sel.unidadActual = unidadPorDefecto();
+  chips('#p1Unidad', listas.map(n => [String(n), 'Unidad ' + n]),
+    v => sel.unidadActual === +v, v => { sel.unidadActual = +v; pintarPrimerUso(); });
+  chips('#p1Largo', [['10','10 preguntas'],['20','20 preguntas'],['40','40 preguntas']],
+    v => sel.largo === +v, v => { sel.largo = +v; pintarPrimerUso(); });
+}
+
+function actualizarStart(){ $('#btnStartManual').disabled = sel.modos.length === 0; }
 
 function pintarHistorial(){
   const ids = Object.keys(prog);
   if(!ids.length){
     $('#histBody').innerHTML = '<p class="sub">Todavía no hay nada. Lo que falles vuelve a salir más seguido.</p>';
+    $('#histUnidades').innerHTML = '';
     return;
   }
-  const vistas = ids.reduce((a,k) => a + prog[k].v, 0);
-  const firmes = ids.filter(k => prog[k].b >= 3).length;
+  const vistas   = ids.reduce((a,k) => a + prog[k].v, 0);
+  const firmes   = ids.filter(k => prog[k].b >= 5).length;
+  const jubilados = ids.filter(k => prog[k].man).length;
   const flojas = ids.filter(k => prog[k].b === 0 && prog[k].f > 0)
                     .sort((a,b) => prog[b].f - prog[a].f).slice(0,8);
+
   $('#histBody').innerHTML = `
     <p class="sub" style="margin-bottom:12px">
-      <b style="color:var(--ink)">${vistas}</b> respuestas · <b style="color:var(--ok)">${firmes}</b> ítems ya firmes
-    </p>` + (flojas.length ? `<p class="sub" style="margin-bottom:6px">Lo que más se te resiste:</p>
-      <div class="chipsrow">${flojas.map(k => `<span class="piece">${esc(etiqueta(k))}</span>`).join('')}</div>` : '');
+      <b style="color:var(--ink)">${vistas}</b> respuestas ·
+      <b style="color:var(--ok)">${firmes}</b> ítems ya firmes` +
+      (jubilados ? ` · <b style="color:var(--gold)">${jubilados}</b> marcados como sabidos` : '') +
+    `</p>` +
+    (flojas.length ? `<p class="sub" style="margin-bottom:6px">Lo que más se te resiste. Toca uno para marcarlo como sabido:</p>
+      <div class="chipsrow">${flojas.map(k =>
+        `<button class="piece" data-id="${esc(k)}">${esc(etiqueta(k))}</button>`).join('')}</div>` : '');
+
+  $('#histBody').querySelectorAll('.piece[data-id]').forEach(b =>
+    b.onclick = () => accionMarcarSabido(b.dataset.id));
+
+  /* Una barra por unidad: cuánto se ha visto y cuánto está firme sobre el
+     total de la unidad. Con nueve unidades es lo único que dice dónde vas. */
+  const filas = UNIDADES.filter(u => u.estado === 'lista').map(u => {
+    const total = armarPool({ modos: TODOS_LOS_MODOS, clase:'0', unidades:[u.n] }).length;
+    if(!total) return '';
+    const pool = armarPool({ modos: TODOS_LOS_MODOS, clase:'0', unidades:[u.n] });
+    const vistos = pool.filter(q => prog[q.id]).length;
+    const fir    = pool.filter(q => prog[q.id] && prog[q.id].b >= 5).length;
+    return `<div class="ubar">
+      <div class="ubar-t"><span>Unidad ${u.n} · ${esc(u.es)}</span><span>${vistos} de ${total}</span></div>
+      <div class="rail"><i style="width:${Math.round(vistos/total*100)}%"></i>
+        <u style="width:${Math.round(fir/total*100)}%"></u></div>
+    </div>`;
+  }).join('');
+  $('#histUnidades').innerHTML = filas
+    ? '<h2 class="sec" style="margin:18px 0 10px">Por unidad</h2>' + filas
+    : '';
 }
+
+async function accionMarcarSabido(id){
+  const esta = jubilado(id);
+  const r = await dialogo({
+    titulo: esc(etiqueta(id)),
+    texto: esta
+      ? 'Está marcado como sabido: vuelve cada 120 días. ¿Lo devuelvo al repaso normal?'
+      : 'Deja de preguntártelo por un tiempo largo. No desaparece: vuelve cada 120 días, y si lo fallas regresa al repaso normal.',
+    botones: esta
+      ? [{ t:'Devolver al repaso', v:'ok', p:true }, { t:'Cancelar', v:null, cancela:true }]
+      : [{ t:'Ya la sé', v:'ok', p:true }, { t:'Cancelar', v:null, cancela:true }]
+  });
+  if(r.boton !== 'ok') return;
+  if(esta) desmarcarAprendido(id); else marcarAprendido(id);
+  pintarInicio();
+}
+
 /* Los ids de frase, hueco y armar son `<t>:<unidad>:<clave>`. Se muestra el
    `es` del ejercicio, que es lo unico que Patricio reconoce de un vistazo en
    el historial; el numero de la clave no le dice nada (plano Anexo A). */
@@ -106,8 +211,9 @@ function enunciado(q){
   return q.promptEs || q.promptJp || etiqueta(q.id);
 }
 
+const PANTALLAS = ['scPrimero','scHome','scMenu','scPlay','scEnd'];
 function ir(pantalla){
-  ['scHome','scPlay','scEnd'].forEach(s => $('#'+s).classList.toggle('hide', s !== pantalla));
+  PANTALLAS.forEach(s => $('#'+s).classList.toggle('hide', s !== pantalla));
   window.scrollTo({ top:0, behavior:'instant' in window ? 'instant' : 'auto' });
 }
 
@@ -132,7 +238,7 @@ function pintarPregunta(){
       (q.promptJp ? `<div class="prompt">${esc(q.promptJp)}</div>` : '') +
       (q.lectura ? `<p class="sub">${esc(q.lectura)}</p>` : '') +
       (q.sub ? `<p class="sub">${esc(q.sub)}</p>` : '') +
-      (q.pide ? `<p class="ask">Escribe la <b>${esc(q.pide)}</b>${q.forma?' <span class="sub">('+esc(q.forma)+')</span>':''}</p>`
+      (q.pide ? `<p class="ask">Escribe la <b>${esc(q.pide)}</b>${q.formaDesc?' <span class="sub">('+esc(q.formaDesc)+')</span>':''}</p>`
               : `<p class="ask">Escríbelo en japonés</p>`) +
       `<input type="text" id="inp" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">`;
     acciones(true);
@@ -236,7 +342,10 @@ function comprobar(){
 function resolver(bien, estado, modelo, q, rendido){
   respondida = true;
   if(bien) aciertos++;
-  marcar(q.id, bien && estado === 'ok');
+  /* la copia se toma antes de tocar el registro: "La tenía bien" la restaura
+     en vez de marcar acierto sobre el registro ya penalizado (Anexo A) */
+  const previo = copiaDe(q.id);
+  marcar(q.id, estado);
   if(!bien) fallos.push({ q, modelo });
 
   const fb = $('#fb');
@@ -252,15 +361,24 @@ function resolver(bien, estado, modelo, q, rendido){
 
   const A = $('#qActs');
   A.innerHTML = `<button class="primary" id="btnNext">${idx+1 >= cola.length ? 'Ver resumen' : 'Siguiente'}</button>` +
-    (estado !== 'ok' && !rendido ? `<button class="ghost thin" id="btnOk">La tenía bien</button>` : '');
+    (estado !== 'ok' && !rendido ? `<button class="ghost thin" id="btnOk">La tenía bien</button>` : '') +
+    (estado === 'ok' && !jubilado(q.id) ? `<button class="ghost thin" id="btnSabida">Ya la sé</button>` : '');
   $('#btnNext').onclick = siguiente;
   if($('#btnOk')) $('#btnOk').onclick = () => {
-    aciertos++; marcar(q.id, true);
+    aciertos++;
+    restaurar(q.id, previo);
+    marcar(q.id, 'ok');
     fallos = fallos.filter(f => f.q !== q);
     $('#btnOk').remove();
     $('#mScore').textContent = aciertos + ' correctas';
     fb.className = 'fb show ok';
     fb.querySelector('.head').textContent = 'Marcada como correcta';
+  };
+  if($('#btnSabida')) $('#btnSabida').onclick = () => {
+    marcarAprendido(q.id);
+    $('#btnSabida').remove();
+    fb.insertAdjacentHTML('beforeend',
+      '<div class="why">Marcada como sabida. Vuelve dentro de 120 días.</div>');
   };
   $('#btnNext').focus();
 }
@@ -284,8 +402,31 @@ function terminar(){
     miss.innerHTML = '<tr><th>Pregunta</th><th>Respuesta</th></tr>' + fallos.map(f =>
       `<tr><td>${esc(enunciado(f.q))}</td><td class="jp">${esc(f.modelo)}</td></tr>`).join('');
   } else $('#endMissCard').classList.add('hide');
+
+  /* Cuántas quedan para hoy: sin esto, el tope por atraso es invisible. */
+  const pan = panoramaHoy();
+  $('#endPend').textContent = pan.vencidas
+    ? 'Te quedan ' + pan.vencidas + ' vencidas para hoy.'
+    : 'No queda nada vencido para hoy.';
+  $('#btnMas').classList.toggle('hide', !pan.vencidas && !pan.nuevas);
+
   ir('scEnd');
   pintarHistorial();
+}
+
+/* "Seguir 10 más": arma otra cola con la misma regla. Es lo que cubre la
+   sesión de quince minutos sin agregar una opción de sesión por tiempo. */
+function seguirMas(){
+  const guardado = sel.largo;
+  sel.largo = 10;
+  const r = construir(false);
+  sel.largo = guardado;
+  if(!r.cola.length){
+    dialogo({ titulo:'No queda nada por ahora', texto:'Vuelve mañana, o usa "Elegir qué practicar" para repasar lo que quieras.' });
+    return;
+  }
+  idx = 0; aciertos = 0; fallos = [];
+  ir('scPlay'); pintarPregunta();
 }
 
 /* ═══════════ dialogos propios ═══════════ */

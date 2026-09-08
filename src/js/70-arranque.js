@@ -1,24 +1,37 @@
 /* Dojo Marugoto - arranque
-   M1: el almacen se inicia antes del primer render, porque puede migrar desde
-   el Tema 8, y los botones de progreso se cablean aqui. */
+   El almacen se inicia antes del primer render, porque puede migrar desde el
+   Tema 8, y de ahi sale si toca la pantalla de primer uso o el inicio. */
 
-function empezar(){
-  construir();
+/* `manual` distingue la sesion del menu de la de "Practicar hoy". Las dos
+   pasan por el mismo programador; lo unico que cambia es el pool (plano 2.4). */
+function empezar(manual){
+  const r = construir(!!manual);
   if(!cola.length){
     dialogo({
       titulo: 'No hay preguntas con esa combinación',
-      texto: 'Prueba con otra clase o marca otro modo.'
+      texto: manual
+        ? 'Prueba con otra unidad, otra clase, o marca otro modo.'
+        : 'Todavía no hay contenido para practicar.'
     });
     return;
   }
   idx = 0; aciertos = 0; fallos = [];
   ir('scPlay'); pintarPregunta();
+  return r;
 }
 
-$('#btnStart').onclick = empezar;
-$('#btnAgain').onclick = empezar;
-$('#btnHome').onclick = () => { pintarInicio(); ir('scHome'); };
-$('#btnQuit').onclick = () => { cola = cola.slice(0, idx); terminar(); };
+$('#btnStart').onclick       = () => empezar(false);
+$('#btnStartManual').onclick = () => empezar(true);
+$('#btnMas').onclick         = seguirMas;
+$('#btnMenu').onclick        = () => { pintarMenu(); ir('scMenu'); };
+$('#btnVolver').onclick      = () => { pintarInicio(); ir('scHome'); };
+$('#btnHome').onclick        = () => { pintarInicio(); ir('scHome'); };
+$('#btnQuit').onclick        = () => { cola = cola.slice(0, idx); terminar(); };
+
+$('#btnPrimero').onclick = () => {
+  sel.primerUso = false; saveCfg();
+  pintarInicio(); ir('scHome');
+};
 
 $('#btnExport').onclick = accionExportar;
 $('#btnImport').onclick = accionImportar;
@@ -37,7 +50,17 @@ document.addEventListener('keydown', e => {
 });
 
 iniciarProgreso();
-pintarInicio();
+
+/* Las dos preguntas del primer uso solo aparecen con el almacen vacio y sin
+   migracion: quien ya tenia historial no pasa por ahi (Anexo B). */
+if(sel.primerUso && !Object.keys(prog).length && unidadesListas().length){
+  pintarPrimerUso();
+  ir('scPrimero');
+} else {
+  if(sel.primerUso){ sel.primerUso = false; saveCfg(); }
+  pintarInicio();
+  ir('scHome');
+}
 
 /* El aviso de migracion se muestra una sola vez, en el arranque en que ocurre.
    Si algun id no se pudo traducir se dice cuantos: con la tabla bien generada

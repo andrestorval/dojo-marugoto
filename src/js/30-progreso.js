@@ -50,30 +50,60 @@ function registroSano(r, dia){
 let prog = {};
 function save(){ escribirLS(LS, prog); }
 function box(id){ return (prog[id] && prog[id].b) || 0; }
+function jubilado(id){ return esJubilado(prog[id]); }
 
-function marcar(id, bien){
-  const p = prog[id] || registroNuevo(HOY);
-  p.v++; p.last = HOY;
-  if(bien){ p.b = Math.min(4, p.b + 1); } else { p.b = 0; p.f++; }
-  /* La escalera completa hasta el paso 7, el `casi` que no castiga y el
-     marcado manual entran en M2 junto con la seleccion por vencimiento. */
-  p.int = ESCALERA[p.b];
-  p.due = HOY + p.int;
-  prog[id] = p; save();
+/* Copia antes de tocar el registro. La usa "La tenia bien": el archivo
+   congelado marcaba acierto sobre el registro ya penalizado, con lo que `f`
+   quedaba incrementado y `b` subia desde 0 en vez de desde el valor previo
+   (Anexo A del plano). */
+function copiaDe(id){
+  const r = prog[id];
+  return r ? Object.assign({}, r) : null;
+}
+function restaurar(id, copia){
+  if(copia) prog[id] = copia; else delete prog[id];
+}
+
+/* resultado in ok | casi | mal */
+function marcar(id, resultado){
+  prog[id] = transicion(prog[id] || registroNuevo(HOY), resultado, HOY);
+  save();
+}
+
+function marcarAprendido(id){
+  prog[id] = transicionManual(prog[id] || registroNuevo(HOY), HOY);
+  save();
+}
+function desmarcarAprendido(id){
+  if(!prog[id]) return;
+  prog[id] = transicionDesmarcar(prog[id], HOY);
+  save();
 }
 
 /* ═══════════ configuracion ═══════════ */
 
+/* `largo` 20 son seis o siete minutos a un ritmo de 15 a 25 segundos por
+   respuesta (plano 2.4). `unidades` vacio significa todas las listas.
+   `primerUso` se apaga en cuanto el usuario contesta las dos preguntas del
+   arranque, y no vuelve a preguntar (Anexo B). */
 const CFG_BASE = {
-  modos:['conj','hueco'], clase:'0', largo:15,
-  /* usados por el programador de M2; se guardan desde ya para que la
-     exportacion de M1 sea legible por la version siguiente */
-  cupoNuevos:6, unidadActual:8, unidades:[]
+  modos:['vocabJP','vocabES','conj','hueco','armar','frase'],
+  clase:'0', largo:20, cupoNuevos:6, unidadActual:0, unidades:[],
+  primerUso:true, manuales:0
 };
 let sel = Object.assign({}, CFG_BASE);
 function saveCfg(){ escribirLS(LS_CFG, sel); }
 function cargarCfg(c){
   if(c && typeof c === 'object') sel = Object.assign({}, CFG_BASE, c);
+}
+
+/* Unidad en curso por defecto: la mas alta que tenga contenido terminado. */
+function unidadPorDefecto(){
+  const listas = UNIDADES.filter(u => u.estado === 'lista').map(u => u.n);
+  return listas.length ? Math.max.apply(null, listas) : 0;
+}
+function unidadActual(){
+  return sel.unidadActual || unidadPorDefecto();
 }
 
 /* ═══════════ migracion desde el Tema 8 ═══════════ */
@@ -116,7 +146,9 @@ function migrarT8(progT8, cfgT8, dia){
     cfg: Object.assign({}, CFG_BASE, {
       modos: Array.isArray(c.modos) && c.modos.length ? c.modos : CFG_BASE.modos,
       clase: c.clase || '0',
-      largo: Number.isFinite(+c.largo) ? +c.largo : CFG_BASE.largo
+      largo: Number.isFinite(+c.largo) ? +c.largo : CFG_BASE.largo,
+      /* quien ya tenia historial no pasa por las preguntas del primer uso */
+      primerUso: false
     }),
     perdidos
   };

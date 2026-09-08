@@ -64,11 +64,16 @@ export function cargarMotor({ unidades = null, archivos = SIN_DOM, almacen = nul
       migrarT8, exportar, leerExportacion, desfase, fusionar,
       respaldar, hayRespaldo, aplicarImportacion, deshacerImportacion,
       iniciarProgreso, nombreExportacion,
-      construir, pesado, enClase,
+      copiaDe, restaurar, marcarAprendido, desmarcarAprendido, jubilado,
+      unidadPorDefecto, unidadActual, registroNuevo,
+      transicion, transicionManual, transicionDesmarcar, esJubilado,
+      ordenUnidades, ordenEntrada, seleccionar, panorama, baraja,
+      armarPool, distractores, construir, panoramaHoy, TODOS_LOS_MODOS,
+      dependenciaCumplida, huecosDelPatron, sinTildes, chocan,
       /* prog y sel se reasignan; hay que leerlos por función */
       estado: () => ({ prog, sel, avisoMigracion }),
       fijarProg: (p) => { prog = p; },
-      fijarSel: (s) => { sel = s; },
+      fijarSel: (s) => { sel = Object.assign({}, sel, s); },
       cola: () => cola`
       : '') +
     `

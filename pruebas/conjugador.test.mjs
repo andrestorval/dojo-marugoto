@@ -63,9 +63,11 @@ test('reglaDe reproduce el vector', () => {
 
 test('ninguna conjugación devuelve undefined ni deja el verbo sin tocar', () => {
   const fallos = [];
+  /* las formas ya no llevan el campo c: cuáles practica cada clase lo dice
+     la unidad (Anexo A del plano) */
   for (const vb of m.VERBOS) {
-    for (const f of m.FORMAS) {
-      if (!f.c.includes(vb.c)) continue;
+    for (const fid of m.TEMA.formas[vb.c]) {
+      const f = m.FORMAS.find((x) => x.id === fid);
       const s = m.conjugar(vb, f.id);
       if (typeof s !== 'string' || !s || s.includes('undefined')) {
         fallos.push(vb.kana + ' ' + f.id + ': ' + s);

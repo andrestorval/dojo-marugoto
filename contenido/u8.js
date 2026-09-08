@@ -11,6 +11,14 @@ CONTENIDO.unidades.push({
   paginas: { 1: "96-100", 2: "101-105" },
   estado: "lista",
 
+  /* Formas de conjugacion que se practican en cada clase de esta unidad.
+     Reemplaza al campo c de FORMAS: 9 formas en la clase 1 y 8 en la 2,
+     los mismos cruces que producia el archivo congelado. */
+  formas: {
+    1: ["masu", "masen", "nai", "ta", "te", "nakatta", "sou", "atode", "pot"],
+    2: ["masu", "masen", "nai", "ta", "te", "nagara", "tari", "imp"]
+  },
+
   /* --- VERBOS ---------------------------------------------------
      kana  : forma diccionario en kana (base de la conjugación)
      kanji : forma diccionario con kanji (si no tiene, repite kana)
