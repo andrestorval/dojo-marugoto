@@ -123,10 +123,10 @@ y tu revisión. La prueba que lo detecta ya está escrita en
 `pruebas/normalizador.test.mjs`, marcada `todo`: informa sin bloquear, y pasa a
 exigir en cuanto se corrija.
 
-**El dato de la sección 0 del plano sigue abierto**: desde qué origen abres hoy
-la app del Tema 8 en el celular. Condiciona si la migración de M1 usa la vía A
-(automática, mismo origen) o la vía B (el puente con botón de exportar). M1
-construye las dos de todos modos, pero saberlo evita probar la equivocada.
+**El dato de la sección 0 del plano quedó resuelto el mismo día**: Andrés abre
+la app desde un archivo guardado, así que la migración de M1 usa la vía B, el
+puente con botón de exportar. La vía A se descarta y no se construye. Está en
+`DECISIONES.md`.
 
 ## Para aprobar
 
@@ -134,3 +134,8 @@ construye las dos de todos modos, pero saberlo evita probar la equivocada.
 de archivo único. Ábrela en el celular junto a la antigua y confirma que se ve
 y responde igual, con la tipografía del sistema. El sello `77427ed0` en el pie
 identifica esta compilación.
+
+## Aprobación
+
+Patricio abrió `2026-09-08 Dojo Marugoto M0 - archivo unico.html` en el celular
+el 2026-09-08 y confirmó que se ve bien. M0 cerrado.

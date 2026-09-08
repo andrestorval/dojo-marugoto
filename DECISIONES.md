@@ -51,6 +51,26 @@ defecto es 8 y la pregunta de primer uso muestra solo las unidades con
 `estado: "lista"`. Deja sin efecto, por ahora, la vía de utilidad temprana de
 8.6 que consistía en adelantar la unidad de la clase en curso.
 
+**El filtro de sesión es por unidad, con la clase conservada un nivel más
+abajo.** Confirma lo que el plano ya definía y responde a una pregunta expresa
+de Andrés, que echaba de menos el selector de clase de la app del Tema 8. El
+menú "Elegir qué practicar" queda: modos, unidades (chips múltiples, solo las
+que tengan `estado: "lista"`), clase (todas / 1 / 2), largo, nuevos por sesión.
+La selección de unidades es un conjunto, no una unidad sola: se pueden pedir
+varias a la vez. La clase deja de ser el filtro principal porque con nueve
+unidades "clase 1" mezcla la primera mitad de nueve unidades distintas, pero
+sigue disponible para repasar media unidad. El campo `c` de cada ítem se
+mantiene en el contenido en cualquier caso: lo usan las páginas del libro y el
+orden de entrada de ítems nuevos de 2.5.
+
+**"Practicar hoy" ignora la selección de unidades y mezcla todo lo vencido.**
+También confirma el plano (Anexo B). Es lo que hace que el repaso espaciado
+funcione: un ítem de la unidad 2 que toca repasar hoy vuelve hoy, aunque Andrés
+esté enfocado en la 7. El menú manual queda para la sesión dirigida, y esa
+sesión también pasa por el programador y también registra progreso. Se descartó
+convertir la selección de unidades en un ajuste permanente que mandara sobre
+"Practicar hoy", y se descartó preguntar al empezar cada sesión.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se
