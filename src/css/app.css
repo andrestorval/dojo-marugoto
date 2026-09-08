@@ -187,3 +187,33 @@ kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--l
 .ubar .rail u{position:absolute; left:0; top:0; height:100%; display:block;
   background:var(--ok); border-radius:99px}
 .piece[data-id]{cursor:pointer; font-family:var(--ui); font-size:.9rem}
+
+/* ---- material de estudio ---- */
+.mat{display:grid; gap:10px}
+.mat button{display:block; width:100%; text-align:left; padding:13px 15px}
+.mat .m-t{display:flex; gap:10px; align-items:baseline; justify-content:space-between}
+.mat .m-jp{font-family:var(--jp); font-size:1.18rem; font-weight:700; color:var(--ink)}
+.mat .m-n{color:var(--muted); font-size:.76rem; font-variant-numeric:tabular-nums; flex:none}
+.mat .m-u{display:block; color:var(--ink-2); font-size:.9rem; line-height:1.45; margin-top:5px}
+.mat button:hover .m-jp{color:var(--ai)}
+.matlista{display:grid; grid-template-columns:1fr 1fr; gap:4px 14px}
+@media(max-width:560px){ .matlista{grid-template-columns:1fr} }
+.matlista div{display:flex; gap:8px; justify-content:space-between; padding:6px 0;
+  border-bottom:1px solid var(--line); font-size:.92rem}
+.matlista .w-jp{font-family:var(--jp); font-size:1.05rem}
+.matlista .w-es{color:var(--muted); text-align:right}
+.matlista .visto{color:var(--ok)}
+.ficha .f-uso{color:var(--ink-2); font-size:.98rem; line-height:1.5; margin:0 0 14px}
+.ficha .f-ej{font-family:var(--jp); font-size:1.24rem; line-height:1.5; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:12px 14px}
+.ficha .f-ej + .f-ej{margin-top:8px}
+.ficha .f-ej small{display:block; font-family:var(--ui); font-size:.84rem; color:var(--muted); margin-top:5px}
+.ficha table{width:100%; border-collapse:collapse; margin-top:6px; font-size:.92rem}
+.ficha th{text-align:left; font-size:.7rem; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); border-bottom:1px solid var(--line); padding:7px 6px}
+.ficha td{border-bottom:1px solid var(--line); padding:9px 6px; vertical-align:top}
+.ficha td.jp{font-family:var(--jp); font-size:1.12rem; white-space:nowrap}
+.ficha .f-nota{color:var(--muted); font-size:.86rem; margin-top:12px; line-height:1.5}
+.ficha .tblwrap{margin-top:6px}
+.ficha td.jp small{white-space:normal}
+@media(max-width:420px){ .ficha table{font-size:.86rem} .ficha td.jp{font-size:1.02rem} }

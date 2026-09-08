@@ -25,6 +25,8 @@ $('#btnStartManual').onclick = () => empezar(true);
 $('#btnMas').onclick         = seguirMas;
 $('#btnMenu').onclick        = () => { pintarMenu(); ir('scMenu'); };
 $('#btnVolver').onclick      = () => { pintarInicio(); ir('scHome'); };
+$('#btnMateria').onclick     = () => { pintarMateria(); ir('scMateria'); };
+$('#btnMatVolver').onclick   = () => { pintarInicio(); ir('scHome'); };
 $('#btnHome').onclick        = () => { pintarInicio(); ir('scHome'); };
 $('#btnQuit').onclick        = () => { cola = cola.slice(0, idx); terminar(); };
 

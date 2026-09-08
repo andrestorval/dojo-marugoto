@@ -42,8 +42,9 @@
       <button class="primary big" id="btnStart">Practicar hoy</button>
       <p class="sub" id="hoyLinea" style="text-align:center; margin-top:10px"></p>
       <p class="sub hide" id="hoyAviso" style="margin-top:10px"></p>
-      <div class="acts" style="margin-top:14px">
+      <div class="acts wrap" style="margin-top:14px">
         <button class="ghost" id="btnMenu">Elegir qué practicar</button>
+        <button class="ghost" id="btnMateria">Ver la materia</button>
       </div>
     </div>
 
@@ -105,6 +106,20 @@
       <button class="primary big" id="btnStartManual">Practicar con esta selección</button>
       <div class="acts" style="margin-top:12px">
         <button class="ghost" id="btnVolver">Volver al inicio</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MATERIA ══════════ -->
+  <section id="scMateria" class="hide">
+    <div class="card">
+      <h2 class="sec">La materia de cada unidad</h2>
+      <div class="chipsrow" id="matUnidades"></div>
+    </div>
+    <div id="matCuerpo"></div>
+    <div class="card">
+      <div class="acts">
+        <button class="ghost" id="btnMatVolver">Volver al inicio</button>
       </div>
     </div>
   </section>

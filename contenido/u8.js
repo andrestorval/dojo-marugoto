@@ -19,6 +19,83 @@ CONTENIDO.unidades.push({
     2: ["masu", "masen", "nai", "ta", "te", "nagara", "tari", "imp"]
   },
 
+  /* --- PATRONES DE LA UNIDAD ------------------------------------
+     pat     : la etiqueta tal como aparece en FRASES y HUECOS
+     uso     : una linea en espanol sobre cuando se emplea
+     ejemplo : una oracion de la unidad que lo usa
+     tipo    : gramatica | expresion. Las expresiones no son patrones
+               gramaticales; se listan porque FRASES las usa como `pat` y el
+               validador de M5 exige que todo `pat` exista aqui.
+
+     Las lineas `uso` las redacte yo y las revisa Patricio con el libro al
+     lado. Son una linea de cuando se usa, no una explicacion gramatical.
+  --------------------------------------------------------------- */
+  patrones: [
+    { pat:"〜そうです", tipo:"gramatica",
+      uso:"Para transmitir lo que dijo otra persona o lo que se anunció. Se pega a la forma simple del verbo.",
+      ejemplo:"あと20分ほどで、手続きが始まるそうです。" },
+    { pat:"N + だそうです", tipo:"gramatica",
+      uso:"El mismo «dicen que», pero cuando lo que se transmite es un sustantivo: entonces hace falta だ.",
+      ejemplo:"25番だそうです。" },
+    { pat:"adj-な + だそうです", tipo:"gramatica",
+      uso:"El mismo «dicen que» con un adjetivo な: también pide だ delante de そうです.",
+      ejemplo:"あのホテルはべんりだそうです。" },
+    { pat:"〜た後で", tipo:"gramatica",
+      uso:"Para ordenar dos acciones: primero una y después la otra. El primer verbo va en forma た.",
+      ejemplo:"チェックインした後で、カフェでお茶を飲んだ。" },
+    { pat:"〜てみましょう", tipo:"gramatica",
+      uso:"Para proponer probar algo sin saber si va a resultar: vamos a ver qué pasa.",
+      ejemplo:"とにかく行ってみましょう。" },
+    { pat:"とにかく〜てみましょう", tipo:"gramatica",
+      uso:"El mismo «probemos», con とにかく delante: da igual lo demás, probemos.",
+      ejemplo:"とにかく行ってみましょう。" },
+    { pat:"forma た", tipo:"gramatica",
+      uso:"El pasado plano, sin cortesía. Es lo que sale hablando solo o entre cercanos.",
+      ejemplo:"かばんが1つない。どこかに忘れたかな。" },
+    { pat:"〜ながら", tipo:"gramatica",
+      uso:"Dos acciones a la vez, de la misma persona. La acción principal va al final.",
+      ejemplo:"コーヒーを飲みながら、メールをチェックします。" },
+    { pat:"〜ながら + 〜てくれる", tipo:"gramatica",
+      uso:"Dos acciones a la vez y, además, alguien las hace por ti.",
+      ejemplo:"歩きながら、ホテルの歴史を説明してくれました。" },
+    { pat:"〜たり〜たり", tipo:"gramatica",
+      uso:"Para enumerar actividades sin agotar la lista: esto, aquello, y cosas así.",
+      ejemplo:"外国語の勉強をしたり、寝たりしています。" },
+    { pat:"他動詞", tipo:"gramatica",
+      uso:"Verbo transitivo: alguien hace algo a una cosa. La cosa lleva を.",
+      ejemplo:"ホテルの人が電気をつけます。" },
+    { pat:"自動詞", tipo:"gramatica",
+      uso:"Verbo intransitivo: la cosa hace algo sola, o le pasa algo. La cosa lleva が.",
+      ejemplo:"電気がつきません。" },
+    { pat:"〜たことがあります", tipo:"gramatica",
+      uso:"Para decir que se ha tenido una experiencia alguna vez en la vida.",
+      ejemplo:"空港でトラブルにあったことがありますか。" },
+    { pat:"〜てもらう", tipo:"gramatica",
+      uso:"Cuando consigues que otro haga algo para ti.",
+      ejemplo:"部屋をかえてもらいました。" },
+    { pat:"〜てあげる", tipo:"gramatica",
+      uso:"Cuando haces algo por otro.",
+      ejemplo:"外国の人に親切にしてあげたいです。" },
+    { pat:"命令形", tipo:"gramatica",
+      uso:"La orden seca, sin cortesía. En la vida real: emergencias, letreros y gritos.",
+      ejemplo:"火事だ、にげろ！" },
+    { pat:"何て言ってましたか", tipo:"expresion",
+      uso:"Para preguntar qué acaban de decir cuando no alcanzaste a oír el aviso.",
+      ejemplo:"今のアナウンス、何て言ってましたか。" },
+    { pat:"ひどい目にあう", tipo:"expresion",
+      uso:"Expresión hecha: pasarlo fatal, que a uno le vaya mal.",
+      ejemplo:"ひどい目にあいました。" },
+    { pat:"abordaje", tipo:"expresion",
+      uso:"Fórmula para dirigirse a un desconocido y abrir conversación.",
+      ejemplo:"すみません。あのう、同じフライトですか。" },
+    { pat:"pedir ayuda", tipo:"expresion",
+      uso:"Fórmulas para pedir auxilio en una situación de apuro.",
+      ejemplo:"助けて！" },
+    { pat:"pedir paso", tipo:"expresion",
+      uso:"Fórmula para pedir que te dejen bajar o pasar.",
+      ejemplo:"すみません、おります！" }
+  ],
+
   /* --- VERBOS ---------------------------------------------------
      kana  : forma diccionario en kana (base de la conjugación)
      kanji : forma diccionario con kanji (si no tiene, repite kana)
@@ -213,31 +290,31 @@ CONTENIDO.unidades.push({
 
   /* --- FRASES CON HUECO ----------------------------------------- */
   huecos: [
-    { k:"h8-01", pre:"あと20分ほどで、手続きが（", post:"）。", hint:"始まります → 〜そうです", ok:["始まるそうです","はじまるそうです"], c:1, es:"Dicen que los trámites empiezan en unos 20 minutos." },
-    { k:"h8-02", pre:"飛行機の出発が1時間（", post:"）。", hint:"おくれます → 〜そうです", ok:["おくれるそうです"], c:1, es:"Dicen que la salida se atrasa una hora." },
-    { k:"h8-03", pre:"出発ゲートが（", post:"）。", hint:"変わりました → 〜そうです", ok:["変わったそうです","かわったそうです"], c:1, es:"Dicen que cambió la puerta." },
-    { k:"h8-04", pre:"今日は天気が悪くて、飛行機が（", post:"）。", hint:"とびません → 〜そうです", ok:["とばないそうです"], c:1, es:"Dicen que hoy no vuela." },
-    { k:"h8-05", pre:"チェックイン（", post:"）、カフェでお茶を飲んだ。", hint:"します → 〜た後で", ok:["した後で","したあとで"], c:1, es:"Después del check-in…" },
-    { k:"h8-06", pre:"空港に（", post:"）、メールをチェックします。", hint:"つきます → 〜た後で", ok:["ついた後で","ついたあとで"], c:1, es:"Una vez llegado al aeropuerto…" },
-    { k:"h8-07", pre:"とにかく（", post:"）。", hint:"行きます → 〜てみましょう", ok:["行ってみましょう","いってみましょう"], c:1, es:"En fin, vamos a ver." },
-    { k:"h8-08", pre:"かばんが1つない。どこかに（", post:"）かな。", hint:"忘れます → forma た", ok:["忘れた","わすれた"], c:1, es:"¿La habré olvidado en alguna parte?" },
-    { k:"h8-09", pre:"ホテルの人が電気を（", post:"）。", hint:"transitivo, forma ます", ok:["つけます"], c:2, es:"El personal enciende la luz." },
-    { k:"h8-10", pre:"電気が（", post:"）。", hint:"intransitivo, forma ません", ok:["つきません"], c:2, es:"La luz no se enciende." },
-    { k:"h8-11", pre:"まどが（", post:"）。", hint:"intransitivo, forma ません", ok:["しまりません"], c:2, es:"La ventana no cierra." },
-    { k:"h8-12", pre:"田中さんがまどを（", post:"）。", hint:"transitivo, forma ました", ok:["あけました"], c:2, es:"Tanaka abrió la ventana." },
-    { k:"h8-13", pre:"シャワーのお湯が（", post:"）。", hint:"intransitivo, forma ません", ok:["出ません","でません"], c:2, es:"No sale agua caliente de la ducha." },
-    { k:"h8-14", pre:"ホテルの人がトイレの水を（", post:"）。", hint:"transitivo, forma ました", ok:["止めました","とめました"], c:2, es:"El personal cortó el agua del baño." },
-    { k:"h8-15", pre:"セーフティボックスのかぎが（", post:"）。", hint:"intransitivo, forma ません", ok:["かかりません"], c:2, es:"La caja fuerte no cierra con llave." },
-    { k:"h8-16", pre:"へやに入ったら、まどが（", post:"）ままでした。", hint:"intransitivo, forma た", ok:["あいた"], c:2, es:"La ventana estaba abierta." },
-    { k:"h8-17", pre:"コーヒーを（", post:"）、メールをチェックしました。", hint:"飲みます → 〜ながら", ok:["飲みながら","のみながら"], c:2, es:"Revisé el correo mientras tomaba café." },
-    { k:"h8-18", pre:"マッサージを（", post:"）、ねむってしまいました。", hint:"してもらいます → 〜ながら", ok:["してもらいながら"], c:2, es:"Me quedé dormido mientras me hacían el masaje." },
-    { k:"h8-19", pre:"子どもたちは、おかしを（", post:"）、ゲームをしていました。", hint:"食べます → 〜ながら", ok:["食べながら","たべながら"], c:2, es:"Los niños jugaban mientras comían dulces." },
-    { k:"h8-20", pre:"アリさんは、サインを（", post:"）、出発ゲートをさがしました。", hint:"見ます → 〜ながら", ok:["見ながら","みながら"], c:2, es:"Ali buscó la puerta mirando los letreros." },
-    { k:"h8-21", pre:"私のむすめは、空港で（", post:"）、友だちとわかれました。", hint:"なきます → 〜ながら", ok:["なきながら"], c:2, es:"Mi hija se despidió llorando." },
-    { k:"h8-22", pre:"ガイドブックを（", post:"）、旅行の計画をたてます。", hint:"読みます → 〜ながら", ok:["読みながら","よみながら"], c:2, es:"Planifico el viaje leyendo la guía." },
-    { k:"h8-23", pre:"となりに座った人と（", post:"）、すごします。", hint:"話します → 〜ながら", ok:["話しながら","はなしながら"], c:2, es:"Paso el rato conversando con el de al lado." },
-    { k:"h8-24", pre:"外国語の勉強を（", post:"）、（", post2:"）しています。", hint:"します / 寝ます → 〜たり〜たり", ok:["したり"], ok2:["寝たり","ねたり"], c:2, es:"Estudio idiomas, duermo, cosas así." },
-    { k:"h8-25", pre:"へたな英語で人に（", post:"）、親切な人に助けて（", post2:"）しました。", hint:"たのみます / もらいます → 〜たり〜たり", ok:["たのんだり"], ok2:["もらったり"], c:2, es:"Pedí ayuda en mal inglés, dejé que me ayudaran…" }
+    { k:"h8-01", pat:"〜そうです", pre:"あと20分ほどで、手続きが（", post:"）。", hint:"始まります → 〜そうです", ok:["始まるそうです","はじまるそうです"], c:1, es:"Dicen que los trámites empiezan en unos 20 minutos." },
+    { k:"h8-02", pat:"〜そうです", pre:"飛行機の出発が1時間（", post:"）。", hint:"おくれます → 〜そうです", ok:["おくれるそうです"], c:1, es:"Dicen que la salida se atrasa una hora." },
+    { k:"h8-03", pat:"〜そうです", pre:"出発ゲートが（", post:"）。", hint:"変わりました → 〜そうです", ok:["変わったそうです","かわったそうです"], c:1, es:"Dicen que cambió la puerta." },
+    { k:"h8-04", pat:"〜そうです", pre:"今日は天気が悪くて、飛行機が（", post:"）。", hint:"とびません → 〜そうです", ok:["とばないそうです"], c:1, es:"Dicen que hoy no vuela." },
+    { k:"h8-05", pat:"〜た後で", pre:"チェックイン（", post:"）、カフェでお茶を飲んだ。", hint:"します → 〜た後で", ok:["した後で","したあとで"], c:1, es:"Después del check-in…" },
+    { k:"h8-06", pat:"〜た後で", pre:"空港に（", post:"）、メールをチェックします。", hint:"つきます → 〜た後で", ok:["ついた後で","ついたあとで"], c:1, es:"Una vez llegado al aeropuerto…" },
+    { k:"h8-07", pat:"〜てみましょう", pre:"とにかく（", post:"）。", hint:"行きます → 〜てみましょう", ok:["行ってみましょう","いってみましょう"], c:1, es:"En fin, vamos a ver." },
+    { k:"h8-08", pat:"forma た", pre:"かばんが1つない。どこかに（", post:"）かな。", hint:"忘れます → forma た", ok:["忘れた","わすれた"], c:1, es:"¿La habré olvidado en alguna parte?" },
+    { k:"h8-09", pat:"他動詞", pre:"ホテルの人が電気を（", post:"）。", hint:"transitivo, forma ます", ok:["つけます"], c:2, es:"El personal enciende la luz." },
+    { k:"h8-10", pat:"自動詞", pre:"電気が（", post:"）。", hint:"intransitivo, forma ません", ok:["つきません"], c:2, es:"La luz no se enciende." },
+    { k:"h8-11", pat:"自動詞", pre:"まどが（", post:"）。", hint:"intransitivo, forma ません", ok:["しまりません"], c:2, es:"La ventana no cierra." },
+    { k:"h8-12", pat:"他動詞", pre:"田中さんがまどを（", post:"）。", hint:"transitivo, forma ました", ok:["あけました"], c:2, es:"Tanaka abrió la ventana." },
+    { k:"h8-13", pat:"自動詞", pre:"シャワーのお湯が（", post:"）。", hint:"intransitivo, forma ません", ok:["出ません","でません"], c:2, es:"No sale agua caliente de la ducha." },
+    { k:"h8-14", pat:"他動詞", pre:"ホテルの人がトイレの水を（", post:"）。", hint:"transitivo, forma ました", ok:["止めました","とめました"], c:2, es:"El personal cortó el agua del baño." },
+    { k:"h8-15", pat:"自動詞", pre:"セーフティボックスのかぎが（", post:"）。", hint:"intransitivo, forma ません", ok:["かかりません"], c:2, es:"La caja fuerte no cierra con llave." },
+    { k:"h8-16", pat:"自動詞", pre:"へやに入ったら、まどが（", post:"）ままでした。", hint:"intransitivo, forma た", ok:["あいた"], c:2, es:"La ventana estaba abierta." },
+    { k:"h8-17", pat:"〜ながら", pre:"コーヒーを（", post:"）、メールをチェックしました。", hint:"飲みます → 〜ながら", ok:["飲みながら","のみながら"], c:2, es:"Revisé el correo mientras tomaba café." },
+    { k:"h8-18", pat:"〜ながら", pre:"マッサージを（", post:"）、ねむってしまいました。", hint:"してもらいます → 〜ながら", ok:["してもらいながら"], c:2, es:"Me quedé dormido mientras me hacían el masaje." },
+    { k:"h8-19", pat:"〜ながら", pre:"子どもたちは、おかしを（", post:"）、ゲームをしていました。", hint:"食べます → 〜ながら", ok:["食べながら","たべながら"], c:2, es:"Los niños jugaban mientras comían dulces." },
+    { k:"h8-20", pat:"〜ながら", pre:"アリさんは、サインを（", post:"）、出発ゲートをさがしました。", hint:"見ます → 〜ながら", ok:["見ながら","みながら"], c:2, es:"Ali buscó la puerta mirando los letreros." },
+    { k:"h8-21", pat:"〜ながら", pre:"私のむすめは、空港で（", post:"）、友だちとわかれました。", hint:"なきます → 〜ながら", ok:["なきながら"], c:2, es:"Mi hija se despidió llorando." },
+    { k:"h8-22", pat:"〜ながら", pre:"ガイドブックを（", post:"）、旅行の計画をたてます。", hint:"読みます → 〜ながら", ok:["読みながら","よみながら"], c:2, es:"Planifico el viaje leyendo la guía." },
+    { k:"h8-23", pat:"〜ながら", pre:"となりに座った人と（", post:"）、すごします。", hint:"話します → 〜ながら", ok:["話しながら","はなしながら"], c:2, es:"Paso el rato conversando con el de al lado." },
+    { k:"h8-24", pat:"〜たり〜たり", pre:"外国語の勉強を（", post:"）、（", post2:"）しています。", hint:"します / 寝ます → 〜たり〜たり", ok:["したり"], ok2:["寝たり","ねたり"], c:2, es:"Estudio idiomas, duermo, cosas así." },
+    { k:"h8-25", pat:"〜たり〜たり", pre:"へたな英語で人に（", post:"）、親切な人に助けて（", post2:"）しました。", hint:"たのみます / もらいます → 〜たり〜たり", ok:["たのんだり"], ok2:["もらったり"], c:2, es:"Pedí ayuda en mal inglés, dejé que me ayudaran…" }
   ],
 
   /* --- ARMAR LA FRASE (piezas desordenadas) ---------------------- */

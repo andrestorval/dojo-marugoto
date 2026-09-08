@@ -211,7 +211,7 @@ function enunciado(q){
   return q.promptEs || q.promptJp || etiqueta(q.id);
 }
 
-const PANTALLAS = ['scPrimero','scHome','scMenu','scPlay','scEnd'];
+const PANTALLAS = ['scPrimero','scHome','scMenu','scMateria','scPlay','scEnd'];
 function ir(pantalla){
   PANTALLAS.forEach(s => $('#'+s).classList.toggle('hide', s !== pantalla));
   window.scrollTo({ top:0, behavior:'instant' in window ? 'instant' : 'auto' });
@@ -601,4 +601,124 @@ async function accionBorrar(){
 
 function pintarAccionesProgreso(){
   $('#btnUndo').classList.toggle('hide', !hayRespaldo());
+}
+
+/* ═══════════ material de estudio ═══════════ */
+
+/* La ficha se arma como HTML porque tiene tabla y ejemplos; `dialogo` recibe
+   texto plano, así que el material usa su propio contenedor sobre el mismo
+   velo. Es el único sitio que necesita marcado dentro del diálogo. */
+function verFicha(f){
+  if(!f) return;
+  const d = $('#dlg');
+  let cuerpo = '';
+
+  if(f.uso) cuerpo += `<p class="f-uso">${esc(f.uso)}</p>`;
+
+  if(f.tipo === 'forma'){
+    cuerpo += `<div class="tblwrap"><table><tr><th>Grupo</th><th>Verbo</th><th>Queda en</th></tr>` +
+      f.grupos.map(g => `<tr>
+        <td>${g.g}</td>
+        <td class="jp">${esc(g.verbo)}<small class="sub" style="display:block">${esc(g.es)}</small></td>
+        <td class="jp">${esc(g.salida)}${g.salida !== g.lectura ? `<small class="sub" style="display:block">${esc(g.lectura)}</small>` : ''}</td>
+      </tr>`).join('') + `</table></div>`;
+    const reglas = f.grupos.filter(g => g.regla);
+    if(reglas.length) cuerpo += `<p class="f-nota">${reglas.map(g => esc(g.regla)).join('<br>')}</p>`;
+    if(f.exc.length) cuerpo += `<p class="f-nota"><b>Excepciones:</b> ` +
+      f.exc.map(e => esc(e.kana) + ' → ' + esc(e.salida)).join(' · ') + `</p>`;
+  } else {
+    cuerpo += f.frases.map(x =>
+      `<div class="f-ej">${esc(x.jp)}${x.es ? `<small>${esc(x.es)}</small>` : ''}</div>`).join('');
+    if(f.huecos) cuerpo += `<p class="f-nota">Lo practicas en ${plural(f.huecos, 'ejercicio')} de hueco.</p>`;
+  }
+
+  d.innerHTML = `<div class="dlgcaja ficha" role="dialog" aria-modal="true">
+    <h2 class="sec">${esc(f.desc || '')}</h2>
+    <div class="prompt" style="margin:0 0 12px; font-size:1.7rem">${esc(f.titulo)}</div>
+    ${cuerpo}
+    <div class="acts"><button class="primary" id="fCerrar">Cerrar</button></div>
+  </div>`;
+  d.classList.remove('hide');
+  const escapar = e => { if(e.key === 'Escape'){ e.preventDefault(); e.stopPropagation(); cerrar(); } };
+  const cerrar = () => {
+    d.classList.add('hide'); d.innerHTML = '';
+    document.removeEventListener('keydown', escapar, true);
+  };
+  $('#fCerrar').onclick = cerrar;
+  document.addEventListener('keydown', escapar, true);
+  $('#fCerrar').focus();
+}
+
+/* "1 ejercicios" delata que nadie leyó la pantalla */
+function plural(n, sing, pl){
+  if(!n) return '';
+  return n + ' ' + (n === 1 ? sing : (pl || sing + 's'));
+}
+
+function filaMaterial(titulo, uso, nota){
+  return `<button class="ghost">
+    <span class="m-t"><span class="m-jp">${esc(titulo)}</span>${nota ? `<span class="m-n">${esc(nota)}</span>` : ''}</span>
+    <span class="m-u">${esc(uso || 'Sin descripción todavía.')}</span>
+  </button>`;
+}
+
+function pintarMateria(){
+  const listas = unidadesListas();
+  if(!sel.matUnidad || !listas.includes(sel.matUnidad)) sel.matUnidad = unidadActual() || listas[0];
+
+  chips('#matUnidades', listas.map(n => [String(n), 'Unidad ' + n]),
+    v => sel.matUnidad === +v, v => { sel.matUnidad = +v; pintarMateria(); });
+
+  const m = materiaDe(sel.matUnidad);
+  const cuerpo = $('#matCuerpo');
+  if(!m){ cuerpo.innerHTML = '<div class="card"><p class="sub">Esa unidad todavía no tiene contenido.</p></div>'; return; }
+
+  const paginas = m.paginas
+    ? 'Clase 1, páginas ' + m.paginas[1] + ' · Clase 2, páginas ' + m.paginas[2]
+    : '';
+
+  const bloque = (titulo, filas, extra) => filas
+    ? `<div class="card"><h2 class="sec">${titulo}</h2>${extra || ''}<div class="mat">${filas}</div></div>` : '';
+
+  cuerpo.innerHTML =
+    `<div class="card">
+       <div class="prompt" style="margin:0; font-size:1.6rem">${esc(m.titulo)}</div>
+       <p class="sub">${esc(m.es)}${paginas ? ' · ' + esc(paginas) : ''}</p>
+       <p class="sub" style="margin-top:8px">${m.gramatica.length} patrones · ${m.formas.length} formas de conjugación · ${m.vocab.length} palabras · ${m.verbos.length} verbos</p>
+     </div>` +
+
+    bloque('Patrones gramaticales',
+      m.gramatica.map(p => filaMaterial(p.pat, p.uso, plural(p.frases + p.huecos, 'ejercicio'))).join(''),
+      '<p class="sub" style="margin:-6px 0 12px">Toca uno para ver el ejemplo y dónde se practica.</p>') +
+
+    bloque('Formas de conjugación',
+      m.formas.map(f => filaMaterial(f.label, f.uso, f.clases.length === 2 ? 'las dos clases' : 'clase ' + f.clases[0])).join(''),
+      '<p class="sub" style="margin:-6px 0 12px">Toca una para ver la regla de cada grupo con un ejemplo.</p>') +
+
+    bloque('Expresiones y fórmulas',
+      m.expresiones.map(p => filaMaterial(p.pat, p.uso, '')).join('')) +
+
+    `<div class="card"><h2 class="sec">Verbos</h2><div class="matlista">` +
+      m.verbos.map(v => `<div><span class="w-jp ${prog['c:'+v.kana+':masu'] ? 'visto' : ''}">${esc(v.kanji || v.kana)}</span><span class="w-es">${esc(v.es)} · G${v.g}</span></div>`).join('') +
+    `</div></div>` +
+
+    `<div class="card"><h2 class="sec">Vocabulario</h2><div class="matlista">` +
+      m.vocab.map(v => `<div><span class="w-jp ${prog['v:'+v.jp+':jp'] ? 'visto' : ''}">${esc(v.jp)}</span><span class="w-es">${esc(v.es)}</span></div>`).join('') +
+    `</div><p class="sub" style="margin-top:10px">En verde, lo que ya has visto en alguna sesión.</p></div>` +
+
+    (m.kanji.length ? `<div class="card"><h2 class="sec">Palabras con kanji</h2><div class="matlista">` +
+      m.kanji.map(v => `<div><span class="w-jp">${esc(v.jp)}</span><span class="w-es">${esc(v.kana)}</span></div>`).join('') +
+    `</div><p class="sub" style="margin-top:10px">El kanji es de reconocimiento: se lee y se identifica, no se escribe.</p></div>` : '');
+
+  /* cablear las fichas por posición dentro de cada bloque */
+  const fuentes = [
+    m.gramatica.map(p => () => fichaPatron(m.n, p.pat)),
+    m.formas.map(f => () => fichaForma(f.id)),
+    m.expresiones.map(p => () => fichaPatron(m.n, p.pat)),
+  ].filter(x => x.length);
+  [...cuerpo.querySelectorAll('.mat')].forEach((bl, i) => {
+    [...bl.querySelectorAll('button')].forEach((b, j) => {
+      if(fuentes[i] && fuentes[i][j]) b.onclick = () => verFicha(fuentes[i][j]());
+    });
+  });
 }

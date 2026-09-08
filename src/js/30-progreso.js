@@ -89,7 +89,7 @@ function desmarcarAprendido(id){
 const CFG_BASE = {
   modos:['vocabJP','vocabES','conj','hueco','armar','frase'],
   clase:'0', largo:20, cupoNuevos:6, unidadActual:0, unidades:[],
-  primerUso:true, manuales:0
+  primerUso:true, manuales:0, matUnidad:0
 };
 let sel = Object.assign({}, CFG_BASE);
 function saveCfg(){ escribirLS(LS_CFG, sel); }
