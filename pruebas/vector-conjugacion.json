@@ -1,0 +1,5460 @@
+{
+ "origen": "fuentes-oficiales/congelado-t8.html",
+ "verbos": 56,
+ "formas": 12,
+ "casos": [
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "のります",
+   "kanji": "乗ります",
+   "aceptadas": [
+    "乗ります",
+    "のります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "のりません",
+   "kanji": "乗りません",
+   "aceptadas": [
+    "乗りません",
+    "のりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "のらない",
+   "kanji": "乗らない",
+   "aceptadas": [
+    "乗らない",
+    "のらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "のった",
+   "kanji": "乗った",
+   "aceptadas": [
+    "乗った",
+    "のった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "te",
+   "salida": "のって",
+   "kanji": "乗って",
+   "aceptadas": [
+    "乗って",
+    "のって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "のらなかった",
+   "kanji": "乗らなかった",
+   "aceptadas": [
+    "乗らなかった",
+    "のらなかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "sou",
+   "salida": "のるそうです",
+   "kanji": "乗るそうです",
+   "aceptadas": [
+    "乗るそうです",
+    "のるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "atode",
+   "salida": "のった後で",
+   "kanji": "乗った後で",
+   "aceptadas": [
+    "乗った後で",
+    "のった後で",
+    "乗ったあとで",
+    "のったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "のる",
+   "g": 1,
+   "forma": "pot",
+   "salida": "のれる",
+   "kanji": "乗れる",
+   "aceptadas": [
+    "乗れる",
+    "のれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "masu",
+   "salida": "とびます",
+   "kanji": null,
+   "aceptadas": [
+    "とびます"
+   ],
+   "regla": "Grupo 1: ぶ → び + ます."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "masen",
+   "salida": "とびません",
+   "kanji": null,
+   "aceptadas": [
+    "とびません"
+   ],
+   "regla": "Grupo 1: ぶ → び + ません."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "nai",
+   "salida": "とばない",
+   "kanji": null,
+   "aceptadas": [
+    "とばない"
+   ],
+   "regla": "Grupo 1: ぶ → ば + ない."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "ta",
+   "salida": "とんだ",
+   "kanji": null,
+   "aceptadas": [
+    "とんだ"
+   ],
+   "regla": "Grupo 1: ぶ → んだ."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "te",
+   "salida": "とんで",
+   "kanji": null,
+   "aceptadas": [
+    "とんで"
+   ],
+   "regla": "Grupo 1: ぶ → んで."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "とばなかった",
+   "kanji": null,
+   "aceptadas": [
+    "とばなかった"
+   ],
+   "regla": "Grupo 1: ぶ → ば + なかった."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "sou",
+   "salida": "とぶそうです",
+   "kanji": null,
+   "aceptadas": [
+    "とぶそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "atode",
+   "salida": "とんだ後で",
+   "kanji": null,
+   "aceptadas": [
+    "とんだ後で",
+    "とんだあとで"
+   ],
+   "regla": "Grupo 1: ぶ → んだ."
+  },
+  {
+   "kana": "とぶ",
+   "g": 1,
+   "forma": "pot",
+   "salida": "とべる",
+   "kanji": null,
+   "aceptadas": [
+    "とべる"
+   ],
+   "regla": "Grupo 1: ぶ → べ + る."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "はじまります",
+   "kanji": "始まります",
+   "aceptadas": [
+    "始まります",
+    "はじまります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "はじまりません",
+   "kanji": "始まりません",
+   "aceptadas": [
+    "始まりません",
+    "はじまりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "はじまらない",
+   "kanji": "始まらない",
+   "aceptadas": [
+    "始まらない",
+    "はじまらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "はじまった",
+   "kanji": "始まった",
+   "aceptadas": [
+    "始まった",
+    "はじまった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "te",
+   "salida": "はじまって",
+   "kanji": "始まって",
+   "aceptadas": [
+    "始まって",
+    "はじまって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "はじまらなかった",
+   "kanji": "始まらなかった",
+   "aceptadas": [
+    "始まらなかった",
+    "はじまらなかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "sou",
+   "salida": "はじまるそうです",
+   "kanji": "始まるそうです",
+   "aceptadas": [
+    "始まるそうです",
+    "はじまるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "atode",
+   "salida": "はじまった後で",
+   "kanji": "始まった後で",
+   "aceptadas": [
+    "始まった後で",
+    "はじまった後で",
+    "始まったあとで",
+    "はじまったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "はじまる",
+   "g": 1,
+   "forma": "pot",
+   "salida": "はじまれる",
+   "kanji": "始まれる",
+   "aceptadas": [
+    "始まれる",
+    "はじまれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "かわります",
+   "kanji": "変わります",
+   "aceptadas": [
+    "変わります",
+    "かわります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "かわりません",
+   "kanji": "変わりません",
+   "aceptadas": [
+    "変わりません",
+    "かわりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "かわらない",
+   "kanji": "変わらない",
+   "aceptadas": [
+    "変わらない",
+    "かわらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "かわった",
+   "kanji": "変わった",
+   "aceptadas": [
+    "変わった",
+    "かわった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "te",
+   "salida": "かわって",
+   "kanji": "変わって",
+   "aceptadas": [
+    "変わって",
+    "かわって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "かわらなかった",
+   "kanji": "変わらなかった",
+   "aceptadas": [
+    "変わらなかった",
+    "かわらなかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "sou",
+   "salida": "かわるそうです",
+   "kanji": "変わるそうです",
+   "aceptadas": [
+    "変わるそうです",
+    "かわるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "atode",
+   "salida": "かわった後で",
+   "kanji": "変わった後で",
+   "aceptadas": [
+    "変わった後で",
+    "かわった後で",
+    "変わったあとで",
+    "かわったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "かわる",
+   "g": 1,
+   "forma": "pot",
+   "salida": "かわれる",
+   "kanji": "変われる",
+   "aceptadas": [
+    "変われる",
+    "かわれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "おくれます",
+   "kanji": null,
+   "aceptadas": [
+    "おくれます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "おくれません",
+   "kanji": null,
+   "aceptadas": [
+    "おくれません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "おくれない",
+   "kanji": null,
+   "aceptadas": [
+    "おくれない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "おくれた",
+   "kanji": null,
+   "aceptadas": [
+    "おくれた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "te",
+   "salida": "おくれて",
+   "kanji": null,
+   "aceptadas": [
+    "おくれて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "nakatta",
+   "salida": "おくれなかった",
+   "kanji": null,
+   "aceptadas": [
+    "おくれなかった"
+   ],
+   "regla": "Grupo 2: quita る y pon なかった."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "sou",
+   "salida": "おくれるそうです",
+   "kanji": null,
+   "aceptadas": [
+    "おくれるそうです"
+   ],
+   "regla": "Grupo 2: forma diccionario + そうです."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "atode",
+   "salida": "おくれた後で",
+   "kanji": null,
+   "aceptadas": [
+    "おくれた後で",
+    "おくれたあとで"
+   ],
+   "regla": "Grupo 2: quita る y pon た後で."
+  },
+  {
+   "kana": "おくれる",
+   "g": 2,
+   "forma": "pot",
+   "salida": "おくれられる",
+   "kanji": null,
+   "aceptadas": [
+    "おくれられる"
+   ],
+   "regla": "Grupo 2: quita る y pon られる."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "わすれます",
+   "kanji": "忘れます",
+   "aceptadas": [
+    "忘れます",
+    "わすれます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "わすれません",
+   "kanji": "忘れません",
+   "aceptadas": [
+    "忘れません",
+    "わすれません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "わすれない",
+   "kanji": "忘れない",
+   "aceptadas": [
+    "忘れない",
+    "わすれない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "わすれた",
+   "kanji": "忘れた",
+   "aceptadas": [
+    "忘れた",
+    "わすれた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "te",
+   "salida": "わすれて",
+   "kanji": "忘れて",
+   "aceptadas": [
+    "忘れて",
+    "わすれて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "nakatta",
+   "salida": "わすれなかった",
+   "kanji": "忘れなかった",
+   "aceptadas": [
+    "忘れなかった",
+    "わすれなかった"
+   ],
+   "regla": "Grupo 2: quita る y pon なかった."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "sou",
+   "salida": "わすれるそうです",
+   "kanji": "忘れるそうです",
+   "aceptadas": [
+    "忘れるそうです",
+    "わすれるそうです"
+   ],
+   "regla": "Grupo 2: forma diccionario + そうです."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "atode",
+   "salida": "わすれた後で",
+   "kanji": "忘れた後で",
+   "aceptadas": [
+    "忘れた後で",
+    "わすれた後で",
+    "忘れたあとで",
+    "わすれたあとで"
+   ],
+   "regla": "Grupo 2: quita る y pon た後で."
+  },
+  {
+   "kana": "わすれる",
+   "g": 2,
+   "forma": "pot",
+   "salida": "わすれられる",
+   "kanji": "忘れられる",
+   "aceptadas": [
+    "忘れられる",
+    "わすれられる"
+   ],
+   "regla": "Grupo 2: quita る y pon られる."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "はいります",
+   "kanji": "入ります",
+   "aceptadas": [
+    "入ります",
+    "はいります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "はいりません",
+   "kanji": "入りません",
+   "aceptadas": [
+    "入りません",
+    "はいりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "はいらない",
+   "kanji": "入らない",
+   "aceptadas": [
+    "入らない",
+    "はいらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "はいった",
+   "kanji": "入った",
+   "aceptadas": [
+    "入った",
+    "はいった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "te",
+   "salida": "はいって",
+   "kanji": "入って",
+   "aceptadas": [
+    "入って",
+    "はいって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "はいらなかった",
+   "kanji": "入らなかった",
+   "aceptadas": [
+    "入らなかった",
+    "はいらなかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "sou",
+   "salida": "はいるそうです",
+   "kanji": "入るそうです",
+   "aceptadas": [
+    "入るそうです",
+    "はいるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "atode",
+   "salida": "はいった後で",
+   "kanji": "入った後で",
+   "aceptadas": [
+    "入った後で",
+    "はいった後で",
+    "入ったあとで",
+    "はいったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "はいる",
+   "g": 1,
+   "forma": "pot",
+   "salida": "はいれる",
+   "kanji": "入れる",
+   "aceptadas": [
+    "入れる",
+    "はいれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "masu",
+   "salida": "あらいます",
+   "kanji": "洗います",
+   "aceptadas": [
+    "洗います",
+    "あらいます"
+   ],
+   "regla": "Grupo 1: う → い + ます."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "masen",
+   "salida": "あらいません",
+   "kanji": "洗いません",
+   "aceptadas": [
+    "洗いません",
+    "あらいません"
+   ],
+   "regla": "Grupo 1: う → い + ません."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "nai",
+   "salida": "あらわない",
+   "kanji": "洗わない",
+   "aceptadas": [
+    "洗わない",
+    "あらわない"
+   ],
+   "regla": "Grupo 1: う → わ (う nunca pasa a あ) + ない."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "ta",
+   "salida": "あらった",
+   "kanji": "洗った",
+   "aceptadas": [
+    "洗った",
+    "あらった"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "te",
+   "salida": "あらって",
+   "kanji": "洗って",
+   "aceptadas": [
+    "洗って",
+    "あらって"
+   ],
+   "regla": "Grupo 1: う → って."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "あらわなかった",
+   "kanji": "洗わなかった",
+   "aceptadas": [
+    "洗わなかった",
+    "あらわなかった"
+   ],
+   "regla": "Grupo 1: う → わ (う nunca pasa a あ) + なかった."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "sou",
+   "salida": "あらうそうです",
+   "kanji": "洗うそうです",
+   "aceptadas": [
+    "洗うそうです",
+    "あらうそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "atode",
+   "salida": "あらった後で",
+   "kanji": "洗った後で",
+   "aceptadas": [
+    "洗った後で",
+    "あらった後で",
+    "洗ったあとで",
+    "あらったあとで"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "あらう",
+   "g": 1,
+   "forma": "pot",
+   "salida": "あらえる",
+   "kanji": "洗える",
+   "aceptadas": [
+    "洗える",
+    "あらえる"
+   ],
+   "regla": "Grupo 1: う → え + る."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "masu",
+   "salida": "はらいます",
+   "kanji": null,
+   "aceptadas": [
+    "はらいます"
+   ],
+   "regla": "Grupo 1: う → い + ます."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "masen",
+   "salida": "はらいません",
+   "kanji": null,
+   "aceptadas": [
+    "はらいません"
+   ],
+   "regla": "Grupo 1: う → い + ません."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "nai",
+   "salida": "はらわない",
+   "kanji": null,
+   "aceptadas": [
+    "はらわない"
+   ],
+   "regla": "Grupo 1: う → わ (う nunca pasa a あ) + ない."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "ta",
+   "salida": "はらった",
+   "kanji": null,
+   "aceptadas": [
+    "はらった"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "te",
+   "salida": "はらって",
+   "kanji": null,
+   "aceptadas": [
+    "はらって"
+   ],
+   "regla": "Grupo 1: う → って."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "はらわなかった",
+   "kanji": null,
+   "aceptadas": [
+    "はらわなかった"
+   ],
+   "regla": "Grupo 1: う → わ (う nunca pasa a あ) + なかった."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "sou",
+   "salida": "はらうそうです",
+   "kanji": null,
+   "aceptadas": [
+    "はらうそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "atode",
+   "salida": "はらった後で",
+   "kanji": null,
+   "aceptadas": [
+    "はらった後で",
+    "はらったあとで"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "はらう",
+   "g": 1,
+   "forma": "pot",
+   "salida": "はらえる",
+   "kanji": null,
+   "aceptadas": [
+    "はらえる"
+   ],
+   "regla": "Grupo 1: う → え + る."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "おきます",
+   "kanji": null,
+   "aceptadas": [
+    "おきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "おきません",
+   "kanji": null,
+   "aceptadas": [
+    "おきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "おかない",
+   "kanji": null,
+   "aceptadas": [
+    "おかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "おいた",
+   "kanji": null,
+   "aceptadas": [
+    "おいた"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "te",
+   "salida": "おいて",
+   "kanji": null,
+   "aceptadas": [
+    "おいて"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "おかなかった",
+   "kanji": null,
+   "aceptadas": [
+    "おかなかった"
+   ],
+   "regla": "Grupo 1: く → か + なかった."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "sou",
+   "salida": "おくそうです",
+   "kanji": null,
+   "aceptadas": [
+    "おくそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "atode",
+   "salida": "おいた後で",
+   "kanji": null,
+   "aceptadas": [
+    "おいた後で",
+    "おいたあとで"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "おく",
+   "g": 1,
+   "forma": "pot",
+   "salida": "おける",
+   "kanji": null,
+   "aceptadas": [
+    "おける"
+   ],
+   "regla": "Grupo 1: く → け + る."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "おもいだします",
+   "kanji": "思い出します",
+   "aceptadas": [
+    "思い出します",
+    "おもいだします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "おもいだしません",
+   "kanji": "思い出しません",
+   "aceptadas": [
+    "思い出しません",
+    "おもいだしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "おもいださない",
+   "kanji": "思い出さない",
+   "aceptadas": [
+    "思い出さない",
+    "おもいださない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "おもいだした",
+   "kanji": "思い出した",
+   "aceptadas": [
+    "思い出した",
+    "おもいだした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "te",
+   "salida": "おもいだして",
+   "kanji": "思い出して",
+   "aceptadas": [
+    "思い出して",
+    "おもいだして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "おもいださなかった",
+   "kanji": "思い出さなかった",
+   "aceptadas": [
+    "思い出さなかった",
+    "おもいださなかった"
+   ],
+   "regla": "Grupo 1: す → さ + なかった."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "sou",
+   "salida": "おもいだすそうです",
+   "kanji": "思い出すそうです",
+   "aceptadas": [
+    "思い出すそうです",
+    "おもいだすそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "atode",
+   "salida": "おもいだした後で",
+   "kanji": "思い出した後で",
+   "aceptadas": [
+    "思い出した後で",
+    "おもいだした後で",
+    "思い出したあとで",
+    "おもいだしたあとで"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "おもいだす",
+   "g": 1,
+   "forma": "pot",
+   "salida": "おもいだせる",
+   "kanji": "思い出せる",
+   "aceptadas": [
+    "思い出せる",
+    "おもいだせる"
+   ],
+   "regla": "Grupo 1: す → せ + る."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "うけとります",
+   "kanji": "受けとります",
+   "aceptadas": [
+    "受けとります",
+    "うけとります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "うけとりません",
+   "kanji": "受けとりません",
+   "aceptadas": [
+    "受けとりません",
+    "うけとりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "うけとらない",
+   "kanji": "受けとらない",
+   "aceptadas": [
+    "受けとらない",
+    "うけとらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "うけとった",
+   "kanji": "受けとった",
+   "aceptadas": [
+    "受けとった",
+    "うけとった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "te",
+   "salida": "うけとって",
+   "kanji": "受けとって",
+   "aceptadas": [
+    "受けとって",
+    "うけとって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "うけとらなかった",
+   "kanji": "受けとらなかった",
+   "aceptadas": [
+    "受けとらなかった",
+    "うけとらなかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "sou",
+   "salida": "うけとるそうです",
+   "kanji": "受けとるそうです",
+   "aceptadas": [
+    "受けとるそうです",
+    "うけとるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "atode",
+   "salida": "うけとった後で",
+   "kanji": "受けとった後で",
+   "aceptadas": [
+    "受けとった後で",
+    "うけとった後で",
+    "受けとったあとで",
+    "うけとったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "うけとる",
+   "g": 1,
+   "forma": "pot",
+   "salida": "うけとれる",
+   "kanji": "受けとれる",
+   "aceptadas": [
+    "受けとれる",
+    "うけとれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "まちがえます",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "まちがえません",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "まちがえない",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "まちがえた",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "te",
+   "salida": "まちがえて",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "nakatta",
+   "salida": "まちがえなかった",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえなかった"
+   ],
+   "regla": "Grupo 2: quita る y pon なかった."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "sou",
+   "salida": "まちがえるそうです",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえるそうです"
+   ],
+   "regla": "Grupo 2: forma diccionario + そうです."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "atode",
+   "salida": "まちがえた後で",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえた後で",
+    "まちがえたあとで"
+   ],
+   "regla": "Grupo 2: quita る y pon た後で."
+  },
+  {
+   "kana": "まちがえる",
+   "g": 2,
+   "forma": "pot",
+   "salida": "まちがえられる",
+   "kanji": null,
+   "aceptadas": [
+    "まちがえられる"
+   ],
+   "regla": "Grupo 2: quita る y pon られる."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "しらせます",
+   "kanji": "知らせます",
+   "aceptadas": [
+    "知らせます",
+    "しらせます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "しらせません",
+   "kanji": "知らせません",
+   "aceptadas": [
+    "知らせません",
+    "しらせません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "しらせない",
+   "kanji": "知らせない",
+   "aceptadas": [
+    "知らせない",
+    "しらせない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "しらせた",
+   "kanji": "知らせた",
+   "aceptadas": [
+    "知らせた",
+    "しらせた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "te",
+   "salida": "しらせて",
+   "kanji": "知らせて",
+   "aceptadas": [
+    "知らせて",
+    "しらせて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "nakatta",
+   "salida": "しらせなかった",
+   "kanji": "知らせなかった",
+   "aceptadas": [
+    "知らせなかった",
+    "しらせなかった"
+   ],
+   "regla": "Grupo 2: quita る y pon なかった."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "sou",
+   "salida": "しらせるそうです",
+   "kanji": "知らせるそうです",
+   "aceptadas": [
+    "知らせるそうです",
+    "しらせるそうです"
+   ],
+   "regla": "Grupo 2: forma diccionario + そうです."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "atode",
+   "salida": "しらせた後で",
+   "kanji": "知らせた後で",
+   "aceptadas": [
+    "知らせた後で",
+    "しらせた後で",
+    "知らせたあとで",
+    "しらせたあとで"
+   ],
+   "regla": "Grupo 2: quita る y pon た後で."
+  },
+  {
+   "kana": "しらせる",
+   "g": 2,
+   "forma": "pot",
+   "salida": "しらせられる",
+   "kanji": "知らせられる",
+   "aceptadas": [
+    "知らせられる",
+    "しらせられる"
+   ],
+   "regla": "Grupo 2: quita る y pon られる."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "たずねます",
+   "kanji": null,
+   "aceptadas": [
+    "たずねます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "たずねません",
+   "kanji": null,
+   "aceptadas": [
+    "たずねません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "たずねない",
+   "kanji": null,
+   "aceptadas": [
+    "たずねない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "たずねた",
+   "kanji": null,
+   "aceptadas": [
+    "たずねた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "te",
+   "salida": "たずねて",
+   "kanji": null,
+   "aceptadas": [
+    "たずねて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "nakatta",
+   "salida": "たずねなかった",
+   "kanji": null,
+   "aceptadas": [
+    "たずねなかった"
+   ],
+   "regla": "Grupo 2: quita る y pon なかった."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "sou",
+   "salida": "たずねるそうです",
+   "kanji": null,
+   "aceptadas": [
+    "たずねるそうです"
+   ],
+   "regla": "Grupo 2: forma diccionario + そうです."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "atode",
+   "salida": "たずねた後で",
+   "kanji": null,
+   "aceptadas": [
+    "たずねた後で",
+    "たずねたあとで"
+   ],
+   "regla": "Grupo 2: quita る y pon た後で."
+  },
+  {
+   "kana": "たずねる",
+   "g": 2,
+   "forma": "pot",
+   "salida": "たずねられる",
+   "kanji": null,
+   "aceptadas": [
+    "たずねられる"
+   ],
+   "regla": "Grupo 2: quita る y pon られる."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "masu",
+   "salida": "あります",
+   "kanji": null,
+   "aceptadas": [
+    "あります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "masen",
+   "salida": "ありません",
+   "kanji": null,
+   "aceptadas": [
+    "ありません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "nai",
+   "salida": "ない",
+   "kanji": null,
+   "aceptadas": [
+    "ない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "ta",
+   "salida": "あった",
+   "kanji": null,
+   "aceptadas": [
+    "あった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "te",
+   "salida": "あって",
+   "kanji": null,
+   "aceptadas": [
+    "あって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "なかった",
+   "kanji": null,
+   "aceptadas": [
+    "なかった"
+   ],
+   "regla": "Grupo 1: る → ら + なかった."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "sou",
+   "salida": "あるそうです",
+   "kanji": null,
+   "aceptadas": [
+    "あるそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "atode",
+   "salida": "あった後で",
+   "kanji": null,
+   "aceptadas": [
+    "あった後で",
+    "あったあとで"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "ある",
+   "g": 1,
+   "forma": "pot",
+   "salida": "あれる",
+   "kanji": null,
+   "aceptadas": [
+    "あれる"
+   ],
+   "regla": "Grupo 1: る → れ + る."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "いきます",
+   "kanji": "行きます",
+   "aceptadas": [
+    "行きます",
+    "いきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "いきません",
+   "kanji": "行きません",
+   "aceptadas": [
+    "行きません",
+    "いきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "いかない",
+   "kanji": "行かない",
+   "aceptadas": [
+    "行かない",
+    "いかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "いった",
+   "kanji": "行った",
+   "aceptadas": [
+    "行った",
+    "いった"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "te",
+   "salida": "いって",
+   "kanji": "行って",
+   "aceptadas": [
+    "行って",
+    "いって"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "nakatta",
+   "salida": "いかなかった",
+   "kanji": "行かなかった",
+   "aceptadas": [
+    "行かなかった",
+    "いかなかった"
+   ],
+   "regla": "Grupo 1: く → か + なかった."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "sou",
+   "salida": "いくそうです",
+   "kanji": "行くそうです",
+   "aceptadas": [
+    "行くそうです",
+    "いくそうです"
+   ],
+   "regla": "Grupo 1: forma diccionario + そうです."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "atode",
+   "salida": "いった後で",
+   "kanji": "行った後で",
+   "aceptadas": [
+    "行った後で",
+    "いった後で",
+    "行ったあとで",
+    "いったあとで"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "いく",
+   "g": 1,
+   "forma": "pot",
+   "salida": "いける",
+   "kanji": "行ける",
+   "aceptadas": [
+    "行ける",
+    "いける"
+   ],
+   "regla": "Grupo 1: く → け + る."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "すごします",
+   "kanji": null,
+   "aceptadas": [
+    "すごします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "すごしません",
+   "kanji": null,
+   "aceptadas": [
+    "すごしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "すごさない",
+   "kanji": null,
+   "aceptadas": [
+    "すごさない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "すごした",
+   "kanji": null,
+   "aceptadas": [
+    "すごした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "te",
+   "salida": "すごして",
+   "kanji": null,
+   "aceptadas": [
+    "すごして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "すごしながら",
+   "kanji": null,
+   "aceptadas": [
+    "すごしながら"
+   ],
+   "regla": "Grupo 1: す → し + ながら."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "tari",
+   "salida": "すごしたり",
+   "kanji": null,
+   "aceptadas": [
+    "すごしたり"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "すごす",
+   "g": 1,
+   "forma": "imp",
+   "salida": "すごせ",
+   "kanji": null,
+   "aceptadas": [
+    "すごせ"
+   ],
+   "regla": "Grupo 1: す → せ."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "masu",
+   "salida": "たのみます",
+   "kanji": null,
+   "aceptadas": [
+    "たのみます"
+   ],
+   "regla": "Grupo 1: む → み + ます."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "masen",
+   "salida": "たのみません",
+   "kanji": null,
+   "aceptadas": [
+    "たのみません"
+   ],
+   "regla": "Grupo 1: む → み + ません."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "nai",
+   "salida": "たのまない",
+   "kanji": null,
+   "aceptadas": [
+    "たのまない"
+   ],
+   "regla": "Grupo 1: む → ま + ない."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "ta",
+   "salida": "たのんだ",
+   "kanji": null,
+   "aceptadas": [
+    "たのんだ"
+   ],
+   "regla": "Grupo 1: む → んだ."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "te",
+   "salida": "たのんで",
+   "kanji": null,
+   "aceptadas": [
+    "たのんで"
+   ],
+   "regla": "Grupo 1: む → んで."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "たのみながら",
+   "kanji": null,
+   "aceptadas": [
+    "たのみながら"
+   ],
+   "regla": "Grupo 1: む → み + ながら."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "tari",
+   "salida": "たのんだり",
+   "kanji": null,
+   "aceptadas": [
+    "たのんだり"
+   ],
+   "regla": "Grupo 1: む → んだ."
+  },
+  {
+   "kana": "たのむ",
+   "g": 1,
+   "forma": "imp",
+   "salida": "たのめ",
+   "kanji": null,
+   "aceptadas": [
+    "たのめ"
+   ],
+   "regla": "Grupo 1: む → め."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "あるきます",
+   "kanji": "歩きます",
+   "aceptadas": [
+    "歩きます",
+    "あるきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "あるきません",
+   "kanji": "歩きません",
+   "aceptadas": [
+    "歩きません",
+    "あるきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "あるかない",
+   "kanji": "歩かない",
+   "aceptadas": [
+    "歩かない",
+    "あるかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "あるいた",
+   "kanji": "歩いた",
+   "aceptadas": [
+    "歩いた",
+    "あるいた"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "te",
+   "salida": "あるいて",
+   "kanji": "歩いて",
+   "aceptadas": [
+    "歩いて",
+    "あるいて"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "あるきながら",
+   "kanji": "歩きながら",
+   "aceptadas": [
+    "歩きながら",
+    "あるきながら"
+   ],
+   "regla": "Grupo 1: く → き + ながら."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "tari",
+   "salida": "あるいたり",
+   "kanji": "歩いたり",
+   "aceptadas": [
+    "歩いたり",
+    "あるいたり"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "あるく",
+   "g": 1,
+   "forma": "imp",
+   "salida": "あるけ",
+   "kanji": "歩け",
+   "aceptadas": [
+    "歩け",
+    "あるけ"
+   ],
+   "regla": "Grupo 1: く → け."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "なきます",
+   "kanji": null,
+   "aceptadas": [
+    "なきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "なきません",
+   "kanji": null,
+   "aceptadas": [
+    "なきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "なかない",
+   "kanji": null,
+   "aceptadas": [
+    "なかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "ないた",
+   "kanji": null,
+   "aceptadas": [
+    "ないた"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "te",
+   "salida": "ないて",
+   "kanji": null,
+   "aceptadas": [
+    "ないて"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "なきながら",
+   "kanji": null,
+   "aceptadas": [
+    "なきながら"
+   ],
+   "regla": "Grupo 1: く → き + ながら."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "tari",
+   "salida": "ないたり",
+   "kanji": null,
+   "aceptadas": [
+    "ないたり"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "なく",
+   "g": 1,
+   "forma": "imp",
+   "salida": "なけ",
+   "kanji": null,
+   "aceptadas": [
+    "なけ"
+   ],
+   "regla": "Grupo 1: く → け."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "すわります",
+   "kanji": "座ります",
+   "aceptadas": [
+    "座ります",
+    "すわります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "すわりません",
+   "kanji": "座りません",
+   "aceptadas": [
+    "座りません",
+    "すわりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "すわらない",
+   "kanji": "座らない",
+   "aceptadas": [
+    "座らない",
+    "すわらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "すわった",
+   "kanji": "座った",
+   "aceptadas": [
+    "座った",
+    "すわった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "te",
+   "salida": "すわって",
+   "kanji": "座って",
+   "aceptadas": [
+    "座って",
+    "すわって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "すわりながら",
+   "kanji": "座りながら",
+   "aceptadas": [
+    "座りながら",
+    "すわりながら"
+   ],
+   "regla": "Grupo 1: る → り + ながら."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "tari",
+   "salida": "すわったり",
+   "kanji": "座ったり",
+   "aceptadas": [
+    "座ったり",
+    "すわったり"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "すわる",
+   "g": 1,
+   "forma": "imp",
+   "salida": "すわれ",
+   "kanji": "座れ",
+   "aceptadas": [
+    "座れ",
+    "すわれ"
+   ],
+   "regla": "Grupo 1: る → れ."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "ねます",
+   "kanji": "寝ます",
+   "aceptadas": [
+    "寝ます",
+    "ねます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "ねません",
+   "kanji": "寝ません",
+   "aceptadas": [
+    "寝ません",
+    "ねません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "ねない",
+   "kanji": "寝ない",
+   "aceptadas": [
+    "寝ない",
+    "ねない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "ねた",
+   "kanji": "寝た",
+   "aceptadas": [
+    "寝た",
+    "ねた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "te",
+   "salida": "ねて",
+   "kanji": "寝て",
+   "aceptadas": [
+    "寝て",
+    "ねて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "ねながら",
+   "kanji": "寝ながら",
+   "aceptadas": [
+    "寝ながら",
+    "ねながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "ねたり",
+   "kanji": "寝たり",
+   "aceptadas": [
+    "寝たり",
+    "ねたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "ねる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "ねろ",
+   "kanji": "寝ろ",
+   "aceptadas": [
+    "寝ろ",
+    "ねろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "おります",
+   "kanji": null,
+   "aceptadas": [
+    "おります"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "おりません",
+   "kanji": null,
+   "aceptadas": [
+    "おりません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "おりない",
+   "kanji": null,
+   "aceptadas": [
+    "おりない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "おりた",
+   "kanji": null,
+   "aceptadas": [
+    "おりた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "te",
+   "salida": "おりて",
+   "kanji": null,
+   "aceptadas": [
+    "おりて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "おりながら",
+   "kanji": null,
+   "aceptadas": [
+    "おりながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "おりたり",
+   "kanji": null,
+   "aceptadas": [
+    "おりたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "おりる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "おりろ",
+   "kanji": null,
+   "aceptadas": [
+    "おりろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "masu",
+   "salida": "たすけます",
+   "kanji": "助けます",
+   "aceptadas": [
+    "助けます",
+    "たすけます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "masen",
+   "salida": "たすけません",
+   "kanji": "助けません",
+   "aceptadas": [
+    "助けません",
+    "たすけません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "nai",
+   "salida": "たすけない",
+   "kanji": "助けない",
+   "aceptadas": [
+    "助けない",
+    "たすけない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "ta",
+   "salida": "たすけた",
+   "kanji": "助けた",
+   "aceptadas": [
+    "助けた",
+    "たすけた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "te",
+   "salida": "たすけて",
+   "kanji": "助けて",
+   "aceptadas": [
+    "助けて",
+    "たすけて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "たすけながら",
+   "kanji": "助けながら",
+   "aceptadas": [
+    "助けながら",
+    "たすけながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "tari",
+   "salida": "たすけたり",
+   "kanji": "助けたり",
+   "aceptadas": [
+    "助けたり",
+    "たすけたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "たすける",
+   "g": 2,
+   "forma": "imp",
+   "salida": "たすけろ",
+   "kanji": "助けろ",
+   "aceptadas": [
+    "助けろ",
+    "たすけろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "にげます",
+   "kanji": null,
+   "aceptadas": [
+    "にげます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "にげません",
+   "kanji": null,
+   "aceptadas": [
+    "にげません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "にげない",
+   "kanji": null,
+   "aceptadas": [
+    "にげない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "にげた",
+   "kanji": null,
+   "aceptadas": [
+    "にげた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "te",
+   "salida": "にげて",
+   "kanji": null,
+   "aceptadas": [
+    "にげて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "にげながら",
+   "kanji": null,
+   "aceptadas": [
+    "にげながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "にげたり",
+   "kanji": null,
+   "aceptadas": [
+    "にげたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "にげる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "にげろ",
+   "kanji": null,
+   "aceptadas": [
+    "にげろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "みせます",
+   "kanji": "見せます",
+   "aceptadas": [
+    "見せます",
+    "みせます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "みせません",
+   "kanji": "見せません",
+   "aceptadas": [
+    "見せません",
+    "みせません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "みせない",
+   "kanji": "見せない",
+   "aceptadas": [
+    "見せない",
+    "みせない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "みせた",
+   "kanji": "見せた",
+   "aceptadas": [
+    "見せた",
+    "みせた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "te",
+   "salida": "みせて",
+   "kanji": "見せて",
+   "aceptadas": [
+    "見せて",
+    "みせて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "みせながら",
+   "kanji": "見せながら",
+   "aceptadas": [
+    "見せながら",
+    "みせながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "みせたり",
+   "kanji": "見せたり",
+   "aceptadas": [
+    "見せたり",
+    "みせたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "みせる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "みせろ",
+   "kanji": "見せろ",
+   "aceptadas": [
+    "見せろ",
+    "みせろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "masu",
+   "salida": "てつだいます",
+   "kanji": "手伝います",
+   "aceptadas": [
+    "手伝います",
+    "てつだいます"
+   ],
+   "regla": "Grupo 1: う → い + ます."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "masen",
+   "salida": "てつだいません",
+   "kanji": "手伝いません",
+   "aceptadas": [
+    "手伝いません",
+    "てつだいません"
+   ],
+   "regla": "Grupo 1: う → い + ません."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "nai",
+   "salida": "てつだわない",
+   "kanji": "手伝わない",
+   "aceptadas": [
+    "手伝わない",
+    "てつだわない"
+   ],
+   "regla": "Grupo 1: う → わ (う nunca pasa a あ) + ない."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "ta",
+   "salida": "てつだった",
+   "kanji": "手伝った",
+   "aceptadas": [
+    "手伝った",
+    "てつだった"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "te",
+   "salida": "てつだって",
+   "kanji": "手伝って",
+   "aceptadas": [
+    "手伝って",
+    "てつだって"
+   ],
+   "regla": "Grupo 1: う → って."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "てつだいながら",
+   "kanji": "手伝いながら",
+   "aceptadas": [
+    "手伝いながら",
+    "てつだいながら"
+   ],
+   "regla": "Grupo 1: う → い + ながら."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "tari",
+   "salida": "てつだったり",
+   "kanji": "手伝ったり",
+   "aceptadas": [
+    "手伝ったり",
+    "てつだったり"
+   ],
+   "regla": "Grupo 1: う → った."
+  },
+  {
+   "kana": "てつだう",
+   "g": 1,
+   "forma": "imp",
+   "salida": "てつだえ",
+   "kanji": "手伝え",
+   "aceptadas": [
+    "手伝え",
+    "てつだえ"
+   ],
+   "regla": "Grupo 1: う → え."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "わかれます",
+   "kanji": null,
+   "aceptadas": [
+    "わかれます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "わかれません",
+   "kanji": null,
+   "aceptadas": [
+    "わかれません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "わかれない",
+   "kanji": null,
+   "aceptadas": [
+    "わかれない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "わかれた",
+   "kanji": null,
+   "aceptadas": [
+    "わかれた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "te",
+   "salida": "わかれて",
+   "kanji": null,
+   "aceptadas": [
+    "わかれて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "わかれながら",
+   "kanji": null,
+   "aceptadas": [
+    "わかれながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "わかれたり",
+   "kanji": null,
+   "aceptadas": [
+    "わかれたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "わかれる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "わかれろ",
+   "kanji": null,
+   "aceptadas": [
+    "わかれろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "こわれます",
+   "kanji": null,
+   "aceptadas": [
+    "こわれます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "こわれません",
+   "kanji": null,
+   "aceptadas": [
+    "こわれません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "こわれない",
+   "kanji": null,
+   "aceptadas": [
+    "こわれない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "こわれた",
+   "kanji": null,
+   "aceptadas": [
+    "こわれた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "te",
+   "salida": "こわれて",
+   "kanji": null,
+   "aceptadas": [
+    "こわれて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "こわれながら",
+   "kanji": null,
+   "aceptadas": [
+    "こわれながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "こわれたり",
+   "kanji": null,
+   "aceptadas": [
+    "こわれたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "こわれる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "こわれろ",
+   "kanji": null,
+   "aceptadas": [
+    "こわれろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "なおします",
+   "kanji": null,
+   "aceptadas": [
+    "なおします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "なおしません",
+   "kanji": null,
+   "aceptadas": [
+    "なおしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "なおさない",
+   "kanji": null,
+   "aceptadas": [
+    "なおさない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "なおした",
+   "kanji": null,
+   "aceptadas": [
+    "なおした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "te",
+   "salida": "なおして",
+   "kanji": null,
+   "aceptadas": [
+    "なおして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "なおしながら",
+   "kanji": null,
+   "aceptadas": [
+    "なおしながら"
+   ],
+   "regla": "Grupo 1: す → し + ながら."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "tari",
+   "salida": "なおしたり",
+   "kanji": null,
+   "aceptadas": [
+    "なおしたり"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "なおす",
+   "g": 1,
+   "forma": "imp",
+   "salida": "なおせ",
+   "kanji": null,
+   "aceptadas": [
+    "なおせ"
+   ],
+   "regla": "Grupo 1: す → せ."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "つきます",
+   "kanji": null,
+   "aceptadas": [
+    "つきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "つきません",
+   "kanji": null,
+   "aceptadas": [
+    "つきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "つかない",
+   "kanji": null,
+   "aceptadas": [
+    "つかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "ついた",
+   "kanji": null,
+   "aceptadas": [
+    "ついた"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "te",
+   "salida": "ついて",
+   "kanji": null,
+   "aceptadas": [
+    "ついて"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "つきながら",
+   "kanji": null,
+   "aceptadas": [
+    "つきながら"
+   ],
+   "regla": "Grupo 1: く → き + ながら."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "tari",
+   "salida": "ついたり",
+   "kanji": null,
+   "aceptadas": [
+    "ついたり"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "つく",
+   "g": 1,
+   "forma": "imp",
+   "salida": "つけ",
+   "kanji": null,
+   "aceptadas": [
+    "つけ"
+   ],
+   "regla": "Grupo 1: く → け."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "masu",
+   "salida": "つけます",
+   "kanji": null,
+   "aceptadas": [
+    "つけます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "masen",
+   "salida": "つけません",
+   "kanji": null,
+   "aceptadas": [
+    "つけません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "nai",
+   "salida": "つけない",
+   "kanji": null,
+   "aceptadas": [
+    "つけない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "ta",
+   "salida": "つけた",
+   "kanji": null,
+   "aceptadas": [
+    "つけた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "te",
+   "salida": "つけて",
+   "kanji": null,
+   "aceptadas": [
+    "つけて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "つけながら",
+   "kanji": null,
+   "aceptadas": [
+    "つけながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "tari",
+   "salida": "つけたり",
+   "kanji": null,
+   "aceptadas": [
+    "つけたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "つける",
+   "g": 2,
+   "forma": "imp",
+   "salida": "つけろ",
+   "kanji": null,
+   "aceptadas": [
+    "つけろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "きえます",
+   "kanji": null,
+   "aceptadas": [
+    "きえます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "きえません",
+   "kanji": null,
+   "aceptadas": [
+    "きえません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "きえない",
+   "kanji": null,
+   "aceptadas": [
+    "きえない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "きえた",
+   "kanji": null,
+   "aceptadas": [
+    "きえた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "te",
+   "salida": "きえて",
+   "kanji": null,
+   "aceptadas": [
+    "きえて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "きえながら",
+   "kanji": null,
+   "aceptadas": [
+    "きえながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "きえたり",
+   "kanji": null,
+   "aceptadas": [
+    "きえたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "きえる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "きえろ",
+   "kanji": null,
+   "aceptadas": [
+    "きえろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "けします",
+   "kanji": null,
+   "aceptadas": [
+    "けします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "けしません",
+   "kanji": null,
+   "aceptadas": [
+    "けしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "けさない",
+   "kanji": null,
+   "aceptadas": [
+    "けさない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "けした",
+   "kanji": null,
+   "aceptadas": [
+    "けした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "te",
+   "salida": "けして",
+   "kanji": null,
+   "aceptadas": [
+    "けして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "けしながら",
+   "kanji": null,
+   "aceptadas": [
+    "けしながら"
+   ],
+   "regla": "Grupo 1: す → し + ながら."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "tari",
+   "salida": "けしたり",
+   "kanji": null,
+   "aceptadas": [
+    "けしたり"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "けす",
+   "g": 1,
+   "forma": "imp",
+   "salida": "けせ",
+   "kanji": null,
+   "aceptadas": [
+    "けせ"
+   ],
+   "regla": "Grupo 1: す → せ."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "masu",
+   "salida": "あきます",
+   "kanji": null,
+   "aceptadas": [
+    "あきます"
+   ],
+   "regla": "Grupo 1: く → き + ます."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "masen",
+   "salida": "あきません",
+   "kanji": null,
+   "aceptadas": [
+    "あきません"
+   ],
+   "regla": "Grupo 1: く → き + ません."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "nai",
+   "salida": "あかない",
+   "kanji": null,
+   "aceptadas": [
+    "あかない"
+   ],
+   "regla": "Grupo 1: く → か + ない."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "ta",
+   "salida": "あいた",
+   "kanji": null,
+   "aceptadas": [
+    "あいた"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "te",
+   "salida": "あいて",
+   "kanji": null,
+   "aceptadas": [
+    "あいて"
+   ],
+   "regla": "Grupo 1: く → いて."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "あきながら",
+   "kanji": null,
+   "aceptadas": [
+    "あきながら"
+   ],
+   "regla": "Grupo 1: く → き + ながら."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "tari",
+   "salida": "あいたり",
+   "kanji": null,
+   "aceptadas": [
+    "あいたり"
+   ],
+   "regla": "Grupo 1: く → いた."
+  },
+  {
+   "kana": "あく",
+   "g": 1,
+   "forma": "imp",
+   "salida": "あけ",
+   "kanji": null,
+   "aceptadas": [
+    "あけ"
+   ],
+   "regla": "Grupo 1: く → け."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "masu",
+   "salida": "あけます",
+   "kanji": null,
+   "aceptadas": [
+    "あけます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "masen",
+   "salida": "あけません",
+   "kanji": null,
+   "aceptadas": [
+    "あけません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "nai",
+   "salida": "あけない",
+   "kanji": null,
+   "aceptadas": [
+    "あけない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "ta",
+   "salida": "あけた",
+   "kanji": null,
+   "aceptadas": [
+    "あけた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "te",
+   "salida": "あけて",
+   "kanji": null,
+   "aceptadas": [
+    "あけて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "あけながら",
+   "kanji": null,
+   "aceptadas": [
+    "あけながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "tari",
+   "salida": "あけたり",
+   "kanji": null,
+   "aceptadas": [
+    "あけたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "あける",
+   "g": 2,
+   "forma": "imp",
+   "salida": "あけろ",
+   "kanji": null,
+   "aceptadas": [
+    "あけろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "しまります",
+   "kanji": null,
+   "aceptadas": [
+    "しまります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "しまりません",
+   "kanji": null,
+   "aceptadas": [
+    "しまりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "しまらない",
+   "kanji": null,
+   "aceptadas": [
+    "しまらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "しまった",
+   "kanji": null,
+   "aceptadas": [
+    "しまった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "te",
+   "salida": "しまって",
+   "kanji": null,
+   "aceptadas": [
+    "しまって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "しまりながら",
+   "kanji": null,
+   "aceptadas": [
+    "しまりながら"
+   ],
+   "regla": "Grupo 1: る → り + ながら."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "tari",
+   "salida": "しまったり",
+   "kanji": null,
+   "aceptadas": [
+    "しまったり"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "しまる",
+   "g": 1,
+   "forma": "imp",
+   "salida": "しまれ",
+   "kanji": null,
+   "aceptadas": [
+    "しまれ"
+   ],
+   "regla": "Grupo 1: る → れ."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "しめます",
+   "kanji": null,
+   "aceptadas": [
+    "しめます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "しめません",
+   "kanji": null,
+   "aceptadas": [
+    "しめません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "しめない",
+   "kanji": null,
+   "aceptadas": [
+    "しめない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "しめた",
+   "kanji": null,
+   "aceptadas": [
+    "しめた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "te",
+   "salida": "しめて",
+   "kanji": null,
+   "aceptadas": [
+    "しめて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "しめながら",
+   "kanji": null,
+   "aceptadas": [
+    "しめながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "しめたり",
+   "kanji": null,
+   "aceptadas": [
+    "しめたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "しめる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "しめろ",
+   "kanji": null,
+   "aceptadas": [
+    "しめろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "でます",
+   "kanji": "出ます",
+   "aceptadas": [
+    "出ます",
+    "でます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "でません",
+   "kanji": "出ません",
+   "aceptadas": [
+    "出ません",
+    "でません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "でない",
+   "kanji": "出ない",
+   "aceptadas": [
+    "出ない",
+    "でない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "でた",
+   "kanji": "出た",
+   "aceptadas": [
+    "出た",
+    "でた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "te",
+   "salida": "でて",
+   "kanji": "出て",
+   "aceptadas": [
+    "出て",
+    "でて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "でながら",
+   "kanji": "出ながら",
+   "aceptadas": [
+    "出ながら",
+    "でながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "でたり",
+   "kanji": "出たり",
+   "aceptadas": [
+    "出たり",
+    "でたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "でる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "でろ",
+   "kanji": "出ろ",
+   "aceptadas": [
+    "出ろ",
+    "でろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "だします",
+   "kanji": "出します",
+   "aceptadas": [
+    "出します",
+    "だします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "だしません",
+   "kanji": "出しません",
+   "aceptadas": [
+    "出しません",
+    "だしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "ださない",
+   "kanji": "出さない",
+   "aceptadas": [
+    "出さない",
+    "ださない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "だした",
+   "kanji": "出した",
+   "aceptadas": [
+    "出した",
+    "だした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "te",
+   "salida": "だして",
+   "kanji": "出して",
+   "aceptadas": [
+    "出して",
+    "だして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "だしながら",
+   "kanji": "出しながら",
+   "aceptadas": [
+    "出しながら",
+    "だしながら"
+   ],
+   "regla": "Grupo 1: す → し + ながら."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "tari",
+   "salida": "だしたり",
+   "kanji": "出したり",
+   "aceptadas": [
+    "出したり",
+    "だしたり"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "だす",
+   "g": 1,
+   "forma": "imp",
+   "salida": "だせ",
+   "kanji": "出せ",
+   "aceptadas": [
+    "出せ",
+    "だせ"
+   ],
+   "regla": "Grupo 1: す → せ."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "とまります",
+   "kanji": "止まります",
+   "aceptadas": [
+    "止まります",
+    "とまります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "とまりません",
+   "kanji": "止まりません",
+   "aceptadas": [
+    "止まりません",
+    "とまりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "とまらない",
+   "kanji": "止まらない",
+   "aceptadas": [
+    "止まらない",
+    "とまらない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "とまった",
+   "kanji": "止まった",
+   "aceptadas": [
+    "止まった",
+    "とまった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "te",
+   "salida": "とまって",
+   "kanji": "止まって",
+   "aceptadas": [
+    "止まって",
+    "とまって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "とまりながら",
+   "kanji": "止まりながら",
+   "aceptadas": [
+    "止まりながら",
+    "とまりながら"
+   ],
+   "regla": "Grupo 1: る → り + ながら."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "tari",
+   "salida": "とまったり",
+   "kanji": "止まったり",
+   "aceptadas": [
+    "止まったり",
+    "とまったり"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "とまる",
+   "g": 1,
+   "forma": "imp",
+   "salida": "とまれ",
+   "kanji": "止まれ",
+   "aceptadas": [
+    "止まれ",
+    "とまれ"
+   ],
+   "regla": "Grupo 1: る → れ."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "とめます",
+   "kanji": "止めます",
+   "aceptadas": [
+    "止めます",
+    "とめます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "とめません",
+   "kanji": "止めません",
+   "aceptadas": [
+    "止めません",
+    "とめません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "とめない",
+   "kanji": "止めない",
+   "aceptadas": [
+    "止めない",
+    "とめない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "とめた",
+   "kanji": "止めた",
+   "aceptadas": [
+    "止めた",
+    "とめた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "te",
+   "salida": "とめて",
+   "kanji": "止めて",
+   "aceptadas": [
+    "止めて",
+    "とめて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "とめながら",
+   "kanji": "止めながら",
+   "aceptadas": [
+    "止めながら",
+    "とめながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "とめたり",
+   "kanji": "止めたり",
+   "aceptadas": [
+    "止めたり",
+    "とめたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "とめる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "とめろ",
+   "kanji": "止めろ",
+   "aceptadas": [
+    "止めろ",
+    "とめろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "masu",
+   "salida": "かかります",
+   "kanji": null,
+   "aceptadas": [
+    "かかります"
+   ],
+   "regla": "Grupo 1: る → り + ます."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "masen",
+   "salida": "かかりません",
+   "kanji": null,
+   "aceptadas": [
+    "かかりません"
+   ],
+   "regla": "Grupo 1: る → り + ません."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "nai",
+   "salida": "かからない",
+   "kanji": null,
+   "aceptadas": [
+    "かからない"
+   ],
+   "regla": "Grupo 1: る → ら + ない."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "ta",
+   "salida": "かかった",
+   "kanji": null,
+   "aceptadas": [
+    "かかった"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "te",
+   "salida": "かかって",
+   "kanji": null,
+   "aceptadas": [
+    "かかって"
+   ],
+   "regla": "Grupo 1: る → って."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "かかりながら",
+   "kanji": null,
+   "aceptadas": [
+    "かかりながら"
+   ],
+   "regla": "Grupo 1: る → り + ながら."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "tari",
+   "salida": "かかったり",
+   "kanji": null,
+   "aceptadas": [
+    "かかったり"
+   ],
+   "regla": "Grupo 1: る → った."
+  },
+  {
+   "kana": "かかる",
+   "g": 1,
+   "forma": "imp",
+   "salida": "かかれ",
+   "kanji": null,
+   "aceptadas": [
+    "かかれ"
+   ],
+   "regla": "Grupo 1: る → れ."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "masu",
+   "salida": "かけます",
+   "kanji": null,
+   "aceptadas": [
+    "かけます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "masen",
+   "salida": "かけません",
+   "kanji": null,
+   "aceptadas": [
+    "かけません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "nai",
+   "salida": "かけない",
+   "kanji": null,
+   "aceptadas": [
+    "かけない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "ta",
+   "salida": "かけた",
+   "kanji": null,
+   "aceptadas": [
+    "かけた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "te",
+   "salida": "かけて",
+   "kanji": null,
+   "aceptadas": [
+    "かけて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "かけながら",
+   "kanji": null,
+   "aceptadas": [
+    "かけながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "tari",
+   "salida": "かけたり",
+   "kanji": null,
+   "aceptadas": [
+    "かけたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "かける",
+   "g": 2,
+   "forma": "imp",
+   "salida": "かけろ",
+   "kanji": null,
+   "aceptadas": [
+    "かけろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "masu",
+   "salida": "ながれます",
+   "kanji": null,
+   "aceptadas": [
+    "ながれます"
+   ],
+   "regla": "Grupo 2: quita る y pon ます."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "masen",
+   "salida": "ながれません",
+   "kanji": null,
+   "aceptadas": [
+    "ながれません"
+   ],
+   "regla": "Grupo 2: quita る y pon ません."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "nai",
+   "salida": "ながれない",
+   "kanji": null,
+   "aceptadas": [
+    "ながれない"
+   ],
+   "regla": "Grupo 2: quita る y pon ない."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "ta",
+   "salida": "ながれた",
+   "kanji": null,
+   "aceptadas": [
+    "ながれた"
+   ],
+   "regla": "Grupo 2: quita る y pon た."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "te",
+   "salida": "ながれて",
+   "kanji": null,
+   "aceptadas": [
+    "ながれて"
+   ],
+   "regla": "Grupo 2: quita る y pon て."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "nagara",
+   "salida": "ながれながら",
+   "kanji": null,
+   "aceptadas": [
+    "ながれながら"
+   ],
+   "regla": "Grupo 2: quita る y pon ながら."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "tari",
+   "salida": "ながれたり",
+   "kanji": null,
+   "aceptadas": [
+    "ながれたり"
+   ],
+   "regla": "Grupo 2: quita る y pon たり."
+  },
+  {
+   "kana": "ながれる",
+   "g": 2,
+   "forma": "imp",
+   "salida": "ながれろ",
+   "kanji": null,
+   "aceptadas": [
+    "ながれろ"
+   ],
+   "regla": "Grupo 2: quita る y pon ろ."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "masu",
+   "salida": "ながします",
+   "kanji": null,
+   "aceptadas": [
+    "ながします"
+   ],
+   "regla": "Grupo 1: す → し + ます."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "masen",
+   "salida": "ながしません",
+   "kanji": null,
+   "aceptadas": [
+    "ながしません"
+   ],
+   "regla": "Grupo 1: す → し + ません."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "nai",
+   "salida": "ながさない",
+   "kanji": null,
+   "aceptadas": [
+    "ながさない"
+   ],
+   "regla": "Grupo 1: す → さ + ない."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "ta",
+   "salida": "ながした",
+   "kanji": null,
+   "aceptadas": [
+    "ながした"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "te",
+   "salida": "ながして",
+   "kanji": null,
+   "aceptadas": [
+    "ながして"
+   ],
+   "regla": "Grupo 1: す → して."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "nagara",
+   "salida": "ながしながら",
+   "kanji": null,
+   "aceptadas": [
+    "ながしながら"
+   ],
+   "regla": "Grupo 1: す → し + ながら."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "tari",
+   "salida": "ながしたり",
+   "kanji": null,
+   "aceptadas": [
+    "ながしたり"
+   ],
+   "regla": "Grupo 1: す → した."
+  },
+  {
+   "kana": "ながす",
+   "g": 1,
+   "forma": "imp",
+   "salida": "ながせ",
+   "kanji": null,
+   "aceptadas": [
+    "ながせ"
+   ],
+   "regla": "Grupo 1: す → せ."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "masu",
+   "salida": "します",
+   "kanji": null,
+   "aceptadas": [
+    "します"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "masen",
+   "salida": "しません",
+   "kanji": null,
+   "aceptadas": [
+    "しません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "nai",
+   "salida": "しない",
+   "kanji": null,
+   "aceptadas": [
+    "しない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "ta",
+   "salida": "した",
+   "kanji": null,
+   "aceptadas": [
+    "した"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "te",
+   "salida": "して",
+   "kanji": null,
+   "aceptadas": [
+    "して"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "しなかった",
+   "kanji": null,
+   "aceptadas": [
+    "しなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "sou",
+   "salida": "するそうです",
+   "kanji": null,
+   "aceptadas": [
+    "するそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "atode",
+   "salida": "した後で",
+   "kanji": null,
+   "aceptadas": [
+    "した後で",
+    "したあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "する",
+   "g": 3,
+   "forma": "pot",
+   "salida": "できる",
+   "kanji": null,
+   "aceptadas": [
+    "できる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "masu",
+   "salida": "きます",
+   "kanji": null,
+   "aceptadas": [
+    "きます"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "masen",
+   "salida": "きません",
+   "kanji": null,
+   "aceptadas": [
+    "きません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "nai",
+   "salida": "こない",
+   "kanji": null,
+   "aceptadas": [
+    "こない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "ta",
+   "salida": "きた",
+   "kanji": null,
+   "aceptadas": [
+    "きた"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "te",
+   "salida": "きて",
+   "kanji": null,
+   "aceptadas": [
+    "きて"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "こなかった",
+   "kanji": null,
+   "aceptadas": [
+    "こなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "sou",
+   "salida": "くるそうです",
+   "kanji": "来るそうです",
+   "aceptadas": [
+    "来るそうです",
+    "くるそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "atode",
+   "salida": "きた後で",
+   "kanji": null,
+   "aceptadas": [
+    "きた後で",
+    "きたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "くる",
+   "g": 3,
+   "forma": "pot",
+   "salida": "こられる",
+   "kanji": null,
+   "aceptadas": [
+    "こられる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "チェックインします",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "チェックインしません",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "チェックインしない",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "チェックインした",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "te",
+   "salida": "チェックインして",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "チェックインしなかった",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインしなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "sou",
+   "salida": "チェックインするそうです",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインするそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "atode",
+   "salida": "チェックインした後で",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインした後で",
+    "チェックインしたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "チェックインする",
+   "g": 3,
+   "forma": "pot",
+   "salida": "チェックインできる",
+   "kanji": null,
+   "aceptadas": [
+    "チェックインできる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "しゅっぱつします",
+   "kanji": "出発します",
+   "aceptadas": [
+    "出発します",
+    "しゅっぱつします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "しゅっぱつしません",
+   "kanji": "出発しません",
+   "aceptadas": [
+    "出発しません",
+    "しゅっぱつしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "しゅっぱつしない",
+   "kanji": "出発しない",
+   "aceptadas": [
+    "出発しない",
+    "しゅっぱつしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "しゅっぱつした",
+   "kanji": "出発した",
+   "aceptadas": [
+    "出発した",
+    "しゅっぱつした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "te",
+   "salida": "しゅっぱつして",
+   "kanji": "出発して",
+   "aceptadas": [
+    "出発して",
+    "しゅっぱつして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "しゅっぱつしなかった",
+   "kanji": "出発しなかった",
+   "aceptadas": [
+    "出発しなかった",
+    "しゅっぱつしなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "sou",
+   "salida": "しゅっぱつするそうです",
+   "kanji": "出発するそうです",
+   "aceptadas": [
+    "出発するそうです",
+    "しゅっぱつするそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "atode",
+   "salida": "しゅっぱつした後で",
+   "kanji": "出発した後で",
+   "aceptadas": [
+    "出発した後で",
+    "しゅっぱつした後で",
+    "出発したあとで",
+    "しゅっぱつしたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "しゅっぱつする",
+   "g": 3,
+   "forma": "pot",
+   "salida": "しゅっぱつできる",
+   "kanji": "出発できる",
+   "aceptadas": [
+    "出発できる",
+    "しゅっぱつできる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "とうちゃくします",
+   "kanji": "到着します",
+   "aceptadas": [
+    "到着します",
+    "とうちゃくします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "とうちゃくしません",
+   "kanji": "到着しません",
+   "aceptadas": [
+    "到着しません",
+    "とうちゃくしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "とうちゃくしない",
+   "kanji": "到着しない",
+   "aceptadas": [
+    "到着しない",
+    "とうちゃくしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "とうちゃくした",
+   "kanji": "到着した",
+   "aceptadas": [
+    "到着した",
+    "とうちゃくした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "te",
+   "salida": "とうちゃくして",
+   "kanji": "到着して",
+   "aceptadas": [
+    "到着して",
+    "とうちゃくして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "とうちゃくしなかった",
+   "kanji": "到着しなかった",
+   "aceptadas": [
+    "到着しなかった",
+    "とうちゃくしなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "sou",
+   "salida": "とうちゃくするそうです",
+   "kanji": "到着するそうです",
+   "aceptadas": [
+    "到着するそうです",
+    "とうちゃくするそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "atode",
+   "salida": "とうちゃくした後で",
+   "kanji": "到着した後で",
+   "aceptadas": [
+    "到着した後で",
+    "とうちゃくした後で",
+    "到着したあとで",
+    "とうちゃくしたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "とうちゃくする",
+   "g": 3,
+   "forma": "pot",
+   "salida": "とうちゃくできる",
+   "kanji": "到着できる",
+   "aceptadas": [
+    "到着できる",
+    "とうちゃくできる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "こしょうします",
+   "kanji": "故障します",
+   "aceptadas": [
+    "故障します",
+    "こしょうします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "こしょうしません",
+   "kanji": "故障しません",
+   "aceptadas": [
+    "故障しません",
+    "こしょうしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "こしょうしない",
+   "kanji": "故障しない",
+   "aceptadas": [
+    "故障しない",
+    "こしょうしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "こしょうした",
+   "kanji": "故障した",
+   "aceptadas": [
+    "故障した",
+    "こしょうした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "te",
+   "salida": "こしょうして",
+   "kanji": "故障して",
+   "aceptadas": [
+    "故障して",
+    "こしょうして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "nagara",
+   "salida": "こしょうしながら",
+   "kanji": "故障しながら",
+   "aceptadas": [
+    "故障しながら",
+    "こしょうしながら"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "tari",
+   "salida": "こしょうしたり",
+   "kanji": "故障したり",
+   "aceptadas": [
+    "故障したり",
+    "こしょうしたり"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "こしょうする",
+   "g": 3,
+   "forma": "imp",
+   "salida": "こしょうしろ",
+   "kanji": "故障しろ",
+   "aceptadas": [
+    "故障しろ",
+    "こしょうしろ"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "せつめいします",
+   "kanji": "説明します",
+   "aceptadas": [
+    "説明します",
+    "せつめいします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "せつめいしません",
+   "kanji": "説明しません",
+   "aceptadas": [
+    "説明しません",
+    "せつめいしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "せつめいしない",
+   "kanji": "説明しない",
+   "aceptadas": [
+    "説明しない",
+    "せつめいしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "せつめいした",
+   "kanji": "説明した",
+   "aceptadas": [
+    "説明した",
+    "せつめいした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "te",
+   "salida": "せつめいして",
+   "kanji": "説明して",
+   "aceptadas": [
+    "説明して",
+    "せつめいして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "nagara",
+   "salida": "せつめいしながら",
+   "kanji": "説明しながら",
+   "aceptadas": [
+    "説明しながら",
+    "せつめいしながら"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "tari",
+   "salida": "せつめいしたり",
+   "kanji": "説明したり",
+   "aceptadas": [
+    "説明したり",
+    "せつめいしたり"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "せつめいする",
+   "g": 3,
+   "forma": "imp",
+   "salida": "せつめいしろ",
+   "kanji": "説明しろ",
+   "aceptadas": [
+    "説明しろ",
+    "せつめいしろ"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "きこくします",
+   "kanji": "帰国します",
+   "aceptadas": [
+    "帰国します",
+    "きこくします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "きこくしません",
+   "kanji": "帰国しません",
+   "aceptadas": [
+    "帰国しません",
+    "きこくしません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "きこくしない",
+   "kanji": "帰国しない",
+   "aceptadas": [
+    "帰国しない",
+    "きこくしない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "きこくした",
+   "kanji": "帰国した",
+   "aceptadas": [
+    "帰国した",
+    "きこくした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "te",
+   "salida": "きこくして",
+   "kanji": "帰国して",
+   "aceptadas": [
+    "帰国して",
+    "きこくして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "きこくしなかった",
+   "kanji": "帰国しなかった",
+   "aceptadas": [
+    "帰国しなかった",
+    "きこくしなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "sou",
+   "salida": "きこくするそうです",
+   "kanji": "帰国するそうです",
+   "aceptadas": [
+    "帰国するそうです",
+    "きこくするそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "atode",
+   "salida": "きこくした後で",
+   "kanji": "帰国した後で",
+   "aceptadas": [
+    "帰国した後で",
+    "きこくした後で",
+    "帰国したあとで",
+    "きこくしたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "きこくする",
+   "g": 3,
+   "forma": "pot",
+   "salida": "きこくできる",
+   "kanji": "帰国できる",
+   "aceptadas": [
+    "帰国できる",
+    "きこくできる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "masu",
+   "salida": "かいしします",
+   "kanji": "開始します",
+   "aceptadas": [
+    "開始します",
+    "かいしします"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "masen",
+   "salida": "かいししません",
+   "kanji": "開始しません",
+   "aceptadas": [
+    "開始しません",
+    "かいししません"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "nai",
+   "salida": "かいししない",
+   "kanji": "開始しない",
+   "aceptadas": [
+    "開始しない",
+    "かいししない"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "ta",
+   "salida": "かいしした",
+   "kanji": "開始した",
+   "aceptadas": [
+    "開始した",
+    "かいしした"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "te",
+   "salida": "かいしして",
+   "kanji": "開始して",
+   "aceptadas": [
+    "開始して",
+    "かいしして"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "nakatta",
+   "salida": "かいししなかった",
+   "kanji": "開始しなかった",
+   "aceptadas": [
+    "開始しなかった",
+    "かいししなかった"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "sou",
+   "salida": "かいしするそうです",
+   "kanji": "開始するそうです",
+   "aceptadas": [
+    "開始するそうです",
+    "かいしするそうです"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "atode",
+   "salida": "かいしした後で",
+   "kanji": "開始した後で",
+   "aceptadas": [
+    "開始した後で",
+    "かいしした後で",
+    "開始したあとで",
+    "かいししたあとで"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  },
+  {
+   "kana": "かいしする",
+   "g": 3,
+   "forma": "pot",
+   "salida": "かいしできる",
+   "kanji": "開始できる",
+   "aceptadas": [
+    "開始できる",
+    "かいしできる"
+   ],
+   "regla": "Grupo 3: する y くる van de memoria."
+  }
+ ]
+}

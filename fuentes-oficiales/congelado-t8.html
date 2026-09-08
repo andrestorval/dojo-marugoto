@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17516B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+<title>Dōjō Marugoto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;900&display=swap">
+
+<style>
+:root{
+  --ground:#F2F3F6; --surface:#FFFFFF; --surface-2:#F7F8FA;
+  --line:#DCE0E8; --line-strong:#C3C9D6;
+  --ink:#11141B; --ink-2:#39404F; --muted:#697083;
+  --ai:#17516B; --ai-lit:#2A82AC; --ai-wash:#E4EEF4;
+  --ok:#2F6B4F; --ok-wash:#E1EFE7;
+  --no:#9C3A2B; --no-wash:#F7E6E2;
+  --gold:#8A6516; --gold-wash:#F6EEDA;
+  --r:14px; --shadow:0 1px 2px rgba(17,20,27,.05), 0 8px 24px -12px rgba(17,20,27,.18);
+  --jp:"Zen Old Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --ui:"Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0C0F14; --surface:#151A21; --surface-2:#1B212A;
+    --line:#272E3A; --line-strong:#3A4351;
+    --ink:#E9ECF2; --ink-2:#C2C8D4; --muted:#8E97A8;
+    --ai:#63B3D4; --ai-lit:#8ACBE6; --ai-wash:#12303E;
+    --ok:#74C295; --ok-wash:#16301F;
+    --no:#E4796A; --no-wash:#3A1D18;
+    --gold:#DCB761; --gold-wash:#2F2716;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C0F14; --surface:#151A21; --surface-2:#1B212A;
+  --line:#272E3A; --line-strong:#3A4351;
+  --ink:#E9ECF2; --ink-2:#C2C8D4; --muted:#8E97A8;
+  --ai:#63B3D4; --ai-lit:#8ACBE6; --ai-wash:#12303E;
+  --ok:#74C295; --ok-wash:#16301F;
+  --no:#E4796A; --no-wash:#3A1D18;
+  --gold:#DCB761; --gold-wash:#2F2716;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  padding:0 0 env(safe-area-inset-bottom);
+}
+.wrap{max-width:760px; margin:0 auto; padding:16px 16px 40px}
+
+/* ---- cabecera ---- */
+header.top{
+  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  padding:14px 4px 16px; border-bottom:1px solid var(--line); margin-bottom:20px;
+}
+.brand{font-family:var(--jp); font-weight:900; font-size:1.35rem; letter-spacing:.01em}
+.brand .kicker{color:var(--ai); }
+.temaLabel{color:var(--muted); font-size:.82rem; letter-spacing:.04em; text-transform:uppercase}
+.spacer{flex:1}
+
+/* ---- botones ---- */
+button{font:inherit; cursor:pointer; border-radius:10px; border:1px solid var(--line-strong);
+  background:var(--surface); color:var(--ink); padding:11px 16px; transition:.12s}
+button:hover{border-color:var(--ai); color:var(--ai)}
+button:focus-visible{outline:2px solid var(--ai-lit); outline-offset:2px}
+button.primary{background:var(--ai); border-color:var(--ai); color:#fff; font-weight:700}
+button.primary:hover{background:var(--ai-lit); border-color:var(--ai-lit); color:#fff}
+button.ghost{background:transparent; border-color:var(--line)}
+button.big{width:100%; padding:15px; font-size:1.02rem}
+button[disabled]{opacity:.45; cursor:default}
+
+/* ---- tarjetas ---- */
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow); padding:22px}
+.card + .card{margin-top:16px}
+
+/* ---- inicio ---- */
+h2.sec{font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+  margin:0 0 12px; font-weight:700}
+.opts{display:grid; gap:10px}
+.opt{display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid var(--line);
+  border-radius:10px; background:var(--surface-2); cursor:pointer; transition:.12s}
+.opt:hover{border-color:var(--ai)}
+.opt input{margin-top:4px; accent-color:var(--ai); width:18px; height:18px; flex:none}
+.opt.on{border-color:var(--ai); background:var(--ai-wash)}
+.opt b{display:block; font-weight:700}
+.opt small{color:var(--muted); font-size:.86rem; line-height:1.4}
+.chipsrow{display:flex; gap:8px; flex-wrap:wrap}
+.chipbtn{padding:9px 14px; border-radius:999px; border:1px solid var(--line-strong); background:var(--surface-2)}
+.chipbtn.on{background:var(--ai); border-color:var(--ai); color:#fff; font-weight:700}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media(max-width:560px){ .grid2{grid-template-columns:1fr} }
+
+/* ---- práctica ---- */
+.rail{height:5px; background:var(--line); border-radius:99px; overflow:hidden; margin-bottom:6px}
+.rail i{display:block; height:100%; background:var(--ai); transition:width .25s}
+.meta{display:flex; justify-content:space-between; color:var(--muted); font-size:.8rem;
+  font-variant-numeric:tabular-nums; margin-bottom:16px}
+.tag{display:inline-block; font-size:.72rem; letter-spacing:.09em; text-transform:uppercase;
+  font-weight:700; padding:4px 9px; border-radius:6px; background:var(--ai-wash); color:var(--ai)}
+.tag.gold{background:var(--gold-wash); color:var(--gold)}
+.prompt{font-family:var(--jp); font-size:2.1rem; line-height:1.35; margin:16px 0 6px; text-wrap:balance}
+.prompt.es{font-family:var(--ui); font-size:1.32rem; font-weight:500; line-height:1.4}
+.sub{color:var(--muted); font-size:.92rem; margin:2px 0 0}
+.ask{margin:18px 0 4px; font-size:.95rem; color:var(--ink-2)}
+.ask b{color:var(--ai)}
+input[type=text]{
+  width:100%; font-family:var(--jp); font-size:1.5rem; padding:13px 14px;
+  border:2px solid var(--line-strong); border-radius:10px; background:var(--surface-2); color:var(--ink);
+}
+input[type=text]:focus{outline:none; border-color:var(--ai); background:var(--surface)}
+.gapline{font-family:var(--jp); font-size:1.34rem; line-height:2.1}
+.gapline input{display:inline-block; width:auto; min-width:9ch; font-size:1.2rem; padding:5px 9px; vertical-align:middle}
+.acts{display:flex; gap:10px; margin-top:14px}
+.acts button{flex:1}
+.acts button.thin{flex:0 0 auto}
+
+/* ---- feedback ---- */
+.fb{margin-top:16px; border-radius:10px; padding:14px 16px; border:1px solid transparent; display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--ok-wash); border-color:var(--ok); color:var(--ok)}
+.fb.casi{background:var(--gold-wash); border-color:var(--gold); color:var(--gold)}
+.fb.no{background:var(--no-wash); border-color:var(--no); color:var(--no)}
+.fb .head{font-weight:700; font-size:.86rem; letter-spacing:.06em; text-transform:uppercase}
+.fb .model{font-family:var(--jp); font-size:1.5rem; color:var(--ink); margin-top:8px; line-height:1.4}
+.fb .why{color:var(--ink-2); font-size:.92rem; margin-top:8px}
+.fb .why b{color:var(--ink)}
+
+/* ---- opciones múltiples ---- */
+.mc{display:grid; gap:9px; margin-top:14px}
+.mc button{text-align:left; padding:13px 15px; font-size:1.02rem}
+.mc button.pick-ok{border-color:var(--ok); background:var(--ok-wash); color:var(--ok); font-weight:700}
+.mc button.pick-no{border-color:var(--no); background:var(--no-wash); color:var(--no)}
+
+/* ---- armar ---- */
+.slot{min-height:62px; border:2px dashed var(--line-strong); border-radius:10px; padding:10px;
+  display:flex; gap:8px; flex-wrap:wrap; align-content:flex-start; background:var(--surface-2)}
+.pool{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+.piece{font-family:var(--jp); font-size:1.16rem; padding:8px 13px; border-radius:9px;
+  border:1px solid var(--line-strong); background:var(--surface)}
+.piece:hover{border-color:var(--ai)}
+
+/* ---- resumen ---- */
+.score{font-size:3.2rem; font-weight:700; font-variant-numeric:tabular-nums; line-height:1}
+.score small{font-size:1rem; color:var(--muted); font-weight:400}
+table.rev{width:100%; border-collapse:collapse; margin-top:6px; font-size:.94rem}
+table.rev th{text-align:left; font-size:.72rem; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); border-bottom:1px solid var(--line); padding:8px 6px}
+table.rev td{border-bottom:1px solid var(--line); padding:9px 6px; vertical-align:top}
+table.rev td.jp{font-family:var(--jp); font-size:1.1rem}
+.tblwrap{overflow-x:auto}
+.hide{display:none}
+.foot{color:var(--muted); font-size:.82rem; text-align:center; margin-top:26px; line-height:1.6}
+kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--line-strong);
+  border-bottom-width:2px; border-radius:5px; padding:1px 6px; background:var(--surface-2)}
+@media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="kicker">道場</span> Dōjō Marugoto</div>
+    <div class="spacer"></div>
+    <div class="temaLabel" id="temaLabel"></div>
+  </header>
+
+  <!-- ══════════ INICIO ══════════ -->
+  <section id="scHome">
+    <div class="card">
+      <h2 class="sec">Qué quieres practicar</h2>
+      <div class="opts" id="modeList"></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h2 class="sec">De qué clase</h2>
+        <div class="chipsrow" id="claseRow"></div>
+      </div>
+      <div class="card">
+        <h2 class="sec">Cuántas preguntas</h2>
+        <div class="chipsrow" id="largoRow"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="primary big" id="btnStart">Empezar</button>
+      <p class="foot" style="margin-top:14px; text-align:left">
+        Puedes escribir en kana o en rōmaji: <b>tobanai</b> y <b>とばない</b> valen lo mismo.
+        <kbd>Enter</kbd> comprueba y vuelve a avanzar.
+      </p>
+    </div>
+
+    <div class="card" id="histCard">
+      <h2 class="sec">Lo que llevas</h2>
+      <div id="histBody"></div>
+      <div class="acts" style="margin-top:14px">
+        <button class="ghost" id="btnReset">Borrar mi progreso</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRÁCTICA ══════════ -->
+  <section id="scPlay" class="hide">
+    <div class="rail"><i id="rail"></i></div>
+    <div class="meta"><span id="mCount"></span><span id="mScore"></span></div>
+
+    <div class="card">
+      <span class="tag" id="qTag"></span>
+      <span class="tag gold hide" id="qTag2"></span>
+      <div id="qBody"></div>
+      <div class="fb" id="fb"></div>
+      <div class="acts" id="qActs"></div>
+    </div>
+
+    <div class="acts" style="margin-top:16px">
+      <button class="ghost" id="btnQuit">Terminar sesión</button>
+    </div>
+  </section>
+
+  <!-- ══════════ RESUMEN ══════════ -->
+  <section id="scEnd" class="hide">
+    <div class="card">
+      <h2 class="sec">Sesión terminada</h2>
+      <div class="score" id="endScore"></div>
+      <p class="sub" id="endLine"></p>
+      <div class="acts" style="margin-top:18px">
+        <button class="primary" id="btnAgain">Otra ronda</button>
+        <button class="ghost" id="btnHome">Volver al inicio</button>
+      </div>
+    </div>
+    <div class="card" id="endMissCard">
+      <h2 class="sec">Para repasar</h2>
+      <div class="tblwrap"><table class="rev" id="endMiss"></table></div>
+    </div>
+  </section>
+
+  <p class="foot">
+    Marugoto A2/B1 Parte 2 · Tema <span id="footTema"></span><br>
+    Tu progreso se guarda solo en este dispositivo.
+  </p>
+</div>
+
+<script>
+/* ============================================================
+   BANCO DE DATOS — Marugoto A2/B1 Parte 2, Tema 8 旅行中のトラブル
+   clase 1 = libro p96-100 · clase 2 = libro p101-105
+   Para agregar un tema nuevo: copia la estructura y agrega los
+   objetos a VERBOS / VOCAB / FRASES / HUECOS / ARMAR.
+   ============================================================ */
+
+const TEMA = { n: 8, titulo: "旅行中のトラブル", es: "Contratiempos en el viaje" };
+
+/* --- VERBOS ---------------------------------------------------
+   kana  : forma diccionario en kana (base de la conjugación)
+   kanji : forma diccionario con kanji (si no tiene, repite kana)
+   g     : grupo 1 / 2 / 3
+   es    : significado
+   c     : clase (1 o 2)
+   par   : pareja transitivo/intransitivo, si la tiene
+   nota  : advertencia (trampas de grupo)
+--------------------------------------------------------------- */
+const VERBOS = [
+  { kana:"のる", kanji:"乗る", g:1, es:"subir a (un transporte)", c:1 },
+  { kana:"とぶ", kanji:"とぶ", g:1, es:"volar", c:1 },
+  { kana:"はじまる", kanji:"始まる", g:1, es:"empezar (algo empieza)", c:1 },
+  { kana:"かわる", kanji:"変わる", g:1, es:"cambiar (algo cambia)", c:1 },
+  { kana:"おくれる", kanji:"おくれる", g:2, es:"atrasarse", c:1, nota:"Grupo 2, aunque termine en 〜る" },
+  { kana:"わすれる", kanji:"忘れる", g:2, es:"olvidar", c:1 },
+  { kana:"はいる", kanji:"入る", g:1, es:"entrar", c:1, nota:"Grupo 1, aunque termine en 〜いる" },
+  { kana:"あらう", kanji:"洗う", g:1, es:"lavar", c:1 },
+  { kana:"はらう", kanji:"はらう", g:1, es:"pagar", c:1 },
+  { kana:"おく", kanji:"おく", g:1, es:"dejar, colocar", c:1 },
+  { kana:"おもいだす", kanji:"思い出す", g:1, es:"recordar, hacer memoria", c:1 },
+  { kana:"うけとる", kanji:"受けとる", g:1, es:"recibir, retirar", c:1 },
+  { kana:"まちがえる", kanji:"まちがえる", g:2, es:"confundirse de", c:1 },
+  { kana:"しらせる", kanji:"知らせる", g:2, es:"avisar, informar", c:1 },
+  { kana:"たずねる", kanji:"たずねる", g:2, es:"preguntar (formal)", c:1 },
+  { kana:"ある", kanji:"ある", g:1, es:"haber, estar", c:1, nota:"Negativo irregular: ない" },
+  { kana:"いく", kanji:"行く", g:1, es:"ir", c:1, nota:"Excepción: forma て 行って" },
+  { kana:"すごす", kanji:"すごす", g:1, es:"pasar (el rato)", c:2 },
+  { kana:"たのむ", kanji:"たのむ", g:1, es:"pedir", c:2 },
+  { kana:"あるく", kanji:"歩く", g:1, es:"caminar", c:2 },
+  { kana:"なく", kanji:"なく", g:1, es:"llorar", c:2 },
+  { kana:"すわる", kanji:"座る", g:1, es:"sentarse", c:2 },
+  { kana:"ねる", kanji:"寝る", g:2, es:"dormir, acostarse", c:2 },
+  { kana:"おりる", kanji:"おりる", g:2, es:"bajarse (de un transporte)", c:2 },
+  { kana:"たすける", kanji:"助ける", g:2, es:"ayudar, salvar", c:2 },
+  { kana:"にげる", kanji:"にげる", g:2, es:"huir, escapar", c:2 },
+  { kana:"みせる", kanji:"見せる", g:2, es:"mostrar", c:2 },
+  { kana:"てつだう", kanji:"手伝う", g:1, es:"echar una mano", c:2 },
+  { kana:"わかれる", kanji:"わかれる", g:2, es:"separarse, despedirse", c:2 },
+  { kana:"こわれる", kanji:"こわれる", g:2, es:"romperse", c:2 },
+  { kana:"なおす", kanji:"なおす", g:1, es:"arreglar", c:2 },
+  /* pares transitivo / intransitivo (clase 2) */
+  { kana:"つく", kanji:"つく", g:1, es:"encenderse", c:2, par:"つける", tipo:"自" },
+  { kana:"つける", kanji:"つける", g:2, es:"encender", c:2, par:"つく", tipo:"他" },
+  { kana:"きえる", kanji:"きえる", g:2, es:"apagarse", c:2, par:"けす", tipo:"自" },
+  { kana:"けす", kanji:"けす", g:1, es:"apagar", c:2, par:"きえる", tipo:"他" },
+  { kana:"あく", kanji:"あく", g:1, es:"abrirse", c:2, par:"あける", tipo:"自" },
+  { kana:"あける", kanji:"あける", g:2, es:"abrir", c:2, par:"あく", tipo:"他" },
+  { kana:"しまる", kanji:"しまる", g:1, es:"cerrarse", c:2, par:"しめる", tipo:"自" },
+  { kana:"しめる", kanji:"しめる", g:2, es:"cerrar", c:2, par:"しまる", tipo:"他" },
+  { kana:"でる", kanji:"出る", g:2, es:"salir", c:2, par:"だす", tipo:"自" },
+  { kana:"だす", kanji:"出す", g:1, es:"sacar, echar", c:2, par:"でる", tipo:"他" },
+  { kana:"とまる", kanji:"止まる", g:1, es:"pararse, detenerse", c:2, par:"とめる", tipo:"自" },
+  { kana:"とめる", kanji:"止める", g:2, es:"parar, cortar", c:2, par:"とまる", tipo:"他" },
+  { kana:"かかる", kanji:"かかる", g:1, es:"quedar cerrado (con llave)", c:2, par:"かける", tipo:"自" },
+  { kana:"かける", kanji:"かける", g:2, es:"echar la llave", c:2, par:"かかる", tipo:"他" },
+  { kana:"ながれる", kanji:"ながれる", g:2, es:"fluir, correr (el agua)", c:2, par:"ながす", tipo:"自" },
+  { kana:"ながす", kanji:"ながす", g:1, es:"hacer correr (el agua)", c:2, par:"ながれる", tipo:"他" },
+  /* grupo 3 */
+  { kana:"する", kanji:"する", g:3, es:"hacer", c:1 },
+  { kana:"くる", kanji:"来る", g:3, es:"venir", c:1 },
+  { kana:"チェックインする", kanji:"チェックインする", g:3, es:"facturar", c:1 },
+  { kana:"しゅっぱつする", kanji:"出発する", g:3, es:"partir, salir", c:1 },
+  { kana:"とうちゃくする", kanji:"到着する", g:3, es:"llegar", c:1 },
+  { kana:"こしょうする", kanji:"故障する", g:3, es:"averiarse", c:2 },
+  { kana:"せつめいする", kanji:"説明する", g:3, es:"explicar", c:2 },
+  { kana:"きこくする", kanji:"帰国する", g:3, es:"volver al país de origen", c:1 },
+  { kana:"かいしする", kanji:"開始する", g:3, es:"dar comienzo", c:1 }
+];
+
+/* --- FORMAS QUE SE PRACTICAN ---------------------------------- */
+const FORMAS = [
+  { id:"masu",    label:"forma ます",          desc:"cortés, no-pasado",       c:[1,2] },
+  { id:"masen",   label:"forma ません",        desc:"cortés, negativo",        c:[1,2] },
+  { id:"nai",     label:"forma ない",          desc:"plano, negativo",         c:[1,2] },
+  { id:"ta",      label:"forma た",            desc:"plano, pasado",           c:[1,2] },
+  { id:"te",      label:"forma て",            desc:"conectiva",               c:[1,2] },
+  { id:"nakatta", label:"forma なかった",      desc:"plano, pasado negativo",  c:[1] },
+  { id:"sou",     label:"〜そうです",          desc:"dicen que… (forma simple + そうです)", c:[1] },
+  { id:"atode",   label:"〜た後で",            desc:"después de…",             c:[1] },
+  { id:"nagara",  label:"〜ながら",            desc:"mientras… (raíz de ます)",  c:[2] },
+  { id:"tari",    label:"〜たり",              desc:"…y tal (forma た + り)",   c:[2] },
+  { id:"pot",     label:"forma potencial",     desc:"poder…",                  c:[1] },
+  { id:"imp",     label:"forma imperativa",    desc:"¡…! (命令形)",             c:[2] }
+];
+
+/* --- VOCABULARIO ---------------------------------------------- */
+const VOCAB = [
+  { jp:"空港", kana:"くうこう", es:"aeropuerto", c:1, cat:"viaje" },
+  { jp:"飛行機", kana:"ひこうき", es:"avión", c:1, cat:"viaje" },
+  { jp:"〜便", kana:"〜びん", es:"vuelo número…", c:1, cat:"viaje" },
+  { jp:"〜航空", kana:"〜こうくう", es:"aerolínea", c:1, cat:"viaje" },
+  { jp:"〜行き", kana:"〜いき", es:"con destino a", c:1, cat:"viaje" },
+  { jp:"フライト", kana:"フライト", es:"vuelo", c:1, cat:"viaje" },
+  { jp:"手続き", kana:"てつづき", es:"trámite", c:1, cat:"viaje" },
+  { jp:"搭乗", kana:"とうじょう", es:"embarque", c:1, cat:"viaje" },
+  { jp:"チェックイン", kana:"チェックイン", es:"facturación", c:1, cat:"viaje" },
+  { jp:"出発ゲート", kana:"しゅっぱつゲート", es:"puerta de embarque", c:1, cat:"viaje" },
+  { jp:"荷物", kana:"にもつ", es:"equipaje", c:1, cat:"objetos" },
+  { jp:"スーツケース", kana:"スーツケース", es:"maleta", c:1, cat:"objetos" },
+  { jp:"パスポート", kana:"パスポート", es:"pasaporte", c:1, cat:"objetos" },
+  { jp:"忘れ物", kana:"わすれもの", es:"objeto olvidado", c:1, cat:"objetos" },
+  { jp:"受付", kana:"うけつけ", es:"recepción", c:1, cat:"viaje" },
+  { jp:"到着時間", kana:"とうちゃくじかん", es:"hora de llegada", c:1, cat:"viaje" },
+  { jp:"予定", kana:"よてい", es:"plan, previsión", c:1, cat:"abstracto" },
+  { jp:"変更", kana:"へんこう", es:"cambio", c:1, cat:"problema" },
+  { jp:"故障", kana:"こしょう", es:"avería", c:1, cat:"problema" },
+  { jp:"エンジン", kana:"エンジン", es:"motor", c:1, cat:"objetos" },
+  { jp:"トラブル", kana:"トラブル", es:"problema", c:1, cat:"problema" },
+  { jp:"アナウンス", kana:"アナウンス", es:"anuncio por megafonía", c:1, cat:"viaje" },
+  { jp:"お客様", kana:"おきゃくさま", es:"pasajero, cliente (formal)", c:1, cat:"viaje" },
+  { jp:"利用", kana:"りよう", es:"uso", c:1, cat:"abstracto" },
+  { jp:"見送り", kana:"みおくり", es:"ir a despedir a alguien", c:1, cat:"abstracto" },
+  { jp:"かばん", kana:"かばん", es:"bolso", c:1, cat:"objetos" },
+  { jp:"ていねいたい", kana:"ていねいたい", es:"estilo formal", c:1, cat:"abstracto" },
+  { jp:"ふつうたい", kana:"ふつうたい", es:"estilo informal", c:1, cat:"abstracto" },
+  { jp:"もうすぐ", kana:"もうすぐ", es:"dentro de poco", c:1, cat:"tiempo" },
+  { jp:"〜ほど", kana:"〜ほど", es:"aproximadamente (formal)", c:1, cat:"tiempo" },
+  { jp:"とにかく", kana:"とにかく", es:"en fin, de todas formas", c:1, cat:"conector" },
+  { jp:"それから", kana:"それから", es:"después de eso", c:1, cat:"conector" },
+  { jp:"どこか", kana:"どこか", es:"algún lugar", c:1, cat:"conector" },
+  { jp:"しまった", kana:"しまった", es:"¡rayos!", c:1, cat:"reaccion" },
+  { jp:"どうしよう", kana:"どうしよう", es:"¿qué hago?", c:1, cat:"reaccion" },
+  { jp:"たぶん", kana:"たぶん", es:"seguramente", c:1, cat:"reaccion" },
+  { jp:"電気", kana:"でんき", es:"luz eléctrica", c:2, cat:"hotel" },
+  { jp:"エアコン", kana:"エアコン", es:"aire acondicionado", c:2, cat:"hotel" },
+  { jp:"まど", kana:"まど", es:"ventana", c:2, cat:"hotel" },
+  { jp:"ドア", kana:"ドア", es:"puerta", c:2, cat:"hotel" },
+  { jp:"かぎ", kana:"かぎ", es:"llave", c:2, cat:"hotel" },
+  { jp:"お湯", kana:"おゆ", es:"agua caliente", c:2, cat:"hotel" },
+  { jp:"水", kana:"みず", es:"agua", c:2, cat:"hotel" },
+  { jp:"部屋", kana:"へや", es:"habitación", c:2, cat:"hotel" },
+  { jp:"〜号室", kana:"〜ごうしつ", es:"habitación número", c:2, cat:"hotel" },
+  { jp:"エレベーター", kana:"エレベーター", es:"ascensor", c:2, cat:"hotel" },
+  { jp:"歴史", kana:"れきし", es:"historia", c:2, cat:"abstracto" },
+  { jp:"説明", kana:"せつめい", es:"explicación", c:2, cat:"abstracto" },
+  { jp:"火事", kana:"かじ", es:"incendio", c:2, cat:"problema" },
+  { jp:"どろぼう", kana:"どろぼう", es:"ladrón", c:2, cat:"problema" },
+  { jp:"マッサージ", kana:"マッサージ", es:"masaje", c:2, cat:"objetos" },
+  { jp:"ガイドブック", kana:"ガイドブック", es:"guía de viaje", c:2, cat:"objetos" },
+  { jp:"計画", kana:"けいかく", es:"plan, planificación", c:2, cat:"abstracto" },
+  { jp:"映画", kana:"えいが", es:"película", c:2, cat:"objetos" },
+  { jp:"外国語", kana:"がいこくご", es:"lengua extranjera", c:2, cat:"abstracto" },
+  { jp:"思い出", kana:"おもいで", es:"recuerdo", c:2, cat:"abstracto" },
+  { jp:"親切", kana:"しんせつ", es:"amabilidad, amable", c:2, cat:"abstracto" },
+  { jp:"仕事", kana:"しごと", es:"trabajo", c:2, cat:"abstracto" },
+  { jp:"やっと", kana:"やっと", es:"por fin", c:2, cat:"tiempo" },
+  { jp:"それに", kana:"それに", es:"además", c:2, cat:"conector" },
+  { jp:"ずっと", kana:"ずっと", es:"todo el rato", c:2, cat:"tiempo" },
+  { jp:"なぜか", kana:"なぜか", es:"por algún motivo", c:2, cat:"conector" },
+  { jp:"ひどい目にあう", kana:"ひどいめにあう", es:"pasarlo fatal", c:2, cat:"reaccion" },
+  { jp:"へたな", kana:"へたな", es:"malo (en algo)", c:2, cat:"reaccion" }
+];
+
+/* --- FRASES: español → japonés --------------------------------
+   ok : lista de respuestas aceptadas (la primera es la modelo)
+--------------------------------------------------------------- */
+const FRASES = [
+  { es:"Dicen que los trámites empiezan en unos 20 minutos.", c:1, pat:"〜そうです",
+    ok:["あと20分ほどで、手続きが始まるそうです。","あと20分ほどで手続きが始まるそうです。","手続きが始まるそうです。"] },
+  { es:"Al parecer la salida se atrasa una hora.", c:1, pat:"〜そうです",
+    ok:["出発が1時間おくれるそうです。","しゅっぱつが1じかんおくれるそうです。"] },
+  { es:"Dicen que cambió la puerta de embarque.", c:1, pat:"〜そうです",
+    ok:["出発ゲートが変わったそうです。","しゅっぱつゲートがかわったそうです。"] },
+  { es:"Dicen que hoy el avión no vuela.", c:1, pat:"〜そうです",
+    ok:["今日は飛行機がとばないそうです。","きょうはひこうきがとばないそうです。","飛行機がとばないそうです。"] },
+  { es:"Dicen que es la puerta 25. (ojo con el だ)", c:1, pat:"N + だそうです",
+    ok:["25番だそうです。","にじゅうごばんだそうです。"] },
+  { es:"Dicen que ese hotel es cómodo. (ojo con el だ)", c:1, pat:"adj-な + だそうです",
+    ok:["あのホテルはべんりだそうです。","ホテルはべんりだそうです。"] },
+  { es:"¿Qué acaban de decir en el aviso?", c:1, pat:"何て言ってましたか",
+    ok:["今のアナウンス、何て言ってましたか。","いまのアナウンス、なんていってましたか。","今のアナウンス、何て言っていましたか。"] },
+  { es:"Disculpe. Esto… ¿va usted en el mismo vuelo?", c:1, pat:"abordaje",
+    ok:["すみません。あのう、同じフライトですか。","すみません、あのう、同じフライトですか。","すみません。あのう、おなじフライトですか。"] },
+  { es:"Después del check-in me tomé un té en la cafetería.", c:1, pat:"〜た後で",
+    ok:["チェックインした後で、カフェでお茶を飲んだ。","チェックインしたあとで、カフェでおちゃをのんだ。"] },
+  { es:"Una vez que llegue al aeropuerto, revisaré el correo.", c:1, pat:"〜た後で",
+    ok:["空港についた後で、メールをチェックします。","くうこうについたあとで、メールをチェックします。"] },
+  { es:"En fin, vamos a ver.", c:1, pat:"とにかく〜てみましょう",
+    ok:["とにかく行ってみましょう。","とにかくいってみましょう。"] },
+  { es:"¿Has tenido alguna vez un problema en el aeropuerto?", c:1, pat:"〜たことがあります",
+    ok:["空港でトラブルにあったことがありますか。","くうこうでトラブルにあったことがありますか。"] },
+  { es:"¡Socorro!", c:2, pat:"pedir ayuda", ok:["助けて！","たすけて！","助けて","たすけて"] },
+  { es:"¡Por favor, que alguien!", c:2, pat:"pedir ayuda", ok:["すみません、だれか！","すみません、だれか"] },
+  { es:"¡Fuego! ¡Huyan! (en estilo llano)", c:2, pat:"命令形", ok:["火事だ、にげろ！","かじだ、にげろ！","火事だ、にげろ"] },
+  { es:"Disculpe, ¡me bajo!", c:2, pat:"pedir paso", ok:["すみません、おります！","すみません、おります"] },
+  { es:"El personal del hotel enciende la luz.", c:2, pat:"他動詞",
+    ok:["ホテルの人が電気をつけます。","ホテルのひとがでんきをつけます。"] },
+  { es:"La luz no se enciende.", c:2, pat:"自動詞", ok:["電気がつきません。","でんきがつきません。"] },
+  { es:"La ventana no cierra.", c:2, pat:"自動詞", ok:["まどがしまりません。"] },
+  { es:"No sale agua caliente.", c:2, pat:"自動詞", ok:["お湯が出ません。","おゆがでません。"] },
+  { es:"El personal del hotel cortó el agua del baño.", c:2, pat:"他動詞",
+    ok:["ホテルの人はトイレの水を止めました。","ホテルの人がトイレの水を止めました。","ホテルのひとはトイレのみずをとめました。"] },
+  { es:"Reviso el correo mientras me tomo un café.", c:2, pat:"〜ながら",
+    ok:["コーヒーを飲みながら、メールをチェックします。","コーヒーをのみながら、メールをチェックします。"] },
+  { es:"Espero leyendo la guía de viaje.", c:2, pat:"〜ながら",
+    ok:["ガイドブックを読みながら、待ちます。","ガイドブックをよみながら、まちます。"] },
+  { es:"Me contó la historia del hotel mientras caminábamos.", c:2, pat:"〜ながら + 〜てくれる",
+    ok:["歩きながら、ホテルの歴史を説明してくれました。","あるきながら、ホテルのれきしをせつめいしてくれました。"] },
+  { es:"Conseguí que me cambiaran de habitación.", c:2, pat:"〜てもらう",
+    ok:["部屋をかえてもらいました。","へやをかえてもらいました。","部屋をかえてもらった。"] },
+  { es:"Quiero ser amable con los extranjeros.", c:2, pat:"〜てあげる",
+    ok:["外国の人に親切にしてあげたいです。","がいこくのひとにしんせつにしてあげたいです。"] },
+  { es:"Estudio idiomas, duermo, cosas así.", c:2, pat:"〜たり〜たり",
+    ok:["外国語の勉強をしたり、寝たりしています。","がいこくごのべんきょうをしたり、ねたりしています。"] },
+  { es:"Lo pasé fatal.", c:2, pat:"ひどい目にあう", ok:["ひどい目にあいました。","ひどいめにあいました。"] }
+];
+
+/* --- FRASES CON HUECO ----------------------------------------- */
+const HUECOS = [
+  { pre:"あと20分ほどで、手続きが（", post:"）。", hint:"始まります → 〜そうです", ok:["始まるそうです","はじまるそうです"], c:1, es:"Dicen que los trámites empiezan en unos 20 minutos." },
+  { pre:"飛行機の出発が1時間（", post:"）。", hint:"おくれます → 〜そうです", ok:["おくれるそうです"], c:1, es:"Dicen que la salida se atrasa una hora." },
+  { pre:"出発ゲートが（", post:"）。", hint:"変わりました → 〜そうです", ok:["変わったそうです","かわったそうです"], c:1, es:"Dicen que cambió la puerta." },
+  { pre:"今日は天気が悪くて、飛行機が（", post:"）。", hint:"とびません → 〜そうです", ok:["とばないそうです"], c:1, es:"Dicen que hoy no vuela." },
+  { pre:"チェックイン（", post:"）、カフェでお茶を飲んだ。", hint:"します → 〜た後で", ok:["した後で","したあとで"], c:1, es:"Después del check-in…" },
+  { pre:"空港に（", post:"）、メールをチェックします。", hint:"つきます → 〜た後で", ok:["ついた後で","ついたあとで"], c:1, es:"Una vez llegado al aeropuerto…" },
+  { pre:"とにかく（", post:"）。", hint:"行きます → 〜てみましょう", ok:["行ってみましょう","いってみましょう"], c:1, es:"En fin, vamos a ver." },
+  { pre:"かばんが1つない。どこかに（", post:"）かな。", hint:"忘れます → forma た", ok:["忘れた","わすれた"], c:1, es:"¿La habré olvidado en alguna parte?" },
+  { pre:"ホテルの人が電気を（", post:"）。", hint:"transitivo, forma ます", ok:["つけます"], c:2, es:"El personal enciende la luz." },
+  { pre:"電気が（", post:"）。", hint:"intransitivo, forma ません", ok:["つきません"], c:2, es:"La luz no se enciende." },
+  { pre:"まどが（", post:"）。", hint:"intransitivo, forma ません", ok:["しまりません"], c:2, es:"La ventana no cierra." },
+  { pre:"田中さんがまどを（", post:"）。", hint:"transitivo, forma ました", ok:["あけました"], c:2, es:"Tanaka abrió la ventana." },
+  { pre:"シャワーのお湯が（", post:"）。", hint:"intransitivo, forma ません", ok:["出ません","でません"], c:2, es:"No sale agua caliente de la ducha." },
+  { pre:"ホテルの人がトイレの水を（", post:"）。", hint:"transitivo, forma ました", ok:["止めました","とめました"], c:2, es:"El personal cortó el agua del baño." },
+  { pre:"セーフティボックスのかぎが（", post:"）。", hint:"intransitivo, forma ません", ok:["かかりません"], c:2, es:"La caja fuerte no cierra con llave." },
+  { pre:"へやに入ったら、まどが（", post:"）ままでした。", hint:"intransitivo, forma た", ok:["あいた"], c:2, es:"La ventana estaba abierta." },
+  { pre:"コーヒーを（", post:"）、メールをチェックしました。", hint:"飲みます → 〜ながら", ok:["飲みながら","のみながら"], c:2, es:"Revisé el correo mientras tomaba café." },
+  { pre:"マッサージを（", post:"）、ねむってしまいました。", hint:"してもらいます → 〜ながら", ok:["してもらいながら"], c:2, es:"Me quedé dormido mientras me hacían el masaje." },
+  { pre:"子どもたちは、おかしを（", post:"）、ゲームをしていました。", hint:"食べます → 〜ながら", ok:["食べながら","たべながら"], c:2, es:"Los niños jugaban mientras comían dulces." },
+  { pre:"アリさんは、サインを（", post:"）、出発ゲートをさがしました。", hint:"見ます → 〜ながら", ok:["見ながら","みながら"], c:2, es:"Ali buscó la puerta mirando los letreros." },
+  { pre:"私のむすめは、空港で（", post:"）、友だちとわかれました。", hint:"なきます → 〜ながら", ok:["なきながら"], c:2, es:"Mi hija se despidió llorando." },
+  { pre:"ガイドブックを（", post:"）、旅行の計画をたてます。", hint:"読みます → 〜ながら", ok:["読みながら","よみながら"], c:2, es:"Planifico el viaje leyendo la guía." },
+  { pre:"となりに座った人と（", post:"）、すごします。", hint:"話します → 〜ながら", ok:["話しながら","はなしながら"], c:2, es:"Paso el rato conversando con el de al lado." },
+  { pre:"外国語の勉強を（", post:"）、（", post2:"）しています。", hint:"します / 寝ます → 〜たり〜たり", ok:["したり"], ok2:["寝たり","ねたり"], c:2, es:"Estudio idiomas, duermo, cosas así." },
+  { pre:"へたな英語で人に（", post:"）、親切な人に助けて（", post2:"）しました。", hint:"たのみます / もらいます → 〜たり〜たり", ok:["たのんだり"], ok2:["もらったり"], c:2, es:"Pedí ayuda en mal inglés, dejé que me ayudaran…" }
+];
+
+/* --- ARMAR LA FRASE (piezas desordenadas) ---------------------- */
+const ARMAR = [
+  { es:"Dicen que la salida se atrasa una hora.", c:1, chips:["出発が","1時間","おくれる","そうです"] },
+  { es:"Dicen que los trámites empiezan en unos 20 minutos.", c:1, chips:["あと20分ほどで","手続きが","始まる","そうです"] },
+  { es:"¿Qué acaban de decir en el aviso?", c:1, chips:["今の","アナウンス、","何て","言ってましたか"] },
+  { es:"Dicen que el vuelo 115 quedó cancelado.", c:1, chips:["115便は","キャンセルに","なった","そうです"] },
+  { es:"Después del check-in me tomé un té en la cafetería.", c:1, chips:["チェックインした後で、","カフェで","お茶を","飲んだ"] },
+  { es:"Puede que esté en el baño. En fin, vamos a ver.", c:1, chips:["トイレに","あるかもしれません。","とにかく","行ってみましょう"] },
+  { es:"Al parecer ya casi podemos subir al avión.", c:1, chips:["もうすぐ","飛行機に","乗れる","そうです"] },
+  { es:"El personal del hotel enciende la luz de la habitación.", c:2, chips:["ホテルの人が","へやの","電気を","つけます"] },
+  { es:"Como en la habitación de al lado hacían ruido, me cambiaron de pieza.", c:2, chips:["となりのへやが","うるさかったから、","へやを","かえてもらいました"] },
+  { es:"Revisé el correo mientras tomaba café en la cafetería.", c:2, chips:["カフェで","コーヒーを","飲みながら、","メールをチェックしました"] },
+  { es:"Contó la historia del hotel mientras caminaba.", c:2, chips:["歩きながら、","ホテルの","歴史を","説明しました"] },
+  { es:"Paso el rato conversando con la persona sentada al lado.", c:2, chips:["となりに","座った人と","話しながら、","すごします"] },
+  { es:"Pedí ayuda en mal inglés y me cambiaron de habitación.", c:2, chips:["がんばって","英語で話して、","部屋を","かえてもらった"] },
+  { es:"Yo también quiero ser amable con los extranjeros en Japón.", c:2, chips:["ぼくも","日本では","外国の人に","親切にしてあげたい"] },
+  { es:"Al entrar a la habitación, la luz no se encendía.", c:2, chips:["部屋に","入ったら、","電気が","つかなかった"] }
+];
+
+/* ============================================================
+   MOTOR — conjugador, conversor rōmaji→kana y comparador
+   ============================================================ */
+
+/* ---------- 1. Conjugador ---------------------------------- */
+
+const U2I = { う:'い', く:'き', ぐ:'ぎ', す:'し', つ:'ち', ぬ:'に', ぶ:'び', む:'み', る:'り' };
+const U2A = { う:'わ', く:'か', ぐ:'が', す:'さ', つ:'た', ぬ:'な', ぶ:'ば', む:'ま', る:'ら' };
+const U2E = { う:'え', く:'け', ぐ:'げ', す:'せ', つ:'て', ぬ:'ね', ぶ:'べ', む:'め', る:'れ' };
+const TE1 = { う:'って', つ:'って', る:'って', む:'んで', ぶ:'んで', ぬ:'んで', く:'いて', ぐ:'いで', す:'して' };
+
+const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:'しなかった',
+               ta:'した', te:'して', nagara:'しながら', tari:'したり',
+               pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で' };
+const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
+               ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
+               pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で' };
+
+/* excepciones que no salen de la regla */
+const EXC = {
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で' },
+  'ある': { nai:'ない', nakatta:'なかった', imp:'あれ' }
+};
+
+function conjugar(v, forma) {
+  const k = v.kana;
+
+  if (v.g === 3) {
+    if (k.endsWith('する')) return k.slice(0, -2) + SURU[forma];
+    if (k.endsWith('くる')) return k.slice(0, -2) + KURU[forma];
+    return k;
+  }
+
+  let out;
+
+  if (v.g === 2) {
+    const st = k.slice(0, -1);              // quita る
+    switch (forma) {
+      case 'masu':    out = st + 'ます'; break;
+      case 'masen':   out = st + 'ません'; break;
+      case 'nai':     out = st + 'ない'; break;
+      case 'nakatta': out = st + 'なかった'; break;
+      case 'ta':      out = st + 'た'; break;
+      case 'te':      out = st + 'て'; break;
+      case 'nagara':  out = st + 'ながら'; break;
+      case 'tari':    out = st + 'たり'; break;
+      case 'pot':     out = st + 'られる'; break;
+      case 'imp':     out = st + 'ろ'; break;
+      case 'sou':     out = k + 'そうです'; break;
+      case 'atode':   out = st + 'た後で'; break;
+    }
+  } else {                                   // grupo 1
+    const last = k.slice(-1);
+    const st = k.slice(0, -1);
+    const te = st + TE1[last];
+    const ta = te.replace(/て$/, 'た').replace(/で$/, 'だ');
+    switch (forma) {
+      case 'masu':    out = st + U2I[last] + 'ます'; break;
+      case 'masen':   out = st + U2I[last] + 'ません'; break;
+      case 'nai':     out = st + U2A[last] + 'ない'; break;
+      case 'nakatta': out = st + U2A[last] + 'なかった'; break;
+      case 'ta':      out = ta; break;
+      case 'te':      out = te; break;
+      case 'nagara':  out = st + U2I[last] + 'ながら'; break;
+      case 'tari':    out = ta + 'り'; break;
+      case 'pot':     out = st + U2E[last] + 'る'; break;
+      case 'imp':     out = st + U2E[last]; break;
+      case 'sou':     out = k + 'そうです'; break;
+      case 'atode':   out = ta + '後で'; break;
+    }
+  }
+
+  const e = EXC[k];
+  if (e && e[forma] !== undefined) out = e[forma];
+  return out;
+}
+
+/* proyecta la forma en kana sobre la escritura con kanji */
+function conKanji(v, kanaConj) {
+  if (!v.kanji || v.kanji === v.kana) return null;
+  let i = 0;
+  while (i < v.kanji.length && i < v.kana.length &&
+         v.kanji[v.kanji.length - 1 - i] === v.kana[v.kana.length - 1 - i]) i++;
+  const cabezaKanji = v.kanji.slice(0, v.kanji.length - i);
+  const cabezaKana  = v.kana.slice(0, v.kana.length - i);
+  if (!kanaConj.startsWith(cabezaKana)) return null;
+  return cabezaKanji + kanaConj.slice(cabezaKana.length);
+}
+
+/* ---------- 2. Rōmaji → kana -------------------------------- */
+
+const RK = {
+  kya:'きゃ',kyu:'きゅ',kyo:'きょ', sha:'しゃ',shu:'しゅ',sho:'しょ', sya:'しゃ',syu:'しゅ',syo:'しょ',
+  cha:'ちゃ',chu:'ちゅ',cho:'ちょ', tya:'ちゃ',tyu:'ちゅ',tyo:'ちょ',
+  nya:'にゃ',nyu:'にゅ',nyo:'にょ', hya:'ひゃ',hyu:'ひゅ',hyo:'ひょ',
+  mya:'みゃ',myu:'みゅ',myo:'みょ', rya:'りゃ',ryu:'りゅ',ryo:'りょ',
+  gya:'ぎゃ',gyu:'ぎゅ',gyo:'ぎょ', ja:'じゃ',ju:'じゅ',jo:'じょ', jya:'じゃ',jyu:'じゅ',jyo:'じょ',
+  zya:'じゃ',zyu:'じゅ',zyo:'じょ', bya:'びゃ',byu:'びゅ',byo:'びょ', pya:'ぴゃ',pyu:'ぴゅ',pyo:'ぴょ',
+  she:'しぇ', che:'ちぇ', je:'じぇ', tsa:'つぁ',tsi:'つぃ',tse:'つぇ',tso:'つぉ',
+  fa:'ふぁ',fi:'ふぃ',fe:'ふぇ',fo:'ふぉ', fyu:'ふゅ',
+  va:'ゔぁ',vi:'ゔぃ',vu:'ゔ',ve:'ゔぇ',vo:'ゔぉ',
+  wi:'うぃ',we:'うぇ', di:'でぃ',du:'どぅ', ti:'てぃ', dyu:'でゅ',
+  ka:'か',ki:'き',ku:'く',ke:'け',ko:'こ',
+  sa:'さ',shi:'し',si:'し',su:'す',se:'せ',so:'そ',
+  ta:'た',chi:'ち',tsu:'つ',tu:'つ',te:'て',to:'と',
+  na:'な',ni:'に',nu:'ぬ',ne:'ね',no:'の',
+  ha:'は',hi:'ひ',fu:'ふ',hu:'ふ',he:'へ',ho:'ほ',
+  ma:'ま',mi:'み',mu:'む',me:'め',mo:'も',
+  ya:'や',yu:'ゆ',yo:'よ',
+  ra:'ら',ri:'り',ru:'る',re:'れ',ro:'ろ',
+  wa:'わ',wo:'を',
+  ga:'が',gi:'ぎ',gu:'ぐ',ge:'げ',go:'ご',
+  za:'ざ',ji:'じ',zi:'じ',zu:'ず',ze:'ぜ',zo:'ぞ',
+  da:'だ',de:'で',do:'ど',
+  ba:'ば',bi:'び',bu:'ぶ',be:'べ',bo:'ぼ',
+  pa:'ぱ',pi:'ぴ',pu:'ぷ',pe:'ぺ',po:'ぽ',
+  a:'あ',i:'い',u:'う',e:'え',o:'お'
+};
+
+function romajiAKana(txt) {
+  let s = txt.toLowerCase()
+    .replace(/ā/g,'aa').replace(/ī/g,'ii').replace(/ū/g,'uu')
+    .replace(/ē/g,'ee').replace(/ō/g,'ou')
+    .replace(/â/g,'aa').replace(/î/g,'ii').replace(/û/g,'uu')
+    .replace(/ê/g,'ee').replace(/ô/g,'ou');
+  let out = '', i = 0;
+  while (i < s.length) {
+    const ch = s[i];
+    if (!/[a-z'\-]/.test(ch)) { out += ch; i++; continue; }
+    /* ん */
+    if (ch === 'n') {
+      if (s[i+1] === "'" || s[i+1] === '-') { out += 'ん'; i += 2; continue; }
+      if (s[i+1] === 'n') { out += 'ん'; i += 1; continue; }
+      if (!s[i+1] || !/[aiueoy]/.test(s[i+1])) { out += 'ん'; i++; continue; }
+    }
+    /* っ  (consonante doble, salvo n) */
+    if (ch === s[i+1] && /[bcdfghjkmpqrstvwxyz]/.test(ch)) { out += 'っ'; i++; continue; }
+    let hecho = false;
+    for (let len = 3; len >= 1; len--) {
+      const trozo = s.substr(i, len);
+      if (RK[trozo]) { out += RK[trozo]; i += len; hecho = true; break; }
+    }
+    if (!hecho) { out += ch; i++; }
+  }
+  return out;
+}
+
+/* ---------- 3. Normalización y comparación ------------------ */
+
+const VOCAL_DE = { 'ア':'あ','イ':'い','ウ':'う','エ':'え','オ':'お' };
+
+function kataAHira(s) {
+  return s.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+}
+
+/* fila vocálica de cada kana */
+const FILA = {
+    'あ':'あ','か':'あ','さ':'あ','た':'あ','な':'あ','は':'あ','ま':'あ','や':'あ','ら':'あ','わ':'あ','が':'あ','ざ':'あ','だ':'あ','ば':'あ','ぱ':'あ','ゃ':'あ',
+    'い':'い','き':'い','し':'い','ち':'い','に':'い','ひ':'い','み':'い','り':'い','ぎ':'い','じ':'い','ぢ':'い','び':'い','ぴ':'い',
+    'う':'う','く':'う','す':'う','つ':'う','ぬ':'う','ふ':'う','む':'う','ゆ':'う','る':'う','ぐ':'う','ず':'う','づ':'う','ぶ':'う','ぷ':'う','ゅ':'う','ゔ':'う',
+    'え':'え','け':'え','せ':'え','て':'え','ね':'え','へ':'え','め':'え','れ':'え','げ':'え','ぜ':'え','で':'え','べ':'え','ぺ':'え',
+    'お':'お','こ':'お','そ':'お','と':'お','の':'お','ほ':'お','も':'お','よ':'お','ろ':'お','ご':'お','ぞ':'お','ど':'お','ぼ':'お','ぽ':'お','ょ':'お'
+};
+
+/* la vocal con que se alarga cada fila: こう, けい */
+const CHOON = { 'あ':'あ', 'い':'い', 'う':'う', 'え':'い', 'お':'う' };
+
+/* ー se convierte en la vocal de la sílaba anterior */
+function expandirChoon(s) {
+  let out = '';
+  for (const c of s) {
+    if ((c === 'ー' || c === '－' || c === '—') && out.length) {
+      out += FILA[out[out.length - 1]] || '';
+    } else out += c;
+  }
+  return out;
+}
+
+/* quita las vocales de alargamiento: すうつけえす → すつけす, そうです → そです */
+function quitarLargas(s) {
+  let out = '';
+  for (const c of s) {
+    const prev = out[out.length - 1];
+    const fila = prev ? FILA[prev] : null;
+    if (fila && /[あいうえお]/.test(c) && (c === fila || c === CHOON[fila])) continue;
+    out += c;
+  }
+  return out;
+}
+
+const BASURA = /[\s　、。．，,\.!！?？「」『』（）()・…~〜ー\-]/g;
+
+/* nivel estricto: acepta kana, kanji o rōmaji, pero exige la lectura exacta */
+function normEstricta(s) {
+  if (!s) return '';
+  let t = s.trim();
+  if (/[a-zA-Zāīūēō]/.test(t) && !/[぀-ヿ一-龯]/.test(t)) t = romajiAKana(t);
+  t = kataAHira(t);
+  t = expandirChoon(t);
+  return t.replace(BASURA, '');
+}
+
+/* nivel tolerante: además colapsa vocales largas (すうつけえす = すつけす) */
+function normSuelta(s) {
+  return quitarLargas(normEstricta(s));
+}
+
+/**
+ * Compara la respuesta del usuario contra la lista de aceptadas.
+ * Devuelve { estado: 'ok' | 'casi' | 'mal', modelo }
+ *  - ok   : coincide exactamente (en kana, kanji o rōmaji)
+ *  - casi : coincide salvo vocales largas / kana pequeño
+ */
+function revisar(usuario, aceptadas) {
+  const u = normEstricta(usuario);
+  if (!u) return { estado: 'mal', modelo: aceptadas[0] };
+  for (const a of aceptadas) {
+    if (normEstricta(a) === u) return { estado: 'ok', modelo: a };
+  }
+  const us = normSuelta(usuario);
+  for (const a of aceptadas) {
+    if (normSuelta(a) === us) return { estado: 'casi', modelo: a };
+  }
+  return { estado: 'mal', modelo: aceptadas[0] };
+}
+
+/* respuestas aceptadas para una conjugación: kana + kanji */
+function aceptadasDeConjugacion(v, forma) {
+  const kana = conjugar(v, forma);
+  const kanji = conKanji(v, kana);
+  const set = [kana];
+  if (kanji && kanji !== kana) set.unshift(kanji);
+  /* 後で también se escribe あとで */
+  set.slice().forEach(x => {
+    if (x.includes('後で')) set.push(x.replace('後で', 'あとで'));
+  });
+  return set;
+}
+
+</script>
+<script>
+/* ═══════════ estado ═══════════ */
+const LS = 'dojo-marugoto-t8';
+let prog = {};
+try { prog = JSON.parse(localStorage.getItem(LS) || '{}'); } catch(e){ prog = {}; }
+function save(){ try{ localStorage.setItem(LS, JSON.stringify(prog)); }catch(e){} }
+function box(id){ return (prog[id] && prog[id].b) || 0; }
+function marcar(id, bien){
+  const p = prog[id] || { b:0, v:0, f:0 };
+  p.v++; if(bien){ p.b = Math.min(4, p.b+1); } else { p.b = 0; p.f++; }
+  prog[id] = p; save();
+}
+
+/* explica el movimiento de sílaba, que es lo que de verdad cuesta */
+function reglaDe(v, forma){
+  if(v.g === 3) return 'Grupo 3: する y くる van de memoria.';
+  if(v.g === 2){
+    const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
+                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で' };
+    if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
+    return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
+  }
+  const u = v.kana.slice(-1);
+  if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
+  if(forma === 'nai' || forma === 'nakatta')
+    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
+  if(forma === 'masu' || forma === 'masen' || forma === 'nagara')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' + (forma === 'nagara' ? 'ながら' : forma === 'masu' ? 'ます' : 'ません') + '.';
+  if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
+  if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode'){
+    const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + '.';
+  }
+  return '';
+}
+
+const MODOS = [
+  { id:'vocabES', nom:'Vocabulario · escribir en japonés', desc:'Te doy la palabra en español y la escribes en japonés.' },
+  { id:'vocabJP', nom:'Vocabulario · reconocer', desc:'Te doy la palabra en japonés y eliges qué significa.' },
+  { id:'conj',    nom:'Conjugación', desc:'Te doy el verbo y la forma que quiero, y la escribes.' },
+  { id:'hueco',   nom:'Frases con hueco', desc:'Completas la parte que falta dentro de una frase del libro.' },
+  { id:'armar',   nom:'Armar la frase', desc:'Te doy las piezas desordenadas y las pones en orden.' },
+  { id:'frase',   nom:'Frase completa desde español', desc:'Lo más exigente: te doy la frase en español y la escribes entera.' }
+];
+
+let sel = { modos:['conj','hueco'], clase:'0', largo:15 };
+try { const s = JSON.parse(localStorage.getItem(LS+'-cfg')||'null'); if(s) sel = s; } catch(e){}
+function saveCfg(){ try{ localStorage.setItem(LS+'-cfg', JSON.stringify(sel)); }catch(e){} }
+
+let cola = [], idx = 0, aciertos = 0, fallos = [], respondida = false;
+
+/* ═══════════ utilidades ═══════════ */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function baraja(a){ const r = a.slice(); for(let i=r.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [r[i],r[j]]=[r[j],r[i]]; } return r; }
+function pesado(items){
+  const con = items.map(it => ({ it, w: 5 - box(it.id) + Math.random()*1.5 }));
+  con.sort((a,b) => b.w - a.w);
+  return con.map(x => x.it);
+}
+/* --- distractores del mismo campo semántico -------------------
+   Sin esto, las opciones se descartan por sentido común y el
+   ejercicio no mide nada. Dos reglas:
+   1. Primero se buscan palabras de la misma categoría.
+   2. Se descarta cualquier opción que en español se pise con la
+      correcta o con otra opción ya elegida (agua / agua caliente,
+      vuelo / vuelo número, habitación / habitación número).
+--------------------------------------------------------------- */
+function sinTildes(t){
+  return String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+function clavesDe(t){
+  return sinTildes(t).split(/[^a-z0-9]+/).filter(w => w.length >= 4);
+}
+function chocan(a, b){
+  const A = sinTildes(a), B = sinTildes(b);
+  if(A === B || A.includes(B) || B.includes(A)) return true;
+  const pa = clavesDe(a), pb = clavesDe(b);
+  return pa.some(w => pb.indexOf(w) !== -1);
+}
+function distractores(v){
+  const libres = VOCAB.filter(x => x.jp !== v.jp && !chocan(x.es, v.es));
+  const mismos = baraja(libres.filter(x => x.cat === v.cat));
+  const resto  = baraja(libres.filter(x => x.cat !== v.cat));
+  const out = [];
+  for(const c of mismos.concat(resto)){
+    if(out.length >= 3) break;
+    if(out.some(o => chocan(o.es, c.es))) continue;
+    out.push(c);
+  }
+  return out.map(x => x.es);
+}
+
+function enClase(c){ return sel.clase === '0' || String(c) === sel.clase; }
+
+/* ═══════════ construcción de preguntas ═══════════ */
+function construir(){
+  let pool = [];
+
+  if (sel.modos.includes('vocabES'))
+    VOCAB.filter(v => enClase(v.c)).forEach(v => pool.push({
+      tipo:'escribir', id:'v:'+v.jp+':es', tag:'Vocabulario', clase:v.c,
+      promptEs:v.es, ok:[v.jp, v.kana], modelo:v.jp, lectura:v.kana
+    }));
+
+  if (sel.modos.includes('vocabJP'))
+    VOCAB.filter(v => enClase(v.c)).forEach(v => pool.push({
+      tipo:'opcion', id:'v:'+v.jp+':jp', tag:'Vocabulario', clase:v.c,
+      promptJp:v.jp, lectura:v.kana, correcta:v.es, modelo:v.es,
+      opciones: baraja([v.es].concat(distractores(v)))
+    }));
+
+  if (sel.modos.includes('conj')){
+    const formas = FORMAS.filter(f => sel.clase === '0' || f.c.includes(+sel.clase));
+    VERBOS.filter(v => enClase(v.c)).forEach(v => formas.forEach(f => {
+      pool.push({
+        tipo:'escribir', id:'c:'+v.kana+':'+f.id, tag:'Conjugación', clase:v.c,
+        promptJp:v.kanji, lectura:(v.kanji!==v.kana? v.kana : ''),
+        pide:f.label, sub:v.es + ' · Grupo ' + v.g, nota:v.nota || '',
+        ok: aceptadasDeConjugacion(v, f.id), modelo: conKanji(v, conjugar(v,f.id)) || conjugar(v,f.id),
+        lecturaResp: conjugar(v, f.id), grupo:v.g, forma:f.desc, regla: reglaDe(v, f.id)
+      });
+    }));
+  }
+
+  if (sel.modos.includes('hueco'))
+    HUECOS.forEach((h,i) => { if(!enClase(h.c)) return; pool.push({
+      tipo: h.ok2 ? 'hueco2' : 'hueco', id:'h:'+i, tag:'Frase con hueco', clase:h.c,
+      pre:h.pre, post:h.post, post2:h.post2, hint:h.hint, ok:h.ok, ok2:h.ok2, sub:h.es,
+      modelo:h.ok[0] + (h.ok2 ? ' … ' + h.ok2[0] : '')
+    }); });
+
+  if (sel.modos.includes('armar'))
+    ARMAR.forEach((a,i) => { if(!enClase(a.c)) return; pool.push({
+      tipo:'armar', id:'a:'+i, tag:'Armar la frase', clase:a.c,
+      promptEs:a.es, chips:a.chips, modelo:a.chips.join('')
+    }); });
+
+  if (sel.modos.includes('frase'))
+    FRASES.forEach((f,i) => { if(!enClase(f.c)) return; pool.push({
+      tipo:'escribir', id:'f:'+i, tag:'Frase completa', clase:f.c, tag2:f.pat,
+      promptEs:f.es, ok:f.ok, modelo:f.ok[0], libre:true
+    }); });
+
+  cola = pesado(pool).slice(0, sel.largo === 0 ? pool.length : sel.largo);
+  cola = baraja(cola);
+}
+
+/* ═══════════ render ═══════════ */
+function pintarInicio(){
+  $('#temaLabel').textContent = 'Tema ' + TEMA.n + ' · ' + TEMA.titulo;
+  $('#footTema').textContent = TEMA.n + ' ' + TEMA.titulo + ' — ' + TEMA.es;
+
+  $('#modeList').innerHTML = MODOS.map(m => `
+    <label class="opt ${sel.modos.includes(m.id)?'on':''}" data-m="${m.id}">
+      <input type="checkbox" ${sel.modos.includes(m.id)?'checked':''}>
+      <span><b>${esc(m.nom)}</b><small>${esc(m.desc)}</small></span>
+    </label>`).join('');
+  $('#modeList').querySelectorAll('.opt').forEach(el => {
+    el.querySelector('input').onchange = e => {
+      const id = el.dataset.m;
+      if(e.target.checked){ if(!sel.modos.includes(id)) sel.modos.push(id); }
+      else sel.modos = sel.modos.filter(x => x !== id);
+      el.classList.toggle('on', e.target.checked); saveCfg(); actualizarStart();
+    };
+  });
+
+  const clases = [['0','Las dos'],['1','Clase 1 · p96–100'],['2','Clase 2 · p101–105']];
+  $('#claseRow').innerHTML = clases.map(([v,t]) =>
+    `<button class="chipbtn ${sel.clase===v?'on':''}" data-c="${v}">${esc(t)}</button>`).join('');
+  $('#claseRow').querySelectorAll('button').forEach(b => b.onclick = () => {
+    sel.clase = b.dataset.c; saveCfg(); pintarInicio();
+  });
+
+  const largos = [[10,'10'],[15,'15'],[25,'25'],[40,'40'],[0,'Todas']];
+  $('#largoRow').innerHTML = largos.map(([v,t]) =>
+    `<button class="chipbtn ${sel.largo===v?'on':''}" data-l="${v}">${esc(t)}</button>`).join('');
+  $('#largoRow').querySelectorAll('button').forEach(b => b.onclick = () => {
+    sel.largo = +b.dataset.l; saveCfg(); pintarInicio();
+  });
+
+  pintarHistorial(); actualizarStart();
+}
+function actualizarStart(){ $('#btnStart').disabled = sel.modos.length === 0; }
+
+function pintarHistorial(){
+  const ids = Object.keys(prog);
+  if(!ids.length){
+    $('#histBody').innerHTML = '<p class="sub">Todavía no hay nada. Lo que falles vuelve a salir más seguido.</p>';
+    return;
+  }
+  const vistas = ids.reduce((a,k) => a + prog[k].v, 0);
+  const firmes = ids.filter(k => prog[k].b >= 3).length;
+  const flojas = ids.filter(k => prog[k].b === 0 && prog[k].f > 0)
+                    .sort((a,b) => prog[b].f - prog[a].f).slice(0,8);
+  $('#histBody').innerHTML = `
+    <p class="sub" style="margin-bottom:12px">
+      <b style="color:var(--ink)">${vistas}</b> respuestas · <b style="color:var(--ok)">${firmes}</b> ítems ya firmes
+    </p>` + (flojas.length ? `<p class="sub" style="margin-bottom:6px">Lo que más se te resiste:</p>
+      <div class="chipsrow">${flojas.map(k => `<span class="piece">${esc(etiqueta(k))}</span>`).join('')}</div>` : '');
+}
+function etiqueta(id){
+  const [t, a, b] = id.split(':');
+  if(t === 'c'){ const f = FORMAS.find(x => x.id === b); return a + ' → ' + (f ? f.label : b); }
+  if(t === 'v'){ return a; }
+  if(t === 'h'){ return 'hueco ' + (+a + 1); }
+  if(t === 'a'){ return 'armar ' + (+a + 1); }
+  if(t === 'f'){ return 'frase ' + (+a + 1); }
+  return id;
+}
+
+function enunciado(q){
+  if(q.tipo === 'hueco' || q.tipo === 'hueco2')
+    return q.pre + '___' + q.post + (q.post2 ? '___' + q.post2 : '') + '  ·  ' + q.hint;
+  if(q.tipo === 'opcion') return q.promptJp + ' (' + q.lectura + ')';
+  if(q.pide) return q.promptJp + ' → ' + q.pide;
+  return q.promptEs || q.promptJp || etiqueta(q.id);
+}
+
+function ir(pantalla){
+  ['scHome','scPlay','scEnd'].forEach(s => $('#'+s).classList.toggle('hide', s !== pantalla));
+  window.scrollTo({ top:0, behavior:'instant' in window ? 'instant' : 'auto' });
+}
+
+/* ═══════════ pregunta ═══════════ */
+function pintarPregunta(){
+  const q = cola[idx];
+  respondida = false;
+  $('#rail').style.width = (idx / cola.length * 100) + '%';
+  $('#mCount').textContent = 'Pregunta ' + (idx+1) + ' de ' + cola.length;
+  $('#mScore').textContent = aciertos + ' correctas';
+  $('#qTag').textContent = q.tag;
+  const t2 = $('#qTag2');
+  if(q.tag2){ t2.textContent = q.tag2; t2.classList.remove('hide'); } else t2.classList.add('hide');
+  $('#fb').className = 'fb';
+  $('#fb').innerHTML = '';
+
+  const B = $('#qBody');
+
+  if(q.tipo === 'escribir'){
+    B.innerHTML =
+      (q.promptEs ? `<div class="prompt es">${esc(q.promptEs)}</div>` : '') +
+      (q.promptJp ? `<div class="prompt">${esc(q.promptJp)}</div>` : '') +
+      (q.lectura ? `<p class="sub">${esc(q.lectura)}</p>` : '') +
+      (q.sub ? `<p class="sub">${esc(q.sub)}</p>` : '') +
+      (q.pide ? `<p class="ask">Escribe la <b>${esc(q.pide)}</b>${q.forma?' <span class="sub">('+esc(q.forma)+')</span>':''}</p>`
+              : `<p class="ask">Escríbelo en japonés</p>`) +
+      `<input type="text" id="inp" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">`;
+    acciones(true);
+    setTimeout(() => $('#inp') && $('#inp').focus(), 30);
+  }
+
+  else if(q.tipo === 'hueco' || q.tipo === 'hueco2'){
+    B.innerHTML =
+      `<p class="ask">Completa la frase</p>
+       <div class="gapline">${esc(q.pre)}<input type="text" id="inp" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(q.post)}` +
+      (q.tipo === 'hueco2' ? `<input type="text" id="inp2" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(q.post2)}` : '') +
+      `</div>
+       <p class="sub" style="margin-top:12px"><b style="color:var(--ai)">${esc(q.hint)}</b></p>
+       <p class="sub">${esc(q.sub)}</p>`;
+    acciones(true);
+    setTimeout(() => $('#inp') && $('#inp').focus(), 30);
+  }
+
+  else if(q.tipo === 'opcion'){
+    B.innerHTML =
+      `<div class="prompt">${esc(q.promptJp)}</div>
+       <p class="sub">${esc(q.lectura)}</p>
+       <p class="ask">¿Qué significa?</p>
+       <div class="mc" id="mc">${q.opciones.map((o,i) => `<button data-i="${i}">${esc(o)}</button>`).join('')}</div>`;
+    $('#mc').querySelectorAll('button').forEach(b => b.onclick = () => {
+      if(respondida) return;
+      const elegido = q.opciones[+b.dataset.i];
+      const bien = elegido === q.correcta;
+      $('#mc').querySelectorAll('button').forEach(x => {
+        if(q.opciones[+x.dataset.i] === q.correcta) x.classList.add('pick-ok');
+        else if(x === b) x.classList.add('pick-no');
+        x.disabled = true;
+      });
+      resolver(bien, bien ? 'ok' : 'mal', q.correcta, q);
+    });
+    acciones(false);
+  }
+
+  else if(q.tipo === 'armar'){
+    B.innerHTML =
+      `<div class="prompt es">${esc(q.promptEs)}</div>
+       <p class="ask">Toca las piezas en el orden correcto</p>
+       <div class="slot" id="slot"></div>
+       <div class="pool" id="pool">${baraja(q.chips.map((c,i)=>({c,i}))).map(o =>
+          `<button class="piece" data-c="${esc(o.c)}">${esc(o.c)}</button>`).join('')}</div>`;
+    const slot = $('#slot'), pool = $('#pool');
+    pool.querySelectorAll('.piece').forEach(b => b.onclick = () => {
+      if(respondida) return;
+      const cp = document.createElement('button');
+      cp.className = 'piece'; cp.textContent = b.textContent;
+      cp.onclick = () => { if(respondida) return; cp.remove(); b.style.display=''; };
+      slot.appendChild(cp); b.style.display = 'none';
+    });
+    acciones(true);
+  }
+
+  $('#fb').classList.remove('show');
+}
+
+function acciones(conComprobar){
+  const A = $('#qActs');
+  A.innerHTML = conComprobar
+    ? `<button class="primary" id="btnCheck">Comprobar</button><button class="ghost thin" id="btnSkip">No sé</button>`
+    : `<button class="ghost thin" id="btnSkip">No sé</button>`;
+  if($('#btnCheck')) $('#btnCheck').onclick = comprobar;
+  if($('#btnSkip')) $('#btnSkip').onclick = () => {
+    const q = cola[idx];
+    if(respondida) return;
+    resolver(false, 'mal', q.modelo, q, true);
+  };
+}
+
+function comprobar(){
+  const q = cola[idx];
+  if(respondida){ siguiente(); return; }
+
+  if(q.tipo === 'armar'){
+    const dado = Array.from($('#slot').querySelectorAll('.piece')).map(x => x.textContent).join('');
+    const r = revisar(dado, [q.chips.join('')]);
+    resolver(r.estado === 'ok', r.estado, q.modelo, q);
+    return;
+  }
+
+  const v1 = ($('#inp') && $('#inp').value) || '';
+  if(!v1.trim()) return;
+
+  if(q.tipo === 'hueco2'){
+    const v2 = ($('#inp2') && $('#inp2').value) || '';
+    const r1 = revisar(v1, q.ok), r2 = revisar(v2, q.ok2);
+    const orden = e => e === 'ok' ? 2 : e === 'casi' ? 1 : 0;
+    const peor = Math.min(orden(r1.estado), orden(r2.estado));
+    const est = peor === 2 ? 'ok' : peor === 1 ? 'casi' : 'mal';
+    resolver(est !== 'mal', est, q.ok[0] + ' … ' + q.ok2[0], q);
+    return;
+  }
+
+  const r = revisar(v1, q.ok);
+  resolver(r.estado === 'ok' || r.estado === 'casi', r.estado, r.modelo, q);
+}
+
+function resolver(bien, estado, modelo, q, rendido){
+  respondida = true;
+  if(bien) aciertos++;
+  marcar(q.id, bien && estado === 'ok');
+  if(!bien) fallos.push({ q, modelo });
+
+  const fb = $('#fb');
+  fb.className = 'fb show ' + (estado === 'ok' ? 'ok' : estado === 'casi' ? 'casi' : 'no');
+  let head = estado === 'ok' ? 'Correcto' : estado === 'casi' ? 'Casi' : (rendido ? 'La respuesta era' : 'No');
+  let why = '';
+  if(estado === 'casi') why = '<div class="why">Lo tenías, pero falla una vocal larga o un kana pequeño. Fíjate en la forma exacta.</div>';
+  if(q.lecturaResp && q.lecturaResp !== modelo) why += '<div class="why">Lectura: <b>' + esc(q.lecturaResp) + '</b></div>';
+  if(estado !== 'ok' && q.regla) why += '<div class="why">' + esc(q.regla) + '</div>';
+  if(estado !== 'ok' && q.nota) why += '<div class="why"><b>Ojo:</b> ' + esc(q.nota) + '</div>';
+
+  fb.innerHTML = `<div class="head">${head}</div><div class="model">${esc(modelo)}</div>${why}`;
+
+  const A = $('#qActs');
+  A.innerHTML = `<button class="primary" id="btnNext">${idx+1 >= cola.length ? 'Ver resumen' : 'Siguiente'}</button>` +
+    (estado !== 'ok' && !rendido ? `<button class="ghost thin" id="btnOk">La tenía bien</button>` : '');
+  $('#btnNext').onclick = siguiente;
+  if($('#btnOk')) $('#btnOk').onclick = () => {
+    aciertos++; marcar(q.id, true);
+    fallos = fallos.filter(f => f.q !== q);
+    $('#btnOk').remove();
+    $('#mScore').textContent = aciertos + ' correctas';
+    fb.className = 'fb show ok';
+    fb.querySelector('.head').textContent = 'Marcada como correcta';
+  };
+  $('#btnNext').focus();
+}
+
+function siguiente(){
+  idx++;
+  if(idx >= cola.length) return terminar();
+  pintarPregunta();
+}
+
+function terminar(){
+  $('#rail').style.width = '100%';
+  const pct = cola.length ? Math.round(aciertos / cola.length * 100) : 0;
+  $('#endScore').innerHTML = aciertos + ' <small>de ' + cola.length + ' · ' + pct + '%</small>';
+  $('#endLine').textContent = pct >= 85 ? 'Esto ya lo tienes. Sube el número de preguntas o agrega un modo más exigente.'
+    : pct >= 55 ? 'Vas bien. Lo que fallaste va a volver a salir más seguido.'
+    : 'Todavía cuesta. Repite esta misma configuración un par de veces antes de cambiar de modo.';
+  const miss = $('#endMiss');
+  if(fallos.length){
+    $('#endMissCard').classList.remove('hide');
+    miss.innerHTML = '<tr><th>Pregunta</th><th>Respuesta</th></tr>' + fallos.map(f =>
+      `<tr><td>${esc(enunciado(f.q))}</td><td class="jp">${esc(f.modelo)}</td></tr>`).join('');
+  } else $('#endMissCard').classList.add('hide');
+  ir('scEnd');
+  pintarHistorial();
+}
+
+/* ═══════════ arranque ═══════════ */
+function empezar(){
+  construir();
+  if(!cola.length){ alert('No hay preguntas con esa combinación. Prueba con otra clase u otro modo.'); return; }
+  idx = 0; aciertos = 0; fallos = [];
+  ir('scPlay'); pintarPregunta();
+}
+
+$('#btnStart').onclick = empezar;
+$('#btnAgain').onclick = empezar;
+$('#btnHome').onclick = () => { pintarInicio(); ir('scHome'); };
+$('#btnQuit').onclick = () => { cola = cola.slice(0, idx); terminar(); };
+$('#btnReset').onclick = () => {
+  if(confirm('¿Borrar todo tu progreso guardado en este dispositivo?')){
+    prog = {}; save(); pintarHistorial();
+  }
+};
+
+document.addEventListener('keydown', e => {
+  if($('#scPlay').classList.contains('hide')) return;
+  if(e.key === 'Enter'){
+    e.preventDefault();
+    if(respondida){ siguiente(); }
+    else if($('#btnCheck')) comprobar();
+  }
+});
+
+pintarInicio();
+</script>
+
+</body>
+</html>

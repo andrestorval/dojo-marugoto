@@ -1,0 +1,6 @@
+# Git no toca finales de línea en este repositorio. El archivo congelado es la
+# autoridad del vector de conjugación y de la comprobación de la tabla de
+# migración (plano 5.3): tiene que salir del checkout byte a byte igual que
+# entró. Lo mismo vale para el contenido, donde una diferencia de bytes es una
+# diferencia de respuesta aceptada.
+* -text

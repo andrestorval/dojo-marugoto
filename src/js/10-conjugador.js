@@ -1,0 +1,105 @@
+/* Dojo Marugoto - conjugador
+   conjugar, conKanji, aceptadasDeConjugacion, reglaDe.
+   Contenido literal del archivo congelado. */
+
+function conjugar(v, forma) {
+  const k = v.kana;
+
+  if (v.g === 3) {
+    if (k.endsWith('する')) return k.slice(0, -2) + SURU[forma];
+    if (k.endsWith('くる')) return k.slice(0, -2) + KURU[forma];
+    return k;
+  }
+
+  let out;
+
+  if (v.g === 2) {
+    const st = k.slice(0, -1);              // quita る
+    switch (forma) {
+      case 'masu':    out = st + 'ます'; break;
+      case 'masen':   out = st + 'ません'; break;
+      case 'nai':     out = st + 'ない'; break;
+      case 'nakatta': out = st + 'なかった'; break;
+      case 'ta':      out = st + 'た'; break;
+      case 'te':      out = st + 'て'; break;
+      case 'nagara':  out = st + 'ながら'; break;
+      case 'tari':    out = st + 'たり'; break;
+      case 'pot':     out = st + 'られる'; break;
+      case 'imp':     out = st + 'ろ'; break;
+      case 'sou':     out = k + 'そうです'; break;
+      case 'atode':   out = st + 'た後で'; break;
+    }
+  } else {                                   // grupo 1
+    const last = k.slice(-1);
+    const st = k.slice(0, -1);
+    const te = st + TE1[last];
+    const ta = te.replace(/て$/, 'た').replace(/で$/, 'だ');
+    switch (forma) {
+      case 'masu':    out = st + U2I[last] + 'ます'; break;
+      case 'masen':   out = st + U2I[last] + 'ません'; break;
+      case 'nai':     out = st + U2A[last] + 'ない'; break;
+      case 'nakatta': out = st + U2A[last] + 'なかった'; break;
+      case 'ta':      out = ta; break;
+      case 'te':      out = te; break;
+      case 'nagara':  out = st + U2I[last] + 'ながら'; break;
+      case 'tari':    out = ta + 'り'; break;
+      case 'pot':     out = st + U2E[last] + 'る'; break;
+      case 'imp':     out = st + U2E[last]; break;
+      case 'sou':     out = k + 'そうです'; break;
+      case 'atode':   out = ta + '後で'; break;
+    }
+  }
+
+  const e = EXC[k];
+  if (e && e[forma] !== undefined) out = e[forma];
+  return out;
+}
+
+/* proyecta la forma en kana sobre la escritura con kanji */
+function conKanji(v, kanaConj) {
+  if (!v.kanji || v.kanji === v.kana) return null;
+  let i = 0;
+  while (i < v.kanji.length && i < v.kana.length &&
+         v.kanji[v.kanji.length - 1 - i] === v.kana[v.kana.length - 1 - i]) i++;
+  const cabezaKanji = v.kanji.slice(0, v.kanji.length - i);
+  const cabezaKana  = v.kana.slice(0, v.kana.length - i);
+  if (!kanaConj.startsWith(cabezaKana)) return null;
+  return cabezaKanji + kanaConj.slice(cabezaKana.length);
+}
+
+/* respuestas aceptadas para una conjugación: kana + kanji */
+function aceptadasDeConjugacion(v, forma) {
+  const kana = conjugar(v, forma);
+  const kanji = conKanji(v, kana);
+  const set = [kana];
+  if (kanji && kanji !== kana) set.unshift(kanji);
+  /* 後で también se escribe あとで */
+  set.slice().forEach(x => {
+    if (x.includes('後で')) set.push(x.replace('後で', 'あとで'));
+  });
+  return set;
+}
+
+/* explica el movimiento de sílaba, que es lo que de verdad cuesta */
+function reglaDe(v, forma){
+  if(v.g === 3) return 'Grupo 3: する y くる van de memoria.';
+  if(v.g === 2){
+    const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
+                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で' };
+    if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
+    return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
+  }
+  const u = v.kana.slice(-1);
+  if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
+  if(forma === 'nai' || forma === 'nakatta')
+    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
+  if(forma === 'masu' || forma === 'masen' || forma === 'nagara')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' + (forma === 'nagara' ? 'ながら' : forma === 'masu' ? 'ます' : 'ません') + '.';
+  if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
+  if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode'){
+    const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + '.';
+  }
+  return '';
+}
