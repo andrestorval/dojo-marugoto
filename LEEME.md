@@ -11,11 +11,16 @@ Node 18 o superior, nada más. No hay `package.json`, no hay `npm install`.
 
 ## Comandos
 
-    node herramientas/build.mjs              compila las dos salidas a dist/
-    node herramientas/build.mjs --unidades=8 compila solo las unidades pedidas
-    node --test "pruebas/*.test.mjs"         corre las pruebas
-    node herramientas/vector.mjs             regenera el vector desde el archivo congelado
-    node herramientas/servir.mjs --base=/dojo  sirve dist/pwa/ en local bajo subruta
+    node herramientas/build.mjs                compila las dos salidas a dist/
+    node herramientas/build.mjs --unidades=8   compila solo las unidades pedidas
+    node --test "pruebas/*.test.mjs"           corre las pruebas
+    node herramientas/claves.mjs --unidad=8    asigna las claves `k` que falten
+    node herramientas/puente.mjs               regenera puente-t8.html
+    node herramientas/vector.mjs               regenera el vector desde el archivo congelado
+    node herramientas/servir.mjs --base=/dojo   sirve dist/pwa/ en local bajo subruta
+
+Compila antes de correr las pruebas: una de ellas comprueba que `alert` y
+`confirm` no aparecen en `dist/`, y sin `dist/` se salta.
 
 Salidas:
 
@@ -34,6 +39,14 @@ Salidas:
 
 ## Estado
 
-Módulo M0 cerrado: el archivo congelado del Tema 8 partido en fuentes, sin
-cambio de comportamiento. Lo que sigue es M1 (ids estables, progreso v2,
-migración, exportar e importar).
+M0 y M1 cerrados. El progreso vive en `dojo-marugoto-v2` con fechas por ítem, el
+historial del Tema 8 se migra por las dos vías, y exportar e importar funcionan
+con fusión y con deshacer. Lo que sigue es M2: el programador de repaso
+espaciado y la pantalla de inicio con "Practicar hoy".
+
+Cada módulo deja su informe (`INFORME-M0.md`, `INFORME-M1.md`). Lo que ya se
+zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
+
+`puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado
+del Tema 8 con un botón de exportar. Se abre desde el mismo lugar desde el que
+se abre la app antigua.

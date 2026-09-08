@@ -74,6 +74,12 @@ if (!CONTENIDO || !Array.isArray(CONTENIDO.unidades)) {
   process.exit(1);
 }
 
+/* La tabla de migración viaja dentro del contenido porque el runtime la
+   necesita para traducir los ids posicionales del Tema 8 (plano 5.2). Es un
+   JSON generado por claves.mjs, no un archivo de autoría: se lee tal cual. */
+const rutaTabla = join(CONT, 'migracion-t8.json');
+if (existsSync(rutaTabla)) CONTENIDO.migracion = JSON.parse(leer(rutaTabla));
+
 /* El validador de contenido entra en M5 (plano 7). Hasta entonces el build
    solo aplica las comprobaciones mecánicas del paso 3 de 6.2. */
 

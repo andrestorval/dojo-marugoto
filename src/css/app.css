@@ -154,3 +154,21 @@ kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--l
 
 /* ---- sello de version del build ---- */
 .foot .sello{font-family:ui-monospace,monospace; font-size:.72rem; opacity:.55; letter-spacing:.05em}
+
+/* ---- acciones de progreso que envuelven en pantalla angosta ---- */
+.acts.wrap{flex-wrap:wrap}
+.acts.wrap button{flex:1 1 auto; min-width:45%}
+
+/* ---- dialogos propios (reemplazan alert y confirm) ---- */
+.dlg{position:fixed; inset:0; z-index:50; display:flex; align-items:center; justify-content:center;
+  background:rgba(17,20,27,.55); padding:20px; backdrop-filter:blur(2px)}
+.dlgcaja{background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow); padding:22px; width:100%; max-width:460px; max-height:86vh; overflow:auto}
+.dlgcaja h2.sec{margin-bottom:8px}
+.dlgcaja .acts{margin-top:18px; flex-wrap:wrap}
+.dlgcaja .acts button{flex:1 1 auto; min-width:40%}
+.dlgcaja textarea{width:100%; height:34vh; margin-top:12px; resize:vertical;
+  font-family:ui-monospace,monospace; font-size:.78rem; line-height:1.5;
+  border:2px solid var(--line-strong); border-radius:10px; padding:10px;
+  background:var(--surface-2); color:var(--ink)}
+.dlgcaja textarea:focus{outline:none; border-color:var(--ai); background:var(--surface)}

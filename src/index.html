@@ -49,9 +49,14 @@
     <div class="card" id="histCard">
       <h2 class="sec">Lo que llevas</h2>
       <div id="histBody"></div>
-      <div class="acts" style="margin-top:14px">
+      <div class="acts wrap" style="margin-top:14px">
+        <button class="ghost" id="btnExport">Exportar progreso</button>
+        <button class="ghost" id="btnImport">Importar de archivo</button>
+        <button class="ghost" id="btnPaste">Pegar progreso</button>
+        <button class="ghost hide" id="btnUndo">Deshacer la importación</button>
         <button class="ghost" id="btnReset">Borrar mi progreso</button>
       </div>
+      <input type="file" id="fileImport" accept=".json,application/json" class="hide">
     </div>
   </section>
 
@@ -96,6 +101,8 @@
     <span class="sello">{{SELLO}}</span>
   </p>
 </div>
+
+<div class="dlg hide" id="dlg"></div>
 
 {{CONTENIDO}}
 {{JS}}

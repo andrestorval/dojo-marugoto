@@ -6,15 +6,26 @@ hecho que lo sostiene.
 
 ## 2026-09-08
 
-**Migración: vía B, el puente.** Andrés abre hoy la app del Tema 8 desde un
-archivo guardado (Descargas / WhatsApp / gestor de archivos), no desde una
-dirección web. El `localStorage` es por origen, así que la app nueva no puede
-leer `dojo-marugoto-t8` sola. M1 entrega `puente-t8.html`: el archivo congelado
-con un botón "Exportar progreso" que vuelca el almacén y su configuración como
-JSON de esquema 1. Andrés lo abre **de la misma forma y desde la misma carpeta**
-en que abre hoy la app (eso es lo que hace que comparta origen y vea el
-historial), exporta, e importa el archivo en la app nueva. La vía A queda
-descartada, no construida. Resuelve el dato (c) de la sección 0 del plano.
+**Migración: las dos vías, con la B como camino seguro.** Andrés abre hoy la app
+del Tema 8 desde un archivo guardado (Descargas / WhatsApp / gestor de
+archivos), no desde una dirección web. Resuelve el dato (c) de la sección 0 del
+plano.
+
+*Corregido el 2026-09-08, durante M1.* Este apartado decía que la vía A quedaba
+descartada y no se construía. Era una inferencia demasiado corta: de que Andrés
+abra un archivo guardado no se sigue que la app nueva nunca comparta origen con
+la antigua. Si guarda el archivo único nuevo en la misma carpeta y lo abre de la
+misma forma, el origen es el mismo y la app lee sola `dojo-marugoto-t8`. Está
+comprobado en el navegador. Como la vía A cuesta unas quince líneas dentro de
+una función que la vía B necesita igual, se construyeron las dos.
+
+Al arrancar, si existe el almacén antiguo y no el nuevo, la app migra sola y lo
+avisa una vez; la clave antigua queda intacta como respaldo. Si no lo encuentra,
+la vía es `puente-t8.html`: el archivo congelado con un botón "Exportar
+progreso" que vuelca el almacén y su configuración como JSON de esquema 1.
+Andrés lo abre **de la misma forma y desde la misma carpeta** en que abre hoy la
+app —eso es lo que hace que comparta origen y vea el historial—, exporta, e
+importa el archivo en la app nueva.
 
 **El material del libro no se consulta; el uso es personal.** La app se reparte
 por mano entre compañeros del curso, sin URL pública difundida. M4 publica la

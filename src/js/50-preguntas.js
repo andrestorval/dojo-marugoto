@@ -66,21 +66,21 @@ function construir(){
   }
 
   if (sel.modos.includes('hueco'))
-    HUECOS.forEach((h,i) => { if(!enClase(h.c)) return; pool.push({
-      tipo: h.ok2 ? 'hueco2' : 'hueco', id:'h:'+i, tag:'Frase con hueco', clase:h.c,
+    HUECOS.forEach(h => { if(!enClase(h.c)) return; pool.push({
+      tipo: h.ok2 ? 'hueco2' : 'hueco', id:'h:'+TEMA.n+':'+h.k, tag:'Frase con hueco', clase:h.c,
       pre:h.pre, post:h.post, post2:h.post2, hint:h.hint, ok:h.ok, ok2:h.ok2, sub:h.es,
       modelo:h.ok[0] + (h.ok2 ? ' … ' + h.ok2[0] : '')
     }); });
 
   if (sel.modos.includes('armar'))
-    ARMAR.forEach((a,i) => { if(!enClase(a.c)) return; pool.push({
-      tipo:'armar', id:'a:'+i, tag:'Armar la frase', clase:a.c,
+    ARMAR.forEach(a => { if(!enClase(a.c)) return; pool.push({
+      tipo:'armar', id:'a:'+TEMA.n+':'+a.k, tag:'Armar la frase', clase:a.c,
       promptEs:a.es, chips:a.chips, modelo:a.chips.join('')
     }); });
 
   if (sel.modos.includes('frase'))
-    FRASES.forEach((f,i) => { if(!enClase(f.c)) return; pool.push({
-      tipo:'escribir', id:'f:'+i, tag:'Frase completa', clase:f.c, tag2:f.pat,
+    FRASES.forEach(f => { if(!enClase(f.c)) return; pool.push({
+      tipo:'escribir', id:'f:'+TEMA.n+':'+f.k, tag:'Frase completa', clase:f.c, tag2:f.pat,
       promptEs:f.es, ok:f.ok, modelo:f.ok[0], libre:true
     }); });
 

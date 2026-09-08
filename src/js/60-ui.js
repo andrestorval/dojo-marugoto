@@ -51,7 +51,7 @@ function pintarInicio(){
     sel.largo = +b.dataset.l; saveCfg(); pintarInicio();
   });
 
-  pintarHistorial(); actualizarStart();
+  pintarHistorial(); pintarAccionesProgreso(); actualizarStart();
 }
 function actualizarStart(){ $('#btnStart').disabled = sel.modos.length === 0; }
 
@@ -71,13 +71,30 @@ function pintarHistorial(){
     </p>` + (flojas.length ? `<p class="sub" style="margin-bottom:6px">Lo que más se te resiste:</p>
       <div class="chipsrow">${flojas.map(k => `<span class="piece">${esc(etiqueta(k))}</span>`).join('')}</div>` : '');
 }
+/* Los ids de frase, hueco y armar son `<t>:<unidad>:<clave>`. Se muestra el
+   `es` del ejercicio, que es lo unico que Patricio reconoce de un vistazo en
+   el historial; el numero de la clave no le dice nada (plano Anexo A). */
+function itemDe(t, n, k){
+  const u = UNIDADES.find(x => x.n === +n);
+  if(!u) return null;
+  const arr = t === 'h' ? u.huecos : t === 'a' ? u.armar : t === 'f' ? u.frases : null;
+  return arr ? arr.find(x => x.k === k) : null;
+}
+
+function recortar(s, n){
+  s = String(s || '');
+  return s.length > n ? s.slice(0, n - 1) + '…' : s;
+}
+
 function etiqueta(id){
   const [t, a, b] = id.split(':');
   if(t === 'c'){ const f = FORMAS.find(x => x.id === b); return a + ' → ' + (f ? f.label : b); }
   if(t === 'v'){ return a; }
-  if(t === 'h'){ return 'hueco ' + (+a + 1); }
-  if(t === 'a'){ return 'armar ' + (+a + 1); }
-  if(t === 'f'){ return 'frase ' + (+a + 1); }
+  if(t === 'h' || t === 'a' || t === 'f'){
+    const it = itemDe(t, a, b);
+    const nom = t === 'h' ? 'hueco' : t === 'a' ? 'armar' : 'frase';
+    return it ? recortar(it.es, 42) : nom + ' ' + b;
+  }
   return id;
 }
 
@@ -269,4 +286,178 @@ function terminar(){
   } else $('#endMissCard').classList.add('hide');
   ir('scEnd');
   pintarHistorial();
+}
+
+/* ═══════════ dialogos propios ═══════════ */
+
+/* Reemplaza a alert y confirm, que en una PWA instalada muestran el nombre del
+   origen y rompen la ilusion de app. Cuatro usos y no se generaliza mas:
+   el aviso de combinacion vacia, el borrado de progreso, la importacion y el
+   aviso de migracion (plano 3.3). */
+function dialogo({ titulo, texto, campo, botones }){
+  return new Promise(resolve => {
+    const d = $('#dlg');
+    const bs = (botones || [{ t:'Entendido', v:'ok', p:true }]);
+    d.innerHTML = `<div class="dlgcaja" role="dialog" aria-modal="true">
+      ${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ''}
+      ${texto ? `<p class="sub" style="color:var(--ink-2)">${esc(texto)}</p>` : ''}
+      ${campo !== undefined ? `<textarea id="dlgCampo" spellcheck="false">${esc(campo)}</textarea>` : ''}
+      <div class="acts">${bs.map((b,i) =>
+        `<button class="${b.p ? 'primary' : 'ghost'}" data-i="${i}">${esc(b.t)}</button>`).join('')}</div>
+    </div>`;
+    d.classList.remove('hide');
+    const cerrar = v => {
+      const campoVal = $('#dlgCampo') ? $('#dlgCampo').value : undefined;
+      d.classList.add('hide'); d.innerHTML = '';
+      document.removeEventListener('keydown', escapar, true);
+      resolve({ boton: v, campo: campoVal });
+    };
+    const escapar = e => {
+      if(e.key !== 'Escape') return;
+      e.preventDefault(); e.stopPropagation();
+      cerrar(bs.find(b => b.cancela) ? bs.find(b => b.cancela).v : null);
+    };
+    d.querySelectorAll('button').forEach(b => b.onclick = () => cerrar(bs[+b.dataset.i].v));
+    document.addEventListener('keydown', escapar, true);
+    const primero = d.querySelector('#dlgCampo') || d.querySelector('button.primary') || d.querySelector('button');
+    if(primero) primero.focus();
+    if($('#dlgCampo')) $('#dlgCampo').select();
+  });
+}
+
+/* ═══════════ exportar e importar ═══════════ */
+
+async function accionExportar(){
+  const { nombre, texto } = exportar();
+  const n = Object.keys(prog).length;
+  const verTexto = () => dialogo({
+    titulo: 'Tu progreso en texto',
+    texto: 'Cópialo y guárdalo donde quieras. Sirve igual que el archivo.',
+    campo: texto,
+    botones: [{ t:'Listo', v:'ok', p:true }]
+  });
+
+  /* 1. Compartir el archivo. En Android instalado es la via mas fiable para
+        mandarlo a Drive, WhatsApp o correo (plano 4.2). */
+  try {
+    if(typeof File === 'function' && navigator.canShare){
+      const archivo = new File([texto], nombre, { type:'application/json' });
+      if(navigator.canShare({ files:[archivo] })){
+        await navigator.share({ files:[archivo], title:nombre });
+        return;
+      }
+    }
+  } catch(e){ if(e && e.name === 'AbortError') return; }
+
+  /* 2. Descarga directa. */
+  let bajo = false;
+  try {
+    const url = URL.createObjectURL(new Blob([texto], { type:'application/json' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = nombre;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+    bajo = true;
+  } catch(e){}
+
+  if(bajo){
+    const r = await dialogo({
+      titulo: 'Progreso exportado',
+      texto: nombre + ' · ' + n + ' ítems. Si no lo encuentras en Descargas, copia el texto.',
+      botones: [{ t:'Listo', v:'ok', p:true }, { t:'Ver el texto', v:'texto' }]
+    });
+    if(r.boton === 'texto') await verTexto();
+    return;
+  }
+
+  /* 3. Cuadro de texto. */
+  await verTexto();
+}
+
+async function aplicarTexto(texto){
+  const d = leerExportacion(texto);
+  if(d.error){
+    await dialogo({ titulo:'No se pudo importar', texto:d.error });
+    return false;
+  }
+  const n = Object.keys(d.prog).length;
+  if(!n){
+    await dialogo({ titulo:'No se pudo importar', texto:'El archivo no trae ningún ítem con progreso.' });
+    return false;
+  }
+
+  let aviso = n + ' ítems' + (d.esquema === 1 ? ', traídos de la app del Tema 8' : '') + '.';
+  if(d.perdidos && d.perdidos.length) aviso += ' ' + d.perdidos.length + ' no se pudieron traducir y se descartan.';
+  const desf = desfase(d.hoy);
+  if(desf > 1) aviso += ' Ojo: el archivo se exportó con una fecha que difiere en ' + desf + ' días de la de este dispositivo.';
+
+  const r = await dialogo({
+    titulo: 'Importar progreso',
+    texto: aviso + ' Fusionar conserva lo mejor de cada lado; reemplazar borra lo que tienes aquí.',
+    botones: [
+      { t:'Fusionar', v:'fusionar', p:true },
+      { t:'Reemplazar todo', v:'reemplazar' },
+      { t:'Cancelar', v:null, cancela:true }
+    ]
+  });
+  if(!r.boton) return false;
+
+  aplicarImportacion(d, r.boton === 'reemplazar');
+  pintarInicio();
+  await dialogo({
+    titulo: 'Progreso importado',
+    texto: Object.keys(prog).length + ' ítems en total. Si algo salió mal, "Deshacer la importación" lo devuelve como estaba.'
+  });
+  return true;
+}
+
+function accionImportar(){
+  const inp = $('#fileImport');
+  inp.value = '';
+  inp.onchange = () => {
+    const f = inp.files && inp.files[0];
+    if(!f) return;
+    const fr = new FileReader();
+    fr.onload = () => aplicarTexto(String(fr.result || ''));
+    fr.onerror = () => dialogo({ titulo:'No se pudo leer el archivo' });
+    fr.readAsText(f);
+  };
+  inp.click();
+}
+
+async function accionPegar(){
+  const r = await dialogo({
+    titulo: 'Pegar el progreso',
+    texto: 'Pega aquí el texto que exportaste desde el otro dispositivo o desde el puente.',
+    campo: '',
+    botones: [{ t:'Importar', v:'ok', p:true }, { t:'Cancelar', v:null, cancela:true }]
+  });
+  if(r.boton && String(r.campo || '').trim()) await aplicarTexto(r.campo);
+}
+
+async function accionDeshacer(){
+  const r = await dialogo({
+    titulo: 'Deshacer la última importación',
+    texto: 'Vuelve el progreso al estado anterior a la importación. Lo importado se pierde.',
+    botones: [{ t:'Deshacer', v:'ok', p:true }, { t:'Cancelar', v:null, cancela:true }]
+  });
+  if(r.boton !== 'ok') return;
+  deshacerImportacion();
+  pintarInicio();
+}
+
+async function accionBorrar(){
+  const r = await dialogo({
+    titulo: 'Borrar tu progreso',
+    texto: 'Se borra todo lo guardado en este dispositivo. Exporta antes si quieres conservarlo.',
+    botones: [{ t:'Borrar', v:'ok' }, { t:'Cancelar', v:null, p:true, cancela:true }]
+  });
+  if(r.boton !== 'ok') return;
+  respaldar();
+  prog = {}; save();
+  pintarInicio();
+}
+
+function pintarAccionesProgreso(){
+  $('#btnUndo').classList.toggle('hide', !hayRespaldo());
 }
