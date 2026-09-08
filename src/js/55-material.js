@@ -81,7 +81,8 @@ function fichaPatron(n, pat){
 
   return { tipo:'patron', clave:'patron:' + n + ':' + pat, titulo:pat,
            desc: p.tipo === 'expresion' ? 'expresión' : 'patrón gramatical',
-           uso:p.uso || '', ejemplo:p.ejemplo || '', frases, huecos, unidad:n };
+           uso:p.uso || '', formula:p.formula || '',
+           ejemplo:p.ejemplo || '', frases, huecos, unidad:n };
 }
 
 /* Indice de la materia de una unidad. Es lo que se ve al tocar la unidad:

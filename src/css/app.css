@@ -217,3 +217,5 @@ kbd{font-family:ui-monospace,monospace; font-size:.8em; border:1px solid var(--l
 .ficha .tblwrap{margin-top:6px}
 .ficha td.jp small{white-space:normal}
 @media(max-width:420px){ .ficha table{font-size:.86rem} .ficha td.jp{font-size:1.02rem} }
+.ficha .f-formula{font-family:var(--jp); font-size:1.08rem; line-height:1.65; color:var(--ink);
+  background:var(--ai-wash); border:1px solid var(--ai); border-radius:10px; padding:12px 14px}

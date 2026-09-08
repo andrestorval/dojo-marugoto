@@ -627,6 +627,12 @@ function verFicha(f){
     if(f.exc.length) cuerpo += `<p class="f-nota"><b>Excepciones:</b> ` +
       f.exc.map(e => esc(e.kana) + ' → ' + esc(e.salida)).join(' · ') + `</p>`;
   } else {
+    /* Como se construye. "Se pega a la forma simple" no le dice a nadie que
+       poner: la formula nombra cada pieza y el orden en que van. */
+    if(f.formula) cuerpo +=
+      `<h2 class="sec" style="margin:18px 0 8px">Cómo se construye</h2>
+       <div class="f-formula">${esc(f.formula)}</div>`;
+    if(f.frases.length) cuerpo += `<h2 class="sec" style="margin:18px 0 8px">En el libro</h2>`;
     cuerpo += f.frases.map(x =>
       `<div class="f-ej">${esc(x.jp)}${x.es ? `<small>${esc(x.es)}</small>` : ''}</div>`).join('');
     if(f.huecos) cuerpo += `<p class="f-nota">Lo practicas en ${plural(f.huecos, 'ejercicio')} de hueco.</p>`;
