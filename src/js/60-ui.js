@@ -25,11 +25,19 @@ function pintarInicio(){
   $('#footTema').textContent = u ? u.n + ' ' + u.titulo + ' — ' + u.es : '';
 
   /* El subtítulo del botón explica sin texto qué va a pasar al tocarlo. */
+  /* sin contenido no hay nada que practicar: el botón principal se convierte
+     en el cargador (plano 6.5) */
+  $('#btnCargar').classList.toggle('hide', hayContenido());
+  $('#btnMateria').classList.toggle('hide', !hayContenido());
+  $('#btnMenu').classList.toggle('hide', !hayContenido());
+
   const pan = panoramaHoy();
   const b = $('#btnStart'), linea = $('#hoyLinea'), aviso = $('#hoyAviso');
   b.disabled = false;
   if(pan.vencidas === 0 && pan.nuevas === 0){
-    linea.textContent = pan.total ? 'Todo al día. Puedes adelantar trabajo.' : 'Todavía no hay contenido.';
+    linea.textContent = pan.total
+      ? 'Todo al día. Puedes adelantar trabajo.'
+      : 'Todavía no hay contenido. Cárgalo desde el archivo que te pasaron.';
     b.textContent = pan.total ? 'Adelantar' : 'Practicar hoy';
     b.disabled = !pan.total;
   } else {
@@ -923,5 +931,82 @@ function pintarMateria(){
     [...bl.querySelectorAll('button')].forEach((b, j) => {
       if(fuentes[i] && fuentes[i][j]) b.onclick = () => verFicha(fuentes[i][j]());
     });
+  });
+}
+
+/* ═══════════ contenido suelto y versión nueva ═══════════ */
+
+/* Con la build --sin-contenido, la app llega vacía y el contenido se carga una
+   vez desde un archivo. Queda en localStorage y no se vuelve a pedir; nueve
+   unidades a la densidad del Tema 8 pesan bastante menos que el límite
+   habitual de 5 MB (plano 6.5). */
+const hayContenido = () => UNIDADES.length > 0;
+
+async function aplicarContenido(texto){
+  let d;
+  try { d = JSON.parse(texto); } catch(e){
+    await dialogo({ titulo:'No se pudo cargar', texto:'El archivo no es JSON válido.' });
+    return false;
+  }
+  if(!d || !Array.isArray(d.unidades) || !d.unidades.length){
+    await dialogo({ titulo:'No se pudo cargar', texto:'Ese archivo no trae el contenido de ninguna unidad.' });
+    return false;
+  }
+  if(!escribirLS(LS_CONTENIDO, d)){
+    await dialogo({ titulo:'No se pudo guardar', texto:'El navegador no dejó guardar el contenido en este dispositivo.' });
+    return false;
+  }
+  await dialogo({
+    titulo:'Contenido cargado',
+    texto: d.unidades.length + (d.unidades.length === 1 ? ' unidad' : ' unidades') +
+           '. La app se reinicia para usarlo.'
+  });
+  location.reload();
+  return true;
+}
+
+function accionCargarContenido(){
+  const inp = $('#fileContenido');
+  inp.value = '';
+  inp.onchange = () => {
+    const f = inp.files && inp.files[0];
+    if(!f) return;
+    const fr = new FileReader();
+    fr.onload = () => aplicarContenido(String(fr.result || ''));
+    fr.onerror = () => dialogo({ titulo:'No se pudo leer el archivo' });
+    fr.readAsText(f);
+  };
+  inp.click();
+}
+
+/* El aviso de versión es propio, no el del navegador: en una PWA instalada el
+   diálogo del sistema muestra el origen y rompe la ilusión de app (plano 6.4). */
+async function avisarVersionNueva(nuevo){
+  const r = await dialogo({
+    titulo: 'Hay una versión nueva',
+    texto: 'Se instaló una actualización. Tu progreso no se toca.',
+    botones: [{ t:'Actualizar', v:'ok', p:true }, { t:'Más tarde', v:null, cancela:true }]
+  });
+  if(r.boton !== 'ok') return;
+  nuevo.postMessage('skipWaiting');
+}
+
+/* El archivo único abierto desde un origen opaco no guarda nada entre
+   aperturas, y el usuario lo descubre con el historial vacío. Solo se avisa
+   cuando el almacenamiento falla de verdad, no por el hecho de ser un archivo:
+   guardado en una carpeta y abierto siempre igual, funciona (sección 10). */
+function avisarSiNoGuarda(){
+  if(location.protocol === 'http:' || location.protocol === 'https:') return;
+  let guarda = false;
+  try {
+    localStorage.setItem('dojo-prueba', '1');
+    guarda = localStorage.getItem('dojo-prueba') === '1';
+    localStorage.removeItem('dojo-prueba');
+  } catch(e){ guarda = false; }
+  if(guarda) return;
+  dialogo({
+    titulo: 'Aquí no se puede guardar tu progreso',
+    texto: 'Estás abriendo el archivo desde un sitio donde el navegador no deja guardar nada. ' +
+           'Guárdalo en una carpeta y ábrelo siempre desde ahí, o instala la app desde su dirección.'
   });
 }

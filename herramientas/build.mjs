@@ -7,7 +7,7 @@
  * necesitar un paquete, se hace una vez a mano y se documenta (plano 6.1).
  */
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync, copyFileSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -84,7 +84,14 @@ if (existsSync(rutaTabla)) CONTENIDO.migracion = JSON.parse(leer(rutaTabla));
    solo aplica las comprobaciones mecánicas del paso 3 de 6.2. */
 
 const contenidoJson = JSON.stringify(CONTENIDO).replace(/</g, '\\u003c');
-const contenidoJs = 'const CONTENIDO = ' + contenidoJson + ';\n';
+
+/* `--sin-contenido` deja el contenido fuera de la salida y lo reparte como
+   archivo suelto. La app lo carga una vez y lo guarda en localStorage
+   (plano 6.5). El JSON se emite igual, porque es lo que hay que repartir. */
+const sinContenido = tiene('sin-contenido');
+const contenidoJs = sinContenido
+  ? 'const CONTENIDO = { unidades: [], formas: [], categorias: [] };\n'
+  : 'const CONTENIDO = ' + contenidoJson + ';\n';
 
 /* ── 3. comprobaciones mecánicas ───────────────────────────────── */
 
@@ -125,7 +132,8 @@ const componer = (marcas) =>
 
 /* PWA: rutas relativas con ./ para que sirva en la raíz o bajo /sub/ */
 const htmlPwa = componer({
-  head: '',                                   // manifest y service worker: M4
+  head: '<link rel="manifest" href="./manifest.webmanifest">\n' +
+        '<link rel="apple-touch-icon" href="./icons/icono-192.png">',
   css: '<link rel="stylesheet" href="./app.css">',
   contenido: '<script src="./contenido.js"></script>',
   js: '<script src="./app.js"></script>',
@@ -165,10 +173,36 @@ const poner = (rel, texto) => {
 };
 
 console.log('sello ' + sello + '  ·  unidades ' +
-  CONTENIDO.unidades.map((u) => u.n).join(', '));
+  (sinContenido ? 'fuera de la salida' : CONTENIDO.unidades.map((u) => u.n).join(', ')));
 poner(join('pwa', 'index.html'), htmlPwa);
 poner(join('pwa', 'app.css'), css);
 poner(join('pwa', 'app.js'), js);
 poner(join('pwa', 'contenido.js'), contenidoJs);
+poner(join('pwa', 'manifest.webmanifest'), leer(join(SRC, 'pwa', 'manifest.webmanifest')));
+
+/* Los iconos se copian tal cual; los genera herramientas/iconos.mjs una vez */
+const ICONOS = ['icono-192.png', 'icono-512.png'];
+mkdirSync(join(DIST, 'pwa', 'icons'), { recursive: true });
+for (const i of ICONOS) {
+  const origen = join(SRC, 'pwa', 'icons', i);
+  if (!existsSync(origen)) {
+    console.error('falta ' + origen + '. Corre: node herramientas/iconos.mjs');
+    process.exit(1);
+  }
+  copyFileSync(origen, join(DIST, 'pwa', 'icons', i));
+}
+console.log('  ' + join('pwa', 'icons').padEnd(28) + String(ICONOS.length).padStart(8) + ' archivos');
+
+/* El service worker precarga esta lista exacta y la caché lleva el sello */
+const ARCHIVOS = ['./', './index.html', './app.css', './app.js', './contenido.js',
+  './manifest.webmanifest'].concat(ICONOS.map((i) => './icons/' + i));
+/* replaceAll y no replace: los marcadores aparecen tambien en el comentario de
+   cabecera de la plantilla, y con `replace` se sustituia ese y la cache se
+   quedaba llamandose `dojo-{{SELLO}}` literal, sin invalidarse nunca. */
+poner(join('pwa', 'sw.js'),
+  leer(join(SRC, 'pwa', 'sw.js'))
+    .replaceAll('{{SELLO}}', sello)
+    .replaceAll('{{ARCHIVOS}}', JSON.stringify(ARCHIVOS, null, 2)));
+
 poner('dojo-marugoto.html', htmlUnico);
-poner('contenido.json', contenidoJson + '\n');   // producto suelto para --sin-contenido (M4)
+poner('contenido.json', contenidoJson + '\n');   // producto suelto para --sin-contenido

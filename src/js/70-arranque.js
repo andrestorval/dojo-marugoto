@@ -35,6 +35,7 @@ $('#btnPrimero').onclick = () => {
   pintarInicio(); ir('scHome');
 };
 
+$('#btnCargar').onclick  = accionCargarContenido;
 $('#btnExport').onclick = accionExportar;
 $('#btnImport').onclick = accionImportar;
 $('#btnPaste').onclick  = accionPegar;
@@ -77,3 +78,33 @@ if(avisoMigracion){
       ' Tu progreso antiguo queda intacto por si acaso.'
   });
 }
+
+/* ═══════════ service worker ═══════════ */
+
+/* Solo en la salida PWA: el archivo único no lleva manifest, y desde file://
+   el service worker no existe. La detección es el propio manifest, así que no
+   hace falta ninguna bandera del build. */
+if('serviceWorker' in navigator && document.querySelector('link[rel="manifest"]')){
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+    reg.update();
+    reg.addEventListener('updatefound', () => {
+      const nuevo = reg.installing;
+      if(!nuevo) return;
+      nuevo.addEventListener('statechange', () => {
+        /* hay controlador previo: es una actualizacion, no la primera visita */
+        if(nuevo.state === 'installed' && navigator.serviceWorker.controller){
+          avisarVersionNueva(nuevo);
+        }
+      });
+    });
+  }).catch(() => {});
+
+  let recargando = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if(recargando) return;
+    recargando = true;
+    location.reload();
+  });
+}
+
+avisarSiNoGuarda();

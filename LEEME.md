@@ -14,7 +14,9 @@ Node 18 o superior, nada más. No hay `package.json`, no hay `npm install`.
     node herramientas/build.mjs                compila las dos salidas a dist/
     node herramientas/build.mjs --unidades=8   compila solo las unidades pedidas
     node --test "pruebas/*.test.mjs"           corre las pruebas
+    node herramientas/build.mjs --sin-contenido publica la app sin el contenido dentro
     node herramientas/claves.mjs --unidad=8    asigna las claves `k` que falten
+    node herramientas/iconos.mjs               regenera los iconos de la PWA
     node herramientas/puente.mjs               regenera puente-t8.html
     node herramientas/vector.mjs               regenera el vector desde el archivo congelado
     node herramientas/servir.mjs --base=/dojo   sirve dist/pwa/ en local bajo subruta
@@ -29,7 +31,9 @@ error aparece después, en el navegador.
 Salidas:
 
 - `dist/pwa/` — carpeta lista para subir a cualquier hosting estático con
-  HTTPS. Rutas relativas: sirve en la raíz o bajo `/loquesea/`.
+  HTTPS, que es el único requisito del service worker. Rutas relativas: sirve
+  en la raíz o bajo `/loquesea/`. Lleva el manifest, el service worker y los
+  iconos.
 - `dist/dojo-marugoto.html` — archivo único autocontenido, para compartir.
 - `dist/contenido.json` — el contenido suelto, para la build sin contenido (M4).
 
@@ -44,14 +48,15 @@ Salidas:
 
 ## Estado
 
-M0 a M3 cerrados. El progreso vive en `dojo-marugoto-v2` con fechas por ítem,
+M0 a M4 cerrados (M4 a falta de publicar). El progreso vive en `dojo-marugoto-v2` con fechas por ítem,
 el historial del Tema 8 se migra por las dos vías, el programador de repaso
 espaciado decide qué entra en cada sesión, y al fallar aparece una pista antes
 que la respuesta. La exigencia de cada ítem sube con su caja: reconocer, después
-producir con apoyo, después producir solo. Lo que sigue es M4: la PWA
-instalable.
+producir con apoyo, después producir solo. La salida PWA ya trae manifest,
+service worker e iconos; falta publicarla. Lo que sigue es M5: el validador de
+contenido, que es lo que desbloquea las ocho unidades restantes.
 
-Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M3.md`). Lo que ya se
+Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M4.md`). Lo que ya se
 zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
 
 `puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado
