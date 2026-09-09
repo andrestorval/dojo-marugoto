@@ -97,6 +97,10 @@ function pintarMenu(){
   chips('#cursoRow', listas.map(n => [String(n), 'Unidad ' + n]),
     v => unidadActual() === +v, v => { sel.unidadActual = +v; pintarMenu(); });
 
+  chips('#presRow', [['0','Preguntármelo directo'],['1','Mostrármelo antes']],
+    v => (v === '1') === !!sel.presentaciones,
+    v => { sel.presentaciones = v === '1'; pintarMenu(); });
+
   actualizarStart();
 }
 

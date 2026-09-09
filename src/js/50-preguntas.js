@@ -438,6 +438,7 @@ function tarjetaPara(q, hechas){
    ningun ejercicio. La tarjeta de vocabulario si la revela, y para esa la
    separacion se cumple siempre. */
 function conPresentaciones(cola){
+  if(!sel.presentaciones) return cola.slice();
   const out = cola.slice();
   const hechas = new Set();
   for(let i = 0; i < out.length; i++){

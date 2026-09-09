@@ -89,7 +89,14 @@ function desmarcarAprendido(id){
 const CFG_BASE = {
   modos:['vocabJP','vocabES','conj','hueco','armar','frase'],
   clase:'0', largo:20, cupoNuevos:6, unidadActual:0, unidades:[],
-  primerUso:true, manuales:0, matUnidad:0
+  primerUso:true, manuales:0, matUnidad:0,
+  /* Mostrar la palabra o la ficha antes de preguntarla ayuda a quien no
+     estudio la unidad, pero al usuario que si la estudio le regala la
+     respuesta: reconoce lo que acaba de ver en vez de recordarlo, y sale de
+     la sesion creyendo que sabe algo que solo recordaba. Apagado por defecto;
+     el material sigue disponible en "Ver la materia", cuando se busca a
+     proposito (plano 3.5, corregido por Patricio). */
+  presentaciones:false
 };
 let sel = Object.assign({}, CFG_BASE);
 function saveCfg(){ escribirLS(LS_CFG, sel); }

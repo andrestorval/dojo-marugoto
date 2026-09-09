@@ -225,7 +225,7 @@ test('el segundo ejemplo es otro verbo del mismo grupo en la misma forma', () =>
 
 test('toda palabra nueva tiene su tarjeta al menos tres posiciones antes', () => {
   const { m } = cargar();
-  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 20, cupoNuevos: 6 });
+  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 20, cupoNuevos: 6, presentaciones: true });
   m.construir(false);
   const cola = [...m.cola()];
 
@@ -251,7 +251,7 @@ test('toda palabra nueva tiene su tarjeta al menos tres posiciones antes', () =>
 
 test('la ficha de una forma nunca vista se inserta antes de su pregunta', () => {
   const { m } = cargar();
-  m.fijarSel({ modos: ['conj'], clase: '0', unidades: [8], largo: 20, cupoNuevos: 10 });
+  m.fijarSel({ modos: ['conj'], clase: '0', unidades: [8], largo: 20, cupoNuevos: 10, presentaciones: true });
   m.construir(true);
   const cola = [...m.cola()];
   const fichas = cola.filter((c) => c.tipo === 'ficha');
@@ -294,7 +294,7 @@ test('cada forma y cada patrón del Tema 8 tienen ficha', () => {
 
 test('la ficha se muestra una sola vez por forma y por patrón en la misma cola', () => {
   const { m } = cargar();
-  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 0, cupoNuevos: 40 });
+  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 0, cupoNuevos: 40, presentaciones: true });
   m.construir(false);
   const claves = m.cola().filter((c) => c.tipo === 'ficha' || c.tipo === 'nuevo').map((c) => c.clave);
   assert.equal(new Set(claves).size, claves.length, 'hay tarjetas repetidas');
@@ -344,4 +344,30 @@ test('la ficha lleva la lectura y el significado hasta el render', () => {
 
   const f = m.fichaForma('imp');
   assert.ok(f.lectura.includes('meireikei'), 'la forma imperativa se lee めいれいけい');
+});
+
+/* ── el material nuevo solo se muestra si se pide (corrección de Patricio) ── */
+
+test('por defecto la sesión no muestra nada antes de preguntarlo', () => {
+  const { m } = cargar();
+  assert.equal(m.estado().sel.presentaciones, false, 'tiene que venir apagado');
+
+  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 20, cupoNuevos: 6 });
+  m.construir(false);
+  const cola = m.cola();
+  assert.ok(cola.length > 0);
+  assert.equal(cola.filter((q) => !m.esPregunta(q)).length, 0,
+    'con el ajuste apagado no debe entrar ninguna tarjeta ni ficha');
+  assert.equal(cola.length, cola.filter(m.esPregunta).length);
+});
+
+test('encendido sí las muestra, y el material sigue disponible en la materia', () => {
+  const { m } = cargar();
+  m.fijarSel({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [], largo: 20, cupoNuevos: 6, presentaciones: true });
+  m.construir(false);
+  assert.ok(m.cola().filter((q) => !m.esPregunta(q)).length > 0, 'encendido debería traer tarjetas');
+
+  /* apagado o encendido, la materia no cambia: es lo que se consulta a propósito */
+  assert.ok(m.materiaDe(8).gramatica.length > 0);
+  assert.ok(m.fichaForma('masu'));
 });

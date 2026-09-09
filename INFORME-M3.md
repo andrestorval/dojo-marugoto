@@ -126,6 +126,30 @@ de tres posiciones de *otro* ejercicio del mismo patrón. Da igual, porque la
 ficha explica el patrón y no revela la respuesta de ningún ejercicio. La tarjeta
 de vocabulario sí la revela, y para esa la separación se cumple siempre.
 
+## El material nuevo dejó de ser obligatorio
+
+Patricio, tras probarlo: mostrarle la palabra o la ficha antes de preguntarla le
+hace reconocer lo que acaba de ver en vez de recordarlo, y salir de la sesión
+creyendo que sabe algo que solo recordaba. Es una objeción sólida: la exposición
+inmediata anterior a la pregunta destruye justamente la recuperación que el
+repaso espaciado mide.
+
+La sección 3.5 del plano justificaba las tarjetas con el usuario secundario,
+"quien no estudió la unidad antes de practicarla". Esa necesidad la cubre ahora
+mejor la sección de materia, que no existía cuando se escribió el plano y que se
+consulta a propósito.
+
+Queda como ajuste en el menú, **apagado por defecto**: "Preguntármelo directo" o
+"Mostrármelo antes". Un compañero de curso que reciba el archivo puede
+encenderlo. Con él apagado la sesión son 20 preguntas y ninguna tarjeta.
+
+Apagarlo no deja al usuario en frío, y esa es la razón por la que es seguro: la
+exigencia escalonada de 3.6 ya hace que el primer encuentro con cualquier ítem
+sea de reconocimiento. Un verbo empieza por elegir su grupo entre tres, una
+conjugación por elegir la forma entre cuatro, un hueco por elegir el patrón, y
+una palabra por elegir su significado entre cuatro. La primera exposición sigue
+siendo suave; lo que se quita es la que regalaba la respuesta.
+
 ## Criterios de aceptación
 
 | Criterio | Resultado |
@@ -140,8 +164,8 @@ de vocabulario sí la revela, y para esa la separación se cumple siempre.
 | La etapa cambia con `b`: 0 → opción, 1 → escribir con pista, 2 → hueco sin pista | Verificado por tipo, y comprobado en el navegador con registros forzados |
 | Cada forma y cada patrón del Tema 8 tiene ficha y se muestra una sola vez | Las 12 formas con ejemplo de los tres grupos, y los 21 patrones con uso, fórmula y ejemplo. Sin claves repetidas en la misma cola |
 
-`node --test "pruebas/*.test.mjs"`: 78 pruebas, 77 en verde, 0 fallos, 1 marcada
-`todo` (la de M5). Las 16 nuevas están en `pruebas/pistas.test.mjs`. La tanda se
+`node --test "pruebas/*.test.mjs"`: 82 pruebas, 81 en verde, 0 fallos, 1 marcada
+`todo` (la de M5). Las 20 nuevas están en `pruebas/pistas.test.mjs`. La tanda se
 corrió cuatro veces seguidas para descartar intermitencias del barajado.
 
 ## Lo que queda pendiente
