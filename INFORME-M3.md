@@ -183,3 +183,13 @@ puede agregar en cualquier momento.
 
 Falla a propósito un ítem de cada tipo y comprueba dos cosas: que la pista
 sirve, y que no te revela la respuesta.
+
+## Aprobación
+
+Patricio probó la salida el 2026-09-09 y la aprobó, tras dos cambios que pidió
+durante el módulo y que están arriba: las lecturas y significados de los
+términos en kanji, y que el material nuevo deje de mostrarse solo.
+
+M3 cerrado. Queda pendiente, y es suyo: revisar con el libro al lado las 21
+líneas de uso, las 21 fórmulas de construcción, las lecturas y significados, y
+el patrón asignado a cada uno de los 25 huecos.
