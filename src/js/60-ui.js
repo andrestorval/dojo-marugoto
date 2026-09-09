@@ -824,9 +824,14 @@ function verFicha(f){
     if(f.huecos) cuerpo += `<p class="f-nota">Lo practicas en ${plural(f.huecos, 'ejercicio')} de hueco.</p>`;
   }
 
+  /* Como se lee y que significa el termino. Sin esto, 他動詞 obliga a salir de
+     la app a buscarlo. */
+  const pie = [f.lectura, f.significado].filter(Boolean).join(' — ');
+
   d.innerHTML = `<div class="dlgcaja ficha" role="dialog" aria-modal="true">
     <h2 class="sec">${esc(f.desc || '')}</h2>
-    <div class="prompt" style="margin:0 0 12px; font-size:1.7rem">${esc(f.titulo)}</div>
+    <div class="prompt" style="margin:0; font-size:1.7rem">${esc(f.titulo)}</div>
+    ${pie ? `<p class="sub" style="margin:4px 0 14px">${esc(pie)}</p>` : '<div style="height:12px"></div>'}
     ${cuerpo}
     <div class="acts"><button class="primary" id="fCerrar">Cerrar</button></div>
   </div>`;
@@ -847,9 +852,11 @@ function plural(n, sing, pl){
   return n + ' ' + (n === 1 ? sing : (pl || sing + 's'));
 }
 
-function filaMaterial(titulo, uso, nota){
+function filaMaterial(titulo, uso, nota, lectura, significado){
+  const pie = [lectura, significado].filter(Boolean).join(' — ');
   return `<button class="ghost">
     <span class="m-t"><span class="m-jp">${esc(titulo)}</span>${nota ? `<span class="m-n">${esc(nota)}</span>` : ''}</span>
+    ${pie ? `<span class="m-lec">${esc(pie)}</span>` : ''}
     <span class="m-u">${esc(uso || 'Sin descripción todavía.')}</span>
   </button>`;
 }
@@ -880,22 +887,22 @@ function pintarMateria(){
      </div>` +
 
     bloque('Patrones gramaticales',
-      m.gramatica.map(p => filaMaterial(p.pat, p.uso, plural(p.frases + p.huecos, 'ejercicio'))).join(''),
+      m.gramatica.map(p => filaMaterial(p.pat, p.uso, plural(p.frases + p.huecos, 'ejercicio'), p.lectura, p.es)).join(''),
       '<p class="sub" style="margin:-6px 0 12px">Toca uno para ver el ejemplo y dónde se practica.</p>') +
 
     bloque('Formas de conjugación',
-      m.formas.map(f => filaMaterial(f.label, f.uso, f.clases.length === 2 ? 'las dos clases' : 'clase ' + f.clases[0])).join(''),
+      m.formas.map(f => filaMaterial(f.label, f.uso, f.clases.length === 2 ? 'las dos clases' : 'clase ' + f.clases[0], f.lectura, f.desc)).join(''),
       '<p class="sub" style="margin:-6px 0 12px">Toca una para ver la regla de cada grupo con un ejemplo.</p>') +
 
     bloque('Expresiones y fórmulas',
-      m.expresiones.map(p => filaMaterial(p.pat, p.uso, '')).join('')) +
+      m.expresiones.map(p => filaMaterial(p.pat, p.uso, '', p.lectura, p.es)).join('')) +
 
     `<div class="card"><h2 class="sec">Verbos</h2><div class="matlista">` +
-      m.verbos.map(v => `<div><span class="w-jp ${prog['c:'+v.kana+':masu'] ? 'visto' : ''}">${esc(v.kanji || v.kana)}</span><span class="w-es">${esc(v.es)} · G${v.g}</span></div>`).join('') +
+      m.verbos.map(v => `<div><span class="w-jp ${prog['c:'+v.kana+':masu'] ? 'visto' : ''}">${esc(v.kanji || v.kana)}${v.kanji && v.kanji !== v.kana ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)} · G${v.g}</span></div>`).join('') +
     `</div></div>` +
 
     `<div class="card"><h2 class="sec">Vocabulario</h2><div class="matlista">` +
-      m.vocab.map(v => `<div><span class="w-jp ${prog['v:'+v.jp+':jp'] ? 'visto' : ''}">${esc(v.jp)}</span><span class="w-es">${esc(v.es)}</span></div>`).join('') +
+      m.vocab.map(v => `<div><span class="w-jp ${prog['v:'+v.jp+':jp'] ? 'visto' : ''}">${esc(v.jp)}${v.kana !== v.jp ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)}</span></div>`).join('') +
     `</div><p class="sub" style="margin-top:10px">En verde, lo que ya has visto en alguna sesión.</p></div>` +
 
     (m.kanji.length ? `<div class="card"><h2 class="sec">Palabras con kanji</h2><div class="matlista">` +

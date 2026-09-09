@@ -315,3 +315,33 @@ test('una forma ya vista no vuelve a traer ficha', () => {
   assert.equal(m.yaVistaForma('masu'), true);
   assert.equal(m.yaVistaForma('te'), false);
 });
+
+/* ── lectura y significado de los términos (pedido de Patricio) ── */
+
+test('todo patrón o forma con kanji dice cómo se lee y qué significa', () => {
+  const { m } = cargar();
+  const KANJI = /[一-龯]/;
+  const fallos = [];
+
+  for (const u of m.UNIDADES) {
+    for (const p of u.patrones || []) {
+      if (!p.es) fallos.push('patrón ' + p.pat + ': sin significado');
+      if (KANJI.test(p.pat) && !p.lectura) fallos.push('patrón ' + p.pat + ': lleva kanji y no dice cómo se lee');
+    }
+  }
+  for (const f of m.FORMAS) {
+    const conKanji = KANJI.test(f.label) || KANJI.test(f.desc);
+    if (conKanji && !f.lectura) fallos.push('forma ' + f.id + ': lleva kanji y no dice cómo se lee');
+  }
+  assert.deepEqual(fallos, []);
+});
+
+test('la ficha lleva la lectura y el significado hasta el render', () => {
+  const { m } = cargar();
+  const t = m.fichaPatron(8, '他動詞');
+  assert.equal(t.lectura, 'たどうし · tadōshi');
+  assert.equal(t.significado, 'verbo transitivo');
+
+  const f = m.fichaForma('imp');
+  assert.ok(f.lectura.includes('meireikei'), 'la forma imperativa se lee めいれいけい');
+});

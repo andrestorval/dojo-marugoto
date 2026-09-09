@@ -59,7 +59,7 @@ function fichaForma(id){
   }
 
   return { tipo:'forma', clave:'forma:' + id, titulo:f.label, desc:f.desc,
-           uso:f.uso || '', grupos, exc };
+           lectura:f.lectura || '', uso:f.uso || '', grupos, exc };
 }
 
 /* Ficha de un patron de frase: que es, cuando se usa, el ejemplo del catalogo
@@ -81,6 +81,7 @@ function fichaPatron(n, pat){
 
   return { tipo:'patron', clave:'patron:' + n + ':' + pat, titulo:pat,
            desc: p.tipo === 'expresion' ? 'expresión' : 'patrón gramatical',
+           lectura:p.lectura || '', significado:p.es || '',
            uso:p.uso || '', formula:p.formula || '',
            ejemplo:p.ejemplo || '', frases, huecos, unidad:n };
 }
@@ -101,7 +102,7 @@ function materiaDe(n){
     const f = FORMAS.find(x => x.id === id);
     if(!f) continue;
     formas.push({
-      id, label:f.label, desc:f.desc, uso:f.uso || '',
+      id, label:f.label, desc:f.desc, uso:f.uso || '', lectura:f.lectura || '',
       clases: [1, 2].filter(c => (u.formas[c] || []).includes(id)),
       verbos: u.verbos.filter(v => (u.formas[v.c] || []).includes(id)).length
     });
