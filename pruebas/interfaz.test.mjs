@@ -53,7 +53,8 @@ test('cada id que el motor busca existe en el marcado', () => {
     .join('\n');
   /* los que se crean en tiempo de ejecución no están en la plantilla */
   const CREADOS = new Set(['dlgCampo', 'inp', 'inp2', 'slot', 'mc', 'pool',
-    'btnCheck', 'btnSkip', 'btnNext', 'btnOk', 'btnSabida', 'fCerrar']);
+    'btnCheck', 'btnSkip', 'btnNext', 'btnOk', 'btnSabida', 'fCerrar',
+    'btnVer', 'btnVerFicha']);
   const faltan = [];
   for (const m of js.matchAll(/\$\('#([A-Za-z0-9_-]+)'\)/g)) {
     const id = m[1];

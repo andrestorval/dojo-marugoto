@@ -36,6 +36,7 @@ Salidas:
 ## Estructura
 
     src/           motor y estilos; JavaScript clásico, concatenado por orden numérico
+                   (55-material.js: fichas de forma y patrón, e índice de materia)
     contenido/     una unidad por archivo; se autorea como JS, el runtime consume JSON
     herramientas/  build, generador del vector de pruebas (validador: M5)
     pruebas/       node --test, sin paquetes
@@ -43,13 +44,14 @@ Salidas:
 
 ## Estado
 
-M0, M1 y M2 cerrados. El progreso vive en `dojo-marugoto-v2` con fechas por
-ítem, el historial del Tema 8 se migra por las dos vías, exportar e importar
-funcionan con fusión y con deshacer, y el programador de repaso espaciado decide
-qué entra en cada sesión. Lo que sigue es M3: pista progresiva, exigencia
-escalonada por caja y fichas de forma y de patrón.
+M0 a M3 cerrados. El progreso vive en `dojo-marugoto-v2` con fechas por ítem,
+el historial del Tema 8 se migra por las dos vías, el programador de repaso
+espaciado decide qué entra en cada sesión, y al fallar aparece una pista antes
+que la respuesta. La exigencia de cada ítem sube con su caja: reconocer, después
+producir con apoyo, después producir solo. Lo que sigue es M4: la PWA
+instalable.
 
-Cada módulo deja su informe (`INFORME-M0.md`, `INFORME-M1.md`, `INFORME-M2.md`). Lo que ya se
+Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M3.md`). Lo que ya se
 zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
 
 `puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado

@@ -199,7 +199,9 @@ test('el cupo se reparte entre tipos y no se agota uno antes de pasar al siguien
   assert.equal(entran.length, 6);
   const modos = entran.map((q) => q.modo);
   assert.ok(modos.filter((x) => x.startsWith('vocab')).length >= 1, 'algo de vocabulario');
-  assert.ok(modos.includes('conj'), 'y conjugación desde la primera sesión');
+  /* Desde M3, la conjugación entra por el ítem de grupo: conjugar sin saber el
+     grupo es adivinar, así que `conj` espera a que `g:<kana>` se haya visto. */
+  assert.ok(modos.includes('grupo') || modos.includes('conj'), 'y conjugación desde la primera sesión');
   assert.ok(new Set(modos).size >= 3, 'al menos tres tipos distintos: ' + modos.join(', '));
 });
 
@@ -246,7 +248,7 @@ test('una sola forma por verbo por sesión', () => {
   const { m } = cargar();
   const p = m.armarPool({ modos: ['conj'], clase: '0', unidades: [] });
   const entran = m.ordenEntrada(p, 10, 8, new Set(p.map((q) => q.id)));
-  const kanas = entran.map((q) => q.kana);
+  const kanas = entran.filter((q) => q.modo === 'conj' || q.modo === 'grupo').map((q) => q.kana);
   assert.equal(new Set(kanas).size, kanas.length, 'un verbo entró con dos formas: ' + kanas.join(', '));
 });
 
@@ -340,8 +342,11 @@ test('las formas que practica cada clase salen de la unidad, no de FORMAS', () =
   assert.equal(u.formas[2].length, 8);
 
   const p = m.armarPool({ modos: ['conj'], clase: '0', unidades: [8] });
-  assert.equal(p.length, 472, '56 verbos por las formas de su clase');
-  for (const q of p) assert.ok(u.formas[q.clase].includes(q.forma), q.id);
+  const conj = p.filter((q) => q.modo === 'conj');
+  assert.equal(conj.length, 472, '56 verbos por las formas de su clase');
+  for (const q of conj) assert.ok(u.formas[q.clase].includes(q.forma), q.id);
+  /* y un ítem de grupo por verbo, que M3 antepone a sus formas */
+  assert.equal(p.filter((q) => q.modo === 'grupo').length, u.verbos.length);
 });
 
 test('los distractores buscan en tres anillos y no se pisan en español', () => {

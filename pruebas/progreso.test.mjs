@@ -253,7 +253,9 @@ test('los ids de ejercicio llevan unidad y clave estable', () => {
   m.iniciarProgreso();
   m.fijarSel({ modos: ['hueco', 'armar', 'frase'], clase: '0', largo: 0, unidades: [] });
   m.construir(true);
-  const ids = m.cola().map((q) => q.id);
+  /* la cola puede traer fichas y tarjetas de presentación, que no son
+     preguntas y no llevan id (plano 3.5) */
+  const ids = m.cola().filter(m.esPregunta).map((q) => q.id);
   assert.ok(ids.length > 0);
   for (const id of ids) {
     assert.match(id, /^[haf]:8:[fha]8-\d{2}$/, id);

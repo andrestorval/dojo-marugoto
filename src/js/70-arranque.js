@@ -15,7 +15,7 @@ function empezar(manual){
     });
     return;
   }
-  idx = 0; aciertos = 0; fallos = [];
+  idx = 0; aciertos = 0; fallos = []; recuperadas = []; repasoPuesto = false;
   ir('scPlay'); pintarPregunta();
   return r;
 }

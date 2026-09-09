@@ -12,7 +12,7 @@ const MODOS = [
 ];
 
 /* ═══════════ estado de la sesion ═══════════ */
-let cola = [], idx = 0, aciertos = 0, fallos = [], respondida = false;
+let cola = [], idx = 0, aciertos = 0, fallos = [], recuperadas = [], repasoPuesto = false, respondida = false;
 
 /* ═══════════ utilidades ═══════════ */
 const $ = s => document.querySelector(s);
@@ -221,16 +221,54 @@ function ir(pantalla){
 function pintarPregunta(){
   const q = cola[idx];
   respondida = false;
+  q.reintento = false;
+
+  /* Las tarjetas y las fichas no son preguntas: no entran en el contador ni
+     en el marcador (plano 3.5). */
+  const preguntas = cola.filter(esPregunta).length;
+  const voy = cola.slice(0, idx + 1).filter(esPregunta).length;
   $('#rail').style.width = (idx / cola.length * 100) + '%';
-  $('#mCount').textContent = 'Pregunta ' + (idx+1) + ' de ' + cola.length;
+  $('#mCount').textContent = esPregunta(q)
+    ? 'Pregunta ' + voy + ' de ' + preguntas
+    : (q.tipo === 'ficha' ? 'Ficha' : 'Palabra nueva');
   $('#mScore').textContent = aciertos + ' correctas';
-  $('#qTag').textContent = q.tag;
+  $('#qTag').textContent = q.tag || (q.tipo === 'ficha' ? 'Antes de seguir' : 'Palabra nueva');
   const t2 = $('#qTag2');
   if(q.tag2){ t2.textContent = q.tag2; t2.classList.remove('hide'); } else t2.classList.add('hide');
   $('#fb').className = 'fb';
   $('#fb').innerHTML = '';
 
   const B = $('#qBody');
+
+  /* ── tarjeta de palabra nueva ── */
+  if(q.tipo === 'nuevo'){
+    B.innerHTML =
+      `<div class="prompt">${esc(q.jp)}</div>
+       <p class="sub">${esc(q.lectura)}</p>
+       <div class="prompt es" style="font-size:1.15rem; margin-top:10px">${esc(q.es)}</div>
+       <p class="ask">Palabra nueva. La vas a ver preguntada en un momento.</p>`;
+    $('#qActs').innerHTML = `<button class="primary" id="btnNext">Entendido</button>`;
+    $('#btnNext').onclick = siguiente;
+    $('#btnNext').focus();
+    $('#fb').classList.remove('show');
+    return;
+  }
+
+  /* ── ficha de forma o de patron ── */
+  if(q.tipo === 'ficha'){
+    B.innerHTML =
+      `<div class="prompt" style="font-size:1.7rem">${esc(q.ficha.titulo)}</div>
+       <p class="sub">${esc(q.ficha.desc || '')}</p>
+       <p class="ask">Es la primera vez que sale. Míralo y seguimos.</p>`;
+    $('#qActs').innerHTML =
+      `<button class="primary" id="btnNext">Entendido</button>` +
+      `<button class="ghost thin" id="btnVerFicha">Ver la ficha</button>`;
+    $('#btnNext').onclick = siguiente;
+    $('#btnVerFicha').onclick = () => verFicha(q.ficha);
+    verFicha(q.ficha);
+    $('#fb').classList.remove('show');
+    return;
+  }
 
   if(q.tipo === 'escribir'){
     B.innerHTML =
@@ -251,22 +289,44 @@ function pintarPregunta(){
        <div class="gapline">${esc(q.pre)}<input type="text" id="inp" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(q.post)}` +
       (q.tipo === 'hueco2' ? `<input type="text" id="inp2" lang="ja" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(q.post2)}` : '') +
       `</div>
-       <p class="sub" style="margin-top:12px"><b style="color:var(--ai)">${esc(q.hint)}</b></p>
+       ${q.hintOculto ? '' : `<p class="sub" style="margin-top:12px"><b style="color:var(--ai)">${esc(q.hint)}</b></p>`}
        <p class="sub">${esc(q.sub)}</p>`;
     acciones(true);
     setTimeout(() => $('#inp') && $('#inp').focus(), 30);
   }
 
   else if(q.tipo === 'opcion'){
-    B.innerHTML =
-      `<div class="prompt">${esc(q.promptJp)}</div>
-       <p class="sub">${esc(q.lectura)}</p>
-       <p class="ask">¿Qué significa?</p>
-       <div class="mc" id="mc">${q.opciones.map((o,i) => `<button data-i="${i}">${esc(o)}</button>`).join('')}</div>`;
+    const enunciado =
+      q.eleccion === 'patron'
+        ? `<div class="prompt es">${esc(q.sub)}</div>
+           <div class="gapline" style="margin-top:10px">${esc(q.pre)}<b style="color:var(--ai)">（　　）</b>${esc(q.post)}${q.post2 ? '（　　）' + esc(q.post2) : ''}</div>
+           <p class="ask">¿Qué patrón pide este hueco?</p>`
+      : q.eleccion === 'forma'
+        ? `<div class="prompt">${esc(q.promptJp)}</div>
+           ${q.lectura ? `<p class="sub">${esc(q.lectura)}</p>` : ''}
+           <p class="sub">${esc(q.sub)}</p>
+           <p class="ask">¿Cuál es la <b>${esc(q.pide)}</b>?</p>`
+      : q.modo === 'grupo'
+        ? `<div class="prompt">${esc(q.promptJp)}</div>
+           ${q.lectura ? `<p class="sub">${esc(q.lectura)}</p>` : ''}
+           <p class="sub">${esc(q.sub)}</p>
+           <p class="ask">¿De qué grupo es este verbo?</p>`
+        : `<div class="prompt">${esc(q.promptJp)}</div>
+           <p class="sub">${esc(q.lectura)}</p>
+           <p class="ask">¿Qué significa?</p>`;
+
+    B.innerHTML = enunciado +
+      `<div class="mc" id="mc">${q.opciones.map((o,i) => `<button data-i="${i}">${esc(o)}</button>`).join('')}</div>`;
     $('#mc').querySelectorAll('button').forEach(b => b.onclick = () => {
       if(respondida) return;
+      if(b.disabled) return;
       const elegido = q.opciones[+b.dataset.i];
       const bien = elegido === q.correcta;
+      /* en el primer fallo con pista no se revela nada todavia */
+      if(!bien && !q.reintento && q.pista1){
+        resolver(false, 'mal', q.correcta, q);
+        return;
+      }
       $('#mc').querySelectorAll('button').forEach(x => {
         if(q.opciones[+x.dataset.i] === q.correcta) x.classList.add('pick-ok');
         else if(x === b) x.classList.add('pick-no');
@@ -339,34 +399,131 @@ function comprobar(){
   resolver(r.estado === 'ok' || r.estado === 'casi', r.estado, r.modelo, q);
 }
 
+/* Pinta la pista del primer fallo. No revela la respuesta: deja lo escrito en
+   el campo y ofrece "Comprobar de nuevo" y "Ver respuesta" (plano 3.1). */
+function pintarPista(q){
+  const p = q.pista1;
+  const fb = $('#fb');
+  fb.className = 'fb show casi';
+  let cuerpo = '';
+
+  if(p.clase === 'usos'){
+    cuerpo = '<div class="why">' + p.usos.map(x =>
+      '<b>' + esc(x.pat) + '</b> · ' + esc(x.uso)).join('<br>') + '</div>';
+  } else if(p.clase === 'quita'){
+    /* se retira una opcion incorrecta del tablero */
+    $('#mc') && $('#mc').querySelectorAll('button').forEach(x => {
+      if(q.opciones[+x.dataset.i] === p.quitar){ x.disabled = true; x.style.opacity = '.3'; }
+    });
+    cuerpo = '<div class="why">Esa no era. Quedan menos opciones.</div>';
+  } else if(p.clase === 'pieza'){
+    /* se fija la primera pieza en su lugar y se bloquea */
+    const pool = $('#pool'), slot = $('#slot');
+    if(pool && slot){
+      slot.innerHTML = '';
+      pool.querySelectorAll('.piece').forEach(b => { b.style.display = ''; });
+      const b = [...pool.querySelectorAll('.piece')].find(x => x.textContent === p.pieza);
+      if(b){
+        const cp = document.createElement('button');
+        cp.className = 'piece'; cp.textContent = p.pieza; cp.disabled = true;
+        slot.appendChild(cp); b.style.display = 'none';
+      }
+    }
+    cuerpo = '<div class="why">' + esc(p.texto) + '</div>';
+  } else if(p.clase === 'esqueleto'){
+    cuerpo = '<div class="model">' + esc(p.texto) + '</div>';
+  } else {
+    cuerpo = '<div class="why">' + esc(p.texto) + '</div>';
+  }
+
+  fb.innerHTML = '<div class="head">Casi. Prueba otra vez</div>' + cuerpo;
+
+  const A = $('#qActs');
+  const puedeReintentar = q.tipo !== 'opcion';
+  A.innerHTML =
+    (puedeReintentar ? '<button class="primary" id="btnCheck">Comprobar de nuevo</button>' : '') +
+    '<button class="ghost thin" id="btnVer">Ver respuesta</button>';
+  if($('#btnCheck')) $('#btnCheck').onclick = comprobar;
+  $('#btnVer').onclick = () => {
+    if(q.tipo === 'opcion' && $('#mc')){
+      $('#mc').querySelectorAll('button').forEach(x => {
+        if(q.opciones[+x.dataset.i] === q.correcta) x.classList.add('pick-ok');
+        x.disabled = true;
+      });
+    }
+    resolver(false, 'mal', q.modelo, q, true);
+  };
+  const foco = $('#inp') || $('#btnVer');
+  if(foco) foco.focus();
+}
+
+/* El progreso se registra en el primer fallo, porque el item no se sabia; el
+   segundo intento es aprendizaje y no cambia el registro. En el marcador
+   cuenta como fallado aunque el segundo intento acierte, y el resumen lo
+   lista aparte como recuperada con pista (plano 3.1). */
 function resolver(bien, estado, modelo, q, rendido){
+  /* ── primer fallo con pista disponible ── */
+  if(estado === 'mal' && !rendido && !q.reintento && q.pista1){
+    q.reintento = true;
+    if(!q.repaso){
+      marcar(q.id, 'mal');
+      fallos.push({ q, modelo: q.modelo, conPista: true });
+    }
+    pintarPista(q);
+    return;
+  }
+
   respondida = true;
-  if(bien) aciertos++;
-  /* la copia se toma antes de tocar el registro: "La tenía bien" la restaura
-     en vez de marcar acierto sobre el registro ya penalizado (Anexo A) */
-  const previo = copiaDe(q.id);
-  marcar(q.id, estado);
-  if(!bien) fallos.push({ q, modelo });
+  const segundoIntento = !!q.reintento;
+
+  /* El repaso del final es una segunda exposicion, no una evaluacion: no
+     registra progreso ni cuenta en el marcador (plano 3.4). */
+  if(bien && !q.repaso) aciertos++;
+
+  if(!segundoIntento && !q.repaso){
+    /* la copia se toma antes de tocar el registro: "La tenía bien" la restaura
+       en vez de marcar acierto sobre el registro ya penalizado (Anexo A) */
+    q.previo = copiaDe(q.id);
+    marcar(q.id, estado);
+    if(!bien) fallos.push({ q, modelo });
+  } else if(segundoIntento && bien){
+    /* recuperada con pista: sale de fallos y entra en su propia lista */
+    const i = fallos.findIndex(f => f.q === q);
+    if(i >= 0){ recuperadas.push(fallos[i]); fallos.splice(i, 1); }
+  }
 
   const fb = $('#fb');
   fb.className = 'fb show ' + (estado === 'ok' ? 'ok' : estado === 'casi' ? 'casi' : 'no');
-  let head = estado === 'ok' ? 'Correcto' : estado === 'casi' ? 'Casi' : (rendido ? 'La respuesta era' : 'No');
+  let head = estado === 'ok' ? (segundoIntento ? 'Correcto, con la pista' : 'Correcto')
+           : estado === 'casi' ? 'Casi'
+           : (rendido ? 'La respuesta era' : 'No');
   let why = '';
   if(estado === 'casi') why = '<div class="why">Lo tenías, pero falla una vocal larga o un kana pequeño. Fíjate en la forma exacta.</div>';
   if(q.lecturaResp && q.lecturaResp !== modelo) why += '<div class="why">Lectura: <b>' + esc(q.lecturaResp) + '</b></div>';
   if(estado !== 'ok' && q.regla) why += '<div class="why">' + esc(q.regla) + '</div>';
   if(estado !== 'ok' && q.nota) why += '<div class="why"><b>Ojo:</b> ' + esc(q.nota) + '</div>';
+  /* la correccion ensena la regla, no solo la respuesta */
+  if(estado !== 'ok' && q.ejemplo2)
+    why += '<div class="why">Misma regla: <b>' + esc(q.ejemplo2.verbo) + ' → ' + esc(q.ejemplo2.salida) + '</b></div>';
+  if(estado !== 'ok' && q.modo === 'hueco' && q.hint)
+    why += '<div class="why">' + esc(q.hint) + '</div>';
+  if(estado !== 'ok' && q.eleccion === 'patron')
+    why += '<div class="why">' + esc(usoDelPatron(q.unidad, q.correcta)) + '</div>';
 
-  fb.innerHTML = `<div class="head">${head}</div><div class="model">${esc(modelo)}</div>${why}`;
+  const cuerpo = (q.modo === 'hueco' && estado !== 'ok')
+    ? q.pre + q.ok[0] + q.post + (q.ok2 ? q.ok2[0] + (q.post2 || '') : '')
+    : modelo;
+  fb.innerHTML = `<div class="head">${head}</div><div class="model">${esc(cuerpo)}</div>${why}`;
 
   const A = $('#qActs');
-  A.innerHTML = `<button class="primary" id="btnNext">${idx+1 >= cola.length ? 'Ver resumen' : 'Siguiente'}</button>` +
-    (estado !== 'ok' && !rendido ? `<button class="ghost thin" id="btnOk">La tenía bien</button>` : '') +
-    (estado === 'ok' && !jubilado(q.id) ? `<button class="ghost thin" id="btnSabida">Ya la sé</button>` : '');
+  const ultima = idx + 1 >= cola.length;
+  A.innerHTML = `<button class="primary" id="btnNext">${ultima ? 'Ver resumen' : 'Siguiente'}</button>` +
+    (estado !== 'ok' && !rendido && !segundoIntento && !q.repaso ? `<button class="ghost thin" id="btnOk">La tenía bien</button>` : '') +
+    (estado === 'ok' && !segundoIntento && !q.repaso && !jubilado(q.id) ? `<button class="ghost thin" id="btnSabida">Ya la sé</button>` : '');
   $('#btnNext').onclick = siguiente;
   if($('#btnOk')) $('#btnOk').onclick = () => {
     aciertos++;
-    restaurar(q.id, previo);
+    restaurar(q.id, q.previo);
     marcar(q.id, 'ok');
     fallos = fallos.filter(f => f.q !== q);
     $('#btnOk').remove();
@@ -383,24 +540,53 @@ function resolver(bien, estado, modelo, q, rendido){
   $('#btnNext').focus();
 }
 
+/* Los fallados se vuelven a preguntar una vez al final, sin registrar
+   progreso y sin contar en el marcador. Es la segunda exposicion que convierte
+   el fallo en aprendizaje ese mismo dia (plano 3.4). */
+function agregarRepaso(){
+  if(repasoPuesto) return false;
+  repasoPuesto = true;
+  const pendientes = fallos.concat(recuperadas)
+    .map(f => f.q)
+    .filter((q, i, a) => a.indexOf(q) === i && esPregunta(q));
+  if(!pendientes.length) return false;
+  for(const q of pendientes){
+    const copia = Object.assign({}, q, { repaso:true, reintento:false, previo:null });
+    cola.push(copia);
+  }
+  return true;
+}
+
 function siguiente(){
   idx++;
-  if(idx >= cola.length) return terminar();
+  if(idx >= cola.length){
+    if(agregarRepaso()) return pintarPregunta();
+    return terminar();
+  }
   pintarPregunta();
 }
 
 function terminar(){
   $('#rail').style.width = '100%';
-  const pct = cola.length ? Math.round(aciertos / cola.length * 100) : 0;
-  $('#endScore').innerHTML = aciertos + ' <small>de ' + cola.length + ' · ' + pct + '%</small>';
-  $('#endLine').textContent = pct >= 85 ? 'Esto ya lo tienes. Sube el número de preguntas o agrega un modo más exigente.'
-    : pct >= 55 ? 'Vas bien. Lo que fallaste va a volver a salir más seguido.'
-    : 'Todavía cuesta. Repite esta misma configuración un par de veces antes de cambiar de modo.';
+
+  /* Tres conteos y nada mas. En repaso espaciado la sesion no es una prueba, y
+     una tasa de fallo alta es el estado normal de quien recien empieza una
+     unidad: el porcentaje y las frases de juicio del archivo congelado sobran
+     (Anexo B). */
+  const nPreg = cola.filter(esPregunta).length;
+  $('#endScore').innerHTML =
+    `<span>${aciertos}</span> <small>${aciertos === 1 ? 'correcta' : 'correctas'}</small>` +
+    (recuperadas.length ? ` · <span>${recuperadas.length}</span> <small>con pista</small>` : '') +
+    (fallos.length ? ` · <span>${fallos.length}</span> <small>${fallos.length === 1 ? 'fallada' : 'falladas'}</small>` : '');
+  $('#endLine').textContent = nPreg + (nPreg === 1 ? ' pregunta' : ' preguntas') + ' en esta sesión.';
+
   const miss = $('#endMiss');
-  if(fallos.length){
+  const lista = fallos.concat(recuperadas.map(r => Object.assign({}, r, { pista:true })));
+  if(lista.length){
     $('#endMissCard').classList.remove('hide');
-    miss.innerHTML = '<tr><th>Pregunta</th><th>Respuesta</th></tr>' + fallos.map(f =>
-      `<tr><td>${esc(enunciado(f.q))}</td><td class="jp">${esc(f.modelo)}</td></tr>`).join('');
+    miss.innerHTML = '<tr><th>Pregunta</th><th>Respuesta</th></tr>' + lista.map(f =>
+      `<tr><td>${esc(enunciado(f.q))}${f.pista ? '<br><small class="sub">recuperada con pista</small>' : ''}</td>` +
+      `<td class="jp">${esc(f.modelo)}</td></tr>`).join('');
   } else $('#endMissCard').classList.add('hide');
 
   /* Cuántas quedan para hoy: sin esto, el tope por atraso es invisible. */
@@ -425,7 +611,7 @@ function seguirMas(){
     dialogo({ titulo:'No queda nada por ahora', texto:'Vuelve mañana, o usa "Elegir qué practicar" para repasar lo que quieras.' });
     return;
   }
-  idx = 0; aciertos = 0; fallos = [];
+  idx = 0; aciertos = 0; fallos = []; recuperadas = []; repasoPuesto = false;
   ir('scPlay'); pintarPregunta();
 }
 

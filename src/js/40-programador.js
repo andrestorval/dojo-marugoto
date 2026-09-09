@@ -58,7 +58,7 @@ const esJubilado = (r) => !!(r && r.man);
    que el cupo se reparte y lo que un tipo no usa pasa al siguiente. */
 const REPARTO = [
   { tipos:['vocabJP', 'vocabES'], parte: 2 },
-  { tipos:['conj'],               parte: 2 },
+  { tipos:['grupo', 'conj'],      parte: 2 },
   { tipos:['hueco', 'armar'],     parte: 1 },
   { tipos:['frase'],              parte: 1 }
 ];
@@ -96,6 +96,11 @@ function dependenciaCumplida(q, idsPool){
     const req = 'v:' + q.jp + ':jp';
     return !enPool(req) || !!prog[req];
   }
+  if(q.modo === 'conj'){
+    /* conjugar sin saber el grupo es adivinar: primero el item de grupo */
+    const req = 'g:' + q.kana;
+    return !enPool(req) || !!prog[req];
+  }
   if(q.modo === 'frase'){
     /* una frase entra cuando algun hueco del mismo patron llego a la caja 2,
        es decir, ya se respondio sin pista */
@@ -128,7 +133,7 @@ function ordenEntrada(nuevos, cupo, unidadActual, idsPool){
       if(!tipos.includes(q.modo)) continue;
       /* una sola forma por verbo por sesion: un verbo nuevo no entra con sus
          nueve formas de golpe */
-      if(q.modo === 'conj'){
+      if(q.modo === 'conj' || q.modo === 'grupo'){
         if(verbosUsados.has(q.kana)) continue;
         verbosUsados.add(q.kana);
       }

@@ -17,7 +17,7 @@ export const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
 const leer = (p) => readFileSync(p, 'utf8').replace(/\r\n/g, '\n');
 
 export const SIN_DOM = ['00-tablas.js', '05-contenido.js', '10-conjugador.js', '20-normalizador.js'];
-export const CON_PROGRESO = SIN_DOM.concat(['30-progreso.js', '40-programador.js', '50-preguntas.js']);
+export const CON_PROGRESO = SIN_DOM.concat(['30-progreso.js', '40-programador.js', '55-material.js', '50-preguntas.js']);
 
 /* localStorage de mentira: la interfaz mínima que usa la app. `datos` deja ver
    desde la prueba lo que quedó escrito, sin volver a parsear. */
@@ -69,6 +69,10 @@ export function cargarMotor({ unidades = null, archivos = SIN_DOM, almacen = nul
       transicion, transicionManual, transicionDesmarcar, esJubilado,
       ordenUnidades, ordenEntrada, seleccionar, panorama, baraja,
       armarPool, distractores, construir, panoramaHoy, TODOS_LOS_MODOS,
+      moras, esqueleto, distractoresConjugacion, distractoresPatron,
+      aplicarEtapa, pistaDe, segundoEjemplo, usoDelPatron,
+      conPresentaciones, tarjetaPara, esPregunta, yaVistaForma, yaVistoPatron,
+      fichaForma, fichaPatron, materiaDe, verboEjemplo,
       dependenciaCumplida, huecosDelPatron, sinTildes, chocan,
       /* prog y sel se reasignan; hay que leerlos por función */
       estado: () => ({ prog, sel, avisoMigracion }),
