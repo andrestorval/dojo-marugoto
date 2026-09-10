@@ -1,6 +1,9 @@
 dist/
 node_modules/
 
+# `docs/` NO se ignora: es la copia de dist/pwa/ que GitHub Pages sirve, y
+# tiene que viajar en el repositorio. La genera herramientas/publicar.mjs.
+
 # `contenido/` y `fuentes-oficiales/` SÍ se versionan mientras el repositorio
 # sea local o privado: son lo que más revisión humana acumula y lo que más
 # conviene poder deshacer. Si algún día esto se sube a un repositorio público,

@@ -20,6 +20,7 @@ Node 18 o superior, nada más. No hay `package.json`, no hay `npm install`.
     node herramientas/puente.mjs               regenera puente-t8.html
     node herramientas/vector.mjs               regenera el vector desde el archivo congelado
     node herramientas/servir.mjs --base=/dojo   sirve dist/pwa/ en local bajo subruta
+    node herramientas/publicar.mjs             copia dist/pwa/ a docs/, que es lo que publica GitHub Pages
 
 Compila antes de correr las pruebas: una de ellas comprueba que `alert` y
 `confirm` no aparecen en `dist/`, y sin `dist/` se salta.
@@ -35,7 +36,9 @@ Salidas:
   en la raíz o bajo `/loquesea/`. Lleva el manifest, el service worker y los
   iconos.
 - `dist/dojo-marugoto.html` — archivo único autocontenido, para compartir.
-- `dist/contenido.json` — el contenido suelto, para la build sin contenido (M4).
+- `dist/contenido.json` — el contenido suelto, para la build sin contenido.
+- `docs/` — copia de `dist/pwa/` que sí se versiona: es lo que GitHub Pages
+  sirve. Se regenera con `publicar.mjs` y se sube con un commit.
 
 ## Estructura
 
