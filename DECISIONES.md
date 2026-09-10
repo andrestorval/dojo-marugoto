@@ -82,6 +82,29 @@ sesión también pasa por el programador y también registra progreso. Se descar
 convertir la selección de unidades en un ajuste permanente que mandara sobre
 "Practicar hoy", y se descartó preguntar al empezar cada sesión.
 
+## 2026-09-10
+
+**El repositorio es público en GitHub, con el material del libro dentro.**
+`github.com/andrestorval/dojo-marugoto`. Pages con plan gratuito solo funciona
+en repositorios públicos, y Andrés prefirió eso a pagar o a mover el
+alojamiento.
+
+Corrige la parte de la tensión 3 que decía que con repositorio público
+`contenido/` y `fuentes-oficiales/` van al `.gitignore` (plano 8.3). Se quedan
+versionados, a propósito: el historial del contenido es lo que protege la
+revisión humana, que es donde está el trabajo caro, y las claves estables de M1
+existen justamente para que ese historial sobreviva a las correcciones. Se
+asume a cambio que el vocabulario, las frases y el archivo congelado quedan
+visibles.
+
+La decisión se tomó sabiendo que ya estaba en el historial de git y que
+deshacerla más tarde exige reescribir el historial y forzar el push. No se
+reabre salvo que aparezca una razón nueva.
+
+**La página publicada es pública aunque el repositorio no lo fuera.** Vale la
+pena tenerlo presente: el enlace no se difunde más allá del curso, pero
+cualquiera que lo tenga entra.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se
