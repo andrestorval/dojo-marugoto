@@ -24,13 +24,9 @@ const UNIDADES   = CONTENIDO.unidades;
 const FORMAS     = CONTENIDO.formas;
 const CATEGORIAS = CONTENIDO.categorias;
 
-/* Sin contenido cargado, TEMA es un hueco con la forma correcta: la app tiene
-   que poder pintar el inicio y ofrecer "Cargar contenido" sin reventar. */
-const UNIDAD_VACIA = { n:0, titulo:'', es:'', paginas:null, estado:'vacia',
-  formas:{}, verbos:[], vocab:[], frases:[], huecos:[], armar:[], patrones:[] };
-const TEMA   = UNIDADES[0] || UNIDAD_VACIA;
-const VERBOS = TEMA.verbos;
-const VOCAB  = TEMA.vocab;
-const FRASES = TEMA.frases;
-const HUECOS = TEMA.huecos;
-const ARMAR  = TEMA.armar;
+/* Aqui vivian TEMA, VERBOS, VOCAB, FRASES, HUECOS y ARMAR, los nombres que
+   tenian los datos en el archivo congelado, cuando la app era de una sola
+   unidad. Se quitaron al entrar la unidad 1 (M6): ninguna linea del motor los
+   usaba ya, y estaban definidos como UNIDADES[0], asi que en cuanto dejo de
+   haber una sola unidad pasaron a apuntar a otra sin avisar. Todo lo que
+   necesita datos de una unidad la busca por su numero en UNIDADES. */

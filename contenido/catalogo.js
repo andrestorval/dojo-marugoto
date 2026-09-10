@@ -52,7 +52,19 @@ CONTENIDO.formas = [
   { id:"yasui",   label:"〜やすい",            desc:"fácil de… (raíz de ます + やすい)", ej:EJ, lectura:"yasui",
     uso:"Dice que algo se hace con facilidad: 働きやすい, un sitio donde es fácil trabajar." },
   { id:"koto",    label:"〜ことができます",    desc:"poder… (forma diccionario + ことができます)", ej:EJ, lectura:"koto ga dekimasu",
-    uso:"La otra manera de decir «poder», más formal que la potencial y sin cambiar el verbo." }
+    uso:"La otra manera de decir «poder», más formal que la potencial y sin cambiar el verbo." },
+  { id:"nara",    label:"〜なら",              desc:"si es que… (forma diccionario + なら)", ej:EJ, lectura:"nara",
+    uso:"Pone una condición retomando algo que el otro acaba de decir: si es ese el caso, entonces sí." },
+  { id:"tte",     label:"〜って言ってました",   desc:"dijo que… (forma simple + って言ってました)", ej:EJ, lectura:"tte itte mashita",
+    uso:"Repetir lo que otro dijo, en conversación. Es la versión hablada y llana de 〜と言っていました." },
+  { id:"na",      label:"〜な (prohibitivo)",  desc:"¡no…! (forma diccionario + な)", ej:EJ, lectura:"きんしけい · kinshikei",
+    uso:"La prohibición seca, la pareja del imperativo. En la grada: 負けるな, あきらめるな." },
+  { id:"meishi",  label:"raíz de ます como sustantivo", desc:"el verbo hecho nombre", ej:EJ, lectura:"めいしか · meishika",
+    uso:"La raíz de ます, sola, funciona como sustantivo: さそいます da さそい, «la invitación»." },
+  { id:"nakereba", label:"〜なければなりません", desc:"hay que… (forma ない sin い + ければなりません)", ej:EJ, lectura:"nakereba narimasen",
+    uso:"La obligación: no queda otra que hacerlo. Es la forma de escribir y de hablar con cuidado." },
+  { id:"nakya",   label:"〜なきゃいけません",   desc:"hay que… (hablado)", ej:EJ, lectura:"nakya ikemasen",
+    uso:"La misma obligación en la boca, no en el papel. なきゃ es なければ comido al hablar." }
 ];
 
 /* --- CATEGORIAS -----------------------------------------------
@@ -72,5 +84,7 @@ CONTENIDO.categorias = [
   "viaje", "hotel", "objetos", "tiempo",
   "problema", "conector", "reaccion", "abstracto",
   /* Tema 9, 仕事をさがす */
-  "trabajo", "empresa", "persona"
+  "trabajo", "empresa", "persona",
+  /* Tema 1, スポーツの試合 */
+  "deporte", "sentimiento", "correo"
 ];

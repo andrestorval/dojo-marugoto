@@ -80,13 +80,37 @@ function variantes(x) {
      〜部 se encontraban a sí mismos en el índice. */
   const s = String(x || '').trim().replace(/[～〜]/g, '〜');
   if (!s) return [];
-  const out = new Set([s]);
-  out.add(s.replace(/[（）()]/g, '').trim());        // quitando solo los signos
-  out.add(s.replace(/[（(][^）)]*[）)]/g, '').trim()); // quitando el paréntesis entero
-  /* Los sustantivos verbales vienen como ほうこく（します）, y su columna de
-     forma de diccionario dice （～する）, que no nombra ninguna palabra. La
-     forma que la app usa es ほうこくする, y se genera aquí. */
-  if (/[（(]します[）)]$/.test(s)) out.add(s.replace(/[（(]します[）)]$/, 'する'));
+
+  const out = new Set();
+
+  /* El índice separa las formas alternativas con ／ dentro de la misma celda:
+     あの／あのう, ごめんなさい／ごめん, にちようび／にち. Cada lado es una
+     palabra por derecho propio. */
+  for (const rama of s.split('／')) {
+    const t = rama.trim();
+    if (!t) continue;
+    out.add(t);
+
+    /* Los paréntesis marcan lo opcional, y puede haber más de uno en la misma
+       entrada: だいじょ（う）ぶ（な） son cuatro escrituras válidas, no dos. Se
+       generan todas las combinaciones de conservar o quitar cada grupo. */
+    const grupos = [...t.matchAll(/[（(][^）)]*[）)]/g)];
+    for (let m = 0; m < (1 << grupos.length); m++) {
+      let v = '', i = 0;
+      for (let g = 0; g < grupos.length; g++) {
+        v += t.slice(i, grupos[g].index);
+        if (m & (1 << g)) v += grupos[g][0].slice(1, -1);  // conservar el contenido
+        i = grupos[g].index + grupos[g][0].length;
+      }
+      out.add((v + t.slice(i)).trim());
+    }
+
+    /* Los sustantivos verbales vienen como ほうこく（します）, y su columna de
+       forma de diccionario dice （～する）, que no nombra ninguna palabra. La
+       forma que la app usa es ほうこくする, y se genera aquí. */
+    if (/[（(]します[）)]$/.test(t)) out.add(t.replace(/[（(]します[）)]$/, 'する'));
+  }
+
   out.delete('');
   return [...out];
 }
@@ -275,7 +299,10 @@ inf('vocabulario del tema en el índice: ' + vocTema.length + ' · en la app: ' 
     ' · sin cubrir: ' + faltanVoc.length);
 
 const kanjiTema = IDX.kanji.filter((k) => k.tema === UNIDAD);
-const enApp = (p) => u.vocab.some((v) => v.jp === p) || u.verbos.some((v) => (v.kanji || '') === p);
+/* Con igualdad de cadenas, ～対～（２対１） no encontraba a 〜対〜 ni
+   ～便（115便） a 〜便: el índice le pega un ejemplo entre paréntesis a la
+   palabra. Se compara con las mismas variantes que el resto del validador. */
+const enApp = (p) => u.vocab.some((v) => coincide(v.jp, p)) || u.verbos.some((v) => coincide(v.kanji || '', p));
 const faltanKanji = kanjiTema.filter((k) => !enApp(k.palabra));
 inf('kanji del tema: ' + kanjiTema.length + ' · sin cubrir: ' + faltanKanji.length +
     (faltanKanji.length ? ' (' + faltanKanji.map((k) => k.palabra).join(' ') + ')' : ''));

@@ -32,6 +32,12 @@ function conjugar(v, forma) {
       case 'tai':     out = st + 'たいです'; break;
       case 'yasui':   out = st + 'やすいです'; break;
       case 'koto':    out = k + 'ことができます'; break;
+      case 'nara':    out = k + 'なら'; break;
+      case 'tte':     out = k + 'って言ってました'; break;
+      case 'na':      out = k + 'な'; break;
+      case 'meishi':  out = st; break;
+      case 'nakereba': out = st + 'なければなりません'; break;
+      case 'nakya':    out = st + 'なきゃいけません'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -55,6 +61,12 @@ function conjugar(v, forma) {
       case 'tai':     out = st + U2I[last] + 'たいです'; break;
       case 'yasui':   out = st + U2I[last] + 'やすいです'; break;
       case 'koto':    out = k + 'ことができます'; break;
+      case 'nara':    out = k + 'なら'; break;
+      case 'tte':     out = k + 'って言ってました'; break;
+      case 'na':      out = k + 'な'; break;
+      case 'meishi':  out = st + U2I[last]; break;
+      case 'nakereba': out = st + U2A[last] + 'なければなりません'; break;
+      case 'nakya':    out = st + U2A[last] + 'なきゃいけません'; break;
     }
   }
 
@@ -94,16 +106,30 @@ function reglaDe(v, forma){
   if(v.g === 2){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
                    nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
-                   tara:'たら', tai:'たいです', yasui:'やすいです' };
+                   tara:'たら', tai:'たいです', yasui:'やすいです',
+                   nakereba:'なければなりません', nakya:'なきゃいけません' };
+    /* na y meishi no siguen el molde "quita る y pon X": el prohibitivo se pega
+       a la forma de diccionario entera (忘れるな, no 忘れな) y la raiz
+       sustantivada no anade nada detras. Con el mapa mentian. */
+    if(forma === 'na') return 'Grupo 2: forma diccionario + な. El る no se quita.';
+    if(forma === 'meishi') return 'Grupo 2: quita る y ahí se queda: la raíz sola ya es el sustantivo.';
     if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
     if(forma === 'koto') return 'Grupo 2: forma diccionario + ことができます.';
+    if(forma === 'nara') return 'Grupo 2: forma diccionario + なら.';
+    if(forma === 'tte') return 'Grupo 2: forma diccionario + って言ってました.';
     return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
   }
   const u = v.kana.slice(-1);
   if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
   if(forma === 'koto') return 'Grupo 1: forma diccionario + ことができます.';
-  if(forma === 'nai' || forma === 'nakatta')
-    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
+  if(forma === 'nara') return 'Grupo 1: forma diccionario + なら.';
+  if(forma === 'tte') return 'Grupo 1: forma diccionario + って言ってました.';
+  if(forma === 'na')  return 'Grupo 1: forma diccionario + な. No cambia el verbo.';
+  if(forma === 'nai' || forma === 'nakatta' || forma === 'nakereba' || forma === 'nakya')
+    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' +
+      ({ nai:'ない', nakatta:'なかった', nakereba:'なければなりません', nakya:'なきゃいけません' })[forma] + '.';
+  if(forma === 'meishi')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ', y ahí se queda: la raíz sola ya es el sustantivo.';
   if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui')
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
       ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
