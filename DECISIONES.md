@@ -132,6 +132,19 @@ Con eso, y con igualar las dos tildes de onda que usan índice y contenido
 (`～` U+FF5E y `〜` U+301C), la unidad 8 bajó de 33 advertencias a 22 sin que
 se tocara su contenido. Once de las suyas eran fallos del validador.
 
+**Los alias de una sola unidad se retiraron del motor.** `TEMA`, `VERBOS`,
+`VOCAB`, `FRASES`, `HUECOS` y `ARMAR` venían del archivo congelado y estaban
+definidos como `UNIDADES[0]`. Ninguna línea del motor los usaba, pero al entrar
+la unidad 1 dejaron de apuntar a la 8 y nueve pruebas se cayeron a la vez. Se
+quitaron; lo que necesita datos de una unidad la busca por su número.
+
+**El id de un verbo no lleva número de unidad**, y el pool deduplica por id. Un
+verbo que dos unidades practican da una sola tarjeta, que es lo correcto, pero
+el juego de formas que recibe lo decide la unidad que lo lista. Por eso la
+regla general es no repetir verbos entre unidades, con las excepciones que el
+contenido justifique: がんばる y あきらめる están en la 9 y en la 1 porque las
+palabras de ánimo de la 1 no se sostienen sin ellas.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se

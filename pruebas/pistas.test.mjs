@@ -83,9 +83,13 @@ test('el ítem de grupo existe, es de tres opciones y no cambia con la caja', ()
   const { m } = cargar();
   const p = m.armarPool({ modos: ['conj'], clase: '0', unidades: [] });
   const grupos = p.filter((q) => q.modo === 'grupo');
-  /* uno por verbo de todo el contenido compilado, no solo de la unidad 8 */
-  const verbos = m.UNIDADES.reduce((n, x) => n + x.verbos.length, 0);
-  assert.equal(grupos.length, verbos, 'uno por verbo');
+  /* Uno por verbo distinto de todo el contenido, no por entrada: el pool
+     deduplica por id, y el id de un verbo (`g:<kana>`) no lleva unidad. Un
+     verbo que dos unidades practican da una sola tarjeta, que es lo correcto. */
+  const verbos = new Set(m.UNIDADES.flatMap((x) => x.verbos.map((v) => v.kana)));
+  assert.equal(grupos.length, verbos.size, 'uno por verbo distinto');
+  const ids = grupos.map((q) => q.id);
+  assert.equal(new Set(ids).size, ids.length, 'ids de grupo repetidos');
 
   for (const caja of [0, 1, 4]) {
     const g = preguntaDe(m, (q) => q.modo === 'grupo', caja);
@@ -229,7 +233,9 @@ test('el segundo ejemplo es otro verbo del mismo grupo en la misma forma', () =>
   const { m } = cargar();
   const c = preguntaDe(m, (q) => q.modo === 'conj', 1);
   assert.ok(c.ejemplo2, 'la corrección debería enseñar la regla, no solo la respuesta');
-  const u = m.UNIDADES.find((x) => x.n === 8);
+  /* En la unidad de la propia pregunta, no en la 8: el pool ya no es de una
+     sola unidad y la primera conjugación puede venir de cualquiera. */
+  const u = m.UNIDADES.find((x) => x.n === c.unidad);
   const otro = u.verbos.find((v) => (v.kanji || v.kana) === c.ejemplo2.verbo);
   assert.ok(otro, 'el ejemplo no está en la unidad');
   assert.equal(otro.g, c.grupo, 'tiene que ser del mismo grupo');

@@ -145,3 +145,52 @@ test('いく mantiene su excepción también en たら', () => {
   /* la regla daría いきたら; la forma て de いく es irregular y たら sale de ella */
   assert.equal(m.conjugar(iku, 'tara'), 'いったら');
 });
+
+/* ── las formas que estrena la unidad 1 ─────────────────────────
+   Mismo motivo que las de la unidad 9: el vector congelado no las conoce.
+   Un verbo regular por grupo, más los dos irregulares y un grupo 1 acabado
+   en 〜う, que es donde la forma ない tiene su trampa (う → わ, nunca あ). */
+test('なら, って, な, la raíz sustantivada, なければ y なきゃ', () => {
+  const casos = [
+    /* grupo 1 */
+    ['かつ',   'nara',     'かつなら'],
+    ['かつ',   'na',       'かつな'],
+    ['かつ',   'meishi',   'かち'],
+    ['かつ',   'nakereba', 'かたなければなりません'],
+    ['かつ',   'nakya',    'かたなきゃいけません'],
+    ['かつ',   'imp',      'かて'],
+    /* grupo 1 en 〜う: la forma ない va a わ, no a あ */
+    ['さそう', 'nakereba', 'さそわなければなりません'],
+    ['さそう', 'meishi',   'さそい'],
+    ['さそう', 'tte',      'さそうって言ってました'],
+    /* grupo 2 */
+    ['まける', 'nara',     'まけるなら'],
+    ['まける', 'na',       'まけるな'],
+    ['まける', 'meishi',   'まけ'],
+    ['まける', 'nakereba', 'まけなければなりません'],
+    ['まける', 'nakya',    'まけなきゃいけません'],
+    /* grupo 3 */
+    ['キャンセルする', 'nara',     'キャンセルするなら'],
+    ['キャンセルする', 'na',       'キャンセルするな'],
+    ['キャンセルする', 'meishi',   'キャンセルし'],
+    ['キャンセルする', 'nakereba', 'キャンセルしなければなりません'],
+  ];
+  const todos = m.UNIDADES.flatMap((u) => u.verbos);
+  const fallos = [];
+  for (const [kana, forma, esperado] of casos) {
+    const vb = todos.find((x) => x.kana === kana);
+    assert.ok(vb, 'falta el verbo ' + kana + ' en el contenido');
+    const sale = m.conjugar(vb, forma);
+    if (sale !== esperado) fallos.push(kana + ' ' + forma + ': ' + sale + ' ≠ ' + esperado);
+  }
+  assert.deepEqual(fallos, []);
+});
+
+test('くる es irregular también en las formas nuevas', () => {
+  const kuru = m.UNIDADES.flatMap((u) => u.verbos).find((x) => x.kana === 'くる');
+  assert.ok(kuru, 'falta くる');
+  /* la regla daría くなければ; くる va de memoria y su ない es こない */
+  assert.equal(m.conjugar(kuru, 'nakereba'), 'こなければなりません');
+  assert.equal(m.conjugar(kuru, 'nakya'), 'こなきゃいけません');
+  assert.equal(m.conjugar(kuru, 'meishi'), 'き');
+});

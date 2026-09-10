@@ -14,17 +14,22 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                ta:'した', te:'して', nagara:'しながら', tari:'したり',
                pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で',
                tara:'したら', tai:'したいです', yasui:'しやすいです',
-               koto:'することができます' };
+               koto:'することができます', nara:'するなら',
+               tte:'するって言ってました', na:'するな', meishi:'し',
+               nakereba:'しなければなりません', nakya:'しなきゃいけません' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
                tara:'きたら', tai:'きたいです', yasui:'きやすいです',
-               koto:'くることができます' };
+               koto:'くることができます', nara:'くるなら',
+               tte:'くるって言ってました', na:'くるな', meishi:'き',
+               nakereba:'こなければなりません', nakya:'こなきゃいけません' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
   'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
-  'ある': { nai:'ない', nakatta:'なかった', imp:'あれ' }
+  'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
+            nakereba:'なければなりません', nakya:'なきゃいけません' }
 };
 
 /* ---------- romaji -> kana ------------------------------- */
@@ -102,16 +107,12 @@ const UNIDADES   = CONTENIDO.unidades;
 const FORMAS     = CONTENIDO.formas;
 const CATEGORIAS = CONTENIDO.categorias;
 
-/* Sin contenido cargado, TEMA es un hueco con la forma correcta: la app tiene
-   que poder pintar el inicio y ofrecer "Cargar contenido" sin reventar. */
-const UNIDAD_VACIA = { n:0, titulo:'', es:'', paginas:null, estado:'vacia',
-  formas:{}, verbos:[], vocab:[], frases:[], huecos:[], armar:[], patrones:[] };
-const TEMA   = UNIDADES[0] || UNIDAD_VACIA;
-const VERBOS = TEMA.verbos;
-const VOCAB  = TEMA.vocab;
-const FRASES = TEMA.frases;
-const HUECOS = TEMA.huecos;
-const ARMAR  = TEMA.armar;
+/* Aqui vivian TEMA, VERBOS, VOCAB, FRASES, HUECOS y ARMAR, los nombres que
+   tenian los datos en el archivo congelado, cuando la app era de una sola
+   unidad. Se quitaron al entrar la unidad 1 (M6): ninguna linea del motor los
+   usaba ya, y estaban definidos como UNIDADES[0], asi que en cuanto dejo de
+   haber una sola unidad pasaron a apuntar a otra sin avisar. Todo lo que
+   necesita datos de una unidad la busca por su numero en UNIDADES. */
 
 /* ══ 10-conjugador.js ══ */
 /* Dojo Marugoto - conjugador
@@ -148,6 +149,12 @@ function conjugar(v, forma) {
       case 'tai':     out = st + 'たいです'; break;
       case 'yasui':   out = st + 'やすいです'; break;
       case 'koto':    out = k + 'ことができます'; break;
+      case 'nara':    out = k + 'なら'; break;
+      case 'tte':     out = k + 'って言ってました'; break;
+      case 'na':      out = k + 'な'; break;
+      case 'meishi':  out = st; break;
+      case 'nakereba': out = st + 'なければなりません'; break;
+      case 'nakya':    out = st + 'なきゃいけません'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -171,6 +178,12 @@ function conjugar(v, forma) {
       case 'tai':     out = st + U2I[last] + 'たいです'; break;
       case 'yasui':   out = st + U2I[last] + 'やすいです'; break;
       case 'koto':    out = k + 'ことができます'; break;
+      case 'nara':    out = k + 'なら'; break;
+      case 'tte':     out = k + 'って言ってました'; break;
+      case 'na':      out = k + 'な'; break;
+      case 'meishi':  out = st + U2I[last]; break;
+      case 'nakereba': out = st + U2A[last] + 'なければなりません'; break;
+      case 'nakya':    out = st + U2A[last] + 'なきゃいけません'; break;
     }
   }
 
@@ -210,16 +223,30 @@ function reglaDe(v, forma){
   if(v.g === 2){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
                    nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
-                   tara:'たら', tai:'たいです', yasui:'やすいです' };
+                   tara:'たら', tai:'たいです', yasui:'やすいです',
+                   nakereba:'なければなりません', nakya:'なきゃいけません' };
+    /* na y meishi no siguen el molde "quita る y pon X": el prohibitivo se pega
+       a la forma de diccionario entera (忘れるな, no 忘れな) y la raiz
+       sustantivada no anade nada detras. Con el mapa mentian. */
+    if(forma === 'na') return 'Grupo 2: forma diccionario + な. El る no se quita.';
+    if(forma === 'meishi') return 'Grupo 2: quita る y ahí se queda: la raíz sola ya es el sustantivo.';
     if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
     if(forma === 'koto') return 'Grupo 2: forma diccionario + ことができます.';
+    if(forma === 'nara') return 'Grupo 2: forma diccionario + なら.';
+    if(forma === 'tte') return 'Grupo 2: forma diccionario + って言ってました.';
     return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
   }
   const u = v.kana.slice(-1);
   if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
   if(forma === 'koto') return 'Grupo 1: forma diccionario + ことができます.';
-  if(forma === 'nai' || forma === 'nakatta')
-    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
+  if(forma === 'nara') return 'Grupo 1: forma diccionario + なら.';
+  if(forma === 'tte') return 'Grupo 1: forma diccionario + って言ってました.';
+  if(forma === 'na')  return 'Grupo 1: forma diccionario + な. No cambia el verbo.';
+  if(forma === 'nai' || forma === 'nakatta' || forma === 'nakereba' || forma === 'nakya')
+    return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' +
+      ({ nai:'ない', nakatta:'なかった', nakereba:'なければなりません', nakya:'なきゃいけません' })[forma] + '.';
+  if(forma === 'meishi')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ', y ahí se queda: la raíz sola ya es el sustantivo.';
   if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui')
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
       ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';

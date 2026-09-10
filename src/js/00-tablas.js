@@ -13,17 +13,22 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                ta:'した', te:'して', nagara:'しながら', tari:'したり',
                pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で',
                tara:'したら', tai:'したいです', yasui:'しやすいです',
-               koto:'することができます' };
+               koto:'することができます', nara:'するなら',
+               tte:'するって言ってました', na:'するな', meishi:'し',
+               nakereba:'しなければなりません', nakya:'しなきゃいけません' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
                tara:'きたら', tai:'きたいです', yasui:'きやすいです',
-               koto:'くることができます' };
+               koto:'くることができます', nara:'くるなら',
+               tte:'くるって言ってました', na:'くるな', meishi:'き',
+               nakereba:'こなければなりません', nakya:'こなきゃいけません' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
   'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
-  'ある': { nai:'ない', nakatta:'なかった', imp:'あれ' }
+  'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
+            nakereba:'なければなりません', nakya:'なきゃいけません' }
 };
 
 /* ---------- romaji -> kana ------------------------------- */

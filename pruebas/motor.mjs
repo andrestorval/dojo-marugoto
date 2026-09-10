@@ -53,7 +53,15 @@ export function cargarMotor({ unidades = null, archivos = SIN_DOM, almacen = nul
     archivos.map((f) => leer(join(RAIZ, 'src', 'js', f))).join('\n') +
     `\n;({
       CONTENIDO, UNIDADES, FORMAS, CATEGORIAS,
-      TEMA, VERBOS, VOCAB, FRASES, HUECOS, ARMAR,
+      /* TEMA y compania ya no son del motor: eran los nombres del archivo
+         congelado y se retiraron en M6. Las pruebas que vienen de aquella
+         epoca hablan de la unidad 8, asi que se los damos apuntando a ella. */
+      TEMA: (UNIDADES.find(u => u.n === 8) || UNIDADES[0] || null),
+      get VERBOS(){ return this.TEMA ? this.TEMA.verbos : []; },
+      get VOCAB (){ return this.TEMA ? this.TEMA.vocab  : []; },
+      get FRASES(){ return this.TEMA ? this.TEMA.frases : []; },
+      get HUECOS(){ return this.TEMA ? this.TEMA.huecos : []; },
+      get ARMAR (){ return this.TEMA ? this.TEMA.armar  : []; },
       conjugar, conKanji, aceptadasDeConjugacion, reglaDe,
       romajiAKana, kataAHira, expandirChoon, quitarLargas,
       normEstricta, normSuelta, revisar` +
