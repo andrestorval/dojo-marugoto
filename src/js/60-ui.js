@@ -28,10 +28,18 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ═══════════ render ═══════════ */
+/* El pie nombra la unidad en la que se está. Lo pintan las dos pantallas que
+   pueden estar delante —la de inicio y la de primer uso—, porque el segmento
+   entero es de este span: sin unidad no se escribe nada. */
+function pintarPie(){
+  const u = UNIDADES.find(x => x.n === unidadActual());
+  $('#footTema').textContent = u ? ' · Tema ' + u.n + ' ' + u.titulo + ' — ' + u.es : '';
+}
+
 function pintarInicio(){
   const u = UNIDADES.find(x => x.n === unidadActual());
   $('#temaLabel').textContent = u ? 'Unidad ' + u.n + ' · ' + u.titulo : '';
-  $('#footTema').textContent = u ? u.n + ' ' + u.titulo + ' — ' + u.es : '';
+  pintarPie();
 
   /* El subtítulo del botón explica sin texto qué va a pasar al tocarlo. */
   /* sin contenido no hay nada que practicar: el botón principal se convierte
@@ -132,6 +140,7 @@ function pintarPrimerUso(){
     v => sel.unidadActual === +v, v => { sel.unidadActual = +v; pintarPrimerUso(); });
   chips('#p1Largo', [['10','10 preguntas'],['20','20 preguntas'],['40','40 preguntas']],
     v => sel.largo === +v, v => { sel.largo = +v; pintarPrimerUso(); });
+  pintarPie();
 }
 
 function actualizarStart(){ $('#btnStartManual').disabled = sel.modos.length === 0; }
@@ -317,10 +326,13 @@ function pintarPregunta(){
   }
 
   else if(q.tipo === 'opcion'){
+    /* El hueco pinta solo el blanco, no los parentesis: el contrato del contenido
+       (y lo que el validador exige) es que el `pre` termine en （ y el `post`
+       empiece por ）. Anadiendo otro par aqui salia （（　　））. */
     const enunciado =
       q.eleccion === 'patron'
         ? `<div class="prompt es">${esc(q.sub)}</div>
-           <div class="gapline" style="margin-top:10px">${esc(q.pre)}<b style="color:var(--ai)">（　　）</b>${esc(q.post)}${q.post2 ? '（　　）' + esc(q.post2) : ''}</div>
+           <div class="gapline" style="margin-top:10px">${esc(q.pre)}<b style="color:var(--ai)">　　</b>${esc(q.post)}${q.post2 ? '<b style="color:var(--ai)">　　</b>' + esc(q.post2) : ''}</div>
            <p class="ask">¿Qué patrón pide este hueco?</p>`
       : q.eleccion === 'forma'
         ? `<div class="prompt">${esc(q.promptJp)}</div>
@@ -908,7 +920,12 @@ function pintarMateria(){
      </div>` +
 
     bloque('Patrones gramaticales',
-      m.gramatica.map(p => filaMaterial(p.pat, p.uso, plural(p.frases + p.huecos, 'ejercicio'), p.lectura, p.es)).join(''),
+      /* Las frases dejaron de ser ejercicio al retirarse el modo "frase completa":
+         sumarlas aquí prometía una práctica que ya no existe. Un patrón sin ningún
+         hueco no miente diciendo "0 ejercicios", dice cuántos ejemplos trae. */
+      m.gramatica.map(p => filaMaterial(p.pat, p.uso,
+        p.huecos ? plural(p.huecos, 'ejercicio') : plural(p.frases, 'ejemplo'),
+        p.lectura, p.es)).join(''),
       '<p class="sub" style="margin:-6px 0 12px">Toca uno para ver el ejemplo y dónde se practica.</p>') +
 
     bloque('Formas de conjugación',

@@ -102,3 +102,46 @@ test('los irregulares する y くる salen de sus tablas', () => {
   assert.ok(m.conjugar(suru, 'masu').endsWith('します'));
   assert.ok(m.conjugar(suru, 'te').endsWith('して'));
 });
+
+/* ── las formas que estrena la unidad 9 ─────────────────────────
+   El vector congelado no puede cubrirlas: no existen en el archivo del que
+   sale. Van fijadas a mano, con un verbo regular por grupo y los dos
+   irregulares, que es lo que el plano exige de cada forma nueva (9.2). */
+test('たら, たい, やすい y ことができます, un verbo por grupo', () => {
+  const casos = [
+    /* grupo 1 */
+    ['はたらく', 'tara',  'はたらいたら'],
+    ['はたらく', 'tai',   'はたらきたいです'],
+    ['はたらく', 'yasui', 'はたらきやすいです'],
+    ['はたらく', 'koto',  'はたらくことができます'],
+    /* grupo 1 con て sonora: ぶ → んだ */
+    ['えらぶ',   'tara',  'えらんだら'],
+    /* grupo 2 */
+    ['つとめる', 'tara',  'つとめたら'],
+    ['つとめる', 'tai',   'つとめたいです'],
+    ['つとめる', 'yasui', 'つとめやすいです'],
+    ['つとめる', 'koto',  'つとめることができます'],
+    /* grupo 3 */
+    ['そつぎょうする', 'tara',  'そつぎょうしたら'],
+    ['そつぎょうする', 'tai',   'そつぎょうしたいです'],
+    ['そつぎょうする', 'yasui', 'そつぎょうしやすいです'],
+    ['そつぎょうする', 'koto',  'そつぎょうすることができます'],
+  ];
+  /* VERBOS es solo el de la primera unidad, un alias que viene del archivo
+     congelado de una sola unidad; estos verbos son de la 9. */
+  const todos = m.UNIDADES.flatMap((u) => u.verbos);
+  const fallos = [];
+  for (const [kana, forma, esperado] of casos) {
+    const vb = todos.find((x) => x.kana === kana);
+    assert.ok(vb, 'falta el verbo ' + kana + ' en el contenido');
+    const sale = m.conjugar(vb, forma);
+    if (sale !== esperado) fallos.push(kana + ' ' + forma + ': ' + sale + ' ≠ ' + esperado);
+  }
+  assert.deepEqual(fallos, []);
+});
+
+test('いく mantiene su excepción también en たら', () => {
+  const iku = m.VERBOS.find((x) => x.kana === 'いく');
+  /* la regla daría いきたら; la forma て de いく es irregular y たら sale de ella */
+  assert.equal(m.conjugar(iku, 'tara'), 'いったら');
+});

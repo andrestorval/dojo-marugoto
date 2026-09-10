@@ -251,14 +251,16 @@ test('marcar escribe el registro completo de 2.1', () => {
 test('los ids de ejercicio llevan unidad y clave estable', () => {
   const { m } = cargar();
   m.iniciarProgreso();
-  m.fijarSel({ modos: ['hueco', 'armar', 'frase'], clase: '0', largo: 0, unidades: [] });
+  m.fijarSel({ modos: ['hueco', 'armar'], clase: '0', largo: 0, unidades: [] });
   m.construir(true);
   /* la cola puede traer fichas y tarjetas de presentación, que no son
      preguntas y no llevan id (plano 3.5) */
   const ids = m.cola().filter(m.esPregunta).map((q) => q.id);
   assert.ok(ids.length > 0);
   for (const id of ids) {
-    assert.match(id, /^[haf]:8:[fha]8-\d{2}$/, id);
+    /* h:9:h9-19 — el numero de unidad del id y el de la clave son el mismo,
+       y eso es lo que hay que exigir; antes la prueba exigia que fuera 8. */
+    assert.match(id, /^[haf]:(\d+):[fha]\1-\d{2}$/, id);
   }
   assert.equal(new Set(ids).size, ids.length, 'ids repetidos');
 });

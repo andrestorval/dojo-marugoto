@@ -105,6 +105,33 @@ reabre salvo que aparezca una razón nueva.
 pena tenerlo presente: el enlace no se difunde más allá del curso, pero
 cualquiera que lo tenga entra.
 
+**La unidad 9 se escribe antes que la 1.** El plano fija el orden 1, 2, 3, 4,
+5, 6, 7, 9 y su §8.6 deja el cambio en manos de Patricio. Pidió que la 8 y la 9
+quedaran como versión final, así que este módulo es la 9. El resto del orden no
+se toca: el siguiente sigue siendo la unidad 1.
+
+**El libro escaneado es ahora la fuente de los ejercicios.** Hasta M5 el
+contenido salía de los índices oficiales y del corpus de la guía de gramática,
+y el informe de M5 concluía que con eso no se podía escribir la unidad 9 sin
+inventarla. Con `Marugoto A2B1.pdf` y `herramientas/paginas.mjs` las páginas se
+leen directamente, y los huecos de la unidad 9 son los ejercicios del libro. El
+corpus queda como lo que siempre fue: una confirmación parcial, nunca una
+prueba de ausencia.
+
+El PDF vive en `Japones\App\`, fuera del repositorio, y las páginas extraídas
+van a `dist/`, que no se versiona. Ni el libro ni sus páginas se publican.
+
+**Un patrón puede declarar a qué entrada del índice oficial corresponde.** Es
+el campo `oficial` del patrón. Nació porque el índice nombra los patrones en
+forma llana (`～ことができる`) y el libro los enseña en cortés
+(`〜ことができます`), y ninguna comparación por texto los iba a unir. Se
+prefirió declararlo a mano antes que hacer que el validador adivine
+equivalencias entre formas verbales.
+
+Con eso, y con igualar las dos tildes de onda que usan índice y contenido
+(`～` U+FF5E y `〜` U+301C), la unidad 8 bajó de 33 advertencias a 22 sin que
+se tocara su contenido. Once de las suyas eran fallos del validador.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se
