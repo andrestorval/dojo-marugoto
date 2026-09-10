@@ -21,6 +21,9 @@ Node 18 o superior, nada más. No hay `package.json`, no hay `npm install`.
     node herramientas/vector.mjs               regenera el vector desde el archivo congelado
     node herramientas/servir.mjs --base=/dojo   sirve dist/pwa/ en local bajo subruta
     node herramientas/publicar.mjs             copia dist/pwa/ a docs/, que es lo que publica GitHub Pages
+    node herramientas/indices.mjs              lee los cuatro xlsx y escribe indices.json (una vez)
+    node herramientas/corpus.mjs               extrae el corpus del libro del PDF (una vez)
+    node herramientas/validar.mjs --unidad=8   valida una unidad y escribe dist/validacion-uN.md
 
 Compila antes de correr las pruebas: una de ellas comprueba que `alert` y
 `confirm` no aparecen en `dist/`, y sin `dist/` se salta.
@@ -51,15 +54,16 @@ Salidas:
 
 ## Estado
 
-M0 a M4 cerrados (M4 a falta de publicar). El progreso vive en `dojo-marugoto-v2` con fechas por ítem,
+M0 a M5 cerrados (M4 a falta de que apruebes la instalacion, M5 de que revises las advertencias). El progreso vive en `dojo-marugoto-v2` con fechas por ítem,
 el historial del Tema 8 se migra por las dos vías, el programador de repaso
 espaciado decide qué entra en cada sesión, y al fallar aparece una pista antes
 que la respuesta. La exigencia de cada ítem sube con su caja: reconocer, después
 producir con apoyo, después producir solo. La salida PWA ya trae manifest,
-service worker e iconos; falta publicarla. Lo que sigue es M5: el validador de
-contenido, que es lo que desbloquea las ocho unidades restantes.
+service worker e iconos y esta publicada en GitHub Pages. El validador de
+contenido ya corre: el Tema 8 pasa con 0 errores. Lo que sigue son los ocho
+modulos de unidad, en el orden 1, 2, 3, 4, 5, 6, 7 y 9.
 
-Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M4.md`). Lo que ya se
+Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M5.md`). Lo que ya se
 zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
 
 `puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado

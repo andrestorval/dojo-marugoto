@@ -99,12 +99,11 @@ test('normEstricta y normSuelta son idempotentes', () => {
 });
 
 /* Regla del plano 7.2: quien escribe en rōmaji produce kana, y una lista solo
-   en kanji le da "mal" a una respuesta correcta. El Tema 8 congelado incumple
-   la regla en una frase (FRASES[0], 手続きが始まるそうです); M0 copia el
-   contenido sin corregirlo y la corrección entra en M5, con el validador y la
-   revisión de Patricio. La prueba queda escrita y marcada todo hasta entonces:
-   informa sin bloquear, y pasa a exigir en cuanto se corrija. */
-test('toda lista ok de frases y huecos trae una variante sin kanji', { todo: 'se corrige en M5' }, () => {
+   en kanji le da "mal" a una respuesta correcta. El Tema 8 congelado incumplia
+   la regla en FRASES[0]; M0 copio el contenido sin tocarlo, la prueba quedo
+   escrita y marcada `todo`, y M5 la corrigio agregando las variantes en kana.
+   Desde entonces exige. */
+test('toda lista ok de frases y huecos trae una variante sin kanji', () => {
   const KANJI = /[一-龯]/;
   const sinKanji = (lista) => lista.some((x) => !KANJI.test(x));
   const fallos = [];

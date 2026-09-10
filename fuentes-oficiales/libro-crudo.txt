@@ -1,0 +1,3195 @@
+GRAMÁTICA
+
+Introducción
+Fundación Japón Madrid (FJMD) se inauguró en abril de 2010 y desde entonces lleva organizando numerosas actividades y proyectos en tres campos principales: arte y cultura, estudios sobre Japón e intercambio intelectual, y enseñanza de la lengua japonesa. En lo que se refiere a esta última, sus actividades están dirigidas tanto a docentes: apoyo a la APJE (Asociación de Profesores de Japonés en España), organización de seminarios, etc.; como a alumnos, con cursos de japonés, eventos dirigidos a estudiantes, etc. Por otro lado, es una fuente de información sobre la situación actual de la enseñanza del japonés en España mediante las encuestas que realiza periódicamente; un centro de recursos educativos; y un centro de asesoramiento sobre enseñanza del japonés.
+La Fundación Japón se basó en el MCER, el Marco Común Europeo de Referencia para la enseñanza de las lenguas, para definir sus propios estándares de enseñanza, conocidos como JFS (Japan Foundation Standards), como herramientas para enseñar, aprender y evaluar los resultados del aprendizaje de la lengua japonesa, que finalmente se publicaron en mayo de 2010. Al tiempo que se organizaban progresivamente clases de japonés basadas en los JFS en las 22 sedes de Fundación Japón de todo el mundo, se elaboraron los libros de texto Marugoto nihon no kotoba to bunka (Traducido como “La lengua y la cultura japonesas al completo” y abreviado como Marugoto), cuya edición de prueba para el nivel A1 vio la luz en mayo de 2011 (en septiembre de 2013 salió a la venta de forma oficial).
+Después, a lo largo de todo un año, en colaboración con la Asociación de Profesores de Japonés en España (APJE), se elaboró un manual de gramática basado en los libros Marugoto de nivel A1 en su edición de prueba, la Marugoto Gramática A1 (Edición de prueba), a la cual seguiría un año después el manual basado en la edición de prueba del libro Marugoto de nivel A2-1, y al año siguiente, el de nivel A2-2.
+Este libro es la continuación de dicho manual, basado en los libros del siguiente nivel, Marugoto nivel A2-B1 en su edición de prueba. Al igual que el volumen anterior, esta gramática está dirigida principalmente a los estudiantes españoles. Sin embargo, con la esperanza que pueda ser aprovechado por nuestras sedes y otros centros de enseñanza del japonés en todo el mundo, se ha redactado tanto en español como en japonés, y se pondrá a disposición del público general en la Web en formato PDF para descargar de forma gratuita. Las autoras de la Marugoto Gramática tienen la esperanza de que este manual sea de utilidad tanto para alumnos como para profesores. En caso de que así sea, agradeceremos cualquier comentario que deseen enviarnos.
+Marzo de 2015 El equipo de autoras de Fundación Japón Madrid y la Asociación de Profesores de Japonés en España
+Nota sobre la edición revisada
+Los libros de texto Marugoto: Lengua y cultura japonesa, tras pasar un período de prueba en las clases de japonés de las distintas sedes de Fundación Japón en el mundo, salieron a la venta oficialmente a partir de agosto de 2013 a través de la editorial japonesa Sanshusha. Con motivo de esa nueva edición, se realizaron pequeños cambios y correcciones que debían quedar reflejados sin falta en la Marugoto Gramática, y de ahí surge esta edición revisada. Mantenemos la esperanza de que la serie Marugoto continúe siendo de utilidad tanto para alumnos como para profesores de japonés.
+Agosto de 2018 Fundación Japón, Madrid
+
+MARUGOTO GRAMÁTICA A2-B1
+Tabla de contenidos
+
+FORMA
+
+USO
+
+トピック 1 Encuentros deportivos スポーツの 試合
+きいて はなす 試合が日曜日なら、だいじょうぶなんですが。
+テレビで、おもしろい試合になるって言って（い）ましたよ。 じつは、明日の試合、行けなくなったんです。 がんばれ. / 負けるな / …（めいれいけい） よんで わかる 土曜日に父の知りあいをむかえに行かなければなりません。 / 行かなきゃいけません。 選手のプレーのすばらしさにかんどうしました。 / 勉強が忙しいから、友だちのさそいをことわりました。 来月のマリナーズとの試合、いっしょに行きましょう。
+
+Rechazar una invitación señalando que podríamos aceptarla si se tratara de otra hora o fecha. Transmitir a otra persona lo que hemos escuchado. Cancelar una cita aduciendo una razón. Animar a nuestro equipo en un encuentro deportivo o similar.
+Expresar que existe la necesidad u obligación de hacer algo.
+Expresar nuestras opiniones sobre un encuentro deportivo o similar, o indicar un hecho objetivo. Señalar contra quién se enfrenta un equipo en un partido.
+
+Rincón lingüístico-cultural para hispanohablantes 1
+
+トピック 2 Buscar una vivienda 家をさがす
+きいて はなす 文の終わり方： いろいろさがして（い）るんですけど。／ いいところがあまりなくて。/ … 広くていい家があったから、決めました。
+会社まで少し遠いけど、いい家があったから、決めました。
+よんで わかる せまくてもがまんしています。／不便でもここに住みたいです。
+もっと広いへやがあれば、ひっこしたいです。 Rincón lingüístico-cultural para hispanohablantes 2
+
+Comunicar que algo nos incomoda o causa problemas.
+Señalar las razones y motivaciones de nuestras decisiones cuando elegimos una vivienda. Expresar el porqué de nuestra decisión a la hora de buscar una vivienda, sopesando las ventajas y las desventajas.
+Reforzar una opinión contrastándola con aspectos que se oponen a la misma, cuando hablamos sobre la vivienda y las mudanzas. Expresar condiciones hipotéticas en la búsqueda de una vivienda.
+
+トピック 3 Una comida reconfortante ほっとする食べ物
+
+きいて はなす
+
+うどんは、外国の人には、味がうすくないですか。 定食は量が少なすぎませんか。
+
+Mostrar nuestra preocupación por el interlocutor preguntándole en forma negativa sobre algo que nos inquieta.
+
+近所のスーパーに何でもあるから、問題ないです。
+
+Expresar razones y causas.
+
+私、日本人なので、白いご飯とみそしるが一番ほっとするんですよ。
+
+よんで わかる
+
+ラーメンみたいな食べ物 / ベジマイトは（見た目が）ジャムみたいです。
+
+Decir a qué se parece una comida o bebida.
+
+ラーメンは毎日食べてもあきないです。 / ベジマイトはあまくありません。
+
+Expresión negativa.
+
+Rincón lingüístico-cultural para hispanohablantes 3
+
+トピック 4 Visitas 訪問
+きいて はなす
+むすこのしょうです。／ しょう、おねえちゃんは？
+
+Presentar nuestra familia a una visita. / Preguntar a un familiar dónde está otro.
+
+Pág.
+1 2 2 2 3 3 4 5
+6 7 7
+7 8 10
+12 13
+13 13 14
+18
+
+ていねいたい／ ふつうたい①:親切な人が多くてたすかりました。／ Hablar sobre una experiencia con compañeros de trabajo y amigos con los que no tenemos una relación muy estrecha, y comentar 19
+
+家族でよく旅行したね。
+
+recuerdos con la familia y amigos cercanos.
+
+よんで わかる アニスさんが家によんでくれました。 アニスさんにつうやくをしてもらいました。 Rincón lingüístico-cultural para hispanohablantes 4
+
+Contar que alguien actúa por nosotros o que nos hace algo.
+
+19
+
+Indicar que alguien nos hace un favor.
+
+19
+
+20
+
+トピック 5 La diversión de aprender idiomas ことばを学ぶ楽しみ
+きいて はなす
+
+せっきょくてきに英語を話すようにしています。/ はやい会話も聞きとれるようになりました。/
+
+Indicar que nos esforzamos regularmente en hacer algo. /
+
+Decir que podemos hacer algo que antes no podíamos. /
+
+22
+
+上手になれるように、毎日英語のニュースを見ています。/ …
+
+Decir qué hacemos para lograr un objetivo.
+
+ていねいたい/ふつうたい②：日本語の学校、つづいてますね。/
+
+Cambiar el estilo de habla según nuestro interlocutor.
+
+23
+
+英語の学校、つづいてるね。
+
+よんで わかる
+
+大学を卒業したら、日本に留学しようと思っています。
+
+Indicar intenciones y planes futuros.
+
+24
+
+つぎの試験は、いいせいせきがとれそうです。/私にも読めそうな本
+
+Decir que existe la posibilidad de que algo ocurra.
+
+25
+
+きのうは 3 時間もチャットをしました。/ Destacar la elevada cantidad de algo. 25 チャットは楽しいので、何時間もやります。
+
+Rincón lingüístico-cultural para hispanohablantes 5
+
+26
+
+トピック 6 Matrimonios y bodas 結婚
+きいて はなす のりかさんは、今、きっと幸せでしょうね。
+何かお祝いをしようと思うんですが。（いこうけい）
+のりかさん、聞きましたよ。 / 結婚するそうですね。 / やさしい人なんですよね。 よんで わかる （私は）のりかの願いを聞いてあげます。 大きなパーティーはしなくてもいいです。 Rincón lingüístico-cultural para hispanohablantes 6
+
+Hacer suposiciones sobre cómo se encuentra un amigo o conocido 28 al tener conocimiento de su situación.
+
+Hablar sobre nuestras intenciones, hacer sugerencias al 29 interlocutor, pedir su opinión, etc.
+
+Confirmar con el amigo o amiga la información que hemos recibido
+
+sobre él o ella.
+
+29
+
+Expresar el deseo de hacer un favor o algo por otra persona.
+
+30
+
+Manifestar que algo no es necesario.
+
+30
+
+31
+
+トピック 7 Hablar sobre problemas personales なやみ相談
+きいて はなす
+
+ちょっとつかれて（い）て（元気がありません）。/ 仕事のことでちょっと（こまっています）。 私のしょくばでも、同じかもしれません。 よんで わかる
+
+Hablar sobre las razones por las que estamos decaídos o las 34
+causas por las que estamos preocupados.
+
+Exponer una opinión personal viendo el resultado de algo.
+
+35
+
+せっかく会っているのに、友達はカレシと長電話をします。
+私は S 子にマナーをまもってほしいです。/ 長電話をしないでほしいです。 Rincón lingüístico-cultural para hispanohablantes 14
+
+Expresar contrariedad o preocupación ante un resultado diferente al 35 esperado.
+
+Decir lo que queremos que otro haga. /
+
+Decir lo que no queremos que otro haga.
+
+36
+
+36
+
+トピック 8 Contratiempos en el viaje 旅行中のトラブル
+きいて はなす
+
+もうすぐ飛行機に乗れるそうです。
+ていねいたい /ふつうたい③： ありました。 / あった！ 助けて！ / すみません、だれか！ / ･･･ よんで わかる ホテルの人が電気をつけます。 電気がつきます。 ホテルの人は歩きながら、ホテルの歴史を説明しました。 Rincón lingüístico-cultural para hispanohablantes 8
+
+Comunicar a alguien una información recibida a través de una 39 tercera persona.
+
+Hablar solo o con uno mismo.
+
+40
+
+Pedir ayuda a alguien cuando estamos en problemas.
+
+40
+
+Expresar la acción o actividad de alguien.
+
+41
+
+Expresar un fenómeno o el estado de algo.
+
+41
+
+Señalar que dos acciones se realizan de forma simultánea.
+
+42
+
+42
+
+トピック 9 Buscando trabajo 仕事をさがす
+きいて はなす
+
+ていねいな言い方: もうしわけございません。／ 少々お待ちください。 Usar expresiones elegantes y educadas cuando una persona ajena visita nuestra empresa y viceversa. 45
+
+留学が終わったら、日本の会社で働きたいと思って（い）るんです。 よんで わかる ヨーロッパのじょうほうを集めることができます。 人の前で話すよりレポートを書く方がとくいです。
+Rincón lingüístico-cultural para hispanohablantes 18
+
+Decir lo que deseamos hacer en algún momento concreto del futuro. 46
+
+Explicar a otro lo que podemos o somos capaces de hacer.
+
+46
+
+Comparar dos tipos de actividades y manifestar cuál de las dos se 46 nos da mejor.
+
+47
+
+MARUGOTO GRAMÁTICA A2-B1
+Rincón lingüístico-cultural para hispanohablantes
+
+Tabla de contenidos
+
+Pág.
+トピック 1 Encuentros deportivos スポーツの 試合
+
+1. Deportes populares
+
+5
+
+2. Deportes tradicionales de Japón
+
+5
+
+3. ¡Los SAMURAI BLUE (selección japonesa) se clasifican para la Copa Mundial de la FIFA Brasil 2014!
+
+5
+
+4. Las dos entonaciones de そうですか y su diferente connotación
+
+5
+
+トピック 2 Buscar una vivienda 家をさがす
+
+1. マンション ¡¿Los japoneses viven en mansiones?!
+
+10
+
+2. 家賃（やちん）・礼金（れいきん）・敷金（しききん） Pagar por alquilar una vivienda
+
+10
+
+3. 一戸建て（いっこだて） Viviendas unifamiliares
+
+10
+
+4. 通勤時間 （つうきんじかん） Duración del desplazamiento al lugar de trabajo
+
+10
+
+トピック 3 Una comida reconfortante ほっとする食べ物
+
+1. ほっとする食べ物 Una comida reconfortante
+
+14
+
+2. Cómo contestar a una pregunta formulada en forma negativa
+
+15
+
+3. Comida japonesa: ¿qué diferencia hay entre 和食 y 日本料理?
+
+16
+
+4. 家庭料理 （かていりょうり） Comida casera
+
+16
+
+5. El sabor de la comida: suave en Kansai y fuerte en Kantoo
+
+16
+
+6. Todo me sabe dulce
+
+17
+
+7. やっぱりラーメンが食べたくなります。
+
+17
+
+トピック 4 Visitas 訪問
+
+1. Nombres de parentesco: cómo llamar a los familiares
+
+20
+
+2. Normas que seguir cuando visitamos una casa japonesa
+
+20
+
+3. Saludos y expresiones típicas cuando vamos de visita a casa de alguien
+
+21
+
+トピック 5 La diversión de aprender idiomas ことばを学ぶ楽しみ
+
+1. Exámenes de japonés
+
+26
+
+2. 日本語が上手ですね。 ¡Qué bien hablas japonés!
+
+26
+
+3. うん y ううん
+
+26
+
+4. 先輩（せんぱい）、後輩（こうはい）
+
+27
+
+トピック 6 Matrimonios y bodas 結婚
+
+1. Cómo conocer al futuro cónyuge
+
+31
+
+2. 婚活 (こんかつ)
+
+32
+
+3. Las bodas en Japón
+
+32
+
+トピック 7 Hablar sobre problemas personales なやみ相談
+
+1. ¿Cómo eliminan el estrés los japoneses?
+
+36
+
+トピック 8 Contratiempos en el viaje 旅行中のトラブル
+
+1. Cómo dirigirse a una persona desconocida
+
+42
+
+2. Pictografías, emoticonos y onomatopeyas
+
+43
+
+3. ひどい目にあう
+
+43
+
+トピック 9 Buscando trabajo 仕事をさがす
+
+1. Cómo atender a los clientes en Japón
+
+47
+
+2. El perfil del empleado que buscan las empresas japonesas
+
+48
+
+3. ¿Qué representa la empresa para los japoneses?
+
+48
+
+トピック 1 Encuentros deportivos
+スポーツの 試合
+来週の土曜日、サッカーの 試合、見に行くんですが、 いっしょに行きませんか。
+
+行きたいんですが、だめなんです。 日曜日なら、だいじょうぶなんです が。
+
+きいて はなす
+
+EXPRESIÓN
+・試合が日曜日なら、だいじょうぶなんですが。 ・テレビで、おもしろい試合になるって言って（い）ましたよ。 ・じつは、明日の試合、行けなくなったんです。 ・がんばれ. / 負けるな / …（めいれいけい）
+
+USO
+・Rechazar una invitación señalando que podríamos aceptarla si se tratara de otra hora o fecha. ・Transmitir a otra persona lo que hemos escuchado. ・Cancelar una cita aduciendo una razón. ・Animar a nuestro equipo en un encuentro deportivo o similar.
+
+よんで わかる
+
+FORMA
+・土曜日に父の知りあいをむかえに行かなければなりません。 / 行かな きゃいけません。 ・選手のプレーのすばらしさにかんどうしました。 / 勉強が忙しいから、 友だちのさそいをことわりました。 ・来月のマリナーズとの試合、いっしょに行きましょう。
+
+USO
+・Expresar que existe la necesidad u obligación de hacer algo.
+・ Expresar nuestras opiniones sobre un encuentro deportivo o similar, o indicar un hecho objetivo.
+・Señalar contra quién se enfrenta un equipo en un partido.
+
+きいて はなす
+
+1. 試合が日曜日なら、だいじょうぶなんですが。 Si el partido es el domingo, me viene bien.
+
+Retomamos con なら aquello que ha dicho el interlocutor para seguidamente ofrecer una recomendación u opinión (ver A2-2
+
+L3)
+
+・あたたかいものなら、よせなべがいいですよ。
+
+Si quieres algo caliente, te recomiendo yosenabe.
+
+En esta lección utilizamos la construcción ～なら、だいじょうぶなんですが para indicar que no podemos aceptar una invitación,
+
+pero que sí podríamos hacerlo si se diera una condición distinta. En lugar de だいじょうぶなんですが también es posible emplear
+
+la fórmula (verbo en forma potencial) + んですが, y contestar diciendo (sustantivo) なら、行けるんですが.
+
+・試合が日曜日なら、だいじょうぶなんですが。
+
+Si el partido es el domingo, me viene bien.
+
+・試合が日曜日なら、行けるんですが。
+
+Si el partido es el domingo, puedo ir.
+
+En la frase que sigue a ～なら podemos expresar nuestras opiniones o impresiones, como en los siguientes ejemplos:
+
+・山田さんが行くなら、私も行きます。
+
+Si va el Sr. Yamada, yo también voy.
+
+・長友選手が出るなら、おもしろい試合になると思います。
+
+Si juega Nagatomo, creo que el partido será interesante.
+
+1
+
+2. テレビで、おもしろい試合になるって言って（い）ましたよ。 En la televisión dijeron que sería un partido entretenido. Usamos la construcción (forma-simple de verbo/adj-I/adj-NA/sustantivo) + って言っていました（よ） cuando queremos informar o transmitir a nuestro interlocutor acerca de algo que ha dicho otra persona, o de lo que hemos sabido por la televisión o medios similares (ver A2-1 L18). En la lengua hablada, como vemos en esta lección, se usa con frecuencia la fórmula って言ってました.
+
+・山田さんも行くって、言ってました。 ・中村さんは、試合のチケットは、もう買ったって言ってました。 ・テレビで、今週の週末は暑くないって、言ってましたよ。
+
+La Sra. Yamada dijo que ella también iría. El Sr. Nakamura dijo que ya compró las entradas del partido. Por la televisión han dicho que este fin de semana no hará calor.
+
+3. じつは、明日の試合、行けなくなったんです。 Resulta que no podré ir al partido de mañana.
+
+Empleamos ～んです para explicar las circunstancias que han llevado a un objeto a su estado actual, o para dar razones de una
+
+situación (ver A2-1 L17).
+
+・このかばんは、あねにもらったんです。
+
+Esta maleta me la regaló mi hermana mayor.
+
+En esta lección se utiliza la fórmula じつは、～(verbo en forma-simple) + んです para cancelar una cita a la vez que se aduce un
+
+motivo. Al añadir じつは se expresa que se trata de una información nueva para el interlocutor.
+
+・じつは、中国から知りあいが日本に来るんです。
+
+Resulta que viene a Japón un conocido de China.
+
+・じつは、明日の試合、行けなくなったんです。
+
+Resulta que no podré ir al partido de mañana.
+
+La fórmula じつは、～ también sirve para declarar o compartir nuestros propios sentimientos.
+
+・じつは、前から一度サッカー場に行ってみたかったんです。
+
+La verdad es que desde hace tiempo tenía ganas de ir a un
+
+estadio de fútbol.
+
+・じつは、学生のとき、ずっとサッカーをやってたんです。
+
+La verdad es que en mi época de estudiante me pasaba todo el
+
+tiempo jugando al fútbol.
+
+4. がんばれ ./ 負けるな / ・・・ ¡Luchad! / ¡No perdáis! (Forma imperativa)
+
+Cuando en un encuentro deportivo queremos animar a nuestro equipo favorito, empleamos los verbos en su forma imperativa,
+
+que puede ser afirmativa o negativa:
+
+・がんばれ！
+
+¡Luchad! (¡Ánimo!)
+
+・負けるな！
+
+¡No perdáis!
+
+Construcción de la forma afirmativa del imperativo
+
+・Grupo 1
+
+La vocal /i/ de la forma-MASU se cambia por /e/.
+
+がんばります
+
+→
+
+がんばれ
+
+はしります
+
+→
+
+はしれ
+
+いきます
+
+→
+
+いけ
+
+かちます
+
+→
+
+かて
+
+2
+
+・Grupo 2
+
+Se elimina -ます y se añade ろ.
+
+みます
+
+→
+
+みろ
+
+たべます
+
+→
+
+たべろ
+
+・Grupo 3
+
+Se elimina -ます y se añade ろ. El verbo きます se convierte en こい.
+
+します
+
+→
+
+しろ
+
+しっかりします
+
+→
+
+しっかりしろ
+
+きます
+
+→
+
+こい
+
+・Construcción de la forma negativa del imperativo
+
+Se añade な a la forma-diccionario.
+
+まける
+
+→
+
+まけるな！
+
+あきらめる
+
+→
+
+あきらめるな！
+
+よんで わかる
+
+5. 土曜日に父の知りあいをむかえに行かなければなりません。 / 行かなきゃいけません。 El domingo tengo que ir a
+
+recibir a un conocido de mi padre. / Me tengo que ir.
+
+Para indicar la necesidad u obligación de hacer algo se usa la construcción (verbo en forma-NAI sin い) + ければなりません /
+
+きゃいけません.
+
+・カーラさんはあさってまでに、レポートを出さなければなりません。 Carla tiene que entregar un informe para pasado mañana.
+
+・ホセさんは明日、大使館にしょるいを取りに行かなきゃいけません。
+
+José tiene que ir mañana a la embajada a recoger
+
+unos documentos.
+
+En la lengua hablada se suele emplear なきゃいけないんです.
+
+・すみません。あした、空港に友達をむかえに行かなきゃいけないんです。 Lo siento. Mañana tengo que ir a recoger a un amigo
+
+al aeropuerto.
+
+・じつは、あさってから、日本に出張しなきゃいけないんです。
+
+Resulta que pasado mañana salgo de viaje de trabajo a Japón.
+
+6. 選手のプレーのすばらしさに感動しました。 / 勉強が忙しいから友だちのさそいをことわりました。 Me impresionó lo
+
+maravilloso de la jugada de los jugadores. / Rechacé la invitación de mi amigo porque estoy ocupado con
+
+los estudios.
+
+Podemos sustantivar un verbo o un adjetivo cuando expresamos nuestra opinión acerca de un asunto o cuando deseamos
+
+indicar un hecho. En esta lección recurrimos a la sustantivación de verbos y adjetivos para ofrecer nuestra impresión sobre un
+
+partido de fútbol o para señalar un hecho objetivo.
+
+・長友選手のプレーのすばらしさに感動しました。
+
+Me impresionó lo fabuloso de las jugadas de Nagatomo.
+
+・ルールのかんたんさが、サッカー人気のりゆうの１つです。
+
+La sencillez de sus reglas es uno de los motivos de la
+
+popularidad del fútbol.
+
+・勉強が忙しいから友達のさそいをことわりました。 Rechacé la invitación de mi amigo porque estoy ocupado con los estudios.
+
+3
+
+・Sustantivación del adjetivo-I y del adjetivo-NA
+
+Adjetivo-I: se elimina い y se añade さ. Atención: el adjetivo いい no se convierte en いさ, sino en よさ.
+
+すばらし い ＋さ → すばらしさ maravilloso → (lo) maravilloso
+
+い い ＋ さ → よさ
+
+bueno → (lo) bueno
+
+Adjetivo-NA: se elimina な y se añade さ. No obstante, hay casos de adjetivos-NA cuya forma sustantivada está en desuso.
+
+かんたん な ＋さ →かんたんさ fácil → facilidad
+
+・Sustantivación de los verbos
+
+Se elimina ます de la forma-MASU.
+
+さそい ます → さそい
+
+invitar → invitación
+
+つかれ ます → つかれ
+
+cansarse → cansancio
+
+7. 来月のマリナーズとの試合、いっしょに行きましょう。 ¡Vamos al partido contra los Mariners del mes que viene!
+
+Cuando queremos indicar contra quién juega un equipo en un partido o en un encuentro similar, utilizamos la siguiente fórmula:
+
+(nombre del equipo contrincante) + と + の + 試合.
+
+Al añadir の detrás de と modificamos el sustantivo que sigue.
+
+・来月、イーグルズはマリナーズと試合をします。
+
+El mes que viene los Eagles juegan contra los Mariners.
+
+・来月のマリナーズとの試合、いっしょに行きましょう。 ¡Vamos juntos al partido del mes que viene contra los Mariners!
+
+También se puede añadir の a otras partículas para modificar un nombre. Solamente hay que tener en cuenta que に se
+
+sustituye por へ, de manera que la fórmula resultante es へ + の + (nombre).
+
+で + の +N
+
+・私はよく、JF サッカー場で、試合を見ます。
+
+Suelo ver partidos en el estadio de fútbol JF.
+
+・JF サッカー場での試合は、年に 15 回ぐらいです。 Los partidos en el estadio de fútbol JF tienen lugar unas 15 veces al año.
+
+まで + の + N
+
+・駅から JF サッカー場まで歩いて 20 分ぐらいです。 Desde la estación al estadio de fútbol JF se tardan unos 20 minutos a pie.
+
+・JF サッカー場までの行き方をサイトでしらべました。 Me informé del camino hasta el estadio de fútbol JF en la página web.
+
+から + の + N
+
+・長友選手は、ファンからプレゼントをもらいました。 El jugador Nagatomo recibió un regalo de sus fans.
+
+・ファンからのプレゼントは、T シャツでした。
+
+El regalo de sus fans era una camiseta.
+
+に→へ： へ + の + N
+
+・長友選手は、ファンにメッセージを書きました。
+
+El jugador Nagatomo escribió un mensaje a sus fans.
+
+・ファンへのメッセージは、サイトで読めます。
+
+Se puede leer el mensaje para sus fans en su página web.
+
+× ファンにのメッセージ
+
+4
+
+Rincón lingüístico-cultural para hispanohablantes
+1. Deportes populares En el año 2007 el instituto de estudios culturales de radiotelevisión dependiente de la emisora NHK condujo una investigación entre 3600 personas de más de 16 años y distribuidas por 300 puntos de todo Japón. En este estudio, los encuestados eligieron ―como espectadores― sus 10 deportes favoritos y los ordenaron según el siguiente escalafón, de más a menos popular: béisbol profesional, béisbol de la escuela secundaria, patinaje artístico, maratones, ekiden (relevos), fútbol, voleibol, sumo, golf y natación sincronizada. En la clasificación por sexos, se observó que los varones dieron un mayor número de respuestas y que, por lo general, a los hombres les gusta más el deporte que a las mujeres. Con respecto a las edades de los encuestados, los varones jóvenes (de entre 16 y 29 años) prefirieron el fútbol al béisbol, mientras que los más mayores (de más de 60 años) se decantaron por este último, las maratones, el sumo y el ekiden; además, muchos de ellos señalaron que aprovechaban su tiempo libre para seguir por televisión los encuentros de estos deportes. Entre las mujeres jóvenes y de mediana edad el patinaje artístico ocupó la primera posición y entre sus 10 deportes más populares también se encuentran la natación sincronizada y la gimnasia rítmica. Como vemos, la estética propia de la realización del ejercicio también es un criterio importante cuando se entra a valorar el atractivo de un deporte.
+2. Deportes tradicionales de Japón Entre los deportes tradicionales de Japón podemos encontrar el aikido, iaido, sumo, kendo y yudo. En muchas de estas artes se concede gran importancia al entrenamiento mental y al refinamiento de ciertas destrezas. Además, en muchas de sus prácticas no se libran combates ni existen contrincantes con los que medirse. Por ejemplo, el aikido, que tan buena acogida ha recibido fuera de Japón, entrena el cuerpo y la mente a través del ejercicio de ciertas habilidades. Asimismo, se le ha atribuido una filosofía de armonía con la naturaleza y de contribución a la paz mundial. Del mismo modo, estas artes marciales típicas de Japón tienen la peculiaridad de defender que, a través del uso racional del cuerpo y con independencia de la fuerza y constitución físicas, es posible que “alguien de pequeño tamaño supere a alguien de gran tamaño”.
+3. ¡Los SAMURAI BLUE (selección japonesa) se clasifican para la Copa Mundial de la FIFA Brasil 2014! La selección japonesa de fútbol, conocida como los SAMURAI BLUE, consiguió clasificarse para el Mundial de 2014 en Brasil al empatar con Australia a un gol en la final eliminatoria de Asia que se disputó el martes 4 de junio de 2013. Con esta victoria la selección japonesa logra por quinta vez consecutiva un billete para la Copa Mundial de la FIFA.
+4. そうですか。 vs. そうですか。 Aunque se trate de la misma expresión, una diferencia de entonación puede transmitir a nuestro interlocutor un matiz completamente distinto. La fórmula そうですか, que tanto se utiliza como respuesta a un mensaje que escuchamos, puede tomar la entonación descendente そうですか y comunicar así sorpresa ante lo expuesto por el interlocutor. No obstante, si pronunciamos este mismo そうですか con falta de ánimo o con indiferencia, transmitiremos desinterés por lo que nuestro interlocutor está diciendo. En cambio, si elevamos la entonación en la parte final y decimos そうですか, mostraremos un sentimiento de incredulidad ante lo nos acaban de contar. Con estos ejemplos observamos lo importante que es prestar atención a la entonación de algunas expresiones.
+5
+
+トピック 2 Buscar una vivienda
+家をさがす
+家はもうみつかりましたか。
+
+いいえ、まだなんです。 いろいろさがしているんですけど。
+
+きいて はなす
+
+EXPRESIÓN
+・文の終わり方： いろいろさがして（い）るんですけど。／いいところがあ まりなくて。／… ・広くていい家があったから、決めました。 ・会社まで少し遠いけど、いい家があったから、決めました。
+
+USO
+・Comunicar que algo nos incomoda o causa problemas.
+・ Señalar las razones y motivaciones de nuestras decisiones cuando elegimos una vivienda. ・Expresar el porqué de nuestra decisión a la hora de buscar una
+
+vivienda, sopesando las ventajas y las desventajas.
+
+よんで わかる
+
+FORMA
+
+USO
+
+・せまくてもがまんしています。／不便でもここに住みたいです。
+
+・Reforzar una opinión contrastándola con aspectos que se oponen
+
+・もっと広いへやがあれば、ひっこしたいです。
+はなす
+
+a la misma, cuando hablamos sobre la vivienda y las mudanzas. ・Expresar condiciones hipotéticas en la búsqueda de una vivienda.
+
+きいて はなす
+
+1. いろいろさがして（い）るんですけど。 Estoy buscando en varios sitios (…pero no encuentro nada). いいところがあまりなくて。 No hay apenas lugares que me gusten.
+
+Cambiando el final de la oración podemos transmitir que algo nos molesta o que tenemos algún problema.
+
+La frase いろいろさがして（い）るんですけど tiene exactamente el mismo significado que いろいろさがしていますが、いい家が見つ
+
+かりません y es una expresión eufemística propia de la lengua hablada. En este caso empleamos la fórmula ～んです (ver A2-1
+
+L11, 17) y el adversativo けど (ver A2-1 L5, oposición con けど), y por último omitimos la segunda parte de la oración.
+
+Este mecanismo se utiliza cuando la situación real difiere de la esperable. También se puede decir ～んですが.
+
+・いつもは 9 時に始まるんですけど。
+
+Siempre empieza a las 9… (Situación real: Son más de las 9 y no ha empezado)
+
+・きのうから田中さんに電話をかけて（い）るんですけど。
+
+Llevo llamando al Sr. Tanaka desde ayer... (Situación real:
+
+Todavía no he hablado con Sr. Tanaka)
+
+Por otro lado, la expresión いいところがあまりなくて significa いいところがあまりなくて、こまっています. Con anterioridad ya hemos
+
+empleado la forma-TE para indicar razones o causas (ver A2-1 L7 L9). En la lengua hablada podemos omitir la segunda parte de
+
+nuestro discurso para así transmitir que lo expuesto en la primera parte nos ocasiona un problema.
+
+6
+
+En la primera parte se usan no solamente verbos en forma-TE, sino también adjetivos (de tipos I y NA) y sustantivos.
+
+・毎日つうきんに 2 時間以上かかって。 Todos los días tardo más de dos horas en ir al trabajo.
+
+・電車やバスが少なくて。
+
+Hay pocos trenes y autobuses.
+
+・今の家は買い物に不便で。
+
+La casa en la que vivo ahora no es práctica para ir de compras.
+
+・来年はてんきんで。
+
+El año que viene me trasladan.
+
+2. 広くていい家があったから、決めました。 Encontramos una casa amplia y buena, así que nos la quedamos.
+
+Utilizamos esta construcción para señalar las razones y el criterio de una decisión como cuando, por ejemplo, nos decantamos
+
+por una vivienda. Anteriormente ya vimos la construcción (F1) + から + (F2), que utilizamos para indicar el motivo de una
+
+decisión (ver A2-1 L3). En la frase inicial F1 se expone la razón o el motivo de nuestro juicio, y en la frase siguiente, F2, se indica
+
+el resultado o el juicio en sí. En F1 los verbos, adjetivos o sustantivos pueden aparecer en la forma-simple y la forma-formal, y
+
+seguidamente se les añade から. Hasta ahora hemos visto F1 en la forma-formal (ver A1 L13, A2-2 L3 L5), por lo que aquí
+
+presentaremos algunos ejemplos en la forma-simple.
+
+① Verbo
+
+・小さい子どもがいるから、安全なところがいいです。 Como tenemos niños pequeños, nos gustaría un lugar seguro.
+
+② Adjetivo-I
+
+・まわりがうるさいから、ひっこしました。 Me mudé porque la zona era ruidosa.
+
+③ Adjetivo-NA
+
+・駅に近くて便利だから、そのマンションにしました。 Elegí este bloque por lo conveniente de estar cerca de la estación.
+
+④ Nombre
+
+・広くて明るい家だから、とても気に入っています。
+
+Me gusta mucho esta casa por lo amplia y luminosa que es.
+
+3. 会社まで少し遠いけど、いい家があったから、決めました。 Aunque está un poco lejos del trabajo, la casa que
+
+encontré está muy bien, así que me quedé con ella.
+
+Cuando queremos manifestar ventajas y desventajas como prueba o motivo de nuestro criterio, utilizamos conjuntamente el
+
+adversativo けど (ver A2-1 L5) y から, que expresa razón.
+
+・やちんがたかいけど、会社に近いから、そのマンションにしました。
+
+El alquiler es caro pero, como está cerca del trabajo,
+
+me decidí por este bloque de viviendas.
+
+・会社から遠いけど、かんきょうがいいから、こうがいの家をさがしています。 Queda lejos de la empresa pero, como el entorno es
+
+agradable, estoy buscando una casa en las afueras.
+
+よんで わかる 4. せまくてもがまんしています。／不便でもここに住みたいです。 Aunque tengo poco espacio, me conformo. / Aunque resulta incómodo, quiero vivir aquí. Con esta fórmula reforzamos una opinión aludiendo a un aspecto opuesto a la misma. Esta construcción adopta la forma F1 + ても（でも） + F2, donde F2 representa la frase o enunciado principal. La información de F2 se opone a lo que inferimos o esperamos de F1. Por último, en F1 se utilizan las fórmulas (adj-I) くても / (adj-NA)でも / (sustantivo)でも (ver A2-1 L12).
+
+7
+
+① Adjetivo-I
+
+高 い → 高くても
+
+・少しやちんが高くても、としんのマンションがいいです。
+
+Aunque el alquiler es algo caro, prefiero un bloque en el centro.
+
+② Adjetivo-NA
+
+たいへん な → たいへんでも
+
+・たいへんでも、毎日電車でつうきんしています。
+
+Aunque es duro, todos los días voy al trabajo en tren.
+
+③ Nombre + でも
+
+としん → としんでも
+
+としんでも、安いマンションがありました。 A pesar de ser el centro, había bloques de viviendas baratos.
+
+⑤ Formas negativas
+
+Verbo：
+
+おふろがな い → おふろがなくても
+
+aunque no haya bañera
+
+Adjetivo-I： 近くな い
+
+→ 近くなくても
+
+aunque no esté cerca
+
+Adjetivo-NA: べんりでな い → べんりでなくても
+
+aunque no resulte conveniente
+
+Sustantivo： いっこだてでな い → いっこだてでなくても aunque no sea una vivienda unifamiliar
+
+En lecciones anteriores hemos aprendido la construcción (verbo en forma-TE) + もいいですか, que usamos con el fin de solicitar
+
+permiso para hacer algo (ver A2-2 L4, L14). Si queremos ceder ante una condición poco deseable podemos utilizar ～もいいです
+
+o ～もだいじょうぶです. En estas construcciones no solamente podemos utilizar verbos en la forma-TE, sino también adjetivos
+
+(adjetivo-I-て, adjetivo-NA-で) y nombres (N-で).
+
+・にわがなくてもいいです。
+
+Me vale aunque no tenga jardín.
+
+・やちんが少し高くてもだいじょうぶです。 No importa que el alquiler sea un poco caro.
+
+Tanto ～てもかまいません como ～ても問題ありません transmiten el mismo significado que ～もいいです, pero resultan más
+
+formales.
+
+・家は、としんでなくてもかまいません。
+
+No importa que la casa no esté en el centro de la ciudad.
+
+5. もっと広いへやがあれば、ひっこしたいです。 Si encontrara una habitación más amplia, me mudaría.
+
+Cuando queremos exponer una hipótesis como premisa, solemos usar la siguiente fórmula: F1 (en forma condicional) 、F2. Ya
+
+vimos anteriormente el uso hipotético de ～たら (ver A2-2 L7). En ambas construcciones, F1 indica la condición y F2 expresa
+
+cómo actuaríamos hipotéticamente bajo ese supuesto (F1→F2). De esta manera, en F1 indicaremos los requisitos necesarios
+
+para que tenga lugar la acción de F2, como puede ser, por ejemplo, el mudarnos de vivienda.
+
+・もっと広いへやがあれば、ひっこしたいです。
+
+Si encontrara una habitación más amplia, me mudaría.
+
+・夜も安全なら、そのマンションにします。 Me quedaré con ese bloque de viviendas si también es seguro de noche.
+
+En muchos casos ～たら y ～ば son intercambiables.
+
+・こうがいにひっこしたら、元気になるかもしれません。 Es probable que te encuentres mejor si te mudas a las afueras.
+
+・こうがいにひっこせば、元気になるかもしれません。
+
+La construcción con ～たら se emplea para indicar cómo actuaríamos una vez se haya cumplido o completado la premisa
+
+representada por el estado o la acción de F1 (ver A2-2 L16). Observemos algunos casos en los que ～たら y ～ば no son
+
+intercambiables:
+
+・いいマンションを見つけたら、おしえてください。
+
+Avísame si encuentras algún bloque de viviendas que esté bien.
+
+・✕いいマンションを見つければ、おしえてください。
+
+8
+
+En casos como el anterior, donde F2 indica una orden o un deseo, no se usa ～ば sino ～たら porque en japonés es necesario
+
+indicar que la acción de F2 (avisarme) sucede una vez se ha terminado (completado) la acción de F1 (encontrar un bloque que
+
+esté bien).
+
+Construcción de la forma condicional
+
+① Verbos
+
+・Grupo 1
+
+La última vocal /u/ de la forma-diccionario se cambia por /e/ y se añade ば.
+
+すむ
+
+→ すめば
+
+かえる → かえれば
+
+ある
+
+→ あれば
+
+・Grupo 2
+
+Se elimina る de la forma-diccionario y se añade れば.
+
+食べる → 食べれば
+
+・Grupo 3
+
+La forma-diccionario くる del verbo きます se convierte en くれば, y la forma-diccionario する de します pasa a ser すれば.
+
+くる
+
+→ くれば
+
+する
+
+→ すれば
+
+② Adjetivo-I
+
+Se elimina い y se añade ければ.
+
+安い →
+
+安ければ
+
+③ Adjetivo-NA
+
+Se añade ら (es decir, se quita な y se pone なら).
+
+安全 な → 安全なら
+
+④ Nombre
+
+Se añade なら.
+
+マンション → マンションなら
+
+⑤ Formas negativas
+
+Se sigue el mismo patrón que el adjetivo-I, de manera que se elimina い y se añade ければ.
+
+Verbo:
+
+さがさな い
+
+→ さがさなければ
+
+Adjetivo-I: とおくな い
+
+→ とおくなければ
+
+Adjetivo-NA: しずかでな い
+
+→ しずかでなければ
+
+Nombre:
+
+しないでな い
+
+→ しないでなければ
+
+Por último, anteriormente hemos presentado la construcción N1 なら N2 がいいですよ, que utilizamos para retomar algo que ha
+
+dicho nuestro interlocutor y ofrecer una recomendación (ver A2-2 L3). Llegados a este punto advertimos que el elemento N1 なら
+
+de dicha fórmula es la forma condicional que acabamos de ver en esta lección.
+
+・駅に近いマンションなら、「アサヒコーポ」がいいですよ。
+
+Si lo que estás buscando es un bloque de apartamentos cerca
+
+de la estación, te recomiendo Asahi Corpo.
+
+9
+
+Rincón lingüístico-cultural para hispanohablantes
+1. マンション ¡¿Los japoneses viven en mansiones?! En las grandes ciudades de Japón, muchas personas viven en マンション. Con esta palabra se hace referencia a las viviendas plurifamiliares, de un tamaño relativamente grande y fabricadas con hormigón armado. Por otro lado, también existen los denominados アパート. Estas edificaciones, de menor tamaño que las anteriores, suelen estar fabricadas con un armazón de hierro o incluso de madera. Asimismo, a diferencia de las マンション, los アパート están destinados por norma general solo al alquiler. En cualquiera de los casos, el tamaño de las viviendas se especifica mediante siglas como DK （ダイニング・キッチン） o LDK （リビング・ダイニング・キッチン）, donde 2LDK significa que la vivienda (además de disponer de un espacio de cocina y salón) cuenta con dos dormitorios. Las construcciones de tipo マンション son en su mayoría de corte occidental, pero en ocasiones disponen también de una habitación de estilo japonés con tatami, llamada 和室（わしつ）. Este último tipo de estancia presenta elementos de la vivienda tradicional japonesa, como las puertas y ventanas correderas de tipo ふすま o 障子（しょう じ）.
+2. 家賃（やちん）・礼金（れいきん）・敷金（しききん） Pagar por alquilar una vivienda Cuando en Japón arrendamos una habitación o vivienda, además del alquiler 家賃（やちん）, debemos pagar la fianza o depósito 敷金（しききん） y los “honorarios” 礼金（れいきん）. La fianza sirve para cubrir los gastos que puedan derivarse del impago del alquiler o de la necesidad de llevar a cabo reparaciones. La fianza —que en la región de Kansai también se conoce con el nombre de 保証金（ほしょうきん）— se nos devuelve íntegramente al finalizar el arrendamiento a menos que la cantidad se haya visto menguada por algún motivo. Los “honorarios” o 礼金 tienen aparentemente su origen en un donativo económico para el arrendador que se otorgaba como muestra de agradecimiento por prestarnos la vivienda. Además de estos honorarios, también existe otra cuantía de dinero que no se nos devuelve: la llamada “comisión de mediación” o 仲介手数料（ちゅうかいてすうりょう）. Se trata de la tasa que cobra la inmobiliaria que actúa de intermediaria entre el arrendador y el arrendatario. La ley estipula que sea inferior al importe de un mes de alquiler, pero en los últimos años se dan muchos casos en los que, a cambio de una atractiva fianza de cero yenes, hay que desembolsar una elevada “comisión de mediación”.
+3. 一戸建て（いっこだて） Viviendas unifamiliares El corazón de las grandes urbes japonesas, al igual que las zonas urbanas de su contorno, no resulta seguro para los niños por el gran tráfico que soporta. Dado que muchos de los apartamentos y edificios de viviendas de esas áreas son pequeños y de alquileres muy costosos, existe una tendencia a construir casas unifamiliares (一戸建て) en sectores más alejados del centro. Estas construcciones son amplias, en muchas ocasiones disponen de jardín y garaje y, además, ofrecen el atractivo de un entorno tranquilo y con espacios verdes.
+4. 通勤時間 （つうきんじかん） Duración del desplazamiento al lugar de trabajo En España, así como en la mayoría de países occidentales, la media de tiempo necesario para desplazarse del hogar al trabajo es inferior a 30 minutos; sin embargo, en Japón es superior a una hora. Por lo general un desplazamiento es clasificado como de larga distancia cuando un solo trayecto implica más de una hora y media de duración. Los habitantes de las ciudades, cuyos puestos de trabajo a menudo se hallan en el centro de las mismas o en sus inmediaciones, se han visto obligados a recorrer
+10
+
+distancias cada vez más largas debido al aumento de la construcción de viviendas unifamiliares en las zonas más alejadas. Algunos de ellos utilizan los trenes Shinkansen para viajar a Tokio y Osaka desde las prefecturas aledañas y no es raro que recorran trayectos de más de 100 kilómetros y de dos horas de duración para acceder a sus trabajos. No obstante, gracias a la caída del precio de la vivienda de los últimos años, los jóvenes se han empezado a decantar por residencias más cercanas a los centros urbanos, lo que se ha traducido en una reducción de los tiempos de desplazamiento.
+11
+
+トピック 3 Una comida reconfortante
+ほっとする食べ物
+外国の人には、うどんは、 味がうすくないですか。
+
+はじめはそう思いましたが、 今はうすい味がおいしいです。
+
+きいて はなす
+
+EXPRESIÓN
+
+USO
+
+・うどんは、外国の人には、味がうすくないですか。 ・定食は量が少なすぎませんか。 ・近所のスーパーに何でもあるから、問題ないです。 ・私、日本人なので、白いご飯とみそしるが一番ほっとするんですよ。
+
+・Mostrar nuestra preocupación por el interlocutor preguntándole en forma negativa sobre algo que nos inquieta.
+・Expresar razones y causas.
+
+よんで わかる
+
+FORMA
+・ラーメンみたいな食べ物 / ベジマイトは（見た目が）ジャムみたいです。 ・ラーメンは毎日食べてもあきないです。 / ベジマイトはあまくありませ
+
+USO
+・Decir a qué se parece una comida o bebida. ・Expresión negativa.
+
+ん。
+
+きいて はなす
+
+1. うどんは、外国の人には、味がうすくないですか。 ¿El udon no os resulta insípido a los extranjeros?
+
+定食は量が少なすぎませんか。
+
+¿La cantidad del menú no se te hace demasiado escasa?
+
+Utilizamos una pregunta en forma negativa cuando queremos expresar nuestra inquietud por alguna incomodidad o malestar
+
+que pueda sentir nuestro interlocutor. Al emplear una negación mostramos nuestra preocupación. Este tipo de preguntas no
+
+siempre precisan de una respuesta con はい（ええ） o いいえ（いえ）: debido a que se formulan como muestra de interés, se
+
+pueden responder con だいじょうぶです o 問題ないです y, de este modo, indicar que no hay motivo de preocupación.
+
+・A: 日本のくだものは、ねだんが高くないですか。
+
+¿No te parece caro el precio de la fruta en Japón?
+
+B: いえいえ、だいじょうぶです。
+
+No, está bien.
+
+・A: 定食は、ホセさんには、量が少なすぎませんか。 José, ¿la cantidad del menú no se te hace demasiado escasa?
+
+B: はじめはそう思いました。でも、今はだいじょうぶですよ。
+
+Al principio sí me lo pareció. Pero ahora ya se me hace normal.
+
+Asimismo, si queremos transmitir que opinamos lo mismo que nuestro interlocutor —pero siempre dependiendo de cómo de
+
+estrecha sea nuestra relación—, una manera de evitar preocuparlo es añadir un comentario positivo.
+
+・ええ、ちょっとそう思いますが、もうなれました。
+
+Sí, me lo parece un poco, pero ya me he acostumbrado.
+
+・じつは、ちょっと口にあわなくて、、、。でも、しょうゆをかけると、おいしいです。
+
+La verdad es que [la comida japonesa] no
+
+12
+
+me hace mucha gracia, pero está rica si le echas salsa de soja.
+
+2. 近所のスーパーに何でもあるから、問題ないです。
+
+En el súper del barrio tienen de todo, así que no hay problema.
+
+私、日本人なので、白いご飯とみそしるが一番ほっとするんですよ。
+
+Para mí, como japonesa que soy, el arroz blanco y la sopa de miso son lo que más me hace sentir como
+
+en casa.
+
+Con から (ver A2-1 L3) y ので (ver A2-2 L3) indicamos razones y causas. La frase que indica razón o causa aparece con から
+
+o ので y, a continuación de esta, se coloca la frase que expresa una acción o un estado. En el caso de から, ver T2 de este libro.
+
+En el caso de ので, se utiliza la construcción forma-simple + ので (ver p. 118-119). No obstante, si se trata del presente
+
+afirmativo de un adjetivo-NA o de un sustantivo, la construcción es (nombre / adjetivo-NA) + な + ので.
+
+・体の調子が悪いので、昼ご飯を半分のこしました。 Como no me encuentro bien, he dejado la mitad del almuerzo.
+
+・うちの子どもは、食べ物に好ききらいがあるので、こまっています。
+
+Mi hijo es muy caprichoso con la comida y me
+
+preocupa.
+
+・いが弱いので、とんかつはあまり食べられないんです。
+
+Como tengo el estómago sensible, apenas puedo comer
+
+tonkatsu.
+
+3. 私に（も）てつだわせてください。 Déjame que te ayude (yo también). Con esta expresión ofrecemos educadamente nuestra ayuda. La fórmula てつだってください (ver A2-1 L6) y también la construcción てつだってくださいませんか (ver A2-1 L9) se usan para pedir asistencia a los demás, pero con てつだわせてください se solicita permiso al interlocutor para que una persona (que marcamos con la partícula に) sirva de ayuda.
+
+よんで わかる
+
+4. ラーメンみたいな食べ物 / ベジマイトは（見た目が）ジャムみたいです。 una comida similar al raamen / El
+
+(aspecto del) Vegemite es como mermelada.
+
+Con esta construcción hablamos de algo tomando como ejemplo otra cosa que, aunque no es igual, se parece por su sabor,
+
+aspecto, olor, etc. Detrás del sustantivo que queremos emplear de ejemplo comparativo se coloca la palabra みたい. Detrás de
+
+みたい añadimos な si con esta expresión lo que hacemos es modificar un sustantivo, como puede ser un alimento, un olor, etc.,
+
+de manera que la fórmula resultante es: (sustantivo de ejemplo) + みたいな + (sustantivos como 食べ物, におい o 味).
+
+・ラーメンみたいな食べ物
+
+una comida similar al raamen
+
+・キンパはおすしみたいな食べ物です。 El kimbap es una comida parecida al sushi.
+
+・このお茶は花みたいなにおいがします。 Este té tiene un olor como de flores.
+
+(Sustantivo de ejemplo) + みたい + です
+
+・ベジマイトはジャムみたいです。 El Vegemite es como la mermelada.
+
+Si se quiere decir que algo del Vegemite se asemeja a la mermelada, se expresa añadiendo (elemento parecido) + が.
+
+・ベジマイトは見た目がジャムみたいです。 El Vegemite tiene un aspecto como de mermelada.
+
+・このお茶はにおいが花みたいですね。 El olor de este té es como de flores.
+
+Tanto みたい como みたいな son expresiones propias de la lengua hablada.
+
+5. ラーメンは毎日食べてもあきないです。 / ベジマイトはあまくありません。 Aunque comiera raamen todos los días, 13
+
+no me cansaría. / El Vegemite no es dulce.
+
+El presente negativo de la forma-formal puede crearse de dos maneras: ～ないです y ～ありません（ません）. En el caso de los
+
+verbos, hasta ahora hemos venido utilizando la construcción negativa ～ません (ver A1 L5), pero, en la práctica, la lengua oral
+
+también emplea profusamente la terminación ～ないです.
+
+Esta segunda fórmula se construye con el verbo en la forma-NAI (ver A2-1 L15, L16, A2-B1 p. 120-121) seguido de です.
+
+・ラーメンは毎日食べてもあきないです。 Aunque comiera raamen todos los días, no me cansaría.
+
+・ラーメンは自分では作らないです。
+
+El raamen no lo preparo yo mismo.
+
+・自分ではあまり料理しないです。
+
+Yo apenas cocino.
+
+・A: これ、ちょっとしょっぱくないですか。 ¿No te parece que esto está un poco salado?
+
+B: いえ、ぜんぜん問題ないです。
+
+No, está perfecto.
+
+En las oraciones de sustantivo o adjetivo, esta negación se forma con ありません, en lugar de ないです.
+
+En el caso de los sustantivos, cambiamos el ないです de じゃないです (ver A1 L3) por ありません.
+
+・そのドリンクはくすりじゃありません。
+
+Esa bebida no es un medicamento.
+
+La forma negativa del adjetivo-NA sigue el mismo patrón del caso anterior y la parte ないです se substituye por ありません.
+
+・日本のなっとうは好きじゃありません。 No me gusta el nattoo japonés.
+
+Lo mismo sucede con el adjetivo-I, donde el ないです de ～くないです se convierte en ありません.
+
+・この料理はおいしくありません。
+
+Esta comida no sabe bien.
+
+6. ベジマイトは、私にとっては、なつかしいオーストラリアの味なんです。Para mí el Vegemite tiene un sabor que me
+
+recuerda a Australia.
+
+En ～にとっては, el elemento que ocupa el hueco de ～ es una persona y se trata de una expresión sirve para indicar la
+
+preferencia, opinión o intereses de la misma.
+
+・やさいは、子どもにとっては、おいしくないかもしれません。
+
+Las verduras quizá no resulten apetitosas para los niños.
+
+・たなかさんにとって、いちばんほっとする食べ物はカレーだそうです。
+
+Al parecer el curry es para el Sr. Tanaka la comida que
+
+más le hace sentir como en casa.
+
+<Atención>
+
+La fórmula ～にとっては no se puede utilizar para expresar que la persona indicada resulta beneficiada. En dicho caso debemos
+
+emplear ～のために. Hemos de prestar especial atención a esta diferencia, ya que en español ambas expresiones se traducen
+
+con la preposición “para”.
+
+× 母は、子どもにとって、ケーキを作りました。
+
+○ 母は、子どものために、ケーキを作りました。
+
+Mi madre hizo un pastel para los niños.
+
+Rincón lingüístico-cultural para hispanohablantes
+
+1. ほっとする食べ物 Una comida reconfortante La palabra ほっ del verbo ほっとする es una onomatopeya que expresa la idea de un suspiro y también puede escribirse en katakana, es decir, ホッ (ver p. 53 del libro de ACTIVIDAD de A2-2). ¿No os sucede que cuando estáis nerviosos y finalmente
+14
+
+sentís alivio, soltáis un suspiro? Esa sensación es la que se expresa con ほっとする. Solemos dar un suspiro de alivio y acompañarlo de la expresión ほっとする cuando nos liberamos de una preocupación, como puede ser tras superar un examen o cuando una intervención quirúrgica termina con éxito. Sin embargo, también podemos emplear este verbo al hablar de alguna comida o bebida, como observamos en esta lección. ¿Qué significa exactamente en este contexto? En este caso expresa ese sentimiento de satisfacción o complacencia que se experimenta cuando se alimenta el cuerpo, tanto física como anímicamente, con algo que se ansiaba tomar. Por ejemplo, seguro que habréis notado esa sensación de relajación cuando, en época de mucho frío, os tomáis una sopa o un chocolate caliente y notáis cómo un calorcillo invade lenta y paulatinamente vuestro cuerpo y estado de ánimo. Algo similar habréis sentido también cuando, tras una temporada comiendo fuera o de viaje en el extranjero, regresáis a casa y volvéis a probar la comida de siempre. En estos casos seguramente hayáis experimentado una sensación de descanso, tanto en el cuerpo como en la mente, como resultado de la satisfacción de llenar el estómago con esos alimentos que llevabais tiempo queriendo tomar. Eso es precisamente lo que se transmite con ほっとする.
+
+2. Cómo contestar a una pregunta formulada en forma negativa
+
+Se dice que cuando respondemos en japonés a una pregunta formulada en forma negativa, “sí” es いいえ y “no” es はい. La
+
+verdad es que, como podemos observar en los siguientes ejemplos, esta regla se cumple:
+
+El profesor realiza la siguiente pregunta al percatarse de que José no está en el aula.
+
+・A: ホセさんは、来ていませんか。
+
+¿José no ha venido?
+
+B: はい、来ていません。
+
+No, no ha venido.
+
+B: いいえ、来ています。さっきトイレにいました。
+
+Sí, ha venido. Hace un momento estaba en el baño.
+
+Hacemos una pregunta a un amigo al que no le apetece ver una película estadounidense.
+
+・A: ホセさんはアメリカ映画が好きじゃないんですか。 José, ¿no te gustan las películas de EE.UU.?
+
+B: ええ、じつはちょっと苦手なんです。
+
+No, la verdad es que no me hacen mucha gracia.
+
+B: いえいえ、好きですよ。でも、さいきんのははちょっとつまらないので、、、。
+
+Sí, sí que me gustan. Lo que pasa es que
+
+últimamente son un poco aburridas.
+
+En A se formulan preguntas en forma negativa y en ellas se considera la posibilidad de “que José no haya venido” y de que “a
+
+José no le gusten” las películas de EE.UU. En estos casos, si las informaciones “José no ha venido” y “a José no le gustan” son
+
+correctas, la respuesta apropiada será はい; en cambio, si su contenido es incorrecto, es decir, “José sí ha venido” y “a José sí
+
+le gustan”, se contestará con いいえ.
+
+Por otro lado, la interrogación negativa también se emplea para cerciorarse de una afirmación. En este caso, si compartimos la
+
+misma opinión de quien nos pregunta, responderemos diciendo はい.
+
+・A: ホセさんも、そう思いませんか。
+
+José, ¿tú no opinas también lo mismo?
+
+B: はい、そう思います。
+
+Sí, pienso igual.
+
+・A: このシャツ、かわいくないですか。
+
+¿No es bonita esta camisa?
+
+B: ええ、かわいいですね。
+
+Sí, qué bonita es.
+
+La expresión de invitación ～しませんか (ver A1 L12) se usa en forma negativa y para aceptarla se contesta はい（ええ）.
+
+・A: いっしょにご飯を食べに行きませんか。 ¿Te apetece que vayamos a comer juntos?
+
+B: ええ、行きましょう。
+
+Sí, ¡vamos!
+
+Como hemos visto en esta lección, la interrogación negativa también se emplea para preguntar acerca de un asunto que nos
+
+15
+
+preocupa, como que un plato esté soso o que el precio de un producto sea caro. En estos casos, contestaremos diciendo はい si compartimos con el interrogador la misma opinión acerca de lo insípido del plato o del alto precio del producto en cuestión; en cambio, responderemos いいえ si pensamos lo contrario. No obstante, en la lengua hablada, responder únicamente ya sea はい o いいえ puede resultar ambiguo. Por otro lado, incluso si contestamos diciendo いいえ、うすくないです o いいえ、高くないです, es probable que la conversación suene poco natural. Esto se debe a que nuestro interlocutor formula su pregunta con el fin de mostrar preocupación y por este motivo es preferible que al responder atendamos a dicho propósito y le transmitamos un mensaje de tranquilidad, con expresiones como だいじょうぶです, 問題ないです o 心配いりません.
+3. Comida japonesa: ¿qué diferencia hay entre 和食 y 日本料理? Cuando se habla de la comida japonesa, además de la palabra 和食 (ver A2-2 L3), es probable que hayáis escuchado la expresión 日本料理. ¿En qué se diferencian? El carácter 和 de 和食 está relacionado con Japón o lo japonés y a decir verdad 和食 y 日本料理 se utilizan generalmente con el mismo significado. No obstante, algunos opinan que 和食 se refiere de forma colectiva a los platos que los japoneses llevan consumiendo desde tiempos antiguos, mientras que 日本料理 tiene su origen en las especialidades culinarias que se sirven como gesto de hospitalidad en banquetes y otras situaciones similares. Por otro lado, últimamente es habitual observar la palabra 和風（わふう） en los menús de los restaurantes de Japón. Esta expresión, empleada en platos como 和風ステーキ o 和風スパゲティ, significa que, si bien no se trata de especialidades propias de la cocina nipona, se les ha otorgado un sabor japonés al prepararlas con ingredientes, condimentos o métodos típicos de Japón.
+4. 家庭料理 （かていりょうり） Comida casera Con esta expresión nos referimos a la comida que se prepara y consume a diario en el hogar e incluye, además de la tradicional japonesa, platos propios de Occidente y de la gastronomía china. Muchos japoneses califican modestamente de 家庭料理 los platos que sirven a un invitado en su propia casa, aunque les haya llevado tiempo y esfuerzo cocinarlos. Por otro lado, con la expresión おふくろの味 nos referimos a esos sabores propios de la comida casera y a esos platos con los que hemos crecido desde pequeños. La palabra おふくろ significa “madre” y es que en Japón tradicionalmente eran ellas quienes se encargaban de preparar la comida del hogar. No obstante, en los últimos años ha aumentado el número de hombres que se ocupan de esta tarea, por lo que es posible que en el futuro se acuñe alguna expresión como 父ちゃんの味, o —quién sabe— quizá aparezca alguna expresión del tipo ウチの味 que no haga distinción entre sexos.
+5. El sabor de la comida: suave en Kansai y fuerte en Kantoo Las preferencias sobre cómo aderezar un plato varían dependiendo de cada persona o cada familia, pero también pueden existir diferencias generales de una región a otra. El dicho popular 関西は薄味（うすあじ）、関東は濃い味（こいあじ） nos sirve de ejemplo ilustrativo. Indica que los habitantes de Kansai se decantan por sabores más suaves, mientras que en Kantoo los prefieren más fuertes. La división entre Kansai y Kantoo se refleja especialmente en la preferencia de una clase de salsa u otra para acompañar a los fideos de tipo udon o soba. Algo parecido ocurre también con los tallarines envasados, ya que se comercializan con condimentos diferentes según la zona. Se dice que el primer producto en ofrecer sabores distintos para cada región fue “Donbei”, de la compañía Nissin: de una zona a otra difiere no solo el gusto, sino también el aspecto de la salsa que lo acompaña. Concretamente, en el este de Japón sabe a bonito y su color y sabor son intensos, mientras que en el oeste del país la salsa tiene un gusto sutil, como de caldo de algas, y suave, al igual que su color. Entonces, ¿cómo podemos distinguir si se trata de una versión u otra? Aunque los envases son iguales en ambos lugares, en la tapa o en el propio cuerpo del recipiente se
+16
+
+puede leer (E) o (W), que significan “Este” y “Oeste” de Japón, respectivamente. Si compráis un bote de tallarines en Japón, fijaos en si figura alguna de estas dos marcas.
+6. Todo me sabe dulce La primera vez que probasteis un plato japonés, ¿no os pareció dulce? Probablemente también hayáis notado un sabor dulce al arroz del sushi o al tamagoyaki (tortilla de huevo). La verdad es que, si nos fijamos en las recetas de platos japoneses, veremos que en muchos de ellos se utiliza azúcar o mirin. ¿No os habéis preguntado por qué? El azúcar, además de conferir un sabor dulce, sirve para crear texturas gelatinosas o, también, como agente conservante, cristalizador o antioxidante. En Japón estas propiedades se aprovechan no solo en los postres, sino también en el resto de platos. Por ejemplo, añadir azúcar al arroz de sushi sirve para que brille y se mantenga blando. En los platos con un proceso de cocción consigue que las carnes y las legumbres estén más tiernas. Asimismo, al agregar azúcar al tamagoyaki se logra un resultado todavía más esponjoso. Además, el azúcar armoniza muy bien con el resto de sabores y construye otros aún más profundos al combinarse, por ejemplo, con gustos salados o ácidos. Quizá el azúcar sea el responsable de la gran acogida que la comida japonesa ha recibido entre tanta gente.
+7. やっぱりラーメンが食べたくなります。 Si habéis escuchado atentamente una conversación entre japoneses, lo más seguro es que hayáis oído la expresión やっぱり o やはり. Según el diccionario significan “también”, “todavía”, “después de todo”, “a pesar de todo” o “como se pensaba” y probablemente estemos ante una de esas esas palabras con varios matices, diferentes y a la vez difíciles de distinguir. Por lo general, estas expresiones tienen el significado de que algo es igual a lo anterior o a lo que uno pensaba. Si estudiamos sus significados con mayor detalle, podemos encontrar los siguientes usos: 1. Igual a lo anterior o igual a otra cosa. ・日本でもやっぱりインド料理を食べています。 (En la India comía platos indios y ahora en Japón también lo sigo haciendo.) ・うちの子供もやっぱりカレーライスが大好きです。 (A los demás niños les gusta el arroz con curry, y a mis hijos también.) ・海外に行ったときも、やっぱりラーメンが食べたくなります。 (En el extranjero me sucede lo mismo que en Japón: sigo queriendo comer raamen.) 2. Algo sucede según las expectativas. ・A: バウムクーヘンて、見た目が木みたいですね。 B: ええ、木のケーキという意味なんですよ。 A: ああ、やっぱり。 (Pensaba que la tarta se parecía a un árbol y resulta que efectivamente su nombre significa eso mismo.) ・外国人に一番人気がある和食はやはり天ぷらだそうです。 (Pensaba que el plato preferido de los extranjeros era el tempura y he descubierto que efectivamente lo es.) 3. Se obtiene un mismo resultado que en ocasiones anteriores aun después de considerar otros métodos u opciones distintos ・和食はいろいろ食べましたが、やっぱりおすしが一番好きです。 (El sushi ya me gustaba antes y, aunque he probado distintos platos, me he dado cuenta de que efectivamente sigue siendo mi preferido.)
+17
+
+トピック 4 Visitas
+訪問
+よくいらっしゃいました。 どうぞおあがりください。
+
+おじゃまします。
+
+きいて はなす
+
+EXPRESIÓN
+・むすこのしょうです。／ しょう、おねえちゃんは？
+・ていねいたい／ ふつうたい①:親切な人が多くてたすかりました。／ 家 族でよく旅行したね。
+
+USO
+・Presentar nuestra familia a una visita. / Preguntar a un familiar dónde está otro. ・ Hablar sobre una experiencia con compañeros de trabajo y
+amigos con los que no tenemos una relación muy estrecha, y
+
+comentar recuerdos con la familia y amigos cercanos.
+
+FORMA
+・アニスさんが家によんでくれました。 ・アニスさんにつうやくをしてもらいました。
+
+よんで わかる USO
+・Contar que alguien actúa por nosotros o que nos hace algo. ・Indicar que alguien nos hace un favor.
+
+きいて はなす
+
+1. むすこのしょうです。 (Este) es mi hijo Shoo.
+
+しょう、お姉ちゃんは？ Shoo, ¿dónde está tu hermana?
+
+Usamos este tipo de frase para presentar nuestra familia a un invitado. En primer lugar colocamos la relación de parentesco que
+
+nos une con la persona en cuestión y seguidamente añadimos su nombre. En estas situaciones también es frecuente usar
+
+expresiones del tipo うちの息子 o うちの主人, que, en vez de centrarse en quien habla, señalan la relación de la persona
+
+referida con respecto “a la familia”, como el hijo o el padre, en los anteriores casos.
+
+・むすこのしょうです。
+
+(Este) es mi hijo Shoo.
+
+・むすめのめぐみです。
+
+(Esta) es mi hija Megumi.
+
+・うちのしゅじんです。
+
+(Este) es mi marido.
+
+Se utilizan estas expresiones para preguntar a un familiar por el lugar en que se encuentra otro miembro de la familia, o para
+
+solicitarlo o invitarlo a que se acerque.
+
+18
+
+・しょう、お姉ちゃんは？ ・お父さん、こっちよ。
+
+Shoo, ¿dónde está tu hermana? ¡Papá, ven aquí!
+
+2.親切な人が多くてたすかりました。 (Estilo formal) Nos ayudó que hubiera tanta gente amable.
+
+家族でよく旅行したね。 (Estilo informal) Viajamos mucho en familia, ¿verdad?
+
+Empleamos el estilo formal cuando hablamos con compañeros de trabajo, amistades o personas similares con las que no
+
+tenemos suficiente confianza. Con “estilo formal” nos referimos a aquel en que las oraciones terminan con ～です y ～ます
+
+(ver A2-1 L16). Empleamos este estilo para no resultar maleducados al hablar con personas que no son ni familiares ni amigos
+
+cercanos.
+
+・親切な人が多くて助かりました。
+
+Nos ayudó que hubiera tanta gente amable.
+
+・私たち、ニューヨークに住んでたんですよ。 Nosotros estuvimos viviendo en Nueva York, ¿sabes?
+
+・ぐうぜんですね。
+
+¡Qué casualidad!
+
+En cambio, se usa el estilo informal cuando se trata con la familia o con los amigos de mayor confianza. Con “estilo informal” nos
+
+referimos a aquel en que las oraciones terminan con la forma-simple, como 書く o 暑い (ver A2-1 L16). No obstante, por muy
+
+estrecha que sea la relación de amistad con alguien, es preferible que empleemos el estilo formal con personas de edad o
+
+posición social mayores a la nuestra. De este modo evitaremos infundirles una sensación de incomodidad. Por estos motivos
+
+hemos de tener cuidado al usar el estilo informal, ya que el grupo de personas con las que podemos emplearlo es mucho más
+
+restringido.
+
+・家族でよく旅行したね。
+
+Hicimos muchos viajes toda la familia, ¿verdad?
+
+・おぼえてるか。
+
+¿Te acuerdas?
+
+・わすれられないけしきだよね。 Es un paisaje que no olvidaremos, ¿verdad?
+
+よんで わかる
+
+3. アニスさんが家によんでくれました。 Anis me invitó a su casa.
+
+Se emplea la fórmula (verbo en forma-TE) + くれました para indicar que alguien ha realizado una acción que redunda en favor
+
+del hablante. Para señalar al actor de la misma se coloca la partícula が tras su nombre. Cuando se dice しました, se enuncia
+
+únicamente que alguien ha realizado una acción; en cambio, してくれました va más allá y comprende además el sentimiento de
+
+gratitud que el hablante —como beneficiario del acto— siente hacia al sujeto de la acción. La construcción (verbo en forma-TE)
+
++ くれました expresa siempre una acción realizada en beneficio del hablante, por lo que no puede usarse para aquellos actos en
+
+los que se favorezca a otra persona distinta a este.
+
+・アニスさんが家によんでくれました。
+
+Anis me invitó a su casa. (Anis me hizo el favor de invitarme a su casa.)
+
+・私の家まで車でむかえに来てくれました。 Vino a buscarme en coche a casa. (Me hizo el favor de venir a buscarme hasta casa.)
+
+〈Atención〉
+
+La construcción (verbo en forma-TE) + くれました implica un sentimiento de gratitud hacia el ejecutante de la acción. Por este
+
+motivo no puede utilizarse en los casos en que se expresa molestia o perjuicio.
+
+・○子どものとき、母がいつも本を読んでくれました。 De niño mi madre me solía leer.
+
+・×兄が私の日記を読んでくれました。
+
+Mi hermano mayor leyó mi diario.
+
+4.アニスさんにつうやくをしてもらいました。 Anis me hizo de intérprete.
+
+19
+
+El verbo もらう significa recibir un objeto o regalo de parte alguien (ver A2-1 L17). A diferencia de este, la fórmula (verbo en
+
+forma-TE) + もらいました no se emplea con objetos, sino que indica que uno es receptor beneficiado de una acción o favor.
+
+Detrás del nombre de la persona que actúa en nuestro favor aparece la partícula に. Cuando se dice しました se enuncia
+
+meramente que alguien ha realizado una acción, mientras que con してもらいました se indica que existe un sentimiento de
+
+gratitud por parte del receptor de la misma.
+
+・アニスさんにつうやくをしてもらいました。
+
+Anis me hizo de intérprete. (Anis me hizo el favor de interpretar.)
+
+・インドネシア語がよくわからなかったので、ご両親にゆっくり話してもらいました。
+
+Como no entendía muy bien el indonesio,
+
+sus padres me hablaron despacio. (…sus padres hicieron el favor de hablarme despacio.)
+
+・お兄さんのカメラで写真をとってもらいました。
+
+Me sacaron una foto con la cámara de mi hermano mayor. (Recibí el favor
+
+de que me sacaran una foto...)
+
+Rincón lingüístico-cultural para hispanohablantes
+
+1. Nombres de parentesco: cómo llamar a los familiares ¿Cómo creéis que los miembros de una familia japonesa se dirigen los unos a los otros? Aquí vamos a ver cómo lo hacen las personas de una misma familia. En primer lugar, las parejas que no tienen hijos suelen hablar entre sí utilizando el nombre de pila o algún diminutivo cariñoso. También es habitual que las mujeres llamen あなた a sus maridos. A partir del momento en que una pareja tiene descendencia, la cualidad de ser padre o madre gana mayor peso y esto se traduce en un cambio en los apelativos. De este modo, aun habiendo empleado anteriormente el nombre de pila o un diminutivo, las parejas comienzan a utilizar palabras como お父さん, パパ, お母さん y ママ. Una vida prolongada en pareja redunda en una mayor confianza y, con el paso del tiempo, es habitual que algunos llamen a su esposa empleando expresiones como おい o ちょっと. ¿Y cómo creéis que los padres se dirigen a sus hijos? Si solo tienen uno, lo harán utilizando su nombre. Sin embargo esta situación vuelve a cambiar cuando nacen más hermanos. Si el mayor de ellos es varón, lo llamarán おにいちゃん, mientras que si es una chica, será おねえちゃん. Con el resto de hijos (de edades menores a la del hermano o hermana mayor) se emplea el nombre de pila. En resumen, en los hogares japoneses cada miembro recibe un apelativo tomando como referencia la posición que ocupa con respecto al benjamín de la familia.
+2. Normas que seguir cuando visitamos una casa japonesa En este punto tratamos las formas de cortesía que debemos tener en cuenta cuando un japonés nos invita a su casa. En primer lugar prestaremos atención al momento del día en que realizar la visita. Para no causar molestias es mejor que evitemos las horas más tempranas de la mañana, los tiempos de las comidas y la franja más tardía de la noche. Cuando entramos en una vivienda particular japonesa, hemos de descalzarnos en la entrada o recibidor y ponernos las zapatillas allí dispuestas. El calzado que se traía de fuera se debe colocar en el suelo de manera que su parte delantera apunte hacia la puerta de salida de la casa. Además, si entramos en una habitación de estilo japonés, debemos quitarnos primero las zapatillas en el pasillo. Hay que tener mucho cuidado en este sentido ya que entrar en una sala de tatami con las zapatillas puestas se considera de mala educación. Por otro lado, también existe una versión especial para el cuarto de aseo. De este modo, cuando entramos en el baño, hemos de dejar fuera las zapatillas anteriores y calzarnos las específicas de dicha estancia. Si nos conducen al interior de
+20
+
+una sala de estilo japonés y nos sentamos en el suelo de tatami, lo correcto es hacerlo sobre los talones. Esta posición se denomina 正座（せいざ） y, si no estamos acostumbrados a sentarnos así, los pies nos empezarán a doler pasado muy poco tiempo. No obstante, lo más importante es mostrar respeto hacia los demás y —salvo si se trata de una visita muy especial— no debemos preocuparnos y pedir directamente permiso para estirar los pies diciendo 失礼して、足を崩してもいいですか（しつれいし て、あしを くずしてもいいですか）. Por último, la persona que nos invitó apreciará que el mismo día de la visita o el posterior le mandemos un e-mail o algún tipo de mensaje de agradecimiento. 3. Saludos y expresiones típicas cuando vamos de visita a casa de alguien La lengua japonesa tiene ciertas expresiones que se suelen utilizar cuando se visita la casa de alguien. Aquí veremos algunas de las más representativas. Ante todo, cuando visitamos la casa de alguien, anunciamos nuestra llegada y avisamos a las personas de su interior diciendo ごめんください sin gritar y desde la entrada. Sin embargo, actualmente la mayoría de las viviendas dispone de un timbre, por lo que hoy en día rara vez necesitaremos utilizar la expresión ごめんください. Una vez nos han invitado a entrar, saludaremos diciendo おじゃまします al pasar del recibidor al interior de la casa. Cuando hacemos una visita a alguien, lo habitual es llevarle algún pequeño regalo o detalle. Los japoneses suelen decir つまらないものですが、どうぞ (“Es una tontería”) a la vez que entregan su obsequio. Esta frase sirve de gesto para aliviar la presión psicológica y evitar que el receptor piense que se trata de un regalo. Sin embargo, con el avance de la globalización, en los últimos años ha aumentado el número de personas que prefieren expresiones más directas que las típicas japonesas. De este modo, cada vez son más los japoneses que, en vez de utilizar つらまないものですが, se decantan por frases como 気に入ってもらえるとうれしいのですが (“Espero que te guste”), o también お口にあうとよろしいのですが (“Espero que te guste”, si el obsequio entregado es algo de comer). Por último, cuando se acerca la hora de marcharse se emplea la expresión そろそろ失礼します (“Ya es hora de volverme” o “Ya se hace tarde”). Si conocemos poco a la persona cuya vivienda visitamos, es preferible que no nos quedemos demasiado tiempo. Cuando nos disponemos a abandonar la casa debemos dar las gracias al salir por la puerta. En ese momento podemos usar expresiones como ありがとうございました o ごちそうさまでした. Hay que tener cuidado ya que marcharse diciendo únicamente さようなら puede resultar maleducado.
+21
+
+トピック 5 La diversión de aprender idiomas
+ことばを学ぶ楽しみ
+私は日本のアニメをよく見ます。 おもしろいですよ。
+
+それで、はやい会話も聞きとれる ようになったんですね。
+
+きいて はなす
+
+EXPRESIÓN
+
+USO
+
+・せっきょくてきに英語を話すようにしています。/はやい会話も聞きとれる ようになりました。/上手になれるように、毎日英語のニュースを見ていま す。 ・ていねいたい/ふつうたい②：日本語の学校、つづいてますね。/英語の 学校、つづいてるね。
+
+・Indicar que nos esforzamos regularmente en hacer algo. / Decir que podemos hacer algo que antes no podíamos. / Decir qué hacemos para lograr un objetivo. ・Cambiar el estilo de habla según nuestro interlocutor.
+
+よんで わかる
+
+FORMA
+
+USO
+
+・大学を卒業したら、日本に留学しようと思っています。 ・つぎの試験は、いいせいせきがとれそうです。/ /私にも読めそうな本 ・きのうは 3 時間もチャットをしました。/チャットは楽しいので、何時間もや ります。
+
+・Indicar intenciones y planes futuros. ・Decir que existe la posibilidad de que algo ocurra. ・Destacar la elevada cantidad de algo.
+
+きいて はなす
+
+1. せっきょくてきに英語を話すようにしています。 Estoy intentando hablar más en inglés.
+
+はやい会話も聞きとれるようになりました。 (Ahora ya) entiendo incluso las conversaciones rápidas.
+
+上手になれるように、毎日英語のニュースを見ています。 Todos los días veo las noticias en inglés para
+
+mejorar.
+
+Vamos a estudiar conjuntamente tres tipos de frase que usan la construcción (verbo) + ように.
+
+① Empleamos la fórmula (verbo en forma-diccionario) + ように para indicar que nos esforzamos de manera regular en hacer
+
+algo (ver A2-2 L15).
+
+・できるだけ漢字のノートを見るようにしています。
+
+Trato de consultar el cuaderno de kanji en la medida de lo posible.
+
+Por otro lado, con la construcción (verbo en forma-NAI) + ように podemos expresar que en nuestro día a día nos esforzamos
+
+por evitar hacer algo.
+
+・漢字を読むとき、できるだけふりがなを見ないようにしています。 Cuando leo un kanji, en lo posible intento no leer el furigana.
+
+22
+
+② Se emplea la construcción (verbo en forma potencial) + ように + なりました para indicar que ahora podemos hacer algo que
+
+antes no podíamos (ver A2-2 L18).
+
+・かんたんな漢字が書けるようになりました。
+
+(Ahora ya) sé escribir los caracteres kanji más sencillos.
+
+<Atención>
+
+Algunos verbos, como わかります o 見えます, ya abarcan de por sí un significado de potencialidad, de manera que no se
+
+colocan en la forma potencial, sino que se emplean según la fórmula (verbo en forma-diccionario) + ように + なりました.
+
+・○日本人の友達がたくさんできたので、日本語がわかるようになりました。 Como hice muchos amigos japoneses ahora ya
+
+entiendo japonés.
+
+×日本人の友達がたくさんできたので、日本語がわかれるようになりました。
+
+③ Se emplea la estructura (V1 en forma potencial) + ように + (V2) para señalar que hacemos algo con el fin de lograr una meta.
+
+V1 es el verbo que expresa nuestro objetivo y V2 es el que indica lo que hacemos para conseguirlo. Debido a que la acción que
+
+se realiza para lograr un objetivo suele efectuarse de manera repetida, es frecuente que V2 aparezca en la forma ～ています,
+
+que indica habitualidad (ver A2-2 L10).
+
+・マリアさんみたいに上手になれるように、毎日日本語のラジオを聞いています。
+
+Todos los días escucho la radio en japonés
+
+para llegar a ser tan buena como María.
+
+・漢字を忘れないように、ノートをいつも持っています。 Llevo siempre un cuaderno para no olvidarme de los caracteres kanji.
+
+<Atención>
+
+Algunos verbos, como わかります o 見えます, ya comprenden de por sí un significado de potencialidad, de manera que no
+
+adoptan la forma potencial y se emplean según la fórmula (verbo en forma-diccionario) + ように.
+
+○難しい漢字がよく見えるように、大きい字で書きます。
+
+×難しい漢字がよく見られるように、大きい字で書きます。
+
+<Atención>
+
+Las fórmulas …ために y …ように se traducen al español como “para”, pero en japonés presentan matices distintos. Veamos en
+
+qué se diferencian:
+
+・日本に留学するために、日本語を勉強しています。 Estudio japonés para irme a estudiar a Japón.
+
+Aquí el motivo por el que el hablante aprende japonés es su objetivo de viajar a Japón a estudiar. Además, ya ha comenzado a
+
+aprender el idioma y ya se le da bastante bien. (Los verbos que acompañan a …ために suelen ser transitivos y aparecen
+
+frecuentemente en forma afirmativa.)
+
+・日本に留学できるように、日本語を勉強しています。 Estudio japonés para (poder) irme a estudiar a Japón.
+
+En este caso, el motivo por el que el hablante aprende japonés es su deseo de viajar a Japón a estudiar. No obstante, se trata de
+
+un objetivo probablemente difícil de conseguir. Además el japonés quizá todavía no se le dé bien. (Los verbos que aparecen con
+
+…ように son verbos intransitivos, en forma potencial y en forma negativa.)
+
+En definitiva, se emplea …ために si se trata de un objetivo firme y, por el contrario, se usa …ように si es un propósito cuya
+
+realización es menos probable.
+
+2. 日本語の学校、つづいてますね。 (Estilo formal) Sigues yendo a la academia de japonés, ¿verdad? 英語の学校、つづいてるね。 (Estilo informal) Sigues yendo a la academia de inglés, ¿verdad?
+En el tema 4 hemos visto que se emplea el estilo formal para hablar con compañeros de trabajo y amigos con los que no se tiene demasiada confianza. También vimos que, por el contrario, se usa el estilo informal con los familiares y las amistades más
+
+23
+
+cercanas. En este apartado vamos a profundizar acerca de con qué personas debemos utilizar una modalidad u otra.
+
+Lo más habitual es utilizar el estilo formal cuando tratamos con: 1) personas que acabamos de conocer, 2) personas más
+
+veteranas de nuestro lugar de trabajo o estudio, 3) personas de posición social superior a la nuestra y 4) conocidos con los que
+
+no tenemos demasiada confianza.
+
+・日本語の学校、つづいて（い）ますね。 Sigues yendo a la academia de japonés, ¿verdad?
+
+・日本語が上手になりましたね。
+
+¡Cuánto ha mejorado tu japonés!
+
+Por lo general empleamos el estilo informal cuando hablamos con: 5) familiares, 6) personas de nuestro lugar de trabajo o
+
+estudio con menor experiencia que nosotros en el mismo, 7) amigos con los que tenemos confianza y 8) personas que son
+
+claramente más jóvenes que nosotros; y también 9) al hablar con nosotros mismos.
+
+・英語の学校、つづいて（い）るね。
+
+Sigues yendo a la academia de inglés, ¿verdad?
+
+・英語の学校にはいろいろな人がいて、自分とはちがういけんが聞けて、勉強になるよ。 En mi academia de inglés hay personas de
+
+distintos tipos y resulta muy instructivo poder escuchar opiniones diferentes a la mía.
+
+Cuando usamos el estilo informal y queremos indicar a nuestro interlocutor que hace falta hacer algo, se emplea la construcción
+
+(verbo en forma-NAI sin い) + きゃ (ver A2-B1 T1).
+
+・エスターさんを見習わなきゃ。(みならわな い ＋きゃ) Tienes que aprender de Esther.
+
+・マンガカフェを始めたいなら、お金をためなきゃ。（ためな い ＋きゃ）。
+
+Tienes que ahorrar si quieres montar un manga-café.
+
+よんで わかる
+
+3. 大学を卒業したら、日本に留学しようと思っています。 Estoy pensando en ir a estudiar a Japón cuando termine
+
+la universidad.
+
+Se usa la fórmula (verbo en forma volitiva) + と思っています para expresar intenciones y planes futuros.
+
+・しょうらい、お金をためて、マンガカフェを始めようと思っています。 Estoy pensando en ahorrar y montar un manga-café en el futuro.
+
+También podemos utilizar (verbo en forma volitiva) + と思って（い）るんです cuando, ante una pregunta, argumentamos nuestra
+
+respuesta exponiendo nuestras intenciones o planes de futuro.
+
+・A: あれ？スペイン語を勉強しているんですか？
+
+¡Vaya! ¿Estás estudiando español?
+
+B: はい。じつは、来年スペインにフラメンコをならいに行こうと思って（い）るんです。 Sí, es que estoy pensando en ir a aprender
+
+flamenco a España el año que viene.
+
+Construcción de la forma volitiva
+
+・Grupo 1
+
+La /i/ que aparece antes de -ます se transforma en /ou/.
+
+いきます
+
+→
+
+いこう
+
+はいります
+
+→
+
+はいろう
+
+かいます
+
+→
+
+かおう
+
+・Grupo 2
+
+Se elimina -ます y se añade よう.
+
+はじめます
+
+→
+
+はじめよう
+
+たべます
+
+→
+
+たべよう
+
+24
+
+・Grupo 3
+
+Se elimina -ます y se añade よう. El verbo きます se convierte en こよう.
+
+します
+
+→
+
+しよう
+
+留学します
+
+→
+
+留学しよう
+
+きます
+
+→
+
+こよう
+
+4. つぎの試験は、いいせいせきがとれそうです。 En el próximo examen creo que podré sacar buena nota.
+
+私にも読めそうな本 un libro que incluso yo podría leer
+
+Se emplea la fórmula (verbo en forma potencial sin ます) + そうです cuando se quiere decir que alguien tiene la posibilidad de
+
+lograr algo que se propone a la vista las capacidades que se le atribuyen.
+
+・この本は難しくないから、弟にも読めそうです。（読め ま す+そうです）
+
+Este libro no es difícil, así que lo podría leer hasta mi
+
+hermano pequeño.
+
+・シンさんにいい本を貸してもらったので、今日中にレポートができそうです。（でき ま す+そうです） Shin me ha prestado un libro
+
+muy bueno, así que creo que podré acabar el trabajo hoy.
+
+Usamos la construcción (verbo en forma-MASU sin ます) + そうです para expresar una posibilidad basándonos en lo que
+
+inferimos de una situación dada.
+
+・日本語のクラスにおくれそうです。（おくれ ま す+そうです）
+
+Es posible que llegue tarde a clase de japonés.
+
+・つぎの試験は、らくだいしそうです。（らくだいし ま す+そうです） Es posible que suspenda el próximo examen.
+
+Si en vez de そうです utilizamos そうな y lo usamos para modificar un sustantivo, podemos expresar una condición o cualidad
+
+del mismo.
+
+・私にも読めそうな本
+
+un libro que incluso yo podría leer
+
+・試験に出そうな漢字
+
+un kanji que podría salir en el examen
+
+Las fórmulas そうです y そうな también pueden emplearse con un adjetivo-I y un adjetivo-NA (ver A2-1 L12). En dichos casos
+
+se usan para hablar de las cualidades que le atribuimos a algo por la impresión que nos causa su aspecto.
+
+・その本、おもしろそうですね。 （おもしろ い +そうです）
+
+¡Qué interesante parece ese libro!
+
+おもしろそうな本 un libro que parece interesante
+
+・スペイン語のぶんぽう、ふくざつそうですね。 （ふくざつ な +そうです）
+
+¡Qué compleja parece la gramática del español!
+
+ふくざつそうなぶんぽう
+
+una gramática que parece compleja
+
+5. きのうは 3 時間もチャットをしました。 Ayer estuve chateando nada más y nada menos que tres horas.
+
+チャットは楽しいので、何時間もやります。 Chatear es divertido, así que lo hago durante horas y horas.
+
+Añadimos la partícula も detrás de una cantidad para expresar que resulta atípica y muy por encima de lo que habíamos
+
+imaginado.
+
+・マリアさんは日本に 7 回も行ったことがあるんですか。うらやましいです。 María, ¡¿has estado en Japón 7 veces?! ¡Qué envidia!
+
+Para destacar el precio de algo se usa la siguiente fórmula: (precio) + も + します. En este caso no se puede utilizar です.
+
+・○この学校のじゅこう料は、48,000 円もします。
+
+La matrícula de esta escuela es de nada más y nada menos que 48.000
+
+yenes.
+
+×この学校のじゅこう料は、48,000 円もです。
+
+25
+
+Se emplea 何回も para hacer hincapié en que algo sucede un gran número de veces.
+
+・このアニメはとてもおもしろいので、何回も見ています。
+
+Este anime es muy divertido y lo habré visto quién sabe cuántas
+
+veces.
+
+Se usa 何人も para resaltar una elevada cantidad de personas.
+
+・この学校には、外国人の先生が何人もいます。
+
+En esta escuela hay muchos profesores extranjeros.
+
+Se utiliza 何時間も para destacar un periodo de tiempo prolongado.
+
+・今月、日本語の試験がありますから、毎日何時間も勉強しています。
+
+Como este mes tengo un examen de japonés, todos
+
+los días estudio horas y horas.
+
+Rincón lingüístico-cultural para hispanohablantes
+
+1. Exámenes de japonés
+
+De los exámenes de japonés, probablemente el más conocido de todos sea el 日本語能力試験（にほんごのうりょくしけん） (o
+
+JLPT, del inglés Japanese Language Proficiency Test), organizado conjuntamente por la Fundación Japón y la Organización
+
+Japonesa de Servicios para Estudiantes (JASSO, por sus siglas en inglés). Se trata de una prueba que certifica las destrezas en
+
+japonés de personas de una lengua materna distinta a esta. Con cerca de 610.000 examinandos en 62 países de todo el mundo
+
+en su convocatoria de 2011, puede presumir de ser el examen de japonés de mayor trascendencia del mundo.
+
+En España es conocido como NOKEN y se celebra todos los años el primer domingo de diciembre. En 2012 se presentaron 863
+
+personas en un total de tres sedes: Barcelona, Madrid y Santiago de Compostela.
+
+La prueba se divide en 5 niveles escalonados según su dificultad: N1, N2, N3, N4 y N5, donde N1 es el más difícil y N5, el más
+
+fácil. Las preguntas, de tipo test con 3 o 4 opciones, se responden en una hoja de reconocimiento óptico de marcas. El nivel N5,
+
+por ejemplo, consta de 3 secciones: 文字・語彙 (escritura y vocabulario), 文法・読解 (gramática y lectura) y 聴解 (audición),
+
+con una duración de 25, 50 y 30 minutos respectivamente. No contiene ni examen oral ni sección de redacción. ¡Poneos a
+
+prueba y animaos a presentaros!
+
+Para más información: http://www.jlpt.jp/
+
+2. 日本語が上手ですね。 ¡Qué bien hablas japonés! ¿Alguna vez un japonés que acabáis de conocer o que un amigo os ha presentado os ha dicho 日本語が上手ですね? Si habéis estado en Japón, seguramente os haya ocurrido. Es probable que os resulte extraño y que os preguntéis a qué se debe este cumplido cuando en ocasiones el elogiado no ha llegado a decir ni cuatro palabras en japonés. Además de emplearse, evidentemente, cuando uno se topa con alguien que de verdad habla bien el idioma, la expresión 日本語が上手ですね sirve también para transmitir la sorpresa y alegría que se siente al escuchar el japonés en boca de un extranjero. En estos casos podemos, por un lado, dar pie a una conversación más extensa y contestar con un humilde まだまだです o そんなこと、ないです (“No es para tanto” o “No, en absoluto”), o, por el otro, agradecer el cumplido con naturalidad y responder ありがとうございます.
+
+3. うん y ううん Además de はい y de いいえ, las palabras para transmitir la idea de “sí” y “no” son varias en japonés y su uso depende de la persona con quien hablemos.
+
+26
+
+はい y ええ … Expresiones formales de afirmación. Se usan con quienes acabamos de conocer y con nuestros superiores.
+
+いいえ
+
+… Expresión formal de negación. Se emplea con personas que acabamos de conocer y con nuestros superiores.
+
+うん
+
+… Expresión informal de afirmación. Se usa en las mismas situaciones que el estilo informal, es decir, entre
+
+familiares y amigos cercanos por lo general.
+
+ううん
+
+… Expresión informal de negación. A pesar de escribirse ううん, su pronunciación se parece más a んーん. Se
+
+emplea cuando se trata con familiares y amistades cercanas.
+
+4. 先輩（せんぱい）、後輩（こうはい） Llamamos 先輩 tanto a las personas más experimentadas que nosotros (ya sea por su mayor edad o posición) como a las que llevan más tiempo en nuestra misma organización (como pueden ser un centro de estudios o una empresa). Por el contrario, denominamos 後輩 a las de menos experiencia (por su edad o posición menores) y a las que han entrado después en nuestra misma organización. Observemos un momento la ilustración de la página 64 del libro. La Sra. Saitoo trabaja en la misma empresa que el Sr. Tanaka. Ella es 先輩 de él y, a su vez, él es 後輩 de ella, por lo que sabemos que la Sra. Saitoo entró en la compañía antes que el Sr. Tanaka. Este es el motivo por el que él se dirige a ella empleando el estilo formal, mientras que ella hace lo propio usando el estilo informal. Imaginemos la siguiente situación. Acabamos de ser admitidos en una compañía japonesa. En ella nos asignan a un tal Sr. Abe, un trabajador de la empresa más joven que nosotros, para que nos explique nuestro trabajo. En este caso, ¿se trata de nuestro 後輩? ¿O, puesto que lleva más tiempo en la empresa, es nuestro 先輩? La respuesta correcta es 先輩. Por muy joven que el Sr. Abe sea con respecto a nosotros, su posición es superior ya que él ha entrado con anterioridad en la compañía y, por si fuera poco, nos está enseñando algo. El Sr. Abe es, pues, nuestro 先輩 y nosotros somos sus 後輩. Sin embargo, desde el punto de vista del Sr. Abe, nosotros somos mayores en edad y por eso, a pesar de que para él seamos 後輩, lo más probable es que nos trate empleando el estilo formal.
+
+27
+
+トピック 6 Matrimonios y bodas
+結婚
+
+聞きましたか。めぐみさん、 結婚するそうですよ。
+
+えっ、ほんとうですか。 じゃあ、めぐみさん、今、 とても幸せでしょうね。
+
+きいて はなす
+
+EXPRESIÓN
+
+USO
+
+・のりかさんは、今、きっと幸せでしょうね。
+
+・ Hacer suposiciones sobre cómo se encuentra un amigo o
+
+conocido al tener conocimiento de su situación.
+
+・何かお祝いをしようと思うんですが。（いこうけい）
+
+・ Hablar sobre nuestras intenciones, hacer sugerencias al
+
+interlocutor, pedir su opinión, etc.
+
+・のりかさん、聞きましたよ。 / 結婚するそうですね。 / やさしい人なん
+
+・ Confirmar con el amigo o amiga la información que hemos
+
+ですよね。
+
+recibido sobre él o ella.
+
+よんで わかる
+
+FORMA
+
+USO
+
+・（私は）のりかの願いを聞いてあげます。 ・大きなパーティーはしなくてもいいです。
+
+・Expresar el deseo de hacer un favor o algo por otra persona. ・Manifestar que algo no es necesario.
+
+きいて はなす
+
+1. のりかさんは、今、きっと幸せでしょうね。 Seguramente Norika será feliz ahora, ¿no crees?
+
+Esta es una expresión que se utiliza para hacer suposiciones sobre los sentimientos y emociones de un amigo o conocido al
+
+tener noticias sobre esa persona. La forma que se adopta es (verbo/adjetivo-I/adjetivo-NA) + でしょうね.
+
+① Verbo + でしょうね
+
+Se utilizan verbos que expresan sentimientos y emociones en su forma-TE + いる (ver A2-2 L2).
+
+・ホセさんは、試験に合格できて、よろこんでいるでしょうね。
+
+José estará contento por haber aprobado el examen, ¿no te
+
+parece?
+
+・田中さんは、仕事が見つからなくて、こまっているでしょうね。 El Sr. Tanaka estará preocupado porque no encuentra trabajo,
+
+¿no crees?
+
+② Adjetivo-I + でしょうね
+
+Se utilizan adjetivos-I que expresan emociones o sentimientos en su forma-simple + でしょうね.
+
+・マリアさんは、恋人とわかれて、きっと悲しいでしょうね。
+
+Seguramente María estará triste tras separarse de su novio,
+
+¿verdad?
+
+28
+
+・林さんは、結婚が決まって、うれしいでしょうね。
+
+El Sr. Hayashi estará contento de que se haya confirmado la boda,
+
+¿no?
+
+③ Adjetivo-NA + でしょうね
+
+Se utilizan adjetivos-NA que expresan emociones o sentimientos en su forma-simple + でしょうね. La forma-simple del adjetivo
+
+va sin el verbo だ (ejemplo: 幸せ だ ＋でしょうね).
+
+・のりかさんは、今、きっと幸せでしょうね。
+
+Seguramente Norika será feliz ahora, ¿no crees?
+
+・キムさんは、お父さんが入院して、心配でしょうね。
+
+Kim estará preocupada porque su padre ha sido hospitalizado.
+
+2. 何かお祝いをしようと思うんですが。 Pienso hacerle un regalo para celebrarlo.
+
+Esta es una expresión que utilizamos para comunicar nuestra intención personal de llevar a cabo una acción o actividad antes
+
+de invitar al interlocutor a compartir dicha actividad, pedir su opinión al respecto, etc. El verbo que denota la actividad que el
+
+hablante piensa realizar adopta la forma volitiva (ver L5) y se le añade la expresión ～と思うのですが.
+
+・何かお祝いしようと思うんですが。
+
+Pienso hacerle un regalo para celebrarlo.
+
+・中村さんのおみまいに行こうと思うんですが。
+
+Pienso ir a visitar al Sr. Tanaka (al hospital, etc.)
+
+・マリアさんをはげますために、パーティーにさそおうと思うんですが。 Pienso invitar a María a la fiesta para animarla.
+
+3. のりかさん、聞きましたよ。 Norika, me he enterado.
+
+結婚するそうですね。 Me han dicho que te vas a casar.
+
+やさしい人なんですよね。 Es una buena persona, ¿verdad?
+
+Se trata de una construcción que se usa ante un amigo o conocido para verificar una información sobre él o ella recibida de una
+
+tercera persona. Al final de la oración colocamos las partículas よ, ね o よね.
+
+① ・・・よ
+
+Cuando queremos confirmar una información recibida sobre alguien con la persona en cuestión, nos podemos dirigir a ella
+
+usando expresiones como 聞きましたよ, 見ましたよ, etc.
+
+・A: のりかさん、聞きましたよ。結婚するそうですね。
+
+Norika, me he enterado de que te vas a casar.
+
+B: ええ、そうなんです。
+
+Pues sí. Es cierto.
+
+・A: 石川さん、新聞で読みましたよ。ボランティアに参加したそうですね。 Sr. Ishikawa, he visto en el periódico que ha sido usted
+
+voluntario.
+
+B: はい、そうなんです。
+
+Pues sí. Es cierto.
+
+Además, también usamos よ cuando queremos comunicar al interlocutor una información que suponemos no posee.
+
+・A: 聞きましたか。川野さん、恋人とわかれたそうですよ。
+
+¿Te has enterado? Al parecer el Sr. Kawano ha roto con su
+
+novia.
+
+B: えっ、ほんとうですか。
+
+Ah, ¿sí?
+
+② ・・・ね (ver A2-2 L1, L7)
+
+Se usa cuando queremos confirmar algo con el interlocutor o expresar que estamos de acuerdo.
+
+・結婚するそうですね。おめでとうございます。よかったですね。
+
+He oído que te vas a casar. Enhorabuena. Me alegro por ti.
+
+・パーティーに招待しますから、ぜひ参加してくださいね。
+
+Te invitaré a la fiesta, así que no puedes faltar, ¿eh?
+
+③ ・・・よね
+
+29
+
+A su vez, la expresión よね se emplea con el mismo objetivo de confirmar algo con el interlocutor o expresar que estamos de
+
+acuerdo, pero dando a entender que el interlocutor sabe más o tiene más información que el hablante.
+
+・A: 聞きましたよ。やさしい人なんですよね。
+
+Me he enterado. Es una buena persona, ¿verdad?
+
+B: ええ。
+
+Sí.
+
+・A: のりかさんに、何かお祝いをするんですよね。
+
+Tengo entendido que se va a hacer algo en honor de Norika.
+
+B: ええ、みんなでいっしょにプレゼントを買いましょう。
+
+Sí. ¿Por qué no le compramos un regalo entre todos?
+
+よんで わかる
+
+4. （私は）のりかの願いを聞いてあげます。 (Yo) atiendo los deseos de Norika.
+
+La palabra あげる básicamente significa “dar” (ver A1 L15 y A2-1 L1). No obstante, cuando se usa como auxiliar en la estructura
+
+(verbo en forma-TE) + あげます, añade al verbo principal el sentido de hacer un favor o algo en beneficio de alguien, en lugar de
+
+la donación de un objeto concreto. Esta forma se suele utilizar cuando el beneficiario no está presente, al tener la connotación
+
+de que se hace sin tener en cuenta la opinión o los deseos de este. Además, se usa solo para referirse a la familia, amigos
+
+íntimos de la misma edad y compañeros de estudio o trabajo más jóvenes o que llevan menos tiempo en la institución.
+
+・のりかの願いを聞いてあげます。
+
+Atiendo los deseos de Norika.
+
+・結婚式で、のりかの写真をたくさんとってあげます。
+
+En la boda, le sacaré muchas fotos a Norika.
+
+Como en la forma (verbo en forma-TE) + あげます se mantiene la connotación de que el servicio o favor se ofrece sin tener en
+
+consideración los sentimientos del beneficiario aun cuando éste no esté presente, se suele recurrir a expresiones derivadas
+
+como (verbo en forma-TE) + あげたいです o (verbo en forma-TE) + あげようと思っています, y así evitamos que suene demasiado
+
+fuerte para el interlocutor.
+
+・結婚式のじゅんびをてつだってあげたいです。
+
+Me gustaría ayudarle a preparar la boda.
+
+・レストランでパーティーをしてあげようと思います。
+
+Estoy pensando en hacerle una fiesta en un restaurante.
+
+Como en ocasiones ～てあげる se puede sustituir por ～てもらう y ～てくれる (ver L4), es importante saber escoger la
+
+expresión adecuada según quién es el que realiza la acción y quién el que la recibe.
+
+・父は田中さんをてつだってあげます。
+
+Mi padre ayuda al Sr. Tanaka.
+
+・田中さんは父にてつだってもらいます。
+
+El Sr. Tanaka recibe la ayuda de mi padre.
+
+・父は私をてつだってくれます。
+
+Mi padre me ayuda.
+
+・私は父にてつだってもらいます。
+
+Yo recibo la ayuda de mi padre.
+
+5. 大きなパーティーはしなくてもいいです。 No hace falta organizar una gran fiesta.
+
+Ya hemos estudiado las expresiones formadas por (adjetivos-I/adjetivos-NA/sustantivos) + なくてもいいです (ver L2). En esta
+
+lección nos centraremos en el patrón (verbo-なくても) + いいです para manifestar que una acción o actividad no es necesaria. El
+
+verbo adopta la forma-NAI en su forma-simple no-pasado y se cambia la terminación い por く antes de añadir てもいいです
+
+(ejemplo: しな い → しなく＋ても＋いいです).
+
+・大きなパーティーはしなくてもいいです。
+
+No hace falta celebrar una gran fiesta.
+
+・結婚式でワルツをおどらなくてもいいです。
+
+No hace falta bailar un vals en la boda.
+
+Y para expresar que no pasa nada si una acción o actividad no se realiza, se utiliza la forma (verbo-なくても) + だいじょうぶです.
+
+・結婚式にしゅっせきするとき、着物を着なくてもだいじょうぶです。 No pasa nada si no te pones quimono para asistir a la boda.
+
+・結婚式でスピーチをしなくてもだいじょうぶです。
+
+No importa que no hagas ningún discurso en la boda.
+
+30
+
+Para preguntar dóRndiensecróeanlizalailngog, uüsaímsotsiどcこoで-:cultural para hispanohablantes
+1. Cómo conocer al futuro cónyuge Según una encuesta reciente sobre la forma en la que la persona encuestada había conocido a su cónyuge, la respuesta más común fue “en mi lugar de trabajo”. Al parecer, las uniones más frecuentes son entre compañeros o entre personas que se han conocido por razones laborales. Por cierto, las uniones entre compañeros de trabajo se llaman 職場結婚 (しょくばけっこん) o “matrimonio del lugar de trabajo”. La segunda respuesta más frecuente fue “a través de un amigo”, seguida de “alguien que conocí cuando era estudiante”, en clara referencia a las relaciones que comienzan en esa época y terminan en boda. Según parece, últimamente también se vienen produciendo enlaces entre personas que se han conocido en las redes sociales virtuales (SNS, Social Networking System). A continuación, presentamos algunas formas de encontrar pareja con ayuda de terceras personas o instituciones. お見合い (おみあい)： El お見合い es la manera más tradicional de buscar pareja en Japón. El procedimiento es el siguiente: primero, el interesado o interesada en encontrar pareja pide a una tercera persona, que recibe el nombre de 世話人（せわにん）, que le enseñe algunas fotos y perfiles de posibles candidatos o candidatas, y si encuentra a alguien interesante, queda con esa persona junto con el 世話人 en algún lugar público, como por ejemplo un restaurante. Los encuentros terminan en matrimonio solo en el caso de que, tras dos o tres citas, ambos se gusten mutuamente. El 世話人 suele ser un familiar, un vecino, un superior en el trabajo, alguien de las empresas con las que la persona interesada tiene alguna relación laboral o comercial, etc. Quien busca acompañante no lo hace en solitario, sino que también se involucran la familia y el 世話人 a la hora de decidir la idoneidad de la posible pareja. Fiestas de emparejamiento: En estos eventos llamados en japonés カップリングパーティー y que también reciben el nombre de お見合いパーティー o 婚活パーティー (こんかつパーティー), o sea, fiestas para buscar pareja, personas de ambos sexos que desean casarse o iniciar alguna relación sentimental se reúnen en una sala de fiestas para encontrar una pareja. Todos se colocan en el pecho una etiqueta con un número, y a la señal del maestro de ceremonias, la gente va en busca de personas del sexo opuesto, se intercambian sus respectivos datos personales y conversan durante tres minutos. En fiestas de gran tamaño, una persona puede llegar a dialogar con 15 o 20 personas. Al final del proceso, todos escriben en un papel el número de la persona con la que les gustaría iniciar una relación, la cual se formaliza solo en los casos en los que la selección es recíproca. 合コン (ごうこん): La palabra 合コン es una abreviación de 合同コンパ (ごうどうコンパ). El término コンパ parece proceder del alemán “Kompanie” o del inglés “company”. Se trata de un encuentro entre amigos de ambos sexos para beber juntos y aprovechar la ocasión para profundizar en la amistad. Una pareja de amigos de sexos opuestos organizan un encuentro en una taberna o lugar parecido a la que ambos invitan al mismo número de amigos y amigas con el fin de que se conozcan mejor. Allí los participantes comen y beben mientras charlan con personas del otro sexo. Las personas que hayan sintonizado o se hayan gustado se intercambian sus números de teléfono y otros datos para empezar una relación. Portales web para buscar pareja: Se trata de empresas que se encargan de presentar de forma anónima a posibles parejas del sexo opuesto a través de internet. Al tener la particularidad de que las personas interesadas en iniciar una relación pueden ponerse en contacto con personas desconocidas, han aparecido recientemente páginas web engañosas y con fines delictivos, por lo que últimamente existen leyes muy restrictivas para estas redes sociales con el fin de evitar actos criminales.
+31
+
+2. 婚活 (こんかつ) 婚活 (こんかつ) es una abreviación de 結婚活動 (けっこんかつどう) y se refiere al hecho de que una persona interesada en casarse se pone a buscar pareja de forma activa. En el Japón actual, abundan las personas que no pueden casarse con quien les gustaría ya sea porque hay menos oportunidades de conocer gente en el trabajo o porque cada vez se tiende más a buscar el matrimonio ideal. Sea como fuere, actualmente está de moda tomar la iniciativa en este sentido yendo a 結婚相談所 (けっこ んそうだんじょ), o sea oficinas de asesoramiento matrimonial, asistiendo a fiestas de emparejamiento, etc., con la esperanza de conocer a la pareja ideal.
+3. Las bodas en Japón 神前式 (しんぜんしき): Actualmente, existen en Japón diversas formas de casarse, pero la más tradicional es quizá la que se realiza en un santuario según el rito sintoísta o 神前式. Tras elevar una oración a la deidad del santuario para pedir su bendición, los novios realizan el rito denominado 三々九度の杯 (さんさんくどのさかずき), que consiste en beberse tres tragos de sake servidos respectivamente en tres cuencos rojos de tamaños diferentes llamados 酒盃 (さかずき). A la ceremonia solo asisten los novios, sus respectivas familias y la persona que los ha presentado, todos ellos vestidos de quimono, mientras que a los amigos se los invita a la recepción posterior. Bodas según el rito cristiano: También abundan las bodas según el rito cristiano debido a la fascinación que muchas mujeres sienten por los vestidos de boda de color blanco inmaculado y el hecho de celebrar la boda en una iglesia. En realidad, no se trata de iglesias o capillas de verdad, ni de verdaderas ceremonias cristianas, sino de meras imitaciones que se llevan a cabo en recintos construidos especialmente para estas ocasiones y diseñados a estilo de las iglesias cristianas. También están de moda las bodas en el extranjero, para las cuales se utilizan las iglesias del lugar. Un destino predilecto es Hawái, pero también hay parejas que prefieren casarse en las capillas de los paradores nacionales españoles, siendo especialmente famosas las que se celebran en el Parador Nacional de Granada. フォトウェディング： Consiste en sacarse una foto ataviados con los trajes de boda y mostrando el certificado de matrimonio para tener un recuerdo de la ocasión, sin que medie ningún tipo de ceremonia o celebración. Parece ser que abundan los casos en los que la gente se saca estas fotos conmemorativas para marcarlo como punto de inflexión en sus vidas. ナシ婚 (ナシこん)： Literalmente “boda sin nada”, no hay ni boda ni sesión de fotos. Se trata únicamente de registrar el matrimonio en el ayuntamiento. La recepción o banquete de bodas: La recepción se suele llevar a cabo tras la ceremonia nupcial en un gran salón de algún restaurante y a ella asisten familiares, amigos y conocidos ataviados tanto al estilo japonés como occidental, según el gusto de cada uno. Los novios se levantan de sus asientos tres o cuatro veces durante la celebración para deleitar a los asistentes cambiándose de atuendo. Así, van pasando del quimono tradicional al traje y vestido de boda occidentales, para terminar con algún traje y vestido de fiesta. A esta costumbre se le llama お色直し (おいろなおし), literalmente, “cambio de color”. Además, los amigos de la pareja bailan y cantan para amenizar la fiesta. Al término de la recepción, que suele durar unas tres horas, los novios entregan unos regalos a los asistentes, que normalmente son dulces o vajillas. Regalo de boda: Como regalo de boda, los invitados suelen entregar dinero en efectivo. La cantidad depende de la relación de los invitados con los novios o la edad, pero no debe incluir las cifras 4 o 9, pues la primera se pronuncia igual que la palabra “muerte” y la segunda, igual que “sufrimiento”. El número 6 tampoco se puede utilizar, porque los números pares dan mala suerte según la costumbre japonesa. Sin embargo, sí que se puede usar el número 8 a pesar de ser par porque las líneas con las que se representa el kanji, 八, se van separando poco a poco, lo cual se interpreta como que “se va abriendo un camino” y
+32
+
+por tanto es un signo de prosperidad. お幸せに！ (おしあわせに)： Las expresiones que se suelen utilizar para felicitar a los novios son おめでとう！(¡Felicidades!) o お幸せに！ (¡Que seáis felices!). Esta última expresión, que se usa exclusivamente en las bodas, es una abreviación de お幸せ に（なってください）.
+33
+
+トピック 7 Hablar sobre problemas personales
+なやみ相談
+マリアさん、どうしたんですか。 いつもより元気がないですね。
+
+じつは、ちょっと寝ていなくて…。
+
+きいて はなす
+
+EXPRESIÓN
+
+USO
+
+・ちょっとつかれて（い）て（元気がありません）。/仕事のことでちょっと（こ
+
+・Hablar sobre las razones por las que estamos decaídos o las
+
+まっています）。
+
+causas por las que estamos preocupados.
+
+・私のしょくばでも、同じかもしれません。
+
+・Exponer una opinión personal viendo el resultado de algo.
+
+よんで わかる
+
+FORMA
+
+USO
+
+・せっかく会っているのに、友達はカレシと長電話をします。
+・私は S 子にマナーをまもってほしいです。/長電話をしないでほしいで す。
+
+・Expresar contrariedad o preocupación ante un resultado diferente al esperado. ・Decir lo que queremos que otro haga. / Decir lo que no queremos que otro haga.
+
+きいて はなす
+
+1. ちょっとつかれて（い）て（元気がありません）。 Estoy algo cansado (y estoy desganado).
+
+仕事のことでちょっと（こまっています）。 (Estoy un poco agobiado) por cuestiones del trabajo.
+
+Cuando queremos expresar la razón por la que nos encontramos en un determinado estado de ánimo o situación (por ejemplo,
+
+en este caso “estar desganado” o “estar agobiado”), se puede terminar la frase en cuestión con la forma ～て o ～で y dejar la
+
+oración inconclusa, omitiendo la parte que expresa explícitamente el estado actual (ver A2-1 L7).
+
+・ちょっとつかれて（い）て（元気がありません）。
+
+Estoy algo cansado y (estoy desganado).
+
+つかれています → つかれていて (forma afirmativa del verbo)
+
+・朝ご飯、食べて（い）なくて（元気がありません）。
+
+No he desayunado y (me faltan las fuerzas).
+
+食べていません → 食べていなくて (forma negativa del verbo)
+
+・ちょっとねむくて（元気がありません）。
+
+Tengo un poco de sueño y (estoy alicaído).
+
+ねむいです
+
+→ ねむくて
+
+(forma afirmativa de adjetivo-I)
+
+・今、仕事がおもしろくなくて（元気がありません）。
+
+El trabajo que tengo ahora es aburrido y (se me quitan las ganas).
+
+おもしろくないです → おもしろくなくて (forma negativa de adjetivo-I)
+
+・人間関係がふくざつで（こまっています）。
+
+Es complicado relacionarse con otras personas y (estoy agobiado).
+
+34
+
+ふくざつです
+
+→ ふくざつで
+
+(forma afirmativa de adjetivo-NA)
+
+・ペットの犬が元気じゃなくて、（こまっています。）
+
+Mi perro no se encuentra bien y (me preocupa).
+
+元気じゃないです → 元気じゃなくて (forma negativa de adjetivo-NA)
+
+Cuando la causa (en este caso, de la preocupación o agobio) es un hecho o alguna persona, se utiliza la estructura (sustantivo)
+
++ のことで.
+
+・子どものことでちょっと…。（こまっています。）
+
+(Estoy) un poco… (agobiado) por mi(s) hijo(s).
+
+・うちのことで…。（こまっています。）
+
+(Tengo problemas) con mi casa.
+
+Si en el lugar de trabajo o estudio nos cruzamos con alguien más alicaído o preocupado de lo normal, podemos interesarnos por
+
+ellos usando expresiones como いつもより元気がないですね o どうしたんですか.
+
+・A： カーラさん、いつもより元気がないですね。
+
+Carla, te veo algo pachucha.
+
+カーラさんらしくないですよ。
+
+No eres la Carla que solemos ver.
+
+B： じつは、さいきん、恋人が私に会ってくれなくて…。
+
+Resulta que últimamente mi novio no quiere verme y…
+
+2. 私のしょくばでも、同じかもしれません。 Puede que suceda lo mismo en mi trabajo.
+
+Cuando, en lugar de una afirmación categórica, queremos manifestar algo como una posibilidad, usamos la construcción (verbo
+
+en forma-simple) + かもしれません. Si en lugar del verbo usamos un adjetivo-I o un adjetivo-NA, estos también van seguidos de
+
+かもしれません (ver A2-2 L17).
+
+・人間関係に問題があると、心の病気になるかもしれません。 Si no llevamos bien las relaciones personales, podemos acabar
+
+teniendo problemas psicológicos y emocionales.
+
+・今の会社で、ストレスがない人はいないかもしれません。 Puede que actualmente no haya nadie sin estrés en el mundo
+
+empresarial.
+
+・しょくばでは人間関係のなやみが一番多いかもしれません。 Puede que la principal preocupación en el trabajo sean las relaciones
+
+personales.
+
+・心の病気がある人はがしょうらいが不安かもしれません。 Puede que las personas con problemas psicológicos y emocionales
+
+se sientan inseguras respecto a su futuro.
+
+・しょうらいが不安なのは、みんな同じかもしれません。
+
+Puede que la inseguridad respecto a nuestro futuro la tengamos
+
+todos.
+
+よんで わかる
+
+3. せっかく会っているのに、友達はカレシと長電話をします。 Pese a que estaba allí conmigo porque habíamos quedado, mi amiga se puso a hablar por teléfono con su novio largo y tendido. Cuando queremos expresar nuestra disconformidad, insatisfacción o preocupación porque las cosas no han salido según lo
+
+esperado, utilizamos la construcción (frase 1) + のに、 (frase 2). En la frase 1 expresamos los hechos objetivos y en la frase 2,
+
+el acontecimiento inesperado. El verbo o adjetivo que aparece en la frase 1 va en la forma-simple.
+
+・いつも一緒に昼食を食べるのに、今日は一人です。
+
+Mira que siempre comemos juntos, pero hoy estoy solo.
+
+・あまり食べたり飲んだりしないのに、わりかんでお金を払います。 A pesar de que yo no como ni bebo mucho, pagamos a partes
+
+iguales.
+
+・メールであやまったのに、カレシはまだおこっています。
+
+A pesar de haberme disculpado por correo electrónico, mi novio
+
+aún sigue enfadado.
+
+・早く帰りたいのに、次の店にさそわれます。
+
+Estoy deseando volver a casa, pero me invitan a ir a otro local.
+
+35
+
+・お酒に強くないのに、部長にすすめられます。
+
+A pesar de que en seguida se me sube el alcohol, mi jefe me
+
+incita a beber.
+
+Cuando la frase 1 termina con un sustantivo o un adjetivo-NA en la forma afirmativa del no-pasado, se usa la forma なのに.
+
+・カレシとデートするとき、友だちはじゃまなのに、いつも一緒に来ます。 A pesar de que, cuando tengo una cita con mi novio, los
+
+amigos son una molestia, ellos siempre vienen conmigo.
+
+・会社の人に新人なのに、なまいきだと言われました。
+
+A pesar de que soy nuevo en la empresa, un compañero me
+
+ha dicho que soy un fresco.
+
+Si la frase 1 termina con un adjetivo-NA en forma negativa o con la estructura (sustantivo) + じゃないです, se adopta la
+
+construcción じゃない + のに.
+
+・お酒は好きじゃないのに、すすめられます。
+
+Mira que no me gusta el alcohol, pero me incitan a beber.
+
+・大山さんはカレシじゃないのに、毎日電話がかかってきます。
+
+A pesar de que Ooyama no es su novio, la llama por teléfono
+
+todos los días.
+
+4. 私は S 子にマナーをまもってほしいです。 Quiero que S siga las normas de etiqueta.
+
+長電話をしないでほしいです。 No quiero que hagas largas llamadas telefónicas.
+
+Cuando queremos manifestar nuestro deseo de que alguien haga algo, utilizamos la construcción (A は B に verbo en
+
+forma-TE) + ほしいです. La A representa a la persona que manifiesta el deseo, mientras que la B representa a la persona cuya
+
+acción se desea. La forma (verbo en forma-TE) + ほしいです se suele usar cuando el sujeto es la primera persona gramatical.
+
+Si queremos expresar que es una tercera persona la que siente el deseo, es frecuente utilizar la estructura (verbo en forma-TE)
+
++ ほしいと思っています.
+
+・ようこ: 「私は夫にもっと早くかえってきてほしいです。」
+
+Yooko: “Quiero que mi marido vuelva más temprano”.
+
+・ようこさんはごしゅじんにもっと早くかえってきてほしいと思っています。 Yooko desea que su marido vuelva más temprano.
+
+Por el contrario, si lo que queremos expresar es que algo no se haga, usamos el patrón (A は B に verbo en forma-NAI + で) +
+
+ほしいです. Como hemos explicado arriba, la A representa a la persona que manifiesta el deseo y la B, a la persona cuya acción
+
+no se desea. Cuando la A es la primera persona, se usa (verbo en forma-NAI + で) + ほしいです, y cuando la A es una tercera
+
+persona, se adopta la fórmula (verbo en forma-NAI + で) + ほしいと思っています.
+
+・しょう: 「ぼくはお父さんにお母さんとけんかしないでほしいです。」 Shoo: “No quiero que mi padre se pelee con mi madre”.
+
+・しょうくんはお父さんにお母さんとけんかしないでほしいと思っています。 Shoo no quiere que su padre se pelee con su madre.
+
+Rincón lingüístico-cultural para hispanohablantes
+
+1. ¿Cómo eliminan el estrés los japoneses? ¿Cómo estáis últimamente? ¿No tenéis estrés acumulado por problemas en vuestras relaciones personales o por la presión que tenéis que soportar en vuestros lugares de trabajo o estudio? A continuación, os presentaremos diversos métodos que utilizan los japoneses para eliminar el estrés. Si alguno os llama la atención, no dejéis de probarlo.
+
+36
+
+Bañarse: Para los japoneses, a quienes les encanta bañarse en “o-furo”, este es un método al que están muy acostumbrados. Bañarse no solo sirve para asearse y limpiarse, sino que también tiene un efecto relajante. Sin embargo, para aumentar este efecto es importante mantenerse durante un buen rato en agua tibia, y se recomienda no sumergirse totalmente para que no afecte al corazón. El efecto relajante del baño está científicamente demostrado, pero además tiene la cualidad de producir un sueño plácido. Como el “o-furo” elimina también la fatiga muscular, si un día os encontráis especialmente cansados, ¿qué os parece disfrutar de una baño más largo y sosegado, escuchando un poco de música tranquila o recibiendo un masaje en las zonas más cansadas? “Superbaños”: Los 銭湯 (せんとう) son baños públicos convertidos en centros de ocio y, además de los tradicionales baños en recintos cerrados, actualmente abundan los baños naturales al aire libre o 露天風呂 (ろてんぶろ), jacuzzi, saunas, saunas sobre piedras, etc. Además, tras un delicioso baño, se puede comer en restaurantes, jugar a los videojuegos, leer manga y otras actividades sin salir de las instalaciones, por lo que se han convertido en paraísos del baño y el ocio. Antiguamente, los 銭湯 tenían la imagen de ser sitios donde solo iban hombres solteros, pero esa imagen ha cambiado radicalmente y ahora se han convertido en スーパー銭湯 o “superbaños”. Pueden estar dirigidos al público femenino, con centros de masaje, peluquerías o salones de belleza, o a familias completas, siendo las edades de los usuarios cada vez más variadas. Para aquellos que quieran ir a un 温泉 (おんせん) o balneario de aguas termales pero les resulte demasiado caro y lejano, estos “superbaños” vienen como anillo al dedo pues su precio es muy asequible (entre 500 y 1.000 yenes por persona). Para eliminar el estrés, no hay duda de que estos sitios están de moda. Dormir: Una de las formas más populares de eliminar el estrés es dormir. Según un estudio sobre los patrones del sueño realizado por la Organización para la Cooperación y el Desarrollo Económico (OCDE) en 2009, los japoneses duermen una media de 7 horas y 50 minutos, mientras que la media de los españoles es de 8 horas y 34 minutos. No obstante, los expertos afirman que más que el tiempo, lo importante es la calidad del sueño, y además, para empezar bien el día, es bueno poner el cuerpo a tono dándose un baño de sol nada más levantarse. Cantar karaoke: El karaoke es un invento japonés extendido por el mundo entero. El término se compone de dos partes: por un lado, “kara” proviene del kanji 空, que significa “vacío”, y “oke” es una abreviación de オーケストラ (orquesta). Se sabe desde hace tiempo que escuchar música es bueno para darle equilibrio al espíritu y reducir el estrés, pero estudios recientes han puesto de manifiesto que cantar en voz alta tiene un efecto aún mayor. En Japón la mayoría de la gente va a las salas de karaoke (カラオケボックス) en compañía de amigos y compañeros de trabajo con los que se lleva bien, pero al parecer cada vez hay más personas que se divierten cantando solas en lo que se conoce como ヒトカラ o karaoke individual. Si cerca de la vivienda no hay ninguna sala de karaoke, también es posible cantar en casa usando el ordenador. Ir de compras: Seguramente, esta es la forma más popular de eliminar el estrés para las mujeres. Según parece, las personas que tienen estrés acumulado pueden reducir algo su irritabilidad satisfaciendo sus deseos personales realizando otras actividades. No obstante, esta es una solución temporal, y casi nunca definitiva, pues el dinero se acaba y sin él no se puede seguir comprando, por lo que se puede convertir en otro motivo de estrés. Reír: En la televisión japonesa hay infinidad de programas de entretenimiento denominados バラエティ番組 o programas de variedades, donde se mezclan la comedia y la canción. Reír es especialmente importante cuando uno tiene estrés porque, según parece, alivia la tensión acumulada estimulando el sistema nervioso parasimpático y mejorando la circulación sanguínea. Ciertamente, incluso con estrés acumulado, uno se siente bien cuando está sonriente y ese estado de ánimo se contagia a los demás.
+37
+
+Cafetería con gatos: ¿Habéis oído hablar de la terapia animal? Es un tratamiento que reduce el estrés y devuelve la salud mental y emocional al afectado mediante el contacto con los animales. Las 猫カフェ (ねこカフェ), o cafeterías con gatos, son establecimientos donde uno puede pasar un rato bebiendo y comiendo en compañía de gatos y en contacto con ellos. Actualmente hay más de cien establecimientos de este tipo en todo Japón, y hasta ahora la mayoría de los clientes habían sido amantes de los gatos que no podían tener uno en su domicilio por estar prohibido —algo bastante común en Japón—, pero últimamente parece que han aumentado las personas que van a esos lugares con la esperanza de curarse de los efectos del estrés gracias al contacto con los felinos. Además de los métodos mencionados, hay una gran variedad de formas de eliminar el estrés, como hacer deporte, viajar, pasear, hacer senderismo, ver películas, ir a conciertos, beber alcohol, comer lo que a uno le gusta, conducir, dedicarse a la jardinería, escribir diarios o blogs, etc. ¿Habéis encontrado algún método que os haya llamado especialmente la atención?
+38
+
+トピック 8 Contratiempos en el viaje
+旅行中のトラブル
+
+あのう、すみません。 今のアナウンス、 何て言ってましたか。
+
+205 便は、１時間おくれて 出発するそうです。
+
+EXPRESIÓN
+・もうすぐ飛行機に乗れるそうです。
+・ていねいたい /ふつうたい③： ありました。 / あった！ ・助けて！ / すみません、だれか！ / ･･･
+FORMA
+・ホテルの人が電気をつけます。 ・電気がつきます。 ・ホテルの人はあるきながら、ホテルの歴史を説明しました。
+
+きいて はなす
+USO
+・Comunicar a alguien una información recibida a través de una tercera persona. ・Hablar solo o con uno mismo. ・Pedir ayuda a alguien cuando estamos en problemas.
+よんで わかる
+USO
+・Expresar la acción o actividad de alguien. ・Expresar un fenómeno o el estado de algo. ・Señalar que dos acciones se realizan de forma simultánea.
+
+きいて はなす
+
+1. もうすぐ飛行機に乗れるそうです。 Al parecer, dentro de poco podremos subir al avión.
+
+Este tipo de expresión se utiliza para transmitir una información obtenida de forma indirecta, ya sea por haberla visto a través de
+
+algún medio visual, por haberla leído en algún sitio o por haberla escuchado de alguien. En esta lección, veremos la manera de
+
+comunicar el contenido de dicha información a terceras personas mediante la construcción (verbo en forma-simple) + そうです
+
+(ver A2-2 L14).
+
+・もうすぐ飛行機に乗れるそうです。
+
+Al parecer, dentro de poco podremos subir al avión.
+
+・飛行機のとうちゃくが 1 時間ほどおくれるそうです。
+
+Parece ser que el avión llegará con una hora de retraso más o
+
+menos.
+
+También se puede usar la forma ～て言っていました en lugar de (verbo en forma-simple) + そうです (ver L1 y A2-1 L18).
+
+・あと 30 分ほどで、手続きがはじまるって言っていました。
+
+Han dicho que los trámites empiezan en unos 30 minutos.
+
+・115 便は、エンジンのこしょうで、とばないって言っていました。 Han dicho que el vuelo 115 no volará por problemas en el motor.
+
+Además, si al principio de la construcción ～て言っていました colocamos la palabra 何, podremos preguntar el contenido de lo
+
+que una tercera persona ha dicho o anunciado. En una conversación, es frecuente adoptar la forma 何て言ってましたか.
+
+39
+
+・A: 今のアナウンス、何て言っていましたか。
+
+¿Qué acaban de decir en el aviso?
+
+B: 出発ゲートがへんこうになったそうです。
+
+Parece ser que han cambiado la puerta de embarque.
+
+・A: アナウンス、何て言ってましたか。
+
+¿Qué han dicho en el aviso?
+
+B: あと 20 分ほどで、手続きが始まるそうです。
+
+Parece ser que los trámites empiezan en 20 minutos.
+
+La partícula ほど tiene el mismo sentido que ぐらい y expresa el tiempo aproximado que se tarda en empezar una acción. En el
+
+caso de los avisos, se suele usar esta partícula porque es más formal.
+
+・JF 航空 115 便をご利用のお客様にお知らせします。
+
+Atención. Pasajeros del vuelo 115 de la aerolínea JF:
+
+あと 15 分ほどで、チェックインの手続きをかいしします。
+
+Los trámites de facturación comenzarán en unos 15 minutos.
+
+2. ありました。 (Lo) he encontrado.
+
+あった！ ¡Aquí está!
+
+Se trata de diferenciar el uso del estilo formal y el estilo informal (ver L4 y L5). En esta lección, distinguimos entre el estilo
+
+informal, que utilizamos cuando nos decimos a nosotros mismos lo que pensamos o sentimos en lugar de a otras personas, y el
+
+estilo formal, que usamos cuando nos dirigimos a alguien.
+
+・ありました。 / あった！
+
+(Lo) he encontrado. / ¡Aquí está!
+
+・あれ？時計がない。どこにおいたかな。
+
+¿Eh? No tengo el reloj. ¿Dónde lo habré puesto?
+
+・A: 林さん、かばん、ありましたか。
+
+Sr. Hayashi, ¿ha encontrado usted la cartera?
+
+B: ありません。受付へ行ったとき、もっていたかな。
+
+No. ¿Lo tenía cuando fui a la recepción?
+
+どうしよう。わからない。
+
+¿Qué voy a hacer? ¿No sé (si lo tenía)?
+
+A veces hablamos solos cuando intentamos recordar algo que hemos hecho. Ya hemos aprendido que se puede usar la fórmula
+
+(verbo 1 en forma-TE) + から、 (verbo 2) (ver A2-2 L4 y L17) cuando queremos recordar en voz alta algo que hemos hecho
+
+mencionando el punto de inicio, o bien queremos recorrer con la memoria una secuencia de acciones en el orden adecuado, o
+
+incluso deseamos repasar cronológicamente las cosas que hemos ido haciendo. En esta lección, vamos a ver la forma
+
+alternativa (verbo 1 en forma-TA) + あとで、 (verbo 2), que denota que la acción siguiente (verbo 2) se realiza una vez terminada
+
+la acción anterior (verbo 1).
+
+・チェックインした後で、カフェでお茶を飲んだ。
+
+Tras hacer la facturación, me tomé un té en la cafetería.
+
+・空港についた後で、メールをチェックします。
+
+Una vez llegado al aeropuerto, revisaré el correo electrónico.
+
+Por último, cuando vemos que nuestro interlocutor no sabe muy bien qué hacer, podernos aconsejarle utilizando la construcción
+
+とにかく、 (verbo en forma-TE) + みましょう, que da a entender que es mejor actuar que pensárselo demasiado.
+
+・A: 石川さん、ケータイ、見つかりましたか。
+
+Sr. Ishikawa, ¿ha encontrado usted el móvil?
+
+B: いいえ。カフェへ行くときはもっていたから、
+
+No. Como lo tenía cuando fui a la cafetería,
+
+カフェにあるかもしれない。でも、あるかなあ。
+
+es posible que esté allí, pero no sé.
+
+A: あるかもしれませんよ。とにかく、カフェへ行ってみましょう。 Puede que sí. Pero bueno, vamos a la cafetería a ver si está.
+
+3. 助けて！ ¡Socorro! すみません、だれか！ ¡Por favor, que alguien (me ayude)!
+Estas son expresiones que se usan cuando, ante algún problema, queremos pedir ayuda o gritamos para avisar rápidamente a alguien. Se emplea la forma-TE o la forma imperativa del verbo (ver L1). Cuando pedimos ayuda, también se puede decir solo すみません、だれか！ y omitir el verbo que viene después.
+
+40
+
+・すみません、だれか（来て）！助けて！
+
+¡Por favor, que alguien (me ayude)! ¡Socorro!
+
+・火事だ！にげろ！
+
+¡Fuego! ¡Huyamos!
+
+En esta misma situación, a veces los hombres (varones) también utilizan la forma (verbo en forma-TE) + くれます (ver L4), en
+
+cuyo caso el verbo auxiliar くれます se pone en forma imperativa: (verbo en forma-TE) + くれ.
+
+・どろぼう！誰かつかまえてくれ！
+
+¡Al ladrón! ¡Que alguien lo coja!
+
+・助けてくれ！
+
+¡Que alguien me ayude!
+
+よんで わかる
+
+4. ホテルの人が電気をつけます。 El personal del hotel enciende la luz.
+
+Los verbos japoneses se dividen en intransitivos y transitivos (ver A2-2 L15). Los verbos intransitivos son los que no necesitan
+
+un objeto directo, mientras que los transitivos siempre van acompañados de dicho objeto. En esta sección veremos los verbos
+
+transitivos. Los verbos transitivos van precedidos por un objeto seguido de la partícula を. La acción de alguien, por tanto, se
+
+expresa con la estructura (sustantivo que indica persona o pronombre personal) + が / は + (objeto) + を + (verbo transitivo).
+
+・ホテルの人が電気をつけます。
+
+El personal del hotel enciende la luz.
+
+・となりのへやがうるさかったから、
+
+Como la gente de la habitación de al lado hacía mucho ruido,
+
+ホテルの人がへやをかえてくれました。
+
+el personal del hotel me cambió de habitación.
+
+5. 電気がつきます。 La luz se enciende.
+
+Si en el apartado anterior nos referimos a los verbos transitivos, en este explicaremos los intransitivos. Para describir el estado
+
+de un objeto o un fenómeno, se utiliza la estructura (sustantivo que indica objeto o cosa) + が + (verbo intransitivo).
+
+・電気がつきます。
+
+Se enciende la luz.
+
+・セーフティボックスのかぎがかかりません。
+
+La llave de la caja de seguridad no cierra.
+
+〈Atención〉
+
+La partícula を no siempre indica que el sintagma al que acompaña sea un objeto directo. También se usa en estructuras como
+
+(lugar) + を + 出ます o (lugar) + を + おります, donde を se emplea para señalar el lugar de donde se sale o se baja.
+
+Asimismo, aparece en construcciones como (lugar) + を + 歩く/とおる, donde を acompaña a sintagmas que indican el lugar
+
+concreto por donde se realiza la acción de andar o pasar. Por tanto, hay que tener cuidado porque el hecho de que aparezca la
+
+partícula を no quiere decir necesariamente que el verbo sea transitivo.
+
+・ホテルの人がかぎをくれます。(verbo transitivo）
+
+El personal del hotel me da una llave.
+
+・田中さんがまどをあけます。(verbo transitivo)
+
+El Sr. Tanaka abre la ventana.
+
+・ホテルを出ます。(verbo intransitivo)
+
+Salgo del hotel.
+
+・ホテルの前でバスをおります。(verbo intransitivo)
+
+Me bajo del autobús delante del hotel.
+
+・ホテルの受付の前をとおります。(verbo intransitivo)
+
+Paso por delante de la recepción del hotel.
+
+Además, en japonés existen parejas de verbos transitivos e intransitivos que comparten la base y cuyos significados están
+
+relacionados.
+
+・ドアがあきます。
+
+Se abre la puerta.
+
+・ホテルの人がドアをあけます。
+
+El personal del hotel abre la puerta.
+
+41
+
+A continuación ofrecemos un cuadro con una lista incompleta de verbos que pueden adoptar forma intransitiva y transitiva. No hay una regularidad en la construcción de ambos tipos de verbos, por lo que es necesario memorizar los más frecuentes.
+
+電気、エアコン、 テレビ、ラジオ ドア、まど、店
+水、おゆ
+かぎ
+
+Verbos intransitivos 電気が つきます Se enciende la luz. 電気が きえます Se apaga la luz. ドアが あきます Se abre la puerta. ドアが しまります Se cierra la puerta. 水が 出ます Sale agua. 水が とまります Se corta el agua. かぎが かかります (Algo) se cierra con llave.
+
+Verbos transitivos （ホテルの人が） 電気を つけます (El personal del hotel) enciende la luz. （ホテルの人が） 電気を けします (El personal del hotel) apaga la luz. （ホテルの人が） ドアを あけます (El personal del hotel) abre la puerta. （ホテルの人が） ドアを しめます (El personal del hotel) cierra la puerta. （ホテルの人が） 水を 出します (El personal del hotel) saca el agua. （ホテルの人が） 水を とめます (El personal del hotel) corta el agua. （ホテルの人が） かぎを かけます (El personal del hotel) echa la llave.
+
+6. ホテルの人は歩きながら、ホテルの歴史を説明しました。 El personal del hotel contó la historia del lugar
+
+mientras caminaba.
+
+Para expresar que una persona está realizando dos acciones al mismo tiempo se usa la forma ながら. La fórmula es (verbo1) +
+
+ながら、 (verbo 2) y denota que el verbo 1 y el verbo 2 se realizan simultáneamente. A la forma-MASU del verbo 1 se le elimina
+
+ます y se sustituye por ながら, o sea, (verbo-ます) + ながら.
+
+・ホテルの人はあるきながら、ホテルの歴史を説明しました。
+
+El personal del hotel contó la historia del lugar mientras
+
+caminaba.
+
+・ホテルのロビーでコーヒーを飲みながら、ガイドブックを読みます。 Leo una guía mientras bebo café en el vestíbulo del hotel.
+
+Como es necesario que las acciones del verbo 1 y del verbo 2 se realicen a la vez, no se pueden usar verbos cuya realización
+
+simultánea sea imposible.
+
+・× あくしゅしながら、わかれました。
+
+Nos separamos mientras nos dábamos la mano.
+
+○ あくしゅして、わかれました。
+
+Tras darnos la mano, nos separamos.
+
+Para preguntar dóRndiensecróeanlizalailngog, uüsaímsotsiどcこoで-:cultural para hispanohablantes
+1. Cómo dirigirse a una persona desconocida Cuando queremos dirigirnos a una persona desconocida para preguntarle algo, no se suele ir directamente al grano, sino que al principio intentamos captar su atención con interjecciones y expresiones como あのう (“esto...”) o すみません (“disculpe”) antes de iniciar la conversación. Estos vocablos sirven de “almohadilla” antes de formular la pregunta pertinente, bien para atraer la
+42
+
+atención de la persona con la que queremos hablar o bien para no asustarla con una pregunta repentina. Debemos evitar la expresión ちょっと、あなた, cuyo uso se reserva a las personas de mayor edad y suena demasiado fuerte y directo. Por otro lado, tampoco se debe utilizar la interjección ええと para solicitar la atención de alguien, pues se usa más bien para indicar al interlocutor que estamos pensando qué decir o cómo decir algo.
+
+2. Pictografías, emoticonos y onomatopeyas Tanto en Japón como en el resto del mundo, está de moda utilizar pictografías a la hora de mandar correos electrónicos a los amigos, mandar mensajes a través de las redes sociales virtuales (SNS) o escribir blogs en internet. Abundan las pictografías que representan las expresiones faciales de forma simplificada y se suelen añadir al texto para transmitir emociones o estados de ánimo que no se pueden describir con palabras. En Europa, Estados Unidos y otros países occidentales se pusieron de moda formas como :-) o :-(, que representan caras en posición horizontal, y que posteriormente han evolucionado en los emoticonos actuales, tales como  o . En cambio, la versión japonesa de estas pictografías fue diferente desde un principio. Las pictografías que representan expresiones faciales, o emoticonos, reciben en japonés el nombre de 顔文字 (かおもじ) y son bastante más complejas que las versiones occidentales. Para empezar, la cara se representa mediante dos paréntesis ( ), y las diferentes emociones se realizan combinando puntos, líneas y otros caracteres especiales dentro de esos paréntesis. Veamos algunos ejemplos:
+
+Pictografía ヾ(*´∀｀*)ﾉ Significado felicidad
+
+(≧∇≦)/ alegría
+
+Σ(ﾟ д ﾟ;) sorpresa
+
+(´･ω･`) decepción
+
+(｀・ω・´) enfado
+
+ﾟ(ﾟ´Д｀ﾟ)ﾟ tristeza
+
+(//∇//) vergüenza
+
+Además, algunos 顔文字 se pueden combinar con onomatopeyas, consiguiendo así mucha más expresividad. A continuación ofrecemos algunos ejemplos donde podemos ver qué sentimientos o emociones se pueden expresar con las onomatopeyas.
+
+Pictografía + onomatopeya (〃^∇^)o 彡☆ ｱﾊﾊﾊﾊ! ガ━━ン!!! Σ(ﾟ Д ﾟ;)
+(〃´o｀)=3 ホッ
+
+Significado Muy gracioso
+Recibir una fuerte impresión Sentir alivio
+
+Emoticono + onomatopeya o(>д<｡ o)｡o エーン! p(╬ Ò ‸ Ó)q ﾌﾟﾝﾌﾟﾝ
+o (*>ω<)o ワクワク
+
+Significado Llorar a voz en grito Estar enfadadísimo
+Estar expectante
+
+3. ひどい目にあう La expresión ひどい目にあう, que podríamos traducir como “pasarlo fatal” o “tener una experiencia muy dura”, se deriva del modismo 目にあう, que tiene el sentido de “encontrarse con algo”, “tener la experiencia de algo”, y se suele utilizar para referirse a experiencias duras y dolorosas. 慣用句（かんようく）: 慣用句 es el término que se utiliza para referirse a los modismos japoneses que se vienen utilizando desde antaño y que se forman a partir de dos o más vocablos que se interpretan como un todo. En otras palabras, son frases hechas de uso común. Los 慣用句 se diferencian de los ことわざ (refranes, proverbios) en que no guardan ninguna enseñanza o mensaje, sino que simplemente hacen referencia a hechos de la vida cotidiana. Entre los 慣用句 hay muchos bastante divertidos en los que se hace referencia a alguna parte del cuerpo. Ahí van algunos. ¡A ver si adivináis su significado!
+
+43
+
+(1) 顎が落ちる（あごがおちる）
+
+“caerse la mandíbula”
+
+（Ejemplo: このレストランの料理はあごがおちる。）
+
+La comida de este restaurante está que “se te cae la
+
+mandíbula”.
+
+(2) 顔から火が出る
+
+“la cara echa fuego”
+
+（Ejemplo: みんなの前でしっぱいして、顔から火が出た。） Me equivoqué delante de todos y “la cara me echaba fuego”.
+
+(3) 目がない
+
+“no tener ojos”
+
+（Ejemplo: 私はあまいものに目がない。）
+
+“No tengo ojos” para los dulces.
+
+(4) 腹が立つ（はらがたつ）
+
+“la barriga se empina”
+
+（Ejemplo: ホテルのサービスがわるすぎて、はらがたった。） El servicio del hotel es tan malo que “la barriga se me empina”.
+
+(5) 鼻が高い（はながたかい）
+
+“la nariz está alta”
+
+（Ejemplo: 弟が試験に合格した。勉強を教えてあげた私も鼻が高い。） Mi hermano ha aprobado el examen. “Tengo la nariz
+
+alta” porque yo le estuve enseñando cómo estudiar.
+
+Respuestas: (1) Quiere decir que algo está tan rico que “se te cae la baba”. (2) Pasar tanta vergüenza que “se te pone la cara como un tomate”. (3) Concentrarse en algo de forma extrema y olvidarse del resto, tanto que “no le quitas los ojos de encima”. (4) Estar tan furioso que “se te revuelven las tripas” de la rabia. (5) “Sacar pecho”, estar orgulloso de algo o alardear de que algo se te da bien.
+
+44
+
+トピック 9 Buscando trabajo
+仕事をさがす
+いらっしゃいませ。
+
+すみません。カーラと申します。 総務課の中村さん、 お願いしたいんですが。
+
+きいて はなす
+
+EXPRESIÓN
+
+USO
+
+・ていねいな言い方: もうしわけございません。／ 少々お待ちください。 ／…
+
+・Usar expresiones elegantes y educadas cuando una persona ajena visita nuestra empresa y viceversa.
+
+・留学が終わったら、日本の会社で働きたいと思って（い）るんです。
+
+・Decir lo que deseamos hacer en algún momento concreto del
+
+futuro.
+
+よんで わかる
+
+FORMA
+
+USO
+
+・ヨーロッパの情報を集めることができます。 ・人の前で話すよりレポートを書く方がとくいです。
+
+・Explicar a otro lo que podemos o somos capaces de hacer. ・Comparar dos tipos de actividades y manifestar cuál de las dos se nos da mejor.
+
+きいて はなす
+
+1. もうしわけございません。/もうしわけありません。 Le pido disculpas.
+
+少々お待ちください。 Espere un momento, por favor.
+
+La expresión もうしわけございません/もうしわけありません significa lo mismo que すみません, pero dicho en un registro más
+
+educado y elegante. En japonés, las expresiones varían según el contexto, las circunstancias o la persona con la que estamos
+
+hablando. Por ejemplo, cuando hablamos en representación de la empresa donde trabajamos con personas ajenas a ella o
+
+cuando nosotros visitamos otras compañías, se utilizan formas más finas y educadas con el fin de no herir la sensibilidad de
+
+nuestro interlocutor.
+
+・もうしわけございません。/もうしわけありません。
+
+Le pido disculpas.
+
+・少々お待ちください。
+
+Espere un momento, por favor.
+
+・ただいままいります。
+
+Enseguida estoy con usted.
+
+45
+
+2.留学が終わったら、日本の会社で働きたいと思って（い）るんです。 Cuando vuelva de la estancia por estudios en
+
+el extranjero, mi deseo es trabajar en una empresa japonesa.
+
+Esta expresión se utiliza cuando queremos decir lo que nos gustaría hacer en algún momento concreto del futuro. La forma たら
+
+colocada al final de la primera frase indica que se presupone que ocurrirá lo que se enuncia en la misma (ver A2-2 L7), mientras
+
+que lo que se desea hacer después se expone en la segunda frase. En la conversación diaria, se suele eliminar la い y decir
+
+思ってるんです, en lugar de 思っているんです.
+
+・留学が終わったら、日本の会社で働きたいと思って(い)るんです。 Cuando vuelva de la estancia por estudios en el extranjero, mi
+
+deseo es trabajar en una empresa japonesa.
+
+・大学を卒業したら、つうやくになりたいと思って(い)るんです。
+
+Cuando me gradúe de la universidad, quiero ser intérprete.
+
+Si delante de たら viene una frase que se refiere a un periodo de tiempo, el enunciado se interpreta como “en el momento en el
+
+que se cumpla ese tiempo”. Es común dar fechas y plazos aproximados.
+
+・あと 2、3 年したら、海外の支社に行きたいと思って(い)るんです。 Dentro de dos o tres años me gustaría ir a una sucursal en el
+
+extranjero.
+
+・5 年ぐらいしたら、自分で会社を作りたいと思って(い)るんです。 Estoy pensando crear mi propia empresa dentro de unos cinco
+
+años.
+
+よんで わかる
+
+3. ヨーロッパのじょうほうを集めることができます。 Puedo reunir información sobre Europa.
+
+Este tipo de construcción se emplea para decir lo que somos capaces de hacer o para preguntar a nuestro interlocutor si tiene la
+
+capacidad de hacer algo. Para explicar lo que podemos hacer, usamos (verbo en forma-diccionario) + ことができます. Esta forma
+
+tiene el mismo significado que la forma potencial del verbo (ver A2-2 L6). Por tanto, se puede sustituir perfectamente por esta
+
+última.
+
+・ヨーロッパのじょうほうを集めることができます。（＝集められます） Puedo reunir información sobre Europa.
+
+・ていねいな外国語で書いたり、話したりすることができますか。 ¿Sabe usted escribir y hablar con expresiones educadas en un
+
+idioma extranjero?
+
+〈Atención〉
+
+Aunque la construcción (verbo en forma-diccionario) + ことができます tiene el mismo sentido que la forma potencial del verbo,
+
+tiene la particularidad de que lo que se representa como sujeto en el potencial adopta en este caso la forma de objeto, por lo que
+
+debe ir seguido por la partícula を.
+
+・日本語を話すことができます。（日本語が話せます）
+
+Sé hablar japonés. (Sé hablar japonés).
+
+・いろいろな人と協力して仕事をすることができます。
+
+Soy capaz de trabajar en colaboración con gente muy diversa.
+
+（いろいろな人と協力して仕事ができます）
+
+(Puedo trabajar en colaboración con gente muy diversa).
+
+４. 人の前で話すよりレポートを書く方がとくいです。 Se me da mejor escribir informes que hablar en público. Cuando comparamos dos objetos, usamos la construcción (sustantivo 1) + よ り (sustantivo 2) + の ほ う が (adjetivo-I/adjetivo-NA) + です (ver A2-2 L12). Si lo que queremos es comparar dos acciones y decir cuál de las dos se nos da mejor o nos gusta más, entonces empleamos la fórmula (verbo en forma-diccionario 1) + より (verbo en forma-diccionario 2) + ほうが (adjetivo-I/adjetivo-NA) + です.
+
+46
+
+・人の前で話すよりレポートを書く方がとくいです。
+
+Se me da mejor escribir informes que hablar en público.
+
+・１人で働くよりいろいろな人に会う方が好きです。
+
+Me gusta más conocer a gente diversa que trabajar solo.
+
+Tal y como aparece en el ejemplo que viene a continuación, a veces el verbo adopta la forma potencial en lugar de la
+
+forma-diccionario, en cuyo caso no se comparan dos acciones o actividades, sino dos capacidades.
+
+・外国語が話せるよりほかの人と協力して働ける方がだいじです。 Es más importante ser capaz de trabajar colaborando con otras
+
+personas que saber hablar un idioma extranjero.
+
+Rincón lingüístico-cultural para hispanohablantes
+
+1. Cómo atender a los clientes en Japón
+
+En Japón, los empleados de grandes almacenes, tiendas, bares, restaurantes, etcétera, usan expresiones muy educadas y
+
+elegantes para dirigirse a los clientes en señal de agradecimiento por haber escogido su establecimiento. Incluso los estudiantes
+
+que están trabajando a tiempo parcial o por horas deben tratar a los clientes con profesionalidad. Por ello, en los restaurantes de
+
+comida rápida y otros establecimientos donde se contrata a muchos estudiantes (como los famosos コンビニ), existen manuales
+
+para aprender a tratar al cliente.
+
+En esos manuales se explica qué expresiones se deben usar a la hora de dirigirse a un cliente. Veamos a continuación algunas
+
+de uso común en la vida cotidiana.
+
+・いらっしゃいませ…
+
+¡Bienvenido!
+
+Se dice para dar la bienvenida a los clientes cuando entran en el establecimiento.
+
+・かしこまりました…
+
+Entendido.
+
+Es la respuesta que se utiliza cuando el cliente ha pedido algo. Es la versión más educada de わかりました.
+
+・おそれいります…
+
+Disculpe.
+
+Se usa cuando se quiere pedir algo al cliente.
+
+・失礼いたします…
+
+Perdone (que le moleste).
+
+Se emplea cuando se pasa cerca del cliente o al cruzar por delante de él/ella.
+
+・申し訳ございません…
+
+Lo siento.
+
+Se utiliza para pedir disculpas al cliente (por algún error, por no haber artículos en stock, etc.)
+
+・お待たせいたしました…
+
+Perdone que le haya hecho esperar.
+
+Se usa como disculpa por haber hecho esperar al cliente a la hora de sacar el producto solicitado.
+
+Por supuesto, las palabras amables y educadas no sirven de nada si no van acompañadas de un comportamiento y una
+
+expresión facial adecuados, por lo que a los empleados se les pide que atiendan a los clientes con una sonrisa y una postura
+
+correctas. Ciertamente, en Japón no es fácil trabajar en sitios donde se requiere atender al público.
+
+47
+
+2. El perfil del empleado que buscan las empresas japonesas En una encuesta realizada por una oficina gubernamental entre 1.300 empresas japonesas en la que se preguntaba por el perfil de los empleados que buscaban en su entidad, la mayoría respondió que preferían a “personas enérgicas y dinámicas” y “personas con espíritu cooperativo y sentido del equilibrio y la proporción”. Por el contrario, fueron relativamente escasas las empresas que buscaban a “personas con alto nivel de especialización tanto a nivel teórico como técnico”. En estas respuestas se puede apreciar la manera de trabajar que tienen las compañías niponas, donde es muy común realizar las tareas en equipo. Por ello, en lugar de la capacidad individual, se buscan personas dispuestas a colaborar con los compañeros como uno más del equipo y se valora mucho la buena disposición para apoyarse y ayudarse mutuamente. Por otro lado, en las empresas japonesas está firmemente asentada la idea de ir formando a los jóvenes talentos que se van incorporando y son muchos los empresarios que piensan que no es necesario que tengan conocimientos especializados a la hora de su contratación, puesto que se les va enseñando mientras trabajan hasta convertirlos en expertos. Podemos decir, por tanto, que una de las características principales de las compañías japonesas es que sus trabajadores siguen formándose en la empresa, aprendiendo de los compañeros más veteranos.
+3. ¿Qué representa la empresa para los japoneses? Seguramente, en los países occidentales, la gente concibe trabajar en una empresa como una transacción en la que el trabajador recibe una compensación o remuneración a cambio de prestar sus conocimientos o su mano de obra. Para los japoneses, en cambio, la empresa es algo más que eso. En Japón, existe una cultura corporativa particular. ¿Conocéis el término 飲みニケーション? Se trata de una costumbre arraigada en las empresas que consiste en ir a beber con los jefes y compañeros después de la jornada laboral. Como en los países occidentales la costumbre es separar la vida laboral de la privada, puede resultar chocante irse a beber con los jefes, y os preguntaréis a qué se debe esto. La respuesta está en el 和 (わ) o la armonía a la que la sociedad japonesa da tanta importancia desde la antigüedad. Bajo esta concepción de la empresa, el empresario ha venido tratando a sus empleados como miembros de una familia y ha hecho lo posible por que las relaciones entre los trabajadores sean cálidas y estrechas. Además, los japoneses son un pueblo al que siempre le ha gustado divertirse bebiendo, por lo que la función básica de la 飲みニケーション es establecer una buena comunicación entre jefes y compañeros incluso fuera del contexto laboral. Por otro lado, se dan casos en los que los trabajadores de una empresa no se van a casa mientras no se vaya el jefe. Se trata de una manifestación de la particular idea que tiene el japonés de que “uno debe quedarse si los demás se quedan”. Y no es de extrañar, si tenemos en cuenta que para los japoneses la empresa se concibe como una familia, una comunidad, en la que es muy difícil “ir por libre”. El colectivo antes que el individuo: esa es la concepción de la sociedad japonesa y así se puede percibir también en el mundo empresarial, aunque conforme pasan los años esta original cultura corporativa va desapareciendo por los efectos de la globalización.
+48
+
+MARUGOTO GRAMÁTICA A2/B1
+
+TÉRMINOS GRAMATICALES
+Índice alfabético
+
+A Adjetivo-I L1, L2, L3, L5, L6, L7, L9 Adjetivo-NA L1, L2, L3, L5, L6, L7, L9
+E Estilo formal L4, L5, L8 Estilo informal L4, L5, L8
+F Forma diccionario (verbo) L5, L9 Forma imperativa (verbo) L1, L8 Forma-MASU (verbo) L1, L5 Forma-NAI (verbo) L1, L2, L3, L5, L7
+
+Forma potencial (verbo) L1, L5 Forma-simple (verbo) L1, L3, L7, L8 Forma-TA (verbo) L8 Forma-TE (verbo) L2, L4, L6, L7, L8 Forma volitiva (verbo) L5, L6 N Nombre L1, L2, L3, L6 S Sustantivación L1 V Verbo intransitivo L8 Verbo transitivo L8
+
+PALABRAS Y EXPRESIONES
+Índice alfabético japonés
+
+あ ああ L3 会います / 会う L7, L9 明るい L2 あくしゅします / あくしゅする L8 あきます / あきる L3 あきます / あく L8 あきらめます/ あきらめる L1 あけます / あける L8 あたたかい L1 集めます / 集める L9 あと L8, L9 -後で L8 あのう L8 あまい L3 あまり L2, L3, L7 あやまります / あやまる L7 ありがとうございました L4 ありがとうございます L5 あります / ある L2, L3, L5, L7, L8 歩きます / 歩く L1, L8 あれ L5, L8 安全（な） L2
+い いい / よい L1, L2, L4, L5, L6 いいえ L3, L5 いいですよ L1 言います / 言う L1, L7, L8 いえ L3 行きます / 行く L1, L3, L5, L6, L8, L9 以上 L2 忙しい L1 一番 L3, L7 いつも L2, L5, L7 いっしょに L1, L3, L6, L7 います / いる L2, L3, L5, L7
+
+いらっしゃいませ L9 いろいろ L2, L3 いろいろ（な） L5, L9 う うすい L3 うらやましい L5 うるさい L2, L8 うれしい L6 うん L5 ううん L5 え ええ L3, L5, L6 えっ L6 お おあがりください L4 おいしい L3 多い L4, L7 大きい L5 大きな L6 おきます / おく L8 おくれます / おくれる L5, L8 おこります / おこる L7 お幸せに L6 おしえます / おしえる L2 おじゃまします L4 おそれいります L9 おどります / おどる L6 お願いします / お願いする L9 おぼえます / おぼえる L4 お待たせいたしました L9 おめでとうございます L6 思います / 思う L1, L3, L5, L6, L7, L9 おもしろい L1, L5, L7 おります / おりる L8 終わります / 終わる L9 か -が L3, L4, L8 -回 L1, L5
+
+かいしします / かいしする L8 かいます / かう L5, L6 かえます / かえる L8 かえります / かえる L2, L7 かかります / かかる L2, L8 書きます / 書く L1, L5, L9 かけます / かける L3, L8 （電話が）かかります / かかる L7 （電話を）かけます / かける L2 かしこまりました L9 かします / かす L5 -方 L1 かちます / かつ L1 -かな / -かなあ L8 かなしい L6 がまんします / がまんする L2 -かもしれません / -かもしれない L2, L7, L8 -から L1, L2, L3, L8 -からの～ L1 かわいい L3 かんたん（な） L1, L5 かんどうします / かんどうする L1 がんばります / がんばる L1 き きえます / きえる L9 聞きとります / 聞きとる L5 聞きます / 聞く L5, L6 きっと L6 気に入ります / 気に入る L2 来ます / 来る L1, L2, L3, L4, L5, L7 着ます / 着る L6 きまります / きまる L6 きめます / きめる L2 協力します / 協力する L9 く ぐうぜん（な） L4 ください L2, L6 口にあいます / 口にあう L3, L4 ぐらい L1 くれます / くれる L8 け けします / けす L8 結婚します / 結婚する L6 -けど L2 けんかします / けんかする L7 元気（な） L7 こ 合格します / 合格する L6 ごちそうさまでした L4 -ことが あります / -ことが ある L5 -ことが できます / -ことが できる L9 ことわります / ことわる L1 こまります / こまる L3, L6, L7 ごめんください L4 さ さがします / さがす L2 さそいます / さそう L1, L6, L7 さっき L3 参加します / 参加する L6 し しあわせ（な） L6 - 時間 L5, L8 しずか（な） L2 じつは L1, L3, L5, L7 しっかりします / しっかりする L1
+
+失礼いたします L9 します（する） L1, L2, L4, L5, L6, L7, L9 しまります / しまる L8 しめます / しめる L8 じゃあ L6 -じゃないです / -じゃありません L3, L7 じゃま（な） L7 しゅっせきします / しゅっせきする L6 出張します / 出張する L1 出発します / 出発する L8 少々 お待ちください L9 上手（な） L5 招待します / 招待する L6 しらべます / しらべる L1 親切（な） L4 心配（な） L6 す すき（な） L3, L7 少ない L2, L3 少し L2 -すぎる L3 すすめます / すすめる L7 ずっと L1 すばらしい L1 住みます / 住む L2, L4 すみません L1, L7, L9 せ せっかく L7 せっきょくてきに L5 説明します / 説明する L8 ぜひ L6 せまい L2 ぜんぜん L3 そ そう L3 -そう（な） L3, L5 -そうです L6, L8 そうですか L1 そうなんです L6 卒業します / 卒業する L5 そろそろしつれいします L4 それで L5 そんなこと、ないです L5 た だいすき（な） L3 だいじょうぶ（な） L1, L3, L6 たいへん（な） L2 -たい L9 だいじ（な） L9 -たいんです L1 高い L2, L3 たくさん L5, L6 出します / 出る L8 助かります / 助かる L4 助けます / 助ける L8 ただいま まいります L9 楽しい L5 食べます / 食べる L1, L2, L3, L5, L7 だめ（な） L1 -ために L3, L5, L6 ためます / ためる L5 -たら L2, L5, L9 -たり L9
+
+ち 小さい L2 チェックインします / チェックインする L8 チェックします / チェックする L8 近い L2 ちがいます / ちがう L5 ちょっと L3, L7
+つ つうきんします / つうきんする L2 つかまえます / つかまえる L8 つかれます / つかれる L1, L7 （電気が）つきます / つく L8 つきます / つく L8 作ります / 作る L3, L9 （電気を）つけます / つく L8 つづきます / つづく L5 - って L1, L8 つまらない L3 つまらないものですが L4 強い L7
+て -で L1, L7 -て あげます / -て あげる L6 ていねい（な） L9 -て （い）ます / -て （い）る L1, L2, L5, L6, L7, L8, L9 -て から L8 -て きます / -て くる L7 できます / できる L5, L9 できるだけ L5 -て くれます / -て くれる L4, L6, L7, L8 -でしょう ね L6 てつだいます / てつだう L3, L6 てつだわせてください L3 -での～ L1 出ます / 出る L1, L5, L8 -て みます / -て みる L1, L8 -ても / -でも L2, L3, L6 でも L3, L8 -て も かまいません L2
+と -と L1, L5, L6, L8, L9 どうしたんですか L7 どうしよう L8 どうぞ L4 遠い L2 とおります / とおる L8 -とき L1, L3, L5, L6, L7, L8 とくい（な） L9 とても L2, L5, L6 とにかく L8 -との～ L1 とびます / とぶ L8 とまります / とまる L8 とめます / とめる L8 取ります / 取る L1, L5 （写真を）とります / とる L4, L6
+な -ないですか L3 -ながら L8 -なきゃ L5 -なきゃいけません / -なければなりません L1 なまいき（な） L7 -なら L1, L5 ならいます / ならう L5
+
+なります / なる L1, L2, L5, L7, L8, L9 なれます / なれる L3 に -に L1, L2, L4 -に（も） L3 にがて（な） L3 にげます / にげる L8 -に します / - にする L2 -に とっては L3 -には L3 入院します / 入院する L6 ね -ね L5, L6 ねます / ねる L7 ねむい L7 の のこします / のこす L3 -ので L3, L5 -の に L7 -の は L3 飲みます / 飲む L7, L8 乗ります / 乗る L8 は -ば L2 はい L3, L5 はいります / はいる L5 はげまします / はげます L6 はじまります / はじまる L2, L8 はじめます / はじめる L5 はじめは L3 はしります / はしる L1 働きます / 働く L9 話します / 話す L4, L9 はやい L5, L7 払います / 払う L7 ひ ひっこします / ひっこす L2 広い L2 ふ ふくざつ（な） L5, L7 ふべん（な） L2 へ 勉強します / 勉強する L5 便利（な） L2 ほ ほしい L7 ほっとします / ほっとする L3 -ほど L8 ま 負けます / 負ける L1 -ませんか L1 まだ L7 まだなんです L2 まだまだです L5 -まで L1, L2 -までに L1 -までの～ L1 まもります / まもる L7 み -みたい L3 見つかります / 見つかる L2, L6, L8 見つけます / 見つける L2 見習います / 見習う L5 見ます / 見る L1, L5 む むかえます / むかえる L1, L4 難しい L5 も -も L3, L5 もう L2, L3 もうします / もうす L9
+
+もうしわけありません L9 もうしわけございません L9 もうすぐ L8 もの L1 持ちます / 持つ L5, L8 もっと L2, L7 もらいます / もらう L1 問題ないです / 問題ありません L3 や やさしい L6 安い L2 やはり / やっぱり L3 やります / やる L1, L5 ゆ ゆっくり L4 よ -よ L1, L3, L5, L6 -よう（な） L5 よく L1, L4, L5 -よね L6 呼びます / 呼ぶ L4
+
+読みます / 読む L1, L4, L5, L6, L8 -より L7, L9 -より～ほうが L9 よろこびます / よろこぶ L6 弱い L3 ら らくだいします / らくだいする L5 -らしい L7 り 留学します / 留学する L5 料理します / 料理する L3 旅行します / 旅行する L4 わ わかります / わかる L4, L5, L8 わかれます / わかれる L6, L8 わすれます / わすれる L4, L5 悪い L3 を -を L1, L8 ん -んです L1, L3, L4, L5, L6 -んですが L1, L9 -んですけど L2
+
+Autores:
+Índice alfabético:
+
+Taeko Kojima Minako Takahashi
+
+Aya Nishioka
+
+Mika Nozaki Kae Baba
+
+Yoshie Yoshimoto
+
+Minako Takahashi
+
+Edición:
+
+Aya Nishioka Tomo Miyajima Raquel Pollán (Edición revisada) Setsuko Shinozaki
+
+Ilustración: Traducción:
+
+Yoshiko Hamamoto Nobuo Ignacio López Sako
+
+Daniel Ruiz Martínez
+
+MARUGOTO GRAMÁTICA A2-B1
+Primera edición: marzo 2015 Edición revisada：agosto 2018 Ⓒ 2015 Ⓒ 2018 The Japan Foundation, Madrid
+Fundación Japón, Madrid Palacio de Cañete – Planta 2 C/ Mayor 69, 28013 Madrid, ESPAÑA TEL: +34 91 310 15 38 E-mail: nihongo@fundacionjapon.es Web: http://www.fundacionjapon.es
+Printed in Spain – Impreso en España
+La reproducción total o parcial de esta obra sin el consentimiento expreso de los titulares del Copyright está prohibida al amparo de la legislación vigente.
+ISBN: 978-84-606-5650-0
+

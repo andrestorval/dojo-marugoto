@@ -48,10 +48,19 @@ CONTENIDO.formas = [
 ];
 
 /* --- CATEGORIAS -----------------------------------------------
-   Nombres validos para el campo cat del vocabulario. En M5 el
-   validador exige que cada una reuna al menos cuatro palabras.
+   Nombres validos para el campo `cat` del vocabulario. El validador rechaza
+   cualquier `cat` que no este aqui, y avisa si una reune menos de cuatro
+   palabras en todo el libro: con menos, `distractores` cae en el resto del
+   vocabulario y el ejercicio se resuelve por descarte.
+
+   Esta lista sale del contenido real, no de una idea previa. En M0 la escribi
+   de memoria y traia cuatro nombres que nadie usaba ("problemas", "lugar",
+   "expresiones") mientras faltaban tres que si estaban en uso; el validador de
+   M5 lo destapo con quince errores.
+
+   Al agregar una unidad, ampliar aqui antes de usar un nombre nuevo.
 --------------------------------------------------------------- */
 CONTENIDO.categorias = [
-  "viaje", "objetos", "hotel", "tiempo",
-  "problemas", "lugar", "expresiones", "abstracto"
+  "viaje", "hotel", "objetos", "tiempo",
+  "problema", "conector", "reaccion", "abstracto"
 ];
