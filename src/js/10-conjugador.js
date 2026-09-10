@@ -28,6 +28,10 @@ function conjugar(v, forma) {
       case 'imp':     out = st + 'ろ'; break;
       case 'sou':     out = k + 'そうです'; break;
       case 'atode':   out = st + 'た後で'; break;
+      case 'tara':    out = st + 'たら'; break;
+      case 'tai':     out = st + 'たいです'; break;
+      case 'yasui':   out = st + 'やすいです'; break;
+      case 'koto':    out = k + 'ことができます'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -47,6 +51,10 @@ function conjugar(v, forma) {
       case 'imp':     out = st + U2E[last]; break;
       case 'sou':     out = k + 'そうです'; break;
       case 'atode':   out = ta + '後で'; break;
+      case 'tara':    out = ta + 'ら'; break;
+      case 'tai':     out = st + U2I[last] + 'たいです'; break;
+      case 'yasui':   out = st + U2I[last] + 'やすいです'; break;
+      case 'koto':    out = k + 'ことができます'; break;
     }
   }
 
@@ -85,21 +93,25 @@ function reglaDe(v, forma){
   if(v.g === 3) return 'Grupo 3: する y くる van de memoria.';
   if(v.g === 2){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
-                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で' };
+                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
+                   tara:'たら', tai:'たいです', yasui:'やすいです' };
     if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
+    if(forma === 'koto') return 'Grupo 2: forma diccionario + ことができます.';
     return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
   }
   const u = v.kana.slice(-1);
   if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
+  if(forma === 'koto') return 'Grupo 1: forma diccionario + ことができます.';
   if(forma === 'nai' || forma === 'nakatta')
     return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
-  if(forma === 'masu' || forma === 'masen' || forma === 'nagara')
-    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' + (forma === 'nagara' ? 'ながら' : forma === 'masu' ? 'ます' : 'ません') + '.';
+  if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
+      ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
   if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
   if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
-  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode'){
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara'){
     const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
-    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + '.';
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + (forma === 'tara' ? ' + ら' : '') + '.';
   }
   return '';
 }

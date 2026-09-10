@@ -75,11 +75,18 @@ const palabras = (t) => sinTildes(t).split(/[^a-z0-9]+/).filter((w) => w.length 
      こしょう（します） un sufijo opcional: vale con する y sin él
    Por eso cada entrada genera varias formas y basta con que una coincida. */
 function variantes(x) {
-  const s = String(x || '').trim();
+  /* El índice escribe la tilde de onda como ～ (U+FF5E) y el contenido como 〜
+     (U+301C). Son dos caracteres distintos, así que sin igualarlos ni 〜便 ni
+     〜部 se encontraban a sí mismos en el índice. */
+  const s = String(x || '').trim().replace(/[～〜]/g, '〜');
   if (!s) return [];
   const out = new Set([s]);
   out.add(s.replace(/[（）()]/g, '').trim());        // quitando solo los signos
   out.add(s.replace(/[（(][^）)]*[）)]/g, '').trim()); // quitando el paréntesis entero
+  /* Los sustantivos verbales vienen como ほうこく（します）, y su columna de
+     forma de diccionario dice （～する）, que no nombra ninguna palabra. La
+     forma que la app usa es ほうこくする, y se genera aquí. */
+  if (/[（(]します[）)]$/.test(s)) out.add(s.replace(/[（(]します[）)]$/, 'する'));
   out.delete('');
   return [...out];
 }
@@ -274,8 +281,25 @@ inf('kanji del tema: ' + kanjiTema.length + ' · sin cubrir: ' + faltanKanji.len
     (faltanKanji.length ? ' (' + faltanKanji.map((k) => k.palabra).join(' ') + ')' : ''));
 
 const gramTema = IDX.gramatica.filter((g) => g.nivel === '初中級' && new RegExp('^' + UNIDAD + '[\\s　]').test(g.tema || ''));
-const sinEjercicio = gramTema.filter((g) =>
-  ![...u.huecos, ...u.frases].some((it) => (it.pat || '').includes(g.item) || g.item.includes(it.pat || '')));
+
+/* El índice escribe la tilde de onda como ～ (U+FF5E) y el contenido como 〜
+   (U+301C): son dos caracteres distintos y sin igualarlos ni "〜ながら" se
+   reconocía a sí mismo. */
+const tilde = (s) => (s || '').replace(/[～〜]/g, '〜');
+
+/* Cuando el índice nombra el patrón en forma simple («～ことができる») y el
+   libro lo enseña en cortés («〜ことができます»), ninguna comparación por
+   texto los va a unir. Para eso está el campo «oficial» del patrón, que lo
+   declara a mano. */
+const conEjercicio = new Set([...u.huecos, ...u.frases].map((it) => tilde(it.pat)));
+const declarados = new Set(
+  (u.patrones || []).filter((p) => p.oficial && conEjercicio.has(tilde(p.pat))).map((p) => tilde(p.oficial)));
+
+const sinEjercicio = gramTema.filter((g) => {
+  const item = tilde(g.item);
+  if (declarados.has(item)) return false;
+  return ![...conEjercicio].some((pat) => pat.includes(item) || item.includes(pat));
+});
 inf('patrones oficiales del tema: ' + gramTema.length + ' · sin ningún ejercicio: ' + sinEjercicio.length +
     (sinEjercicio.length ? ' (' + sinEjercicio.map((g) => g.item).join(' · ') + ')' : ''));
 

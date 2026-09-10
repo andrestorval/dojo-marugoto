@@ -48,7 +48,7 @@ Salidas:
     src/           motor y estilos; JavaScript clásico, concatenado por orden numérico
                    (55-material.js: fichas de forma y patrón, e índice de materia)
     contenido/     una unidad por archivo; se autorea como JS, el runtime consume JSON
-    herramientas/  build, generador del vector de pruebas (validador: M5)
+    herramientas/  build, validador, vector de pruebas, extractor de páginas del libro
     pruebas/       node --test, sin paquetes
     fuentes-oficiales/  copia del archivo congelado y los índices del libro
 
@@ -60,10 +60,21 @@ espaciado decide qué entra en cada sesión, y al fallar aparece una pista antes
 que la respuesta. La exigencia de cada ítem sube con su caja: reconocer, después
 producir con apoyo, después producir solo. La salida PWA ya trae manifest,
 service worker e iconos y esta publicada en GitHub Pages. El validador de
-contenido ya corre: el Tema 8 pasa con 0 errores. Lo que sigue son los ocho
-modulos de unidad, en el orden 1, 2, 3, 4, 5, 6, 7 y 9.
+contenido ya corre: los Temas 8 y 9 pasan con 0 errores.
 
-Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M5.md`). Lo que ya se
+**M13 cerrado: la unidad 9 está escrita**, a falta de que revises sus 23
+advertencias. Se adelantó a las demás porque pediste dejar la 8 y la 9 como
+versión final; el orden del resto no cambia y el siguiente módulo es la unidad
+1, seguida de 2, 3, 4, 5, 6 y 7.
+
+La unidad 9 es la primera escrita con el libro escaneado delante:
+`herramientas/paginas.mjs` saca las páginas de `Marugoto A2B1.pdf` como imagen
+y sus huecos son los ejercicios reales del libro, no una reconstrucción desde
+los índices. El PDF vive fuera del repositorio y las páginas van a `dist/`, que
+no se versiona.
+
+Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M5.md` y
+`INFORME-M13.md`). Lo que ya se
 zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
 
 `puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado

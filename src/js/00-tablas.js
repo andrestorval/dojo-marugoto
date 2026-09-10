@@ -11,14 +11,18 @@ const TE1 = { う:'って', つ:'って', る:'って', む:'んで', ぶ:'ん�
 
 const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:'しなかった',
                ta:'した', te:'して', nagara:'しながら', tari:'したり',
-               pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で' };
+               pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で',
+               tara:'したら', tai:'したいです', yasui:'しやすいです',
+               koto:'することができます' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
-               pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で' };
+               pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
+               tara:'きたら', tai:'きたいです', yasui:'きやすいです',
+               koto:'くることができます' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ' }
 };
 

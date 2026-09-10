@@ -83,8 +83,9 @@ test('el ítem de grupo existe, es de tres opciones y no cambia con la caja', ()
   const { m } = cargar();
   const p = m.armarPool({ modos: ['conj'], clase: '0', unidades: [] });
   const grupos = p.filter((q) => q.modo === 'grupo');
-  const u = m.UNIDADES.find((x) => x.n === 8);
-  assert.equal(grupos.length, u.verbos.length, 'uno por verbo');
+  /* uno por verbo de todo el contenido compilado, no solo de la unidad 8 */
+  const verbos = m.UNIDADES.reduce((n, x) => n + x.verbos.length, 0);
+  assert.equal(grupos.length, verbos, 'uno por verbo');
 
   for (const caja of [0, 1, 4]) {
     const g = preguntaDe(m, (q) => q.modo === 'grupo', caja);

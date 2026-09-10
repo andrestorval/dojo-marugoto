@@ -44,7 +44,15 @@ CONTENIDO.formas = [
   { id:"pot",     label:"forma potencial",     desc:"poder…", ej:EJ, lectura:"かのうけい · kanōkei",
     uso:"Para decir que se puede hacer algo, o que algo es posible." },
   { id:"imp",     label:"forma imperativa",    desc:"¡…! (命令形)", ej:EJ, lectura:"めいれいけい · meireikei",
-    uso:"La orden seca, sin cortesía. En la vida real: emergencias, letreros y gritos." }
+    uso:"La orden seca, sin cortesía. En la vida real: emergencias, letreros y gritos." },
+  { id:"tara",    label:"forma たら",          desc:"cuando… / si… (forma た + ら)", ej:EJ, lectura:"tara",
+    uso:"Pone una condición o un momento futuro: cuando eso ocurra, entonces lo otro. Sale de la forma た." },
+  { id:"tai",     label:"forma たい",          desc:"querer hacer… (raíz de ます + たい)", ej:EJ, lectura:"tai",
+    uso:"El deseo propio: lo que uno quiere hacer. Se conjuga como un adjetivo い, no como un verbo." },
+  { id:"yasui",   label:"〜やすい",            desc:"fácil de… (raíz de ます + やすい)", ej:EJ, lectura:"yasui",
+    uso:"Dice que algo se hace con facilidad: 働きやすい, un sitio donde es fácil trabajar." },
+  { id:"koto",    label:"〜ことができます",    desc:"poder… (forma diccionario + ことができます)", ej:EJ, lectura:"koto ga dekimasu",
+    uso:"La otra manera de decir «poder», más formal que la potencial y sin cambiar el verbo." }
 ];
 
 /* --- CATEGORIAS -----------------------------------------------
@@ -62,5 +70,7 @@ CONTENIDO.formas = [
 --------------------------------------------------------------- */
 CONTENIDO.categorias = [
   "viaje", "hotel", "objetos", "tiempo",
-  "problema", "conector", "reaccion", "abstracto"
+  "problema", "conector", "reaccion", "abstracto",
+  /* Tema 9, 仕事をさがす */
+  "trabajo", "empresa", "persona"
 ];

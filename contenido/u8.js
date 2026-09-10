@@ -32,6 +32,7 @@ CONTENIDO.unidades.push({
   --------------------------------------------------------------- */
   patrones: [
     { pat:"〜そうです", tipo:"gramatica",
+      oficial:"～そうだ",
       lectura:"sō desu",
       es:"dicen que…",
       formula:"forma simple del verbo (diccionario, た, ない o なかった) + そうです",
@@ -68,6 +69,7 @@ CONTENIDO.unidades.push({
       uso:"El mismo «probemos», con とにかく delante: da igual lo demás, probemos.",
       ejemplo:"とにかく行ってみましょう。" },
     { pat:"forma た", tipo:"gramatica",
+      oficial:"普通体・丁寧体使い分け",
       lectura:"ta",
       es:"pasado plano",
       formula:"la forma て cambiando て por た y で por だ. Grupo 2: raíz + た. する → した, くる → きた",
