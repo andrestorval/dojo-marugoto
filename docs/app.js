@@ -400,7 +400,7 @@ function desmarcarAprendido(id){
    `primerUso` se apaga en cuanto el usuario contesta las dos preguntas del
    arranque, y no vuelve a preguntar (Anexo B). */
 const CFG_BASE = {
-  modos:['vocabJP','vocabES','conj','hueco','armar','frase'],
+  modos:['vocabJP','vocabES','conj','hueco','armar'],
   clase:'0', largo:20, cupoNuevos:6, unidadActual:0, unidades:[],
   primerUso:true, manuales:0, matUnidad:0,
   /* Mostrar la palabra o la ficha antes de preguntarla ayuda a quien no
@@ -413,8 +413,15 @@ const CFG_BASE = {
 };
 let sel = Object.assign({}, CFG_BASE);
 function saveCfg(){ escribirLS(LS_CFG, sel); }
+const MODOS_VALIDOS = ['vocabES', 'vocabJP', 'conj', 'hueco', 'armar'];
+
 function cargarCfg(c){
   if(c && typeof c === 'object') sel = Object.assign({}, CFG_BASE, c);
+  /* Una configuracion guardada antes puede traer modos que ya no existen,
+     como el retirado "frase": se limpian para que el menu y los conteos
+     cuadren con lo que de verdad se practica. */
+  sel.modos = (sel.modos || []).filter(m => MODOS_VALIDOS.includes(m));
+  if(!sel.modos.length) sel.modos = MODOS_VALIDOS.slice();
 }
 
 /* Unidad en curso por defecto: la mas alta que tenga contenido terminado. */
@@ -651,8 +658,8 @@ const esJubilado = (r) => !!(r && r.man);
 const REPARTO = [
   { tipos:['vocabJP', 'vocabES'], parte: 2 },
   { tipos:['grupo', 'conj'],      parte: 2 },
-  { tipos:['hueco', 'armar'],     parte: 1 },
-  { tipos:['frase'],              parte: 1 }
+  { tipos:['hueco'],              parte: 1 },
+  { tipos:['armar'],              parte: 1 }
 ];
 
 /* Unidades ordenadas desde la que se cursa hacia abajo y despues hacia
@@ -663,13 +670,6 @@ function ordenUnidades(unidadActual){
   const abajo = ns.filter(n => n <= unidadActual).sort((a,b) => b - a);
   const arriba = ns.filter(n => n > unidadActual).sort((a,b) => a - b);
   return abajo.concat(arriba);
-}
-
-/* ids de los huecos de una unidad que comparten patron */
-function huecosDelPatron(n, pat){
-  const u = UNIDADES.find(x => x.n === n);
-  if(!u || !pat) return [];
-  return u.huecos.filter(h => h.pat === pat).map(h => 'h:' + n + ':' + h.k);
 }
 
 /* Un item nuevo solo entra si lo que lo precede ya se vio: sin esto la app
@@ -692,12 +692,6 @@ function dependenciaCumplida(q, idsPool){
     /* conjugar sin saber el grupo es adivinar: primero el item de grupo */
     const req = 'g:' + q.kana;
     return !enPool(req) || !!prog[req];
-  }
-  if(q.modo === 'frase'){
-    /* una frase entra cuando algun hueco del mismo patron llego a la caja 2,
-       es decir, ya se respondio sin pista */
-    const reqs = huecosDelPatron(q.unidad, q.pat).filter(enPool);
-    return !reqs.length || reqs.some(id => (prog[id] && prog[id].b) >= 2);
   }
   return true;
 }
@@ -953,12 +947,8 @@ function armarPool(filtro){
         promptEs:a.es, chips:a.chips, modelo:a.chips.join('')
       }); });
 
-    if(modos.includes('frase'))
-      u.frases.forEach((f, i) => { if(!enClaseDe(f.c)) return; meter({
-        modo:'frase', tipo:'escribir', id:'f:'+u.n+':'+f.k, tag:'Frase completa',
-        unidad:u.n, clase:f.c, orden:i, tag2:f.pat, pat:f.pat,
-        promptEs:f.es, ok:f.ok, modelo:f.ok[0], libre:true
-      }); });
+    /* El modo "frase completa desde español" se retiró; las frases siguen en el
+       contenido como ejemplos de los patrones (ver la nota en 60-ui.js). */
   }
   return pool;
 }
@@ -967,7 +957,7 @@ function armarPool(filtro){
    el pool pero pasa por el mismo programador: también respeta vencimientos y
    también registra progreso (plano 2.4). */
 /* Los seis modos, sin depender de la tabla de la interfaz */
-const TODOS_LOS_MODOS = ['vocabES','vocabJP','conj','hueco','armar','frase'];
+const TODOS_LOS_MODOS = ['vocabES','vocabJP','conj','hueco','armar'];
 
 function construir(manual){
   const filtro = manual
@@ -1163,11 +1153,6 @@ function pistaDe(q){
   if(q.modo === 'armar')
     return { clase:'pieza', texto:'Empieza por esta pieza.', pieza:q.chips[0] };
 
-  if(q.modo === 'frase')
-    return { clase:'texto',
-             texto:(q.pat ? q.pat + ' · ' : '') + esqueleto(q.ok[0], 2) +
-                   ' · ' + q.ok[0].length + ' caracteres' };
-
   return null;
 }
 
@@ -1225,7 +1210,7 @@ function tarjetaPara(q, hechas){
   }
 
   /* patron nunca visto */
-  if((q.modo === 'hueco' || q.modo === 'frase') && q.pat && !yaVistoPatron(q.unidad, q.pat)){
+  if(q.modo === 'hueco' && q.pat && !yaVistoPatron(q.unidad, q.pat)){
     const clave = 'patron:' + q.unidad + ':' + q.pat;
     if(hechas.has(clave)) return null;
     hechas.add(clave);
@@ -1424,9 +1409,18 @@ const MODOS = [
   { id:'vocabJP', nom:'Vocabulario · reconocer', desc:'Te doy la palabra en japonés y eliges qué significa.' },
   { id:'conj',    nom:'Conjugación', desc:'Te doy el verbo y la forma que quiero, y la escribes.' },
   { id:'hueco',   nom:'Frases con hueco', desc:'Completas la parte que falta dentro de una frase del libro.' },
-  { id:'armar',   nom:'Armar la frase', desc:'Te doy las piezas desordenadas y las pones en orden.' },
-  { id:'frase',   nom:'Frase completa desde español', desc:'Lo más exigente: te doy la frase en español y la escribes entera.' }
+  { id:'armar',   nom:'Armar la frase', desc:'Te doy las piezas desordenadas y las pones en orden.' }
 ];
+
+/* Hubo un séptimo modo, "frase completa desde español": se daba la frase en
+   español y había que escribirla entera en japonés. Se quitó a petición de
+   Patricio y con razón. Escribir una oración entera en el teclado del celular
+   es una tarea de tecleo, no de idioma, y lo que mide —orden de las palabras,
+   partículas, forma del verbo— lo mide "armar la frase" sin esa fricción.
+
+   Las frases NO se borraron del contenido: siguen siendo los ejemplos de la
+   ficha de cada patrón y de la sección de materia. Lo que se quitó es el
+   ejercicio, no el material. */
 
 /* ═══════════ estado de la sesion ═══════════ */
 let cola = [], idx = 0, aciertos = 0, fallos = [], recuperadas = [], repasoPuesto = false, respondida = false;

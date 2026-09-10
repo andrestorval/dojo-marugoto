@@ -222,28 +222,25 @@ test('reconocer entra antes que escribir para la misma palabra', () => {
   assert.ok(despues.some((q) => q.jp === palabra.jp), 'ya puede entrar a escribir');
 });
 
-test('una frase espera a que un hueco de su patrón llegue a la caja 2', () => {
+/* La dependencia hueco→frase existió mientras existió el modo "frase completa
+   desde español". Al retirarse ese modo, la regla se quedó sin sujeto y se
+   quitó del programador. La que sí sigue viva es reconocer→escribir, que
+   tiene su propia prueba arriba. */
+test('la dependencia que queda es reconocer antes que escribir', () => {
   const { m } = cargar();
-  const u = m.UNIDADES.find((x) => x.n === 8);
-  const pat = u.frases[0].pat;
-  /* se simula lo que hará M3: los huecos del patrón, con `pat` puesto */
-  const hueco = { id: 'h:8:hx', modo: 'hueco', unidad: 8, clase: 1, orden: 0, pat };
-  const frase = { id: 'f:8:' + u.frases[0].k, modo: 'frase', unidad: 8, clase: 1, orden: 0, pat };
-  u.huecos.push({ k: 'hx', pat, c: 1, pre: '', post: '', hint: '', ok: [''], es: '' });
+  const p = m.armarPool({ modos: m.TODOS_LOS_MODOS, clase: '0', unidades: [] });
+  const ids = new Set(p.map((q) => q.id));
 
-  const ids = new Set([hueco.id, frase.id]);
-  assert.equal(m.dependenciaCumplida(frase, ids), false, 'sin el hueco visto, la frase no entra');
+  const escribir = p.find((q) => q.modo === 'vocabES');
+  assert.equal(m.dependenciaCumplida(escribir, ids), false, 'sin haberla reconocido, no entra');
 
-  m.fijarProg({ [hueco.id]: { b: 2, v: 3, f: 0, int: 3, due: D + 3, man: 0, last: D } });
-  assert.equal(m.dependenciaCumplida(frase, ids), true);
+  m.fijarProg({ ['v:' + escribir.jp + ':jp']: { b: 1, v: 1, f: 0, int: 1, due: D + 1, man: 0, last: D } });
+  assert.equal(m.dependenciaCumplida(escribir, ids), true);
 
-  /* y si el hueco no está en el pool, la regla no bloquea: un portón que no
-     puede abrirse es un muro */
+  /* y si el ítem de reconocer no está en el pool, la regla no bloquea */
   m.fijarProg({});
-  assert.equal(m.dependenciaCumplida(frase, new Set([frase.id])), true);
-  u.huecos.pop();
+  assert.equal(m.dependenciaCumplida(escribir, new Set([escribir.id])), true);
 });
-
 test('una sola forma por verbo por sesión', () => {
   const { m } = cargar();
   const p = m.armarPool({ modos: ['conj'], clase: '0', unidades: [] });

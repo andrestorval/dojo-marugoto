@@ -94,9 +94,9 @@ test('el ítem de grupo existe, es de tres opciones y no cambia con la caja', ()
   }
 });
 
-test('frase, armar y vocabulario no cambian de etapa', () => {
+test('armar y vocabulario no cambian de etapa', () => {
   const { m } = cargar();
-  for (const modo of ['frase', 'armar', 'vocabES', 'vocabJP']) {
+  for (const modo of ['armar', 'vocabES', 'vocabJP']) {
     const a = preguntaDe(m, (q) => q.modo === modo, 0);
     const b = preguntaDe(m, (q) => q.modo === modo, 4);
     assert.equal(a.tipo, b.tipo, modo + ' cambió de tipo con la caja');
@@ -184,10 +184,24 @@ test('los cinco tipos tienen pista y dice lo que el plano pide', () => {
   assert.equal(a.pista1.clase, 'pieza');
   assert.equal(a.pista1.pieza, a.chips[0]);
 
-  /* frase completa: patrón, dos moras y la cuenta de caracteres */
-  const f = preguntaDe(m, (q) => q.modo === 'frase', 0);
-  assert.ok(f.pista1.texto.includes(m.esqueleto(f.ok[0], 2)));
-  assert.ok(f.pista1.texto.includes(String(f.ok[0].length)));
+});
+
+/* El modo "frase completa desde español" se retiró: escribir la oración entera
+   en el teclado del celular mide tecleo, no idioma, y lo que enseñaba lo
+   enseña "armar la frase". Las frases siguen en el contenido como ejemplos de
+   los patrones, y esta prueba vigila que no vuelvan como ejercicio por
+   descuido. */
+test('el modo de frase completa ya no existe', () => {
+  const { m } = cargar();
+  assert.equal(m.TODOS_LOS_MODOS.includes('frase'), false);
+  const p = m.armarPool({ modos: m.TODOS_LOS_MODOS.concat('frase'), clase: '0', unidades: [] });
+  assert.equal(p.filter((q) => q.modo === 'frase').length, 0,
+    'pedirlo explícitamente tampoco debe producir preguntas de frase');
+
+  /* pero las frases siguen alimentando las fichas y la materia */
+  const u = m.UNIDADES.find((x) => x.n === 8);
+  assert.ok(u.frases.length > 0);
+  assert.ok(m.fichaPatron(8, u.frases[0].pat).frases.length > 0);
 });
 
 test('ninguna pista revela la respuesta entera', () => {

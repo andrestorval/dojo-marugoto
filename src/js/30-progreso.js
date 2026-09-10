@@ -87,7 +87,7 @@ function desmarcarAprendido(id){
    `primerUso` se apaga en cuanto el usuario contesta las dos preguntas del
    arranque, y no vuelve a preguntar (Anexo B). */
 const CFG_BASE = {
-  modos:['vocabJP','vocabES','conj','hueco','armar','frase'],
+  modos:['vocabJP','vocabES','conj','hueco','armar'],
   clase:'0', largo:20, cupoNuevos:6, unidadActual:0, unidades:[],
   primerUso:true, manuales:0, matUnidad:0,
   /* Mostrar la palabra o la ficha antes de preguntarla ayuda a quien no
@@ -100,8 +100,15 @@ const CFG_BASE = {
 };
 let sel = Object.assign({}, CFG_BASE);
 function saveCfg(){ escribirLS(LS_CFG, sel); }
+const MODOS_VALIDOS = ['vocabES', 'vocabJP', 'conj', 'hueco', 'armar'];
+
 function cargarCfg(c){
   if(c && typeof c === 'object') sel = Object.assign({}, CFG_BASE, c);
+  /* Una configuracion guardada antes puede traer modos que ya no existen,
+     como el retirado "frase": se limpian para que el menu y los conteos
+     cuadren con lo que de verdad se practica. */
+  sel.modos = (sel.modos || []).filter(m => MODOS_VALIDOS.includes(m));
+  if(!sel.modos.length) sel.modos = MODOS_VALIDOS.slice();
 }
 
 /* Unidad en curso por defecto: la mas alta que tenga contenido terminado. */

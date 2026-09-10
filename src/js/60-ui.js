@@ -7,9 +7,18 @@ const MODOS = [
   { id:'vocabJP', nom:'Vocabulario · reconocer', desc:'Te doy la palabra en japonés y eliges qué significa.' },
   { id:'conj',    nom:'Conjugación', desc:'Te doy el verbo y la forma que quiero, y la escribes.' },
   { id:'hueco',   nom:'Frases con hueco', desc:'Completas la parte que falta dentro de una frase del libro.' },
-  { id:'armar',   nom:'Armar la frase', desc:'Te doy las piezas desordenadas y las pones en orden.' },
-  { id:'frase',   nom:'Frase completa desde español', desc:'Lo más exigente: te doy la frase en español y la escribes entera.' }
+  { id:'armar',   nom:'Armar la frase', desc:'Te doy las piezas desordenadas y las pones en orden.' }
 ];
+
+/* Hubo un séptimo modo, "frase completa desde español": se daba la frase en
+   español y había que escribirla entera en japonés. Se quitó a petición de
+   Patricio y con razón. Escribir una oración entera en el teclado del celular
+   es una tarea de tecleo, no de idioma, y lo que mide —orden de las palabras,
+   partículas, forma del verbo— lo mide "armar la frase" sin esa fricción.
+
+   Las frases NO se borraron del contenido: siguen siendo los ejemplos de la
+   ficha de cada patrón y de la sección de materia. Lo que se quitó es el
+   ejercicio, no el material. */
 
 /* ═══════════ estado de la sesion ═══════════ */
 let cola = [], idx = 0, aciertos = 0, fallos = [], recuperadas = [], repasoPuesto = false, respondida = false;

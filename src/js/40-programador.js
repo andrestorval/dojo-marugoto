@@ -59,8 +59,8 @@ const esJubilado = (r) => !!(r && r.man);
 const REPARTO = [
   { tipos:['vocabJP', 'vocabES'], parte: 2 },
   { tipos:['grupo', 'conj'],      parte: 2 },
-  { tipos:['hueco', 'armar'],     parte: 1 },
-  { tipos:['frase'],              parte: 1 }
+  { tipos:['hueco'],              parte: 1 },
+  { tipos:['armar'],              parte: 1 }
 ];
 
 /* Unidades ordenadas desde la que se cursa hacia abajo y despues hacia
@@ -71,13 +71,6 @@ function ordenUnidades(unidadActual){
   const abajo = ns.filter(n => n <= unidadActual).sort((a,b) => b - a);
   const arriba = ns.filter(n => n > unidadActual).sort((a,b) => a - b);
   return abajo.concat(arriba);
-}
-
-/* ids de los huecos de una unidad que comparten patron */
-function huecosDelPatron(n, pat){
-  const u = UNIDADES.find(x => x.n === n);
-  if(!u || !pat) return [];
-  return u.huecos.filter(h => h.pat === pat).map(h => 'h:' + n + ':' + h.k);
 }
 
 /* Un item nuevo solo entra si lo que lo precede ya se vio: sin esto la app
@@ -100,12 +93,6 @@ function dependenciaCumplida(q, idsPool){
     /* conjugar sin saber el grupo es adivinar: primero el item de grupo */
     const req = 'g:' + q.kana;
     return !enPool(req) || !!prog[req];
-  }
-  if(q.modo === 'frase'){
-    /* una frase entra cuando algun hueco del mismo patron llego a la caja 2,
-       es decir, ya se respondio sin pista */
-    const reqs = huecosDelPatron(q.unidad, q.pat).filter(enPool);
-    return !reqs.length || reqs.some(id => (prog[id] && prog[id].b) >= 2);
   }
   return true;
 }

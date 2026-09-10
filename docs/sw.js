@@ -7,7 +7,7 @@
    estrategia mas simple que existe (plano 6.4). El progreso vive en
    localStorage y nada de esto lo toca. */
 
-const CACHE = 'dojo-2f296725';
+const CACHE = 'dojo-88f6b217';
 const ARCHIVOS = [
   "./",
   "./index.html",

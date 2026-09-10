@@ -140,12 +140,8 @@ function armarPool(filtro){
         promptEs:a.es, chips:a.chips, modelo:a.chips.join('')
       }); });
 
-    if(modos.includes('frase'))
-      u.frases.forEach((f, i) => { if(!enClaseDe(f.c)) return; meter({
-        modo:'frase', tipo:'escribir', id:'f:'+u.n+':'+f.k, tag:'Frase completa',
-        unidad:u.n, clase:f.c, orden:i, tag2:f.pat, pat:f.pat,
-        promptEs:f.es, ok:f.ok, modelo:f.ok[0], libre:true
-      }); });
+    /* El modo "frase completa desde español" se retiró; las frases siguen en el
+       contenido como ejemplos de los patrones (ver la nota en 60-ui.js). */
   }
   return pool;
 }
@@ -154,7 +150,7 @@ function armarPool(filtro){
    el pool pero pasa por el mismo programador: también respeta vencimientos y
    también registra progreso (plano 2.4). */
 /* Los seis modos, sin depender de la tabla de la interfaz */
-const TODOS_LOS_MODOS = ['vocabES','vocabJP','conj','hueco','armar','frase'];
+const TODOS_LOS_MODOS = ['vocabES','vocabJP','conj','hueco','armar'];
 
 function construir(manual){
   const filtro = manual
@@ -350,11 +346,6 @@ function pistaDe(q){
   if(q.modo === 'armar')
     return { clase:'pieza', texto:'Empieza por esta pieza.', pieza:q.chips[0] };
 
-  if(q.modo === 'frase')
-    return { clase:'texto',
-             texto:(q.pat ? q.pat + ' · ' : '') + esqueleto(q.ok[0], 2) +
-                   ' · ' + q.ok[0].length + ' caracteres' };
-
   return null;
 }
 
@@ -412,7 +403,7 @@ function tarjetaPara(q, hechas){
   }
 
   /* patron nunca visto */
-  if((q.modo === 'hueco' || q.modo === 'frase') && q.pat && !yaVistoPatron(q.unidad, q.pat)){
+  if(q.modo === 'hueco' && q.pat && !yaVistoPatron(q.unidad, q.pat)){
     const clave = 'patron:' + q.unidad + ':' + q.pat;
     if(hechas.has(clave)) return null;
     hechas.add(clave);

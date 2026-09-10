@@ -73,7 +73,7 @@ export function cargarMotor({ unidades = null, archivos = SIN_DOM, almacen = nul
       aplicarEtapa, pistaDe, segundoEjemplo, usoDelPatron,
       conPresentaciones, tarjetaPara, esPregunta, yaVistaForma, yaVistoPatron,
       fichaForma, fichaPatron, materiaDe, verboEjemplo,
-      dependenciaCumplida, huecosDelPatron, sinTildes, chocan,
+      dependenciaCumplida, sinTildes, chocan,
       /* prog y sel se reasignan; hay que leerlos por función */
       estado: () => ({ prog, sel, avisoMigracion }),
       fijarProg: (p) => { prog = p; },
