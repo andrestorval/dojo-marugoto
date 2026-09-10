@@ -147,6 +147,20 @@ De dónde salieron los 68 del Tema 8: de `Japones\Clase 8\`, que tiene los PDF d
 las páginas del libro. Hay carpeta `Clase 7` y `Clase 8`; **no hay `Clase 9`**.
 Para escribir la unidad 9 con oraciones del libro hace falta ese material.
 
+## Aceptado
+
+**2026-09-10 — Patricio acepta las advertencias de la unidad 8 tal como
+están.** No se cambia ninguna glosa: se quedan las de la unidad.
+
+Ojo con la cifra: **ya no son 33, son 22.** Al escribir la unidad 9 (M13)
+salieron tres fallos del propio validador que también afectaban a esta unidad
+—la tilde de onda del índice no es la del contenido, los sustantivos verbales
+no se encontraban, y un patrón cortés no es el mismo texto que uno llano— y
+once de las 33 advertencias eran falsas. Con ellas se fue también el
+«3 patrones oficiales sin ningún ejercicio» de la sección de cobertura: los
+cuatro del Tema 8 están reconocidos. Nada de eso tocó el contenido de la
+unidad 8. El detalle está en `INFORME-M13.md`.
+
 ## Para aprobar
 
 Lee `dist/validacion-u8.md` y decide qué hacer con las 33 advertencias. Las que

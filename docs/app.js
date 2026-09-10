@@ -12,14 +12,18 @@ const TE1 = { う:'って', つ:'って', る:'って', む:'んで', ぶ:'ん�
 
 const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:'しなかった',
                ta:'した', te:'して', nagara:'しながら', tari:'したり',
-               pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で' };
+               pot:'できる', imp:'しろ', sou:'するそうです', atode:'した後で',
+               tara:'したら', tai:'したいです', yasui:'しやすいです',
+               koto:'することができます' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
-               pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で' };
+               pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
+               tara:'きたら', tai:'きたいです', yasui:'きやすいです',
+               koto:'くることができます' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ' }
 };
 
@@ -140,6 +144,10 @@ function conjugar(v, forma) {
       case 'imp':     out = st + 'ろ'; break;
       case 'sou':     out = k + 'そうです'; break;
       case 'atode':   out = st + 'た後で'; break;
+      case 'tara':    out = st + 'たら'; break;
+      case 'tai':     out = st + 'たいです'; break;
+      case 'yasui':   out = st + 'やすいです'; break;
+      case 'koto':    out = k + 'ことができます'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -159,6 +167,10 @@ function conjugar(v, forma) {
       case 'imp':     out = st + U2E[last]; break;
       case 'sou':     out = k + 'そうです'; break;
       case 'atode':   out = ta + '後で'; break;
+      case 'tara':    out = ta + 'ら'; break;
+      case 'tai':     out = st + U2I[last] + 'たいです'; break;
+      case 'yasui':   out = st + U2I[last] + 'やすいです'; break;
+      case 'koto':    out = k + 'ことができます'; break;
     }
   }
 
@@ -197,21 +209,25 @@ function reglaDe(v, forma){
   if(v.g === 3) return 'Grupo 3: する y くる van de memoria.';
   if(v.g === 2){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
-                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で' };
+                   nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
+                   tara:'たら', tai:'たいです', yasui:'やすいです' };
     if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
+    if(forma === 'koto') return 'Grupo 2: forma diccionario + ことができます.';
     return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
   }
   const u = v.kana.slice(-1);
   if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
+  if(forma === 'koto') return 'Grupo 1: forma diccionario + ことができます.';
   if(forma === 'nai' || forma === 'nakatta')
     return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' + (forma === 'nai' ? 'ない' : 'なかった') + '.';
-  if(forma === 'masu' || forma === 'masen' || forma === 'nagara')
-    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' + (forma === 'nagara' ? 'ながら' : forma === 'masu' ? 'ます' : 'ません') + '.';
+  if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui')
+    return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
+      ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
   if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
   if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
-  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode'){
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara'){
     const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
-    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + '.';
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + (forma === 'tara' ? ' + ら' : '') + '.';
   }
   return '';
 }
@@ -1430,10 +1446,18 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ═══════════ render ═══════════ */
+/* El pie nombra la unidad en la que se está. Lo pintan las dos pantallas que
+   pueden estar delante —la de inicio y la de primer uso—, porque el segmento
+   entero es de este span: sin unidad no se escribe nada. */
+function pintarPie(){
+  const u = UNIDADES.find(x => x.n === unidadActual());
+  $('#footTema').textContent = u ? ' · Tema ' + u.n + ' ' + u.titulo + ' — ' + u.es : '';
+}
+
 function pintarInicio(){
   const u = UNIDADES.find(x => x.n === unidadActual());
   $('#temaLabel').textContent = u ? 'Unidad ' + u.n + ' · ' + u.titulo : '';
-  $('#footTema').textContent = u ? u.n + ' ' + u.titulo + ' — ' + u.es : '';
+  pintarPie();
 
   /* El subtítulo del botón explica sin texto qué va a pasar al tocarlo. */
   /* sin contenido no hay nada que practicar: el botón principal se convierte
@@ -1534,6 +1558,7 @@ function pintarPrimerUso(){
     v => sel.unidadActual === +v, v => { sel.unidadActual = +v; pintarPrimerUso(); });
   chips('#p1Largo', [['10','10 preguntas'],['20','20 preguntas'],['40','40 preguntas']],
     v => sel.largo === +v, v => { sel.largo = +v; pintarPrimerUso(); });
+  pintarPie();
 }
 
 function actualizarStart(){ $('#btnStartManual').disabled = sel.modos.length === 0; }
@@ -1719,10 +1744,13 @@ function pintarPregunta(){
   }
 
   else if(q.tipo === 'opcion'){
+    /* El hueco pinta solo el blanco, no los parentesis: el contrato del contenido
+       (y lo que el validador exige) es que el `pre` termine en （ y el `post`
+       empiece por ）. Anadiendo otro par aqui salia （（　　））. */
     const enunciado =
       q.eleccion === 'patron'
         ? `<div class="prompt es">${esc(q.sub)}</div>
-           <div class="gapline" style="margin-top:10px">${esc(q.pre)}<b style="color:var(--ai)">（　　）</b>${esc(q.post)}${q.post2 ? '（　　）' + esc(q.post2) : ''}</div>
+           <div class="gapline" style="margin-top:10px">${esc(q.pre)}<b style="color:var(--ai)">　　</b>${esc(q.post)}${q.post2 ? '<b style="color:var(--ai)">　　</b>' + esc(q.post2) : ''}</div>
            <p class="ask">¿Qué patrón pide este hueco?</p>`
       : q.eleccion === 'forma'
         ? `<div class="prompt">${esc(q.promptJp)}</div>
@@ -2310,7 +2338,12 @@ function pintarMateria(){
      </div>` +
 
     bloque('Patrones gramaticales',
-      m.gramatica.map(p => filaMaterial(p.pat, p.uso, plural(p.frases + p.huecos, 'ejercicio'), p.lectura, p.es)).join(''),
+      /* Las frases dejaron de ser ejercicio al retirarse el modo "frase completa":
+         sumarlas aquí prometía una práctica que ya no existe. Un patrón sin ningún
+         hueco no miente diciendo "0 ejercicios", dice cuántos ejemplos trae. */
+      m.gramatica.map(p => filaMaterial(p.pat, p.uso,
+        p.huecos ? plural(p.huecos, 'ejercicio') : plural(p.frases, 'ejemplo'),
+        p.lectura, p.es)).join(''),
       '<p class="sub" style="margin:-6px 0 12px">Toca uno para ver el ejemplo y dónde se practica.</p>') +
 
     bloque('Formas de conjugación',

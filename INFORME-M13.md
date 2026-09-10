@@ -187,6 +187,32 @@ español, no el libro, y solo cita una selección; la unidad 8 daba 26% con las
 mismas fuentes. Ahora que el libro escaneado está disponible, **la confirmación
 de verdad fue leer las páginas**, que es de donde salieron los ejercicios.
 
+## Aceptado
+
+**2026-09-10 — Patricio acepta las 23 advertencias tal como están.** No se
+cambia ninguna glosa: quedan las de la unidad, no las del índice. En concreto,
+y para que conste una por una:
+
+- Los seis kanji del recuadro de p107 se quedan glosados como sustantivo
+  (輸入 «importación», 報告 «informe, parte», 連絡 «aviso, contacto», 協力
+  «colaboración», 担当 «cargo, cometido del que uno se ocupa», 輸出
+  «exportación»), porque así aparecen en el propio ejercicio. El verbo está
+  aparte, en la lista de verbos.
+- 広報 «comunicación, prensa», 企画 «planificación, proyectos», 食品
+  «alimentación» y 海外事業 «negocio internacional»: son departamentos de una
+  empresa en la lista de p109, no las acepciones generales del índice.
+- とくい, ふんいき, ていねい, きちんと, つごう, はじめに, ただいま, いえいえ,
+  ラグビー部 y 翻訳: se queda la acepción con la que la unidad las usa.
+- 働き方 y 就職活動 se quedan aunque no estén en el índice: salen literales del
+  libro (p114 y p112).
+
+Quedan aceptados también el subconjunto de vocabulario (72 de las 79 del
+índice, más 13 de temas anteriores) y la clasificación de las cuatro formas
+nuevas —たら, たい, やすい y ことができます— como formas conjugables.
+
+Pendiente todavía: la sesión de 25 en el celular con el libro al lado, que es
+lo único que puede destapar una lista `ok` incompleta o una pista que no sirve.
+
 ## Para aprobar
 
 1. Lee las 23 advertencias de `dist/validacion-u9.md` y dime qué glosas cambio.
