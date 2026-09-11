@@ -54,6 +54,16 @@ header.top{
 .brand .kicker{color:var(--ai); }
 .temaLabel{color:var(--muted); font-size:.82rem; letter-spacing:.04em; text-transform:uppercase}
 .spacer{flex:1}
+/* el ← de la cabecera: compacto y alineado con la marca, no con su linea base */
+button.back{align-self:center; padding:6px 13px; font-size:1.15rem; line-height:1; border-radius:10px}
+
+/* ---- secciones plegables de la materia ---- */
+details.plegable > summary{list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px}
+details.plegable > summary::-webkit-details-marker{display:none}
+details.plegable > summary .sec{margin:0}
+details.plegable > summary::after{content:'＋'; color:var(--muted); font-size:1.15rem; flex:none}
+details.plegable[open] > summary::after{content:'－'}
+details.plegable[open] > summary{margin-bottom:12px}
 
 /* ---- botones ---- */
 button{font:inherit; cursor:pointer; border-radius:10px; border:1px solid var(--line-strong);

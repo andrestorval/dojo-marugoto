@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#17516B">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="dojo-build" content="076b4eab">
+<meta name="dojo-build" content="e21199ab">
 <title>Dōjō Marugoto</title>
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/icono-192.png">
@@ -16,6 +16,7 @@
 
 <div class="wrap">
   <header class="top">
+    <button class="back hide" id="btnAtras" aria-label="Volver">←</button>
     <div class="brand"><span class="kicker">道場</span> Dōjō Marugoto</div>
     <div class="spacer"></div>
     <div class="temaLabel" id="temaLabel"></div>
@@ -46,6 +47,7 @@
       <div class="acts wrap" style="margin-top:14px">
         <button class="ghost" id="btnMenu">Elegir qué practicar</button>
         <button class="ghost" id="btnMateria">Ver la materia</button>
+        <button class="ghost" id="btnFormas">Formas de conjugación</button>
         <button class="primary hide" id="btnCargar">Cargar contenido</button>
       </div>
       <input type="file" id="fileContenido" accept=".json,application/json" class="hide">
@@ -133,6 +135,11 @@
     </div>
   </section>
 
+  <!-- ══════════ FORMAS DE CONJUGACIÓN ══════════ -->
+  <section id="scFormas" class="hide">
+    <div id="formasCuerpo"></div>
+  </section>
+
   <!-- ══════════ PRÁCTICA ══════════ -->
   <section id="scPlay" class="hide">
     <div class="rail"><i id="rail"></i></div>
@@ -172,7 +179,7 @@
   <p class="foot">
     Marugoto A2/B1 Parte 2<span id="footTema"></span><br>
     Tu progreso se guarda solo en este dispositivo.<br>
-    <span class="sello">076b4eab</span>
+    <span class="sello">e21199ab</span>
   </p>
 </div>
 

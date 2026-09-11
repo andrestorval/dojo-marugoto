@@ -731,11 +731,13 @@ function dependenciaCumplida(q, idsPool){
     const req = 'v:' + q.jp + ':jp';
     return !enPool(req) || !!prog[req];
   }
-  if(q.modo === 'conj'){
-    /* conjugar sin saber el grupo es adivinar: primero el item de grupo */
-    const req = 'g:' + q.kana;
-    return !enPool(req) || !!prog[req];
-  }
+  /* Hubo aquí una regla más: conjugar esperaba a que el ítem de grupo del
+     verbo se hubiera visto (plano 3.6, "conjugar sin saber el grupo es
+     adivinar"). En el celular se traducía en sesiones enteras de "¿de qué
+     grupo es?" sin una sola conjugación, porque cada verbo nuevo gastaba su
+     turno en el grupo y la forma llegaba otro día. Patricio la retiró: quiere
+     el verbo y la forma desde la primera vez. El ítem de grupo sigue
+     existiendo, pero entra después de las formas, como remate. */
   return true;
 }
 
@@ -945,11 +947,12 @@ function armarPool(filtro){
         const ids = (u.formas && u.formas[v.c]) || [];
 
         /* Item de grupo: uno por verbo, siempre de eleccion entre 1, 2 y 3.
-           Va antes que sus formas en el orden de entrada, porque conjugar sin
-           saber el grupo es adivinar (plano 3.6). */
+           Iba antes que sus formas (plano 3.6); ahora va despues de todas
+           ellas, como remate, porque en el celular se comia las sesiones de
+           conjugacion (ver la nota en dependenciaCumplida). */
         if(ids.length && enClaseDe(v.c)) meter({
           modo:'grupo', tipo:'opcion', id:'g:' + v.kana, tag:'Grupo del verbo',
-          unidad:u.n, clase:v.c, orden:i * 20, kana:v.kana,
+          unidad:u.n, clase:v.c, orden:i * 20 + 19, kana:v.kana,
           promptJp:v.kanji, lectura:(v.kanji !== v.kana ? v.kana : ''),
           sub:v.es, nota:v.nota || '',
           correcta:'Grupo ' + v.g, modelo:'Grupo ' + v.g,
@@ -965,7 +968,11 @@ function armarPool(filtro){
           if(!f || !enClaseDe(v.c)) return;
           meter({
             modo:'conj', tipo:'escribir', id:'c:'+v.kana+':'+f.id, tag:'Conjugación',
-            unidad:u.n, clase:v.c, orden:i * 20 + 1 + j, kana:v.kana, forma:f.id,
+            /* Cada verbo entra por una forma distinta: rotando por el indice del
+               verbo, la primera sesion no es "forma ます" doce veces seguidas
+               sino ます, ません, ない, た... una por verbo. Con el tiempo cada
+               verbo pasa por todas igual; solo cambia por cual empieza. */
+            unidad:u.n, clase:v.c, orden:i * 20 + 1 + ((j + i) % ids.length), kana:v.kana, forma:f.id,
             promptJp:v.kanji, lectura:(v.kanji!==v.kana? v.kana : ''),
             pide:f.label, sub:v.es + ' · Grupo ' + v.g, nota:v.nota || '',
             ok: aceptadasDeConjugacion(v, f.id), modelo: conKanji(v, conjugar(v,f.id)) || conjugar(v,f.id),
@@ -1491,6 +1498,7 @@ function pintarInicio(){
      en el cargador (plano 6.5) */
   $('#btnCargar').classList.toggle('hide', hayContenido());
   $('#btnMateria').classList.toggle('hide', !hayContenido());
+  $('#btnFormas').classList.toggle('hide', !hayContenido());
   $('#btnMenu').classList.toggle('hide', !hayContenido());
 
   const pan = panoramaHoy();
@@ -1686,10 +1694,46 @@ function enunciado(q){
   return q.promptEs || q.promptJp || etiqueta(q.id);
 }
 
-const PANTALLAS = ['scPrimero','scHome','scMenu','scMateria','scPlay','scEnd'];
-function ir(pantalla){
+const PANTALLAS = ['scPrimero','scHome','scMenu','scMateria','scFormas','scPlay','scEnd'];
+let pantallaActual = 'scHome';
+
+/* Cada pantalla que no es el inicio deja una entrada en el historial del
+   navegador. Es lo que hace que la tecla "atrás" del celular vuelva al inicio
+   en vez de cerrar la app: Android manda esa tecla al historial, y con una
+   sola entrada no había adónde volver. El ← de la cabecera hace lo mismo.
+
+   modo: undefined    entra a la pantalla y deja entrada en el historial
+         'reemplazar' entra sustituyendo la entrada actual (sesión → resumen)
+         'historial'  viene de la tecla atrás: el historial ya cambió solo */
+function ir(pantalla, modo){
   PANTALLAS.forEach(s => $('#'+s).classList.toggle('hide', s !== pantalla));
+  pantallaActual = pantalla;
+  const enCasa = pantalla === 'scHome' || pantalla === 'scPrimero';
+  $('#btnAtras').classList.toggle('hide', enCasa);
+  if(modo !== 'historial'){
+    try {
+      if(enCasa || modo === 'reemplazar') history.replaceState({ p: pantalla }, '');
+      else history.pushState({ p: pantalla }, '');
+    } catch(e){}
+  }
   window.scrollTo({ top:0, behavior:'instant' in window ? 'instant' : 'auto' });
+}
+
+/* Lo que pasa al volver atrás, venga de la tecla del celular o del ←:
+   con un diálogo abierto se cierra el diálogo y nada más; en plena sesión se
+   termina la sesión y se ve el resumen; en cualquier otra pantalla, al inicio.
+   Un diálogo no deja entrada en el historial, así que cuando la tecla lo
+   cierra hay que reponer la de la pantalla que sigue debajo. */
+let dlgCerrar = null;
+function atras(desdeHistorial){
+  if(dlgCerrar){
+    dlgCerrar();
+    if(desdeHistorial) try { history.pushState({ p: pantallaActual }, ''); } catch(e){}
+    return;
+  }
+  if(pantallaActual === 'scPlay'){ cola = cola.slice(0, idx); terminar(); return; }
+  if(pantallaActual === 'scHome' || pantallaActual === 'scPrimero') return;
+  pintarInicio(); ir('scHome', desdeHistorial ? 'historial' : undefined);
 }
 
 /* ═══════════ pregunta ═══════════ */
@@ -1697,6 +1741,12 @@ function pintarPregunta(){
   const q = cola[idx];
   respondida = false;
   q.reintento = false;
+
+  /* La cabecera nombra la unidad de lo que se está preguntando. Antes decía
+     la "unidad en curso" del ajuste, que puede ser la 8 mientras se practica
+     la 9 a propósito, y eso confundía. */
+  const uq = UNIDADES.find(x => x.n === q.unidad);
+  if(uq) $('#temaLabel').textContent = 'Unidad ' + uq.n + ' · ' + uq.titulo;
 
   /* Las tarjetas y las fichas no son preguntas: no entran en el contador ni
      en el marcador (plano 3.5). */
@@ -1746,10 +1796,14 @@ function pintarPregunta(){
   }
 
   if(q.tipo === 'escribir'){
+    /* En "escribir en japonés" la lectura en kana ES la respuesta: pintarla
+       debajo del español regalaba la pregunta. En conjugación sí se pinta,
+       porque ahí es la lectura del verbo que se da, no de lo que se pide. */
+    const conLectura = q.lectura && q.modo !== 'vocabES';
     B.innerHTML =
       (q.promptEs ? `<div class="prompt es">${esc(q.promptEs)}</div>` : '') +
       (q.promptJp ? `<div class="prompt">${esc(q.promptJp)}</div>` : '') +
-      (q.lectura ? `<p class="sub">${esc(q.lectura)}</p>` : '') +
+      (conLectura ? `<p class="sub">${esc(q.lectura)}</p>` : '') +
       (q.sub ? `<p class="sub">${esc(q.sub)}</p>` : '') +
       (q.pide ? `<p class="ask">Escribe la <b>${esc(q.pide)}</b>${q.formaDesc?' <span class="sub">('+esc(q.formaDesc)+')</span>':''}</p>`
               : `<p class="ask">Escríbelo en japonés</p>`) +
@@ -2074,7 +2128,9 @@ function terminar(){
     : 'No queda nada vencido para hoy.';
   $('#btnMas').classList.toggle('hide', !pan.vencidas && !pan.nuevas);
 
-  ir('scEnd');
+  /* sustituye la entrada de la sesión en el historial: atrás desde el
+     resumen va al inicio, no a una sesión que ya terminó */
+  ir('scEnd', 'reemplazar');
   pintarHistorial();
 }
 
@@ -2115,8 +2171,11 @@ function dialogo({ titulo, texto, campo, botones }){
       const campoVal = $('#dlgCampo') ? $('#dlgCampo').value : undefined;
       d.classList.add('hide'); d.innerHTML = '';
       document.removeEventListener('keydown', escapar, true);
+      dlgCerrar = null;
       resolve({ boton: v, campo: campoVal });
     };
+    /* la tecla atrás lo cierra como si se hubiera cancelado */
+    dlgCerrar = () => cerrar(bs.find(b => b.cancela) ? bs.find(b => b.cancela).v : null);
     const escapar = e => {
       if(e.key !== 'Escape') return;
       e.preventDefault(); e.stopPropagation();
@@ -2318,7 +2377,9 @@ function verFicha(f){
   const cerrar = () => {
     d.classList.add('hide'); d.innerHTML = '';
     document.removeEventListener('keydown', escapar, true);
+    dlgCerrar = null;
   };
+  dlgCerrar = cerrar;
   $('#fCerrar').onclick = cerrar;
   document.addEventListener('keydown', escapar, true);
   $('#fCerrar').focus();
@@ -2349,19 +2410,25 @@ function pintarMateria(){
   const m = materiaDe(sel.matUnidad);
   const cuerpo = $('#matCuerpo');
   if(!m){ cuerpo.innerHTML = '<div class="card"><p class="sub">Esa unidad todavía no tiene contenido.</p></div>'; return; }
+  $('#temaLabel').textContent = 'Unidad ' + m.n + ' · ' + m.titulo;
 
   const paginas = m.paginas
     ? 'Clase 1, páginas ' + m.paginas[1] + ' · Clase 2, páginas ' + m.paginas[2]
     : '';
 
+  /* Cada sección va plegada: la lista entera de patrones, verbos y palabras
+     de una unidad ocupaba varias pantallas de celular y había que bajar a
+     ciegas hasta lo que se buscaba. Se abre la que se quiere mirar. */
   const bloque = (titulo, filas, extra) => filas
-    ? `<div class="card"><h2 class="sec">${titulo}</h2>${extra || ''}<div class="mat">${filas}</div></div>` : '';
+    ? `<details class="card plegable"><summary><h2 class="sec">${titulo}</h2></summary>${extra || ''}<div class="mat">${filas}</div></details>` : '';
+  const lista = (titulo, filas, nota) =>
+    `<details class="card plegable"><summary><h2 class="sec">${titulo}</h2></summary><div class="matlista">${filas}</div>${nota ? `<p class="sub" style="margin-top:10px">${nota}</p>` : ''}</details>`;
 
   cuerpo.innerHTML =
     `<div class="card">
        <div class="prompt" style="margin:0; font-size:1.6rem">${esc(m.titulo)}</div>
        <p class="sub">${esc(m.es)}${paginas ? ' · ' + esc(paginas) : ''}</p>
-       <p class="sub" style="margin-top:8px">${m.gramatica.length} patrones · ${m.formas.length} formas de conjugación · ${m.vocab.length} palabras · ${m.verbos.length} verbos</p>
+       <p class="sub" style="margin-top:8px">${m.gramatica.length} patrones · ${m.expresiones.length} expresiones · ${m.vocab.length} palabras · ${m.verbos.length} verbos</p>
      </div>` +
 
     bloque('Patrones gramaticales',
@@ -2373,29 +2440,25 @@ function pintarMateria(){
         p.lectura, p.es)).join(''),
       '<p class="sub" style="margin:-6px 0 12px">Toca uno para ver el ejemplo y dónde se practica.</p>') +
 
-    bloque('Formas de conjugación',
-      m.formas.map(f => filaMaterial(f.label, f.uso, f.clases.length === 2 ? 'las dos clases' : 'clase ' + f.clases[0], f.lectura, f.desc)).join(''),
-      '<p class="sub" style="margin:-6px 0 12px">Toca una para ver la regla de cada grupo con un ejemplo.</p>') +
-
+    /* Las formas de conjugación ya no van por unidad: son transversales y
+       viven en su propia pantalla desde el inicio (btnFormas). */
     bloque('Expresiones y fórmulas',
       m.expresiones.map(p => filaMaterial(p.pat, p.uso, '', p.lectura, p.es)).join('')) +
 
-    `<div class="card"><h2 class="sec">Verbos</h2><div class="matlista">` +
-      m.verbos.map(v => `<div><span class="w-jp ${prog['c:'+v.kana+':masu'] ? 'visto' : ''}">${esc(v.kanji || v.kana)}${v.kanji && v.kanji !== v.kana ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)} · G${v.g}</span></div>`).join('') +
-    `</div></div>` +
+    lista('Verbos',
+      m.verbos.map(v => `<div><span class="w-jp ${prog['c:'+v.kana+':masu'] ? 'visto' : ''}">${esc(v.kanji || v.kana)}${v.kanji && v.kanji !== v.kana ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)} · G${v.g}</span></div>`).join('')) +
 
-    `<div class="card"><h2 class="sec">Vocabulario</h2><div class="matlista">` +
-      m.vocab.map(v => `<div><span class="w-jp ${prog['v:'+v.jp+':jp'] ? 'visto' : ''}">${esc(v.jp)}${v.kana !== v.jp ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)}</span></div>`).join('') +
-    `</div><p class="sub" style="margin-top:10px">En verde, lo que ya has visto en alguna sesión.</p></div>` +
+    lista('Vocabulario',
+      m.vocab.map(v => `<div><span class="w-jp ${prog['v:'+v.jp+':jp'] ? 'visto' : ''}">${esc(v.jp)}${v.kana !== v.jp ? `<small> ${esc(v.kana)}</small>` : ''}</span><span class="w-es">${esc(v.es)}</span></div>`).join(''),
+      'En verde, lo que ya has visto en alguna sesión.') +
 
-    (m.kanji.length ? `<div class="card"><h2 class="sec">Palabras con kanji</h2><div class="matlista">` +
-      m.kanji.map(v => `<div><span class="w-jp">${esc(v.jp)}</span><span class="w-es">${esc(v.kana)}</span></div>`).join('') +
-    `</div><p class="sub" style="margin-top:10px">El kanji es de reconocimiento: se lee y se identifica, no se escribe.</p></div>` : '');
+    (m.kanji.length ? lista('Palabras con kanji',
+      m.kanji.map(v => `<div><span class="w-jp">${esc(v.jp)}</span><span class="w-es">${esc(v.kana)}</span></div>`).join(''),
+      'El kanji es de reconocimiento: se lee y se identifica, no se escribe.') : '');
 
   /* cablear las fichas por posición dentro de cada bloque */
   const fuentes = [
     m.gramatica.map(p => () => fichaPatron(m.n, p.pat)),
-    m.formas.map(f => () => fichaForma(f.id)),
     m.expresiones.map(p => () => fichaPatron(m.n, p.pat)),
   ].filter(x => x.length);
   [...cuerpo.querySelectorAll('.mat')].forEach((bl, i) => {
@@ -2403,6 +2466,28 @@ function pintarMateria(){
       if(fuentes[i] && fuentes[i][j]) b.onclick = () => verFicha(fuentes[i][j]());
     });
   });
+}
+
+/* Las formas de conjugación son transversales: la forma て de la unidad 8
+   es la misma que la de la 1. Por eso no van dentro de la materia de cada
+   unidad sino en su propia pantalla, a un toque desde el inicio, para
+   consultarlas en cualquier momento. Cada una dice qué unidades la practican. */
+function pintarFormas(){
+  $('#temaLabel').textContent = 'Formas de conjugación';
+  const cuerpo = $('#formasCuerpo');
+  const donde = (fid) => {
+    const us = UNIDADES.filter(u => u.estado === 'lista' &&
+      [1, 2].some(c => (u.formas[c] || []).includes(fid))).map(u => u.n).sort((a, b) => a - b);
+    return us.length ? (us.length === 1 ? 'unidad ' : 'unidades ') + us.join(', ') : '';
+  };
+  cuerpo.innerHTML =
+    `<div class="card">
+       <h2 class="sec">Formas de conjugación</h2>
+       <p class="sub" style="margin-bottom:12px">Las ${FORMAS.length} formas que se practican en el libro. Toca una para ver la regla de cada grupo con un ejemplo, y las excepciones.</p>
+       <div class="mat">${FORMAS.map(f => filaMaterial(f.label, f.uso, donde(f.id), f.lectura, f.desc)).join('')}</div>
+     </div>`;
+  [...cuerpo.querySelectorAll('.mat button')].forEach((b, i) =>
+    b.onclick = () => verFicha(fichaForma(FORMAS[i].id)));
 }
 
 /* ═══════════ contenido suelto y versión nueva ═══════════ */
@@ -2511,6 +2596,15 @@ $('#btnMas').onclick         = seguirMas;
 $('#btnMenu').onclick        = () => { pintarMenu(); ir('scMenu'); };
 $('#btnVolver').onclick      = () => { pintarInicio(); ir('scHome'); };
 $('#btnMateria').onclick     = () => { pintarMateria(); ir('scMateria'); };
+$('#btnFormas').onclick      = () => { pintarFormas(); ir('scFormas'); };
+/* El ← se limita a retroceder en el historial y deja que popstate haga el
+   trabajo: así la tecla del celular y el botón siguen exactamente el mismo
+   camino. Si por lo que sea no hay entrada a la que volver, vuelve a mano. */
+$('#btnAtras').onclick       = () => {
+  if(history.state && history.state.p && history.state.p !== 'scHome') history.back();
+  else atras(false);
+};
+window.addEventListener('popstate', () => atras(true));
 $('#btnMatVolver').onclick   = () => { pintarInicio(); ir('scHome'); };
 $('#btnHome').onclick        = () => { pintarInicio(); ir('scHome'); };
 $('#btnQuit').onclick        = () => { cola = cola.slice(0, idx); terminar(); };

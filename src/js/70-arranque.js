@@ -26,6 +26,15 @@ $('#btnMas').onclick         = seguirMas;
 $('#btnMenu').onclick        = () => { pintarMenu(); ir('scMenu'); };
 $('#btnVolver').onclick      = () => { pintarInicio(); ir('scHome'); };
 $('#btnMateria').onclick     = () => { pintarMateria(); ir('scMateria'); };
+$('#btnFormas').onclick      = () => { pintarFormas(); ir('scFormas'); };
+/* El ← se limita a retroceder en el historial y deja que popstate haga el
+   trabajo: así la tecla del celular y el botón siguen exactamente el mismo
+   camino. Si por lo que sea no hay entrada a la que volver, vuelve a mano. */
+$('#btnAtras').onclick       = () => {
+  if(history.state && history.state.p && history.state.p !== 'scHome') history.back();
+  else atras(false);
+};
+window.addEventListener('popstate', () => atras(true));
 $('#btnMatVolver').onclick   = () => { pintarInicio(); ir('scHome'); };
 $('#btnHome').onclick        = () => { pintarInicio(); ir('scHome'); };
 $('#btnQuit').onclick        = () => { cola = cola.slice(0, idx); terminar(); };

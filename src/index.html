@@ -15,6 +15,7 @@
 
 <div class="wrap">
   <header class="top">
+    <button class="back hide" id="btnAtras" aria-label="Volver">←</button>
     <div class="brand"><span class="kicker">道場</span> Dōjō Marugoto</div>
     <div class="spacer"></div>
     <div class="temaLabel" id="temaLabel"></div>
@@ -45,6 +46,7 @@
       <div class="acts wrap" style="margin-top:14px">
         <button class="ghost" id="btnMenu">Elegir qué practicar</button>
         <button class="ghost" id="btnMateria">Ver la materia</button>
+        <button class="ghost" id="btnFormas">Formas de conjugación</button>
         <button class="primary hide" id="btnCargar">Cargar contenido</button>
       </div>
       <input type="file" id="fileContenido" accept=".json,application/json" class="hide">
@@ -130,6 +132,11 @@
         <button class="ghost" id="btnMatVolver">Volver al inicio</button>
       </div>
     </div>
+  </section>
+
+  <!-- ══════════ FORMAS DE CONJUGACIÓN ══════════ -->
+  <section id="scFormas" class="hide">
+    <div id="formasCuerpo"></div>
   </section>
 
   <!-- ══════════ PRÁCTICA ══════════ -->

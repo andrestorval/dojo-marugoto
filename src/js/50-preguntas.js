@@ -95,11 +95,12 @@ function armarPool(filtro){
         const ids = (u.formas && u.formas[v.c]) || [];
 
         /* Item de grupo: uno por verbo, siempre de eleccion entre 1, 2 y 3.
-           Va antes que sus formas en el orden de entrada, porque conjugar sin
-           saber el grupo es adivinar (plano 3.6). */
+           Iba antes que sus formas (plano 3.6); ahora va despues de todas
+           ellas, como remate, porque en el celular se comia las sesiones de
+           conjugacion (ver la nota en dependenciaCumplida). */
         if(ids.length && enClaseDe(v.c)) meter({
           modo:'grupo', tipo:'opcion', id:'g:' + v.kana, tag:'Grupo del verbo',
-          unidad:u.n, clase:v.c, orden:i * 20, kana:v.kana,
+          unidad:u.n, clase:v.c, orden:i * 20 + 19, kana:v.kana,
           promptJp:v.kanji, lectura:(v.kanji !== v.kana ? v.kana : ''),
           sub:v.es, nota:v.nota || '',
           correcta:'Grupo ' + v.g, modelo:'Grupo ' + v.g,
@@ -115,7 +116,11 @@ function armarPool(filtro){
           if(!f || !enClaseDe(v.c)) return;
           meter({
             modo:'conj', tipo:'escribir', id:'c:'+v.kana+':'+f.id, tag:'Conjugación',
-            unidad:u.n, clase:v.c, orden:i * 20 + 1 + j, kana:v.kana, forma:f.id,
+            /* Cada verbo entra por una forma distinta: rotando por el indice del
+               verbo, la primera sesion no es "forma ます" doce veces seguidas
+               sino ます, ません, ない, た... una por verbo. Con el tiempo cada
+               verbo pasa por todas igual; solo cambia por cual empieza. */
+            unidad:u.n, clase:v.c, orden:i * 20 + 1 + ((j + i) % ids.length), kana:v.kana, forma:f.id,
             promptJp:v.kanji, lectura:(v.kanji!==v.kana? v.kana : ''),
             pide:f.label, sub:v.es + ' · Grupo ' + v.g, nota:v.nota || '',
             ok: aceptadasDeConjugacion(v, f.id), modelo: conKanji(v, conjugar(v,f.id)) || conjugar(v,f.id),

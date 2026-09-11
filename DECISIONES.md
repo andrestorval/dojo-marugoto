@@ -145,6 +145,37 @@ regla general es no repetir verbos entre unidades, con las excepciones que el
 contenido justifique: がんばる y あきらめる están en la 9 y en la 1 porque las
 palabras de ánimo de la 1 no se sostienen sin ellas.
 
+## 2026-09-11
+
+Seis correcciones que salieron de probar la app a fondo en el celular. Dos de
+ellas revierten decisiones del plano y por eso quedan aquí.
+
+**El ítem de grupo deja de ser la puerta de la conjugación.** El plano (3.6)
+hacía esperar a cada forma hasta que el ítem "¿de qué grupo es?" del verbo se
+hubiera visto, con la idea de que conjugar sin saber el grupo es adivinar. En
+el celular se traducía en sesiones enteras de grupo sin una sola conjugación:
+cada verbo nuevo gastaba su turno en el grupo y la forma llegaba otro día.
+Patricio lo retiró: quiere el verbo y la forma desde la primera vez. El ítem
+de grupo sigue existiendo, pero entra después de todas las formas del verbo,
+como remate. Y cada verbo entra por una forma distinta, rotando, para que la
+primera sesión no sea "forma ます" doce veces.
+
+**Las formas de conjugación salen de la materia de cada unidad** y pasan a
+una pantalla propia, a un toque desde el inicio, con las 22 juntas y qué
+unidades practica cada una. La forma て es la misma en todas las unidades:
+es material transversal y hay que poder consultarlo en cualquier momento.
+
+**La tecla "atrás" del celular navega dentro de la app.** Cada pantalla que
+no es el inicio deja una entrada en el historial del navegador; sin eso
+Android cerraba la app. Hay además un ← en la cabecera que hace lo mismo.
+Con un diálogo abierto, atrás lo cierra; en plena sesión, la termina y
+muestra el resumen.
+
+Las otras tres: la materia va en secciones plegadas; en "escribir en japonés"
+ya no se pinta la lectura en kana debajo del español, que era la respuesta; y
+la cabecera nombra la unidad de lo que se está preguntando, no la "unidad en
+curso" del ajuste.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se

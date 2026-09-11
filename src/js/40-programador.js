@@ -89,11 +89,13 @@ function dependenciaCumplida(q, idsPool){
     const req = 'v:' + q.jp + ':jp';
     return !enPool(req) || !!prog[req];
   }
-  if(q.modo === 'conj'){
-    /* conjugar sin saber el grupo es adivinar: primero el item de grupo */
-    const req = 'g:' + q.kana;
-    return !enPool(req) || !!prog[req];
-  }
+  /* Hubo aquí una regla más: conjugar esperaba a que el ítem de grupo del
+     verbo se hubiera visto (plano 3.6, "conjugar sin saber el grupo es
+     adivinar"). En el celular se traducía en sesiones enteras de "¿de qué
+     grupo es?" sin una sola conjugación, porque cada verbo nuevo gastaba su
+     turno en el grupo y la forma llegaba otro día. Patricio la retiró: quiere
+     el verbo y la forma desde la primera vez. El ítem de grupo sigue
+     existiendo, pero entra después de las formas, como remate. */
   return true;
 }
 
