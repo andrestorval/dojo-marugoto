@@ -7,6 +7,8 @@
 const U2I = { う:'い', く:'き', ぐ:'ぎ', す:'し', つ:'ち', ぬ:'に', ぶ:'び', む:'み', る:'り' };
 const U2A = { う:'わ', く:'か', ぐ:'が', す:'さ', つ:'た', ぬ:'な', ぶ:'ば', む:'ま', る:'ら' };
 const U2E = { う:'え', く:'け', ぐ:'げ', す:'せ', つ:'て', ぬ:'ね', ぶ:'べ', む:'め', る:'れ' };
+/* la fila お, para la volitiva いこうけい: いく → いこう */
+const U2O = { う:'お', く:'こ', ぐ:'ご', す:'そ', つ:'と', ぬ:'の', ぶ:'ぼ', む:'も', る:'ろ' };
 const TE1 = { う:'って', つ:'って', る:'って', む:'んで', ぶ:'んで', ぬ:'んで', く:'いて', ぐ:'いで', す:'して' };
 
 const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:'しなかった',
@@ -16,7 +18,11 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                koto:'することができます', nara:'するなら',
                tte:'するって言ってました', na:'するな', meishi:'し',
                nakereba:'しなければなりません', nakya:'しなきゃいけません',
-               ba:'すれば', temo:'しても' };
+               ba:'すれば', temo:'しても', naidesu:'しないです', sugi:'しすぎます',
+               tekureru:'してくれました', temorau:'してもらいました',
+               you:'しよう', sou2:'しそうです', youni:'するようになりました',
+               teageru:'してあげました', nakutemo:'しなくてもいいです', deshou:'するでしょう',
+               tehoshii:'してほしいです', naidehoshii:'しないでほしいです', kamo:'するかもしれません' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
@@ -24,13 +30,20 @@ const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:
                koto:'くることができます', nara:'くるなら',
                tte:'くるって言ってました', na:'くるな', meishi:'き',
                nakereba:'こなければなりません', nakya:'こなきゃいけません',
-               ba:'くれば', temo:'きても' };
+               ba:'くれば', temo:'きても', naidesu:'こないです', sugi:'きすぎます',
+               tekureru:'きてくれました', temorau:'きてもらいました',
+               you:'こよう', sou2:'きそうです', youni:'くるようになりました',
+               teageru:'きてあげました', nakutemo:'こなくてもいいです', deshou:'くるでしょう',
+               tehoshii:'きてほしいです', naidehoshii:'こないでほしいです', kamo:'くるかもしれません' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても',
+            tekureru:'いってくれました', temorau:'いってもらいました', teageru:'いってあげました',
+            tehoshii:'いってほしいです' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
-            nakereba:'なければなりません', nakya:'なきゃいけません' }
+            nakereba:'なければなりません', nakya:'なきゃいけません', naidesu:'ないです',
+            nakutemo:'なくてもいいです', naidehoshii:'ないでほしいです' }
 };
 
 /* ---------- romaji -> kana ------------------------------- */

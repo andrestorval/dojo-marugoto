@@ -8,6 +8,8 @@
 const U2I = { う:'い', く:'き', ぐ:'ぎ', す:'し', つ:'ち', ぬ:'に', ぶ:'び', む:'み', る:'り' };
 const U2A = { う:'わ', く:'か', ぐ:'が', す:'さ', つ:'た', ぬ:'な', ぶ:'ば', む:'ま', る:'ら' };
 const U2E = { う:'え', く:'け', ぐ:'げ', す:'せ', つ:'て', ぬ:'ね', ぶ:'べ', む:'め', る:'れ' };
+/* la fila お, para la volitiva いこうけい: いく → いこう */
+const U2O = { う:'お', く:'こ', ぐ:'ご', す:'そ', つ:'と', ぬ:'の', ぶ:'ぼ', む:'も', る:'ろ' };
 const TE1 = { う:'って', つ:'って', る:'って', む:'んで', ぶ:'んで', ぬ:'んで', く:'いて', ぐ:'いで', す:'して' };
 
 const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:'しなかった',
@@ -17,7 +19,11 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                koto:'することができます', nara:'するなら',
                tte:'するって言ってました', na:'するな', meishi:'し',
                nakereba:'しなければなりません', nakya:'しなきゃいけません',
-               ba:'すれば', temo:'しても' };
+               ba:'すれば', temo:'しても', naidesu:'しないです', sugi:'しすぎます',
+               tekureru:'してくれました', temorau:'してもらいました',
+               you:'しよう', sou2:'しそうです', youni:'するようになりました',
+               teageru:'してあげました', nakutemo:'しなくてもいいです', deshou:'するでしょう',
+               tehoshii:'してほしいです', naidehoshii:'しないでほしいです', kamo:'するかもしれません' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
@@ -25,13 +31,20 @@ const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:
                koto:'くることができます', nara:'くるなら',
                tte:'くるって言ってました', na:'くるな', meishi:'き',
                nakereba:'こなければなりません', nakya:'こなきゃいけません',
-               ba:'くれば', temo:'きても' };
+               ba:'くれば', temo:'きても', naidesu:'こないです', sugi:'きすぎます',
+               tekureru:'きてくれました', temorau:'きてもらいました',
+               you:'こよう', sou2:'きそうです', youni:'くるようになりました',
+               teageru:'きてあげました', nakutemo:'こなくてもいいです', deshou:'くるでしょう',
+               tehoshii:'きてほしいです', naidehoshii:'こないでほしいです', kamo:'くるかもしれません' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても',
+            tekureru:'いってくれました', temorau:'いってもらいました', teageru:'いってあげました',
+            tehoshii:'いってほしいです' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
-            nakereba:'なければなりません', nakya:'なきゃいけません' }
+            nakereba:'なければなりません', nakya:'なきゃいけません', naidesu:'ないです',
+            nakutemo:'なくてもいいです', naidehoshii:'ないでほしいです' }
 };
 
 /* ---------- romaji -> kana ------------------------------- */
@@ -130,6 +143,13 @@ function conjugar(v, forma) {
     return k;
   }
 
+  /* Los compuestos que terminan en いく (つれていく, 持っていく) heredan la
+     excepción de 行く: la forma て es つれていって, no つれていいて. Se
+     conjuga el いく del final con su tabla y se le pega lo de delante. */
+  if (v.g === 1 && k.length > 2 && k.endsWith('いく') && EXC['いく'][forma] !== undefined) {
+    return k.slice(0, -2) + EXC['いく'][forma];
+  }
+
   let out;
 
   if (v.g === 2) {
@@ -159,6 +179,19 @@ function conjugar(v, forma) {
       case 'nakya':    out = st + 'なきゃいけません'; break;
       case 'ba':       out = st + 'れば'; break;
       case 'temo':     out = st + 'ても'; break;
+      case 'naidesu':  out = st + 'ないです'; break;
+      case 'sugi':     out = st + 'すぎます'; break;
+      case 'tekureru': out = st + 'てくれました'; break;
+      case 'temorau':  out = st + 'てもらいました'; break;
+      case 'you':      out = st + 'よう'; break;
+      case 'sou2':     out = st + 'そうです'; break;
+      case 'youni':    out = k + 'ようになりました'; break;
+      case 'teageru':  out = st + 'てあげました'; break;
+      case 'nakutemo': out = st + 'なくてもいいです'; break;
+      case 'deshou':   out = k + 'でしょう'; break;
+      case 'tehoshii': out = st + 'てほしいです'; break;
+      case 'naidehoshii': out = st + 'ないでほしいです'; break;
+      case 'kamo':     out = k + 'かもしれません'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -190,6 +223,19 @@ function conjugar(v, forma) {
       case 'nakya':    out = st + U2A[last] + 'なきゃいけません'; break;
       case 'ba':       out = st + U2E[last] + 'ば'; break;
       case 'temo':     out = te + 'も'; break;
+      case 'naidesu':  out = st + U2A[last] + 'ないです'; break;
+      case 'sugi':     out = st + U2I[last] + 'すぎます'; break;
+      case 'tekureru': out = te + 'くれました'; break;
+      case 'temorau':  out = te + 'もらいました'; break;
+      case 'you':      out = st + U2O[last] + 'う'; break;
+      case 'sou2':     out = st + U2I[last] + 'そうです'; break;
+      case 'youni':    out = k + 'ようになりました'; break;
+      case 'teageru':  out = te + 'あげました'; break;
+      case 'nakutemo': out = st + U2A[last] + 'なくてもいいです'; break;
+      case 'deshou':   out = k + 'でしょう'; break;
+      case 'tehoshii': out = te + 'ほしいです'; break;
+      case 'naidehoshii': out = st + U2A[last] + 'ないでほしいです'; break;
+      case 'kamo':     out = k + 'かもしれません'; break;
     }
   }
 
@@ -231,7 +277,10 @@ function reglaDe(v, forma){
                    nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
                    tara:'たら', tai:'たいです', yasui:'やすいです',
                    nakereba:'なければなりません', nakya:'なきゃいけません',
-                   ba:'れば', temo:'ても' };
+                   ba:'れば', temo:'ても', naidesu:'ないです', sugi:'すぎます',
+                   tekureru:'てくれました', temorau:'てもらいました',
+                   you:'よう', sou2:'そうです', teageru:'てあげました', nakutemo:'なくてもいいです',
+                   tehoshii:'てほしいです', naidehoshii:'ないでほしいです' };
     /* na y meishi no siguen el molde "quita る y pon X": el prohibitivo se pega
        a la forma de diccionario entera (忘れるな, no 忘れな) y la raiz
        sustantivada no anade nada detras. Con el mapa mentian. */
@@ -239,6 +288,9 @@ function reglaDe(v, forma){
     if(forma === 'meishi') return 'Grupo 2: quita る y ahí se queda: la raíz sola ya es el sustantivo.';
     if(forma === 'sou') return 'Grupo 2: forma diccionario + そうです.';
     if(forma === 'koto') return 'Grupo 2: forma diccionario + ことができます.';
+    if(forma === 'youni') return 'Grupo 2: forma diccionario + ようになりました.';
+    if(forma === 'deshou') return 'Grupo 2: forma diccionario + でしょう.';
+    if(forma === 'kamo') return 'Grupo 2: forma diccionario + かもしれません.';
     if(forma === 'nara') return 'Grupo 2: forma diccionario + なら.';
     if(forma === 'tte') return 'Grupo 2: forma diccionario + って言ってました.';
     return 'Grupo 2: quita る y pon ' + (mapa[forma] || '') + '.';
@@ -246,24 +298,30 @@ function reglaDe(v, forma){
   const u = v.kana.slice(-1);
   if(forma === 'sou') return 'Grupo 1: forma diccionario + そうです.';
   if(forma === 'koto') return 'Grupo 1: forma diccionario + ことができます.';
+  if(forma === 'youni') return 'Grupo 1: forma diccionario + ようになりました.';
+  if(forma === 'deshou') return 'Grupo 1: forma diccionario + でしょう.';
+  if(forma === 'kamo') return 'Grupo 1: forma diccionario + かもしれません.';
+  if(forma === 'you') return 'Grupo 1: ' + u + ' → ' + U2O[u] + ' + う.';
   if(forma === 'nara') return 'Grupo 1: forma diccionario + なら.';
   if(forma === 'tte') return 'Grupo 1: forma diccionario + って言ってました.';
   if(forma === 'na')  return 'Grupo 1: forma diccionario + な. No cambia el verbo.';
-  if(forma === 'nai' || forma === 'nakatta' || forma === 'nakereba' || forma === 'nakya')
+  if(forma === 'nai' || forma === 'nakatta' || forma === 'nakereba' || forma === 'nakya' || forma === 'naidesu' || forma === 'nakutemo' || forma === 'naidehoshii')
     return 'Grupo 1: ' + u + ' → ' + U2A[u] + (u === 'う' ? ' (う nunca pasa a あ)' : '') + ' + ' +
-      ({ nai:'ない', nakatta:'なかった', nakereba:'なければなりません', nakya:'なきゃいけません' })[forma] + '.';
+      ({ nai:'ない', nakatta:'なかった', nakereba:'なければなりません', nakya:'なきゃいけません', naidesu:'ないです', nakutemo:'なくてもいいです', naidehoshii:'ないでほしいです' })[forma] + '.';
   if(forma === 'meishi')
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ', y ahí se queda: la raíz sola ya es el sustantivo.';
-  if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui')
+  if(forma === 'masu' || forma === 'masen' || forma === 'nagara' || forma === 'tai' || forma === 'yasui' || forma === 'sugi' || forma === 'sou2')
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
-      ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
+      ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです', sugi:'すぎます', sou2:'そうです' })[forma] + '.';
   if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
   if(forma === 'ba')  return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + ば.';
   if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
-  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara' || forma === 'temo'){
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara' || forma === 'temo' ||
+     forma === 'tekureru' || forma === 'temorau' || forma === 'teageru' || forma === 'tehoshii'){
     const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
-    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' || forma === 'temo' ? te : ta) +
-      (forma === 'tara' ? ' + ら' : forma === 'temo' ? ' + も' : '') + '.';
+    const deTe = forma === 'te' || forma === 'temo' || forma === 'tekureru' || forma === 'temorau' || forma === 'teageru' || forma === 'tehoshii';
+    const cola = { tara:' + ら', temo:' + も', tekureru:' + くれました', temorau:' + もらいました', teageru:' + あげました', tehoshii:' + ほしいです' }[forma] || '';
+    return 'Grupo 1: ' + u + ' → ' + (deTe ? te : ta) + cola + '.';
   }
   return '';
 }

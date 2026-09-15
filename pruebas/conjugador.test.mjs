@@ -223,3 +223,54 @@ test('la condicional ば y 〜ても, un verbo por grupo', () => {
   }
   assert.deepEqual(fallos, []);
 });
+
+/* ── las formas que estrenan las unidades 3 a 7 ─────────────────
+   Trece formas en cinco unidades, fijadas a mano con un verbo por grupo.
+   Los casos de la volitiva son la tabla いこうけい de p71 del libro. */
+test('las formas de las unidades 3 a 7, un verbo por grupo', () => {
+  const casos = [
+    /* unidad 3 */
+    ['のこす',   'naidesu', 'のこさないです'],
+    ['なれる',   'naidesu', 'なれないです'],
+    ['ある',     'naidesu', 'ないです'],
+    ['たべる',   'sugi',    'たべすぎます'],
+    ['のむ',     'sugi',    'のみすぎます'],
+    /* unidad 4 */
+    ['よぶ',     'tekureru', 'よんでくれました'],
+    ['つれていく', 'tekureru', 'つれていってくれました'],   // compuesto en いく
+    ['かす',     'temorau',  'かしてもらいました'],
+    ['おしえる', 'temorau',  'おしえてもらいました'],
+    ['する',     'temorau',  'してもらいました'],
+    /* unidad 5: la tabla de p71 */
+    ['いく',     'you',   'いこう'],
+    ['はいる',   'you',   'はいろう'],
+    ['たべる',   'you',   'たべよう'],
+    ['はじめる', 'you',   'はじめよう'],
+    ['する',     'you',   'しよう'],
+    ['くる',     'you',   'こよう'],
+    ['うける',   'sou2',  'うけそうです'],
+    ['ききとる', 'youni', 'ききとるようになりました'],
+    /* unidad 6 */
+    ['いわう',   'teageru',  'いわってあげました'],
+    ['もっていく', 'teageru', 'もっていってあげました'],
+    ['する',     'nakutemo', 'しなくてもいいです'],
+    ['ある',     'nakutemo', 'なくてもいいです'],
+    ['くる',     'nakutemo', 'こなくてもいいです'],
+    ['いわう',   'deshou',   'いわうでしょう'],
+    /* unidad 7 */
+    ['まもる',   'tehoshii',    'まもってほしいです'],
+    ['かえってくる', 'tehoshii', 'かえってきてほしいです'],
+    ['けんかする', 'naidehoshii', 'けんかしないでほしいです'],
+    ['いう',     'naidehoshii', 'いわないでほしいです'],
+    ['なる',     'kamo',        'なるかもしれません'],
+  ];
+  const todos = m.UNIDADES.flatMap((u) => u.verbos);
+  const fallos = [];
+  for (const [kana, forma, esperado] of casos) {
+    const vb = todos.find((x) => x.kana === kana);
+    assert.ok(vb, 'falta el verbo ' + kana + ' en el contenido');
+    const sale = m.conjugar(vb, forma);
+    if (sale !== esperado) fallos.push(kana + ' ' + forma + ': ' + sale + ' ≠ ' + esperado);
+  }
+  assert.deepEqual(fallos, []);
+});

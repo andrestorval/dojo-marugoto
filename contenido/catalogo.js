@@ -68,7 +68,33 @@ CONTENIDO.formas = [
   { id:"ba",      label:"forma ば (condicional)", desc:"si… (じょうけんけい)", ej:EJ, lectura:"じょうけんけい · jōkenkei",
     uso:"La condición: si pasa esto, entonces aquello. Grupo 1 cambia la última sílaba a la fila え y añade ば; grupo 2 quita る y pone れば." },
   { id:"temo",    label:"〜ても",                desc:"aunque… (forma て + も)", ej:EJ, lectura:"temo",
-    uso:"Concede algo y sigue adelante: aunque sea así, da igual. Con adjetivos い es 〜くても; con な y sustantivos, 〜でも." }
+    uso:"Concede algo y sigue adelante: aunque sea así, da igual. Con adjetivos い es 〜くても; con な y sustantivos, 〜でも." },
+  { id:"naidesu", label:"〜ないです",            desc:"no… (negativo cortés hablado)", ej:EJ, lectura:"nai desu",
+    uso:"El negativo cortés de la conversación: forma ない + です. Dice lo mismo que 〜ません, con menos formalidad." },
+  { id:"sugi",    label:"〜すぎます",            desc:"demasiado… (raíz de ます + すぎます)", ej:EJ, lectura:"sugimasu",
+    uso:"Un exceso, siempre con matiz de queja: comí de más, bebí de más. Con adjetivos: 大きすぎます." },
+  { id:"tekureru", label:"〜てくれました",        desc:"alguien lo hizo por mí (forma て + くれました)", ej:EJ, lectura:"te kuremashita",
+    uso:"El favor visto desde quien lo recibe: me invitó, me lo escribió, me llevó. La persona que lo hizo lleva が." },
+  { id:"temorau", label:"〜てもらいました",       desc:"conseguí que alguien lo hiciera (forma て + もらいました)", ej:EJ, lectura:"te moraimashita",
+    uso:"El mismo favor contado desde quien lo pidió: le pedí que me lo explicara. La persona lleva に." },
+  { id:"you",     label:"forma volitiva (いこうけい)", desc:"vamos a…, voy a… (いこう, たべよう, しよう)", ej:EJ, lectura:"いこうけい · ikōkei",
+    uso:"La intención en llano: grupo 1 lleva la última sílaba a la fila お y añade う; grupo 2 quita る y pone よう. Es la base de 〜ようと思っています." },
+  { id:"sou2",    label:"〜そうです（様態）",      desc:"parece que… (raíz de ます + そうです)", ej:EJ, lectura:"〜そうです（ようたい）· sō desu",
+    uso:"Lo que se ve venir: parece que sacaré buena nota. Va con la raíz, no con el verbo entero; ese otro そうです es «dicen que»." },
+  { id:"youni",   label:"〜ようになりました",      desc:"he llegado a… (forma diccionario + ようになりました)", ej:EJ, lectura:"yō ni narimashita",
+    uso:"Un cambio conseguido con el tiempo: antes no, ahora sí. Con la potencial es «ya puedo»." },
+  { id:"teageru", label:"〜てあげました",         desc:"lo hice por alguien (forma て + あげました)", ej:EJ, lectura:"te agemashita",
+    uso:"El favor que uno hace a otro. La tercera pieza del trío あげる, くれる, もらう." },
+  { id:"nakutemo", label:"〜なくてもいいです",     desc:"no hace falta… (forma ない sin la い + くてもいいです)", ej:EJ, lectura:"nakutemo ii desu",
+    uso:"Lo que no es obligatorio: no hace falta hacerlo. Lo contrario de 〜なければなりません." },
+  { id:"deshou",  label:"〜でしょう",              desc:"seguro que… (forma simple + でしょう)", ej:EJ, lectura:"deshō",
+    uso:"Una suposición con bastante seguridad, casi siempre con きっと o たぶん delante. Sin cambiar el verbo." },
+  { id:"tehoshii", label:"〜てほしいです",         desc:"quiero que alguien… (forma て + ほしいです)", ej:EJ, lectura:"te hoshii desu",
+    uso:"El deseo sobre lo que hace otro: quiero que vuelva pronto, que respete las normas. La persona lleva に." },
+  { id:"naidehoshii", label:"〜ないでほしいです",   desc:"quiero que alguien no… (forma ない + でほしいです)", ej:EJ, lectura:"naide hoshii desu",
+    uso:"La misma petición en negativo: que no discuta, que no hable tanto por teléfono." },
+  { id:"kamo",    label:"〜かもしれません",        desc:"puede que… (forma simple + かもしれません)", ej:EJ, lectura:"kamo shiremasen",
+    uso:"Una posibilidad sin afirmar, más dubitativa que でしょう. Sin cambiar el verbo." }
 ];
 
 /* --- CATEGORIAS -----------------------------------------------
@@ -92,5 +118,11 @@ CONTENIDO.categorias = [
   /* Tema 1, スポーツの試合 */
   "deporte", "sentimiento", "correo",
   /* Tema 2, 家をさがす */
-  "casa", "lugar", "cualidad"
+  "casa", "lugar", "cualidad",
+  /* Tema 3, ほっとする食べ物 */
+  "comida",
+  /* Tema 5, ことばを学ぶ楽しみ */
+  "estudio",
+  /* Tema 6, 結婚 */
+  "pareja"
 ];

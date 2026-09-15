@@ -177,6 +177,17 @@ ya no se pinta la lectura en kana debajo del español, que era la respuesta; y
 la cabecera nombra la unidad de lo que se está preguntando, no la "unidad en
 curso" del ajuste.
 
+**Los homógrafos por kana no se repiten como verbo.** El id de un verbo es su
+kana, así que 買う (u1) y 飼う (u2), 帰る (u2) y 変える (u7), 聞く (oír) y きく
+(notarse), 会う y 合う, tendrían la misma tarjeta con dos sentidos. Cuando una
+unidad trae el segundo, va al vocabulario y a los huecos, no a los verbos.
+
+**Cuando el índice oficial se equivoca, manda el libro.** Patricio lo pidió
+al empezar las unidades 3 a 7: ところ no es «lejos», せいかく no es «vida
+cotidiana», プレー no es «jugador». Las correcciones quedan anotadas en el
+informe de cada unidad; el validador las sigue listando como advertencia, que
+es lo correcto: avisa de la diferencia y la persona decide.
+
 ## Abierto todavía
 
 Nada que bloquee. Lo que queda son decisiones que nacen dentro de un módulo y se
