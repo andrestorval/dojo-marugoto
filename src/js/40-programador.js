@@ -179,7 +179,15 @@ function seleccionar(pool, largo, cupoNuevos, unidadActual, dia){
     nuevasEnCola = entran.length;
     if(cola.length < tope) cola = cola.concat(adelantados.slice(0, tope - cola.length));
     if(cola.length < tope){
-      const mas = ordenEntrada(nuevos.filter(q => !entran.includes(q)), tope - cola.length, unidadActual, idsPool);
+      /* La segunda tanda respeta lo que la primera ya metio: un verbo que ya
+         entro con una forma no vuelve con otra, ni una palabra con su otra
+         cara. Sin esto, la regla de una forma por verbo solo valia dentro de
+         cada tanda y さがす podia salir dos veces seguidas. */
+      const kanas = new Set(entran.filter(q => q.kana).map(q => q.kana));
+      const jps = new Set(entran.filter(q => q.jp).map(q => q.jp));
+      const resto = nuevos.filter(q => !entran.includes(q) &&
+        !(q.kana && kanas.has(q.kana)) && !(q.jp && jps.has(q.jp)));
+      const mas = ordenEntrada(resto, tope - cola.length, unidadActual, idsPool);
       cola = cola.concat(mas);
       nuevasEnCola += mas.length;
     }

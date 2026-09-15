@@ -108,8 +108,9 @@ unidad 8 explícitamente, que es lo que esas pruebas siempre quisieron decir.
 Aprovecho para dejar apuntado algo que descubrí de paso y conviene saber al
 escribir las unidades que faltan: **el id de un verbo no lleva número de
 unidad** (`g:はたらく`, `c:はたらく:masu`), y el pool deduplica por id. Un verbo
-que dos unidades practican da una sola tarjeta, que es lo correcto, pero
-significa que el juego de formas que recibe lo decide la unidad que lo lista.
+que dos unidades practican da una sola tarjeta de grupo y la unión de las
+formas de las dos (corregido en M7: aquí decía que mandaba la primera unidad,
+y no es así).
 がんばる y あきらめる están en la 9 y en la 1 a propósito: sin ellas, las
 palabras de ánimo de p29 no se sostienen.
 

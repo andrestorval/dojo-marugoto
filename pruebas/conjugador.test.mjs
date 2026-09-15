@@ -194,3 +194,32 @@ test('くる es irregular también en las formas nuevas', () => {
   assert.equal(m.conjugar(kuru, 'nakya'), 'こなきゃいけません');
   assert.equal(m.conjugar(kuru, 'meishi'), 'き');
 });
+
+/* ── las formas que estrena la unidad 2 ─────────────────────────
+   La condicional ば sigue la tabla じょうけんけい de p41 del libro, que es
+   de donde salen estos casos: すめば, かえれば, あれば, たべれば, すれば. */
+test('la condicional ば y 〜ても, un verbo por grupo', () => {
+  const casos = [
+    ['すむ',   'ba',   'すめば'],
+    ['かえる', 'ba',   'かえれば'],     // 帰る, grupo 1 acabado en える
+    ['ある',   'ba',   'あれば'],
+    ['たべる', 'ba',   'たべれば'],
+    ['ひっこしする', 'ba', 'ひっこしすれば'],
+    ['くる',   'ba',   'くれば'],
+    ['すむ',   'temo', 'すんでも'],
+    ['かえる', 'temo', 'かえっても'],
+    ['たべる', 'temo', 'たべても'],
+    ['ひっこしする', 'temo', 'ひっこししても'],
+    ['くる',   'temo', 'きても'],
+    ['いく',   'temo', 'いっても'],    // la excepción de 行く llega a ても
+  ];
+  const todos = m.UNIDADES.flatMap((u) => u.verbos);
+  const fallos = [];
+  for (const [kana, forma, esperado] of casos) {
+    const vb = todos.find((x) => x.kana === kana);
+    assert.ok(vb, 'falta el verbo ' + kana + ' en el contenido');
+    const sale = m.conjugar(vb, forma);
+    if (sale !== esperado) fallos.push(kana + ' ' + forma + ': ' + sale + ' ≠ ' + esperado);
+  }
+  assert.deepEqual(fallos, []);
+});

@@ -60,11 +60,11 @@ espaciado decide qué entra en cada sesión, y al fallar aparece una pista antes
 que la respuesta. La exigencia de cada ítem sube con su caja: reconocer, después
 producir con apoyo, después producir solo. La salida PWA ya trae manifest,
 service worker e iconos y esta publicada en GitHub Pages. El validador de
-contenido ya corre: los Temas 1, 8 y 9 pasan con 0 errores.
+contenido ya corre: los Temas 1, 2, 8 y 9 pasan con 0 errores.
 
-**M13 y M6 cerrados: están escritas las unidades 9 y 1.** La 9 se adelantó
-porque pediste dejar la 8 y la 9 como versión final; después se retomó el orden
-del plano por la 1. Quedan seis: 2, 3, 4, 5, 6 y 7.
+**M13, M6 y M7 cerrados: están escritas las unidades 9, 1 y 2.** La 9 se
+adelantó porque pediste dejar la 8 y la 9 como versión final; después se retomó
+el orden del plano. Quedan cinco: 3, 4, 5, 6 y 7.
 
 La unidad 9 es la primera escrita con el libro escaneado delante:
 `herramientas/paginas.mjs` saca las páginas de `Marugoto A2B1.pdf` como imagen
@@ -73,7 +73,7 @@ los índices. El PDF vive fuera del repositorio y las páginas van a `dist/`, qu
 no se versiona.
 
 Cada módulo deja su informe (`INFORME-M0.md` a `INFORME-M5.md`,
-`INFORME-M6.md` y `INFORME-M13.md`). Lo que ya se
+`INFORME-M6.md`, `INFORME-M7.md` y `INFORME-M13.md`). Lo que ya se
 zanjó y no se reabre está en `DECISIONES.md`; léelo antes de proponer nada.
 
 `puente-t8.html`, en la raíz, es la vía B de la migración: el archivo congelado

@@ -15,18 +15,20 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                tara:'したら', tai:'したいです', yasui:'しやすいです',
                koto:'することができます', nara:'するなら',
                tte:'するって言ってました', na:'するな', meishi:'し',
-               nakereba:'しなければなりません', nakya:'しなきゃいけません' };
+               nakereba:'しなければなりません', nakya:'しなきゃいけません',
+               ba:'すれば', temo:'しても' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
                tara:'きたら', tai:'きたいです', yasui:'きやすいです',
                koto:'くることができます', nara:'くるなら',
                tte:'くるって言ってました', na:'くるな', meishi:'き',
-               nakereba:'こなければなりません', nakya:'こなきゃいけません' };
+               nakereba:'こなければなりません', nakya:'こなきゃいけません',
+               ba:'くれば', temo:'きても' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
             nakereba:'なければなりません', nakya:'なきゃいけません' }
 };

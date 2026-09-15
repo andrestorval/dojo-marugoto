@@ -38,6 +38,8 @@ function conjugar(v, forma) {
       case 'meishi':  out = st; break;
       case 'nakereba': out = st + 'なければなりません'; break;
       case 'nakya':    out = st + 'なきゃいけません'; break;
+      case 'ba':       out = st + 'れば'; break;
+      case 'temo':     out = st + 'ても'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -67,6 +69,8 @@ function conjugar(v, forma) {
       case 'meishi':  out = st + U2I[last]; break;
       case 'nakereba': out = st + U2A[last] + 'なければなりません'; break;
       case 'nakya':    out = st + U2A[last] + 'なきゃいけません'; break;
+      case 'ba':       out = st + U2E[last] + 'ば'; break;
+      case 'temo':     out = te + 'も'; break;
     }
   }
 
@@ -107,7 +111,8 @@ function reglaDe(v, forma){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
                    nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
                    tara:'たら', tai:'たいです', yasui:'やすいです',
-                   nakereba:'なければなりません', nakya:'なきゃいけません' };
+                   nakereba:'なければなりません', nakya:'なきゃいけません',
+                   ba:'れば', temo:'ても' };
     /* na y meishi no siguen el molde "quita る y pon X": el prohibitivo se pega
        a la forma de diccionario entera (忘れるな, no 忘れな) y la raiz
        sustantivada no anade nada detras. Con el mapa mentian. */
@@ -134,10 +139,12 @@ function reglaDe(v, forma){
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
       ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
   if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
+  if(forma === 'ba')  return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + ば.';
   if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
-  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara'){
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara' || forma === 'temo'){
     const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
-    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + (forma === 'tara' ? ' + ら' : '') + '.';
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' || forma === 'temo' ? te : ta) +
+      (forma === 'tara' ? ' + ら' : forma === 'temo' ? ' + も' : '') + '.';
   }
   return '';
 }

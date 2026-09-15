@@ -16,18 +16,20 @@ const SURU = { masu:'します', masen:'しません', nai:'しない', nakatta:
                tara:'したら', tai:'したいです', yasui:'しやすいです',
                koto:'することができます', nara:'するなら',
                tte:'するって言ってました', na:'するな', meishi:'し',
-               nakereba:'しなければなりません', nakya:'しなきゃいけません' };
+               nakereba:'しなければなりません', nakya:'しなきゃいけません',
+               ba:'すれば', temo:'しても' };
 const KURU = { masu:'きます', masen:'きません', nai:'こない', nakatta:'こなかった',
                ta:'きた', te:'きて', nagara:'きながら', tari:'きたり',
                pot:'こられる', imp:'こい', sou:'くるそうです', atode:'きた後で',
                tara:'きたら', tai:'きたいです', yasui:'きやすいです',
                koto:'くることができます', nara:'くるなら',
                tte:'くるって言ってました', na:'くるな', meishi:'き',
-               nakereba:'こなければなりません', nakya:'こなきゃいけません' };
+               nakereba:'こなければなりません', nakya:'こなきゃいけません',
+               ba:'くれば', temo:'きても' };
 
 /* excepciones que no salen de la regla */
 const EXC = {
-  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら' },
+  'いく': { te:'いって', ta:'いった', tari:'いったり', atode:'いった後で', tara:'いったら', temo:'いっても' },
   'ある': { nai:'ない', nakatta:'なかった', imp:'あれ',
             nakereba:'なければなりません', nakya:'なきゃいけません' }
 };
@@ -155,6 +157,8 @@ function conjugar(v, forma) {
       case 'meishi':  out = st; break;
       case 'nakereba': out = st + 'なければなりません'; break;
       case 'nakya':    out = st + 'なきゃいけません'; break;
+      case 'ba':       out = st + 'れば'; break;
+      case 'temo':     out = st + 'ても'; break;
     }
   } else {                                   // grupo 1
     const last = k.slice(-1);
@@ -184,6 +188,8 @@ function conjugar(v, forma) {
       case 'meishi':  out = st + U2I[last]; break;
       case 'nakereba': out = st + U2A[last] + 'なければなりません'; break;
       case 'nakya':    out = st + U2A[last] + 'なきゃいけません'; break;
+      case 'ba':       out = st + U2E[last] + 'ば'; break;
+      case 'temo':     out = te + 'も'; break;
     }
   }
 
@@ -224,7 +230,8 @@ function reglaDe(v, forma){
     const mapa = { masu:'ます', masen:'ません', nai:'ない', nakatta:'なかった', ta:'た', te:'て',
                    nagara:'ながら', tari:'たり', pot:'られる', imp:'ろ', atode:'た後で',
                    tara:'たら', tai:'たいです', yasui:'やすいです',
-                   nakereba:'なければなりません', nakya:'なきゃいけません' };
+                   nakereba:'なければなりません', nakya:'なきゃいけません',
+                   ba:'れば', temo:'ても' };
     /* na y meishi no siguen el molde "quita る y pon X": el prohibitivo se pega
        a la forma de diccionario entera (忘れるな, no 忘れな) y la raiz
        sustantivada no anade nada detras. Con el mapa mentian. */
@@ -251,10 +258,12 @@ function reglaDe(v, forma){
     return 'Grupo 1: ' + u + ' → ' + U2I[u] + ' + ' +
       ({ nagara:'ながら', masu:'ます', masen:'ません', tai:'たいです', yasui:'やすいです' })[forma] + '.';
   if(forma === 'pot') return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + る.';
+  if(forma === 'ba')  return 'Grupo 1: ' + u + ' → ' + U2E[u] + ' + ば.';
   if(forma === 'imp') return 'Grupo 1: ' + u + ' → ' + U2E[u] + '.';
-  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara'){
+  if(forma === 'te' || forma === 'ta' || forma === 'tari' || forma === 'atode' || forma === 'tara' || forma === 'temo'){
     const te = TE1[u], ta = te.replace(/て$/,'た').replace(/で$/,'だ');
-    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' ? te : ta) + (forma === 'tara' ? ' + ら' : '') + '.';
+    return 'Grupo 1: ' + u + ' → ' + (forma === 'te' || forma === 'temo' ? te : ta) +
+      (forma === 'tara' ? ' + ら' : forma === 'temo' ? ' + も' : '') + '.';
   }
   return '';
 }
@@ -821,7 +830,15 @@ function seleccionar(pool, largo, cupoNuevos, unidadActual, dia){
     nuevasEnCola = entran.length;
     if(cola.length < tope) cola = cola.concat(adelantados.slice(0, tope - cola.length));
     if(cola.length < tope){
-      const mas = ordenEntrada(nuevos.filter(q => !entran.includes(q)), tope - cola.length, unidadActual, idsPool);
+      /* La segunda tanda respeta lo que la primera ya metio: un verbo que ya
+         entro con una forma no vuelve con otra, ni una palabra con su otra
+         cara. Sin esto, la regla de una forma por verbo solo valia dentro de
+         cada tanda y さがす podia salir dos veces seguidas. */
+      const kanas = new Set(entran.filter(q => q.kana).map(q => q.kana));
+      const jps = new Set(entran.filter(q => q.jp).map(q => q.jp));
+      const resto = nuevos.filter(q => !entran.includes(q) &&
+        !(q.kana && kanas.has(q.kana)) && !(q.jp && jps.has(q.jp)));
+      const mas = ordenEntrada(resto, tope - cola.length, unidadActual, idsPool);
       cola = cola.concat(mas);
       nuevasEnCola += mas.length;
     }

@@ -64,7 +64,11 @@ CONTENIDO.formas = [
   { id:"nakereba", label:"〜なければなりません", desc:"hay que… (forma ない sin い + ければなりません)", ej:EJ, lectura:"nakereba narimasen",
     uso:"La obligación: no queda otra que hacerlo. Es la forma de escribir y de hablar con cuidado." },
   { id:"nakya",   label:"〜なきゃいけません",   desc:"hay que… (hablado)", ej:EJ, lectura:"nakya ikemasen",
-    uso:"La misma obligación en la boca, no en el papel. なきゃ es なければ comido al hablar." }
+    uso:"La misma obligación en la boca, no en el papel. なきゃ es なければ comido al hablar." },
+  { id:"ba",      label:"forma ば (condicional)", desc:"si… (じょうけんけい)", ej:EJ, lectura:"じょうけんけい · jōkenkei",
+    uso:"La condición: si pasa esto, entonces aquello. Grupo 1 cambia la última sílaba a la fila え y añade ば; grupo 2 quita る y pone れば." },
+  { id:"temo",    label:"〜ても",                desc:"aunque… (forma て + も)", ej:EJ, lectura:"temo",
+    uso:"Concede algo y sigue adelante: aunque sea así, da igual. Con adjetivos い es 〜くても; con な y sustantivos, 〜でも." }
 ];
 
 /* --- CATEGORIAS -----------------------------------------------
@@ -86,5 +90,7 @@ CONTENIDO.categorias = [
   /* Tema 9, 仕事をさがす */
   "trabajo", "empresa", "persona",
   /* Tema 1, スポーツの試合 */
-  "deporte", "sentimiento", "correo"
+  "deporte", "sentimiento", "correo",
+  /* Tema 2, 家をさがす */
+  "casa", "lugar", "cualidad"
 ];

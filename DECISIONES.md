@@ -139,11 +139,12 @@ la unidad 1 dejaron de apuntar a la 8 y nueve pruebas se cayeron a la vez. Se
 quitaron; lo que necesita datos de una unidad la busca por su número.
 
 **El id de un verbo no lleva número de unidad**, y el pool deduplica por id. Un
-verbo que dos unidades practican da una sola tarjeta, que es lo correcto, pero
-el juego de formas que recibe lo decide la unidad que lo lista. Por eso la
-regla general es no repetir verbos entre unidades, con las excepciones que el
-contenido justifique: がんばる y あきらめる están en la 9 y en la 1 porque las
-palabras de ánimo de la 1 no se sostienen sin ellas.
+verbo que dos unidades practican da una sola tarjeta de grupo y **la unión de
+las formas de las dos unidades** (comprobado en M7 con がんばる: nueve formas de
+la 1 más cinco de la 9). No hay pérdida; solo la etiqueta de unidad de la
+tarjeta es la de la primera que lo lista. La regla general sigue siendo no
+repetir verbos sin motivo, y repetirlos cuando el contenido lo pide: がんばる y
+あきらめる en la 1 y la 9, 勤める en la 2 y la 9.
 
 ## 2026-09-11
 

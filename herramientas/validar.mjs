@@ -158,15 +158,26 @@ if (/<\/script/i.test(crudoUnidad)) err('estructura: el archivo contiene </scrip
 /* ── 2. verbos contra el índice de vocabulario ─────────────────── */
 
 const vocIdx = IDX.vocabulario;
-const buscarVerbo = (kana) => vocIdx.find((v) => coincide(v.dicc, kana))
-  || vocIdx.find((v) => coincide(v.kana, kana));
+/* Un mismo kana puede ser dos verbos: かえる es 帰る (grupo 1) y 変える (grupo
+   2). Con el primero que apareciera, 帰る salía acusado de grupo equivocado.
+   Si hay varios candidatos y el verbo trae kanji, gana el que comparte el
+   primer kanji; si no, el del mismo tema; si no, el primero. */
+const buscarVerbo = (kana, kanji) => {
+  const cands = vocIdx.filter((v) => coincide(v.dicc, kana));
+  if (!cands.length) return vocIdx.find((v) => coincide(v.kana, kana));
+  if (cands.length === 1) return cands[0];
+  const k0 = kanji && kanji !== kana ? kanji[0] : null;
+  return (k0 && cands.find((v) => String(v.kanji || '').startsWith(k0)))
+    || cands.find((v) => v.tema === UNIDAD)
+    || cands[0];
+};
 
 /* Que un verbo venga de un tema anterior es lo normal y no es un problema: la
    gramática de una unidad se practica sobre verbos que ya se conocen. Se
    cuenta en el informe en vez de llenar la lista de revisión. */
 const verbosDeOtroTema = [];
 for (const v of u.verbos) {
-  const o = buscarVerbo(v.kana);
+  const o = buscarVerbo(v.kana, v.kanji);
   if (!o) { avi('verbo: ' + v.kana + ' no aparece como forma de diccionario en el índice'); continue; }
   if (o.grupo && o.grupo !== v.g)
     err('verbo: ' + v.kana + ' está como grupo ' + o.grupo + ' en el índice y aquí es ' + v.g);
