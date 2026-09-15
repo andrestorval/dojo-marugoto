@@ -115,8 +115,12 @@ for (const [n, t] of [['el motor', js], ['el CSS', css], ['el contenido', conten
 
 /* ── 4. sello ──────────────────────────────────────────────────── */
 
+/* La plantilla entra en el sello: un cambio solo en el HTML (un texto del
+   menu, un boton) tiene que invalidar la cache del service worker igual que
+   uno en el JS. Sin ella, el sello no cambiaba y la PWA instalada seguia
+   sirviendo el index.html viejo para siempre. */
 const sello = createHash('sha256')
-  .update(css + js + contenidoJs, 'utf8')
+  .update(plantilla + css + js + contenidoJs, 'utf8')
   .digest('hex')
   .slice(0, 8);
 
